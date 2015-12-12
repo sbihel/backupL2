@@ -1,0 +1,12 @@
+<ship>
+  <add>
+    <energy>4</energy>
+    <system>
+      <weaponControl>2</weaponControl>
+      <engines>4</engines>
+      <shields>2</shields>
+    </system>
+    <weapon>ionBlastI hullLaserII</weapon>
+  </add>
+  <cost>485</cost>
+</ship>

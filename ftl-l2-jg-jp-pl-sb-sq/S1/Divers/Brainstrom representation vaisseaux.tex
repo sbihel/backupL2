@@ -1,0 +1,192 @@
+%%!TEX encoding = UTF-8 Unicode
+\documentclass[a4paper, 11pt]{article}
+\usepackage[utf8]{inputenc} 
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage[french]{babel}
+\usepackage{multirow,multicol}
+\usepackage{amsmath, amssymb, latexsym}
+\usepackage{pstricks,pst-node,pst-coil,pst-grad,pst-plot}
+\usepackage{epsfig,subfigure}
+\usepackage[lined,boxed]{algorithm}
+\usepackage{algorithmic}
+\usepackage{tikz}
+\usepackage{lscape}
+
+\usepackage{rotate}
+\usepackage{url}
+
+\usepackage{setspace}
+
+
+\title{FTL : Fit the fittest©}
+\author{Sébastien \textsc{Gamblin} \and  Simon \textsc{Bihel} \and Julien \textsc{Pezant} \and  Paul \textsc{Leménager} \and  Josselin \textsc{Gueneron}}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+
+\begin{landscape}
+
+\section{Constitution d'un vaisseau (table)}
+
+%:-+-+-+- Engendré par : http://math.et.info.free.fr/TikZ/Arbre/
+\begin{center}
+% Racine en Haut, développement vers le bas
+\begin{tikzpicture}[xscale=1,yscale=1]
+% Styles (MODIFIABLES)
+\tikzstyle{fleche}=[->,>=latex,thick]
+\tikzstyle{noeud}=[fill=green,rectangle,draw]
+\tikzstyle{feuille}=[fill=yellow,rectangle,draw]
+% Dimensions (MODIFIABLES)
+\def\DistanceInterNiveaux{3}
+\def\DistanceInterFeuilles{2}
+% Dimensions calculées (NON MODIFIABLES)
+\def\NiveauA{(-0)*\DistanceInterNiveaux}
+\def\NiveauB{(-1)*\DistanceInterNiveaux}
+\def\NiveauC{(-2)*\DistanceInterNiveaux}
+\def\InterFeuilles{(1)*\DistanceInterFeuilles}
+% Noeuds (MODIFIABLES : Styles et Coefficients d'InterFeuilles)
+\node[noeud] (R) at ({(5.5)*\InterFeuilles},{\NiveauA}) {$Vaisseau$};
+\node[noeud] (Ra) at ({(2)*\InterFeuilles},{\NiveauB}) {$Ressources$};
+\node[feuille] (Raa) at ({(0)*\InterFeuilles},{\NiveauC}) {$Drones parts$};
+\node[feuille] (Rab) at ({(1)*\InterFeuilles},{\NiveauC}) {$Energy$};
+\node[feuille] (Rac) at ({(2)*\InterFeuilles},{\NiveauC}) {$Missiles$};
+\node[feuille] (Rad) at ({(3)*\InterFeuilles},{\NiveauC}) {$Equipage$};
+\node[feuille] (Rae) at ({(4)*\InterFeuilles},{\NiveauC}) {$Scraps HC$};
+\node[noeud] (Rb) at ({(5.5)*\InterFeuilles},{\NiveauB}) {$Eq off$};
+\node[feuille] (Rba) at ({(5)*\InterFeuilles},{\NiveauC}) {$Armes (1)$};
+\node[feuille] (Rbb) at ({(6)*\InterFeuilles},{\NiveauC}) {$Drones (2)$};
+\node[noeud] (Rc) at ({(7.5)*\InterFeuilles},{\NiveauB}) {$Equ def$};
+\node[feuille] (Rca) at ({(7)*\InterFeuilles},{\NiveauC}) {$Boucliers (3)$};
+\node[feuille] (Rcb) at ({(8)*\InterFeuilles},{\NiveauC}) {$Drones (4)$};
+\node[noeud] (Rd) at ({(9.5)*\InterFeuilles},{\NiveauB}) {$Salles$};
+\node[feuille] (Rda) at ({(9)*\InterFeuilles},{\NiveauC}) {$Equipage$};
+\node[feuille] (Rdb) at ({(10)*\InterFeuilles},{\NiveauC}) {$Systemes$};
+\node[feuille] (Re) at ({(11)*\InterFeuilles},{\NiveauB}) {$Systemes$};
+% Arcs (MODIFIABLES : Styles)
+\draw[fleche] (R)--(Ra);
+\draw[fleche] (Ra)--(Raa);
+\draw[fleche] (Ra)--(Rab);
+\draw[fleche] (Ra)--(Rac);
+\draw[fleche] (Ra)--(Rad);
+\draw[fleche] (Ra)--(Rae);
+\draw[fleche] (R)--(Rb);
+\draw[fleche] (Rb)--(Rba);
+\draw[fleche] (Rb)--(Rbb);
+\draw[fleche] (R)--(Rc);
+\draw[fleche] (Rc)--(Rca);
+\draw[fleche] (Rc)--(Rcb);
+\draw[fleche] (R)--(Rd);
+\draw[fleche] (Rd)--(Rda);
+\draw[fleche] (Rd)--(Rdb);
+\draw[fleche] (R)--(Re);
+\end{tikzpicture}
+\end{center}
+%:-+-+-+-+- Fin
+
+\begin{itemize}
+\item (1) Energie + Missiles, Nécessite salle des armes
+\item (2) Drones + énergie, nécessire salle des drones
+\item (3) Energie, Nécessite salle des boucliers
+\item (4) Drones + énergie, nécessire salle des drones
+\end{itemize}
+
+\end{landscape}
+
+\endsection
+
+\section{Un bon lien}
+
+Un bon site avec plein d'informations : \url {http://ftl.wikia.com/wiki/FTL:_Faster_Than_Light_Wiki}
+\endsection
+
+\section{Constitution d'un vaisseau (Liste)}
+
+\begin{itemize}
+ \item ressources 
+	\begin{itemize}
+		\item drones parts
+		\item energy
+		\item missiles
+		\item equipage
+		\item (scraps hors combat)
+	\end{itemize}
+ \item equipements offensifs
+	\begin{itemize}
+		\item armes (utilise de l'energie et eventuellement des missiles) (requiert salle des armes)
+		\item drones (utilise des drones parts et de l'energie) (requiert salle  des drones)
+	\end{itemize}
+ \item equipements deffensifs
+	\begin{itemize}
+		\item boucliers (utilise de l'energie) (requiert salle des boucliers)
+		\item drones (utilise peut-etre des drones parts et de l'energie) (requiert salle  des drones)
+	\end{itemize}
+ \item salles
+	\begin{itemize}
+		\item equipage
+		\item systemes
+	\end{itemize}
+ \item systemes 
+\end{itemize}
+
+\endsection
+
+\section{Quelques informations}
+\begin{multicols}{2}
+\subsection{Types de vaisseaux}
+\begin{itemize}
+	\item Kestrel
+	\item Engi
+	\item Federation
+	\item Zoltan
+	\item Mantis
+	\item Slug
+	\item Rock
+	\item Stealth
+	\item Lanius
+	\item Crystal
+\end{itemize}
+\medskip
+\medskip
+\endsubsection
+
+\subsection{Noms des armes}
+\begin{itemize}
+	\item Missiles
+	\item Lasers
+	\item Ions
+	\item Beams
+	\item Bombs
+	\item Flak
+	\item Crystal
+\end{itemize}
+\endsubsection
+\end{multicols}
+
+\endsection
+
+\section{Quelques questionnements}
+\begin{itemize}
+	\item Doit-on gérer l'extension ? (option finale ? )
+	\item Comment gérer l'équipage, faire une IA aléatoire ?
+	\item Faire des fichiers txt pour récupérer la liste des armes et les stats ?
+	\item Comment matérialiser les salles d'un vaisseau ? Dico, matrice ?
+\end{itemize}
+\endsection
+
+\section{Quelques pistes à suivre, étapes de conception}
+\begin{itemize}
+	\item Modélisation d'un vaisseau basique
+	\item Génération aléatoire d'un vaisseau
+	\item Générer les choix aléatoires d'armes avec une somme d'argent
+	\item Générer les combats virtuels
+	\item Faire des tournois de vaisseaux afin de selectionner le meilleur
+\end{itemize}
+\endsection
+
+\end{document}

@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='us-ascii'?>
+<ship>
+  <name>kestrel</name>
+  <type>C</type>
+  <add>
+    <energy>6</energy>
+    <system>
+      <shields>2</shields>
+      <droneControl>4</droneControl>
+    </system>
+    <drones>
+      <drone0>combat2</drone0>
+      <drone1>beam1</drone1>
+    </drones>
+  </add>
+  <cost>400</cost>
+</ship>

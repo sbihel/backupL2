@@ -1,0 +1,16 @@
+<ship>
+  <name>engiCruiser</name>
+  <type>A</type>
+  <add>
+    <energy>2</energy>
+    <system>
+      <weaponControl>2</weaponControl>
+      <shields>4</shields>
+    </system>
+    <weapons>
+      <weapon0>hullBeam</weapon0>
+      <weapon1>hermes</weapon1>
+    </weapons>
+  </add>
+  <cost>400</cost>
+</ship>

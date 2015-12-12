@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='us-ascii'?>
+<ship>
+  <name>kestrel</name>
+  <type>B</type>
+  <add>
+    <energy>3</energy>
+    <system>
+      <shields>6</shields>
+    </system>
+  </add>
+  <cost>395</cost>
+</ship>

@@ -1,0 +1,11 @@
+divisionTime = 25
+
+showShipState = False
+
+pausesCombat = False
+
+showShipStateEnd = True
+
+printTournament = True
+
+printTK = False

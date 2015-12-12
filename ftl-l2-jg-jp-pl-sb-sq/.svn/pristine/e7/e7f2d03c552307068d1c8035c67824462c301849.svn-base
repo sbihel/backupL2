@@ -1,0 +1,22 @@
+\chapter{Organisation générale}
+
+	\section{Importation des modules}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=1\linewidth]{packageDiagram.pdf}
+	\end{figure}
+	
+	Comme on peut le voir, notre programme est divisé en 3 grandes parties :
+	\begin{itemize}
+		\item une partie qui gère les combats entre vaisseau (réalisé au semestre 1);
+		\item une partie qui gère les vaisseaux personnalisés;
+		\item une partie qui utilise les 2 parties précédentes pour determiner le meilleur vaisseau.
+	\end{itemize}
+	En plus de cela, il y a aussi diverses fonctions d'affichage (graphiques ou textuelles) ainsi qu'un fichier qui contient des variables globales qui determine si il y doit y avoir certains affichages, combien de "cycles" il y a par seconde, etc.
+
+	\section{Stockage des vaisseaux personnalisés}
+	
+	Les vaisseaux personnalisés sont stockés dans des fichiers xml. Nous n'y stockons que ce qui a été ajouté ou enlevé par rapport au vaisseau de base. 
+
+	\section{Déroulement de l'algorithme final d'optimisation}

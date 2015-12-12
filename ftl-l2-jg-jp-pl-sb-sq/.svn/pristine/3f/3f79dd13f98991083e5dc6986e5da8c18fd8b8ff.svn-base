@@ -1,0 +1,219 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\gdef \LT@xx {\LT@entry 
+    {1}{152.92793pt}\LT@entry 
+    {1}{258.72162pt}\LT@entry 
+    {1}{12.0pt}}
+\@writefile{toc}{\contentsline {section}{\numberline {10}Module systems}{27}{section.10}}
+\newlabel{systems}{{10}{27}{Module systems}{section.10}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {10.1}Variables}{27}{subsection.10.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {10.2}Class System}{27}{subsection.10.2}}
+\newlabel{systems:System}{{10.2}{27}{Class System}{subsection.10.2}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {10.2.1}Methods}{27}{subsubsection.10.2.1}}
+\newlabel{systems:System:getPowerIonised}{{10.2.1}{27}{Methods}{subsubsection.10.2.1}{}}
+\newlabel{systems:System:setPowerIonised}{{10.2.1}{27}{Methods}{subsubsection.10.2.1}{}}
+\newlabel{systems:System:getCooldownIon}{{10.2.1}{27}{Methods}{subsubsection.10.2.1}{}}
+\newlabel{systems:System:setCooldownIon}{{10.2.1}{27}{Methods}{subsubsection.10.2.1}{}}
+\newlabel{systems:System:getCooldownIonDone}{{10.2.1}{28}{Methods}{subsubsection.10.2.1}{}}
+\newlabel{systems:System:setCooldownIonDone}{{10.2.1}{28}{Methods}{subsubsection.10.2.1}{}}
+\newlabel{systems:System:getShip}{{10.2.1}{28}{Methods}{subsubsection.10.2.1}{}}
+\newlabel{systems:System:getMaxPowerMax}{{10.2.1}{28}{Methods}{subsubsection.10.2.1}{}}
+\newlabel{systems:System:getPowerInIt}{{10.2.1}{28}{Methods}{subsubsection.10.2.1}{}}
+\newlabel{systems:System:setPowerInIt}{{10.2.1}{28}{Methods}{subsubsection.10.2.1}{}}
+\newlabel{systems:System:getCurrentMaxPower}{{10.2.1}{28}{Methods}{subsubsection.10.2.1}{}}
+\newlabel{systems:System:setCurrentMaxPower}{{10.2.1}{28}{Methods}{subsubsection.10.2.1}{}}
+\newlabel{systems:System:getMaxPower}{{10.2.1}{28}{Methods}{subsubsection.10.2.1}{}}
+\newlabel{systems:System:getName}{{10.2.1}{28}{Methods}{subsubsection.10.2.1}{}}
+\newlabel{systems:System:getNameAbbreviation}{{10.2.1}{28}{Methods}{subsubsection.10.2.1}{}}
+\newlabel{systems:System:getDots}{{10.2.1}{28}{Methods}{subsubsection.10.2.1}{}}
+\newlabel{systems:System:setDots}{{10.2.1}{28}{Methods}{subsubsection.10.2.1}{}}
+\newlabel{systems:System:getRepair}{{10.2.1}{28}{Methods}{subsubsection.10.2.1}{}}
+\newlabel{systems:System:setRepair}{{10.2.1}{28}{Methods}{subsubsection.10.2.1}{}}
+\newlabel{systems:System:isIonised}{{10.2.1}{28}{Methods}{subsubsection.10.2.1}{}}
+\newlabel{systems:System:addPower}{{10.2.1}{28}{Methods}{subsubsection.10.2.1}{}}
+\newlabel{systems:System:upgradeMaxPower}{{10.2.1}{29}{Methods}{subsubsection.10.2.1}{}}
+\newlabel{systems:System:doDamages}{{10.2.1}{29}{Methods}{subsubsection.10.2.1}{}}
+\newlabel{systems:System:ionise}{{10.2.1}{29}{Methods}{subsubsection.10.2.1}{}}
+\newlabel{systems:System:cooldownIon}{{10.2.1}{29}{Methods}{subsubsection.10.2.1}{}}
+\newlabel{systems:System:reparation}{{10.2.1}{29}{Methods}{subsubsection.10.2.1}{}}
+\newlabel{systems:System:dotFire}{{10.2.1}{29}{Methods}{subsubsection.10.2.1}{}}
+\gdef \LT@xxi {\LT@entry 
+    {1}{152.92793pt}\LT@entry 
+    {1}{258.72162pt}\LT@entry 
+    {1}{12.0pt}}
+\newlabel{systems:System:explode}{{10.2.1}{30}{Methods}{subsubsection.10.2.1}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {10.2.2}Properties}{30}{subsubsection.10.2.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {10.3}Class Shields}{30}{subsection.10.3}}
+\newlabel{systems:Shields}{{10.3}{30}{Class Shields}{subsection.10.3}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {10.3.1}Methods}{30}{subsubsection.10.3.1}}
+\newlabel{systems:Shields:getLayers}{{10.3.1}{30}{Methods}{subsubsection.10.3.1}{}}
+\newlabel{systems:Shields:incomingDamages}{{10.3.1}{30}{Methods}{subsubsection.10.3.1}{}}
+\gdef \LT@xxii {\LT@entry 
+    {1}{152.92793pt}\LT@entry 
+    {1}{258.72162pt}\LT@entry 
+    {1}{12.0pt}}
+\newlabel{systems:Shields:cooldownLayer}{{10.3.1}{31}{Methods}{subsubsection.10.3.1}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {10.3.2}Properties}{31}{subsubsection.10.3.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {10.4}Class Engines}{32}{subsection.10.4}}
+\newlabel{systems:Engines}{{10.4}{32}{Class Engines}{subsection.10.4}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {10.4.1}Methods}{32}{subsubsection.10.4.1}}
+\newlabel{systems:Engines:incomingDamages}{{10.4.1}{32}{Methods}{subsubsection.10.4.1}{}}
+\gdef \LT@xxiii {\LT@entry 
+    {1}{152.92793pt}\LT@entry 
+    {1}{258.72162pt}\LT@entry 
+    {1}{12.0pt}}
+\gdef \LT@xxiv {\LT@entry 
+    {1}{152.92793pt}\LT@entry 
+    {1}{258.72162pt}\LT@entry 
+    {1}{12.0pt}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {10.4.2}Properties}{33}{subsubsection.10.4.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {10.5}Class Piloting}{33}{subsection.10.5}}
+\newlabel{systems:Piloting}{{10.5}{33}{Class Piloting}{subsection.10.5}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {10.5.1}Methods}{33}{subsubsection.10.5.1}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {10.5.2}Properties}{33}{subsubsection.10.5.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {10.6}Class WeaponControl}{34}{subsection.10.6}}
+\newlabel{systems:WeaponControl}{{10.6}{34}{Class WeaponControl}{subsection.10.6}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {10.6.1}Methods}{34}{subsubsection.10.6.1}}
+\newlabel{systems:WeaponControl:getWeapons}{{10.6.1}{34}{Methods}{subsubsection.10.6.1}{}}
+\newlabel{systems:WeaponControl:addWeapon}{{10.6.1}{34}{Methods}{subsubsection.10.6.1}{}}
+\newlabel{systems:WeaponControl:powerWeapon}{{10.6.1}{34}{Methods}{subsubsection.10.6.1}{}}
+\newlabel{systems:WeaponControl:unpowerWeapon}{{10.6.1}{34}{Methods}{subsubsection.10.6.1}{}}
+\newlabel{systems:WeaponControl:cooldownWeapons}{{10.6.1}{35}{Methods}{subsubsection.10.6.1}{}}
+\newlabel{systems:WeaponControl:useWeapon}{{10.6.1}{35}{Methods}{subsubsection.10.6.1}{}}
+\newlabel{systems:WeaponControl:testUnpowerWeapons}{{10.6.1}{35}{Methods}{subsubsection.10.6.1}{}}
+\newlabel{systems:WeaponControl:weaponHasBeenUsed}{{10.6.1}{35}{Methods}{subsubsection.10.6.1}{}}
+\gdef \LT@xxv {\LT@entry 
+    {1}{152.92793pt}\LT@entry 
+    {1}{258.72162pt}\LT@entry 
+    {1}{12.0pt}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {10.6.2}Properties}{36}{subsubsection.10.6.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {10.7}Class Oxygen}{36}{subsection.10.7}}
+\newlabel{systems:Oxygen}{{10.7}{36}{Class Oxygen}{subsection.10.7}{}}
+\gdef \LT@xxvi {\LT@entry 
+    {1}{152.92793pt}\LT@entry 
+    {1}{258.72162pt}\LT@entry 
+    {1}{12.0pt}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {10.7.1}Methods}{37}{subsubsection.10.7.1}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {10.7.2}Properties}{37}{subsubsection.10.7.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {10.8}Class Medbay}{37}{subsection.10.8}}
+\newlabel{systems:Medbay}{{10.8}{37}{Class Medbay}{subsection.10.8}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {10.8.1}Methods}{37}{subsubsection.10.8.1}}
+\newlabel{systems:Medbay:amountHealPerSecond}{{10.8.1}{37}{Methods}{subsubsection.10.8.1}{}}
+\gdef \LT@xxvii {\LT@entry 
+    {1}{152.92793pt}\LT@entry 
+    {1}{258.72162pt}\LT@entry 
+    {1}{12.0pt}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {10.8.2}Properties}{38}{subsubsection.10.8.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {10.9}Class Sensors}{38}{subsection.10.9}}
+\newlabel{systems:Sensors}{{10.9}{38}{Class Sensors}{subsection.10.9}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {10.9.1}Methods}{38}{subsubsection.10.9.1}}
+\gdef \LT@xxviii {\LT@entry 
+    {1}{152.92793pt}\LT@entry 
+    {1}{258.72162pt}\LT@entry 
+    {1}{12.0pt}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {10.9.2}Properties}{39}{subsubsection.10.9.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {10.10}Class DoorSystem}{39}{subsection.10.10}}
+\newlabel{systems:DoorSystem}{{10.10}{39}{Class DoorSystem}{subsection.10.10}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {10.10.1}Methods}{39}{subsubsection.10.10.1}}
+\gdef \LT@xxix {\LT@entry 
+    {1}{152.92793pt}\LT@entry 
+    {1}{258.72162pt}\LT@entry 
+    {1}{12.0pt}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {10.10.2}Properties}{40}{subsubsection.10.10.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {10.11}Class DroneControl}{40}{subsection.10.11}}
+\newlabel{systems:DroneControl}{{10.11}{40}{Class DroneControl}{subsection.10.11}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {10.11.1}Methods}{40}{subsubsection.10.11.1}}
+\newlabel{systems:DroneControl:getDrones}{{10.11.1}{40}{Methods}{subsubsection.10.11.1}{}}
+\newlabel{systems:DroneControl:addDrone}{{10.11.1}{40}{Methods}{subsubsection.10.11.1}{}}
+\newlabel{systems:DroneControl:powerDrone}{{10.11.1}{40}{Methods}{subsubsection.10.11.1}{}}
+\newlabel{systems:DroneControl:cooldownDrones}{{10.11.1}{40}{Methods}{subsubsection.10.11.1}{}}
+\newlabel{systems:DroneControl:useDrone}{{10.11.1}{40}{Methods}{subsubsection.10.11.1}{}}
+\gdef \LT@xxx {\LT@entry 
+    {1}{152.92793pt}\LT@entry 
+    {1}{258.72162pt}\LT@entry 
+    {1}{12.0pt}}
+\newlabel{systems:DroneControl:testUnpowerDrones}{{10.11.1}{41}{Methods}{subsubsection.10.11.1}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {10.11.2}Properties}{41}{subsubsection.10.11.2}}
+\gdef \LT@xxxi {\LT@entry 
+    {1}{152.92793pt}\LT@entry 
+    {1}{258.72162pt}\LT@entry 
+    {1}{12.0pt}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {10.12}Class BackupBattery}{42}{subsection.10.12}}
+\newlabel{systems:BackupBattery}{{10.12}{42}{Class BackupBattery}{subsection.10.12}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {10.12.1}Methods}{42}{subsubsection.10.12.1}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {10.12.2}Properties}{42}{subsubsection.10.12.2}}
+\gdef \LT@xxxii {\LT@entry 
+    {1}{152.92793pt}\LT@entry 
+    {1}{258.72162pt}\LT@entry 
+    {1}{12.0pt}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {10.13}Class CrewTeleporter}{43}{subsection.10.13}}
+\newlabel{systems:CrewTeleporter}{{10.13}{43}{Class CrewTeleporter}{subsection.10.13}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {10.13.1}Methods}{43}{subsubsection.10.13.1}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {10.13.2}Properties}{43}{subsubsection.10.13.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {10.14}Class Cloaking}{44}{subsection.10.14}}
+\newlabel{systems:Cloaking}{{10.14}{44}{Class Cloaking}{subsection.10.14}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {10.14.1}Methods}{44}{subsubsection.10.14.1}}
+\newlabel{systems:Cloaking:isUsed}{{10.14.1}{44}{Methods}{subsubsection.10.14.1}{}}
+\newlabel{systems:Cloaking:getTimesIonised}{{10.14.1}{44}{Methods}{subsubsection.10.14.1}{}}
+\newlabel{systems:Cloaking:cooldownCloaking}{{10.14.1}{44}{Methods}{subsubsection.10.14.1}{}}
+\newlabel{systems:Cloaking:generalCooldown}{{10.14.1}{44}{Methods}{subsubsection.10.14.1}{}}
+\newlabel{systems:Cloaking:ionisedCloaking}{{10.14.1}{44}{Methods}{subsubsection.10.14.1}{}}
+\newlabel{systems:Cloaking:useCloaking}{{10.14.1}{44}{Methods}{subsubsection.10.14.1}{}}
+\newlabel{systems:Cloaking:weaponIsUsed}{{10.14.1}{44}{Methods}{subsubsection.10.14.1}{}}
+\gdef \LT@xxxiii {\LT@entry 
+    {1}{152.92793pt}\LT@entry 
+    {1}{258.72162pt}\LT@entry 
+    {1}{12.0pt}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {10.14.2}Properties}{45}{subsubsection.10.14.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {10.15}Class CloneBay}{45}{subsection.10.15}}
+\newlabel{systems:CloneBay}{{10.15}{45}{Class CloneBay}{subsection.10.15}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {10.15.1}Methods}{45}{subsubsection.10.15.1}}
+\newlabel{systems:CloneBay:getDeadCrew}{{10.15.1}{45}{Methods}{subsubsection.10.15.1}{}}
+\newlabel{systems:CloneBay:addDeadCrew}{{10.15.1}{45}{Methods}{subsubsection.10.15.1}{}}
+\newlabel{systems:CloneBay:cooldownRevive}{{10.15.1}{45}{Methods}{subsubsection.10.15.1}{}}
+\newlabel{systems:CloneBay:reviveCrewMember}{{10.15.1}{45}{Methods}{subsubsection.10.15.1}{}}
+\gdef \LT@xxxiv {\LT@entry 
+    {1}{152.92793pt}\LT@entry 
+    {1}{258.72162pt}\LT@entry 
+    {1}{12.0pt}}
+\gdef \LT@xxxv {\LT@entry 
+    {1}{152.92793pt}\LT@entry 
+    {1}{258.72162pt}\LT@entry 
+    {1}{12.0pt}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {10.15.2}Properties}{46}{subsubsection.10.15.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {10.16}Class MindControl}{46}{subsection.10.16}}
+\newlabel{systems:MindControl}{{10.16}{46}{Class MindControl}{subsection.10.16}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {10.16.1}Methods}{46}{subsubsection.10.16.1}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {10.16.2}Properties}{46}{subsubsection.10.16.2}}
+\gdef \LT@xxxvi {\LT@entry 
+    {1}{152.92793pt}\LT@entry 
+    {1}{258.72162pt}\LT@entry 
+    {1}{12.0pt}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {10.17}Class Hacking}{47}{subsection.10.17}}
+\newlabel{systems:Hacking}{{10.17}{47}{Class Hacking}{subsection.10.17}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {10.17.1}Methods}{47}{subsubsection.10.17.1}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {10.17.2}Properties}{47}{subsubsection.10.17.2}}
+\@setckpt{systems-module}{
+\setcounter{page}{48}
+\setcounter{equation}{0}
+\setcounter{enumi}{0}
+\setcounter{enumii}{0}
+\setcounter{enumiii}{0}
+\setcounter{enumiv}{0}
+\setcounter{footnote}{0}
+\setcounter{mpfootnote}{0}
+\setcounter{part}{0}
+\setcounter{section}{10}
+\setcounter{subsection}{17}
+\setcounter{subsubsection}{2}
+\setcounter{paragraph}{0}
+\setcounter{subparagraph}{0}
+\setcounter{figure}{0}
+\setcounter{table}{36}
+\setcounter{LT@tables}{36}
+\setcounter{LT@chunks}{4}
+\setcounter{Item}{0}
+\setcounter{Hfootnote}{0}
+\setcounter{bookmark@seq@number}{99}
+\setcounter{section@level}{3}
+}

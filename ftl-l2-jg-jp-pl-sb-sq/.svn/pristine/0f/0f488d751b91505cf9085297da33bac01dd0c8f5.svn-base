@@ -1,0 +1,18 @@
+\chapter{Concepts à maîtriser}
+
+Pour comprendre le travail effectué au cours de ce semestre, il faut d'abord faire un rappel sur le jeu. Ensuite, nous pourrons présenter de façon générale les différents algorithmes d'optimisation et de data mining.
+
+
+	\section{Le jeu}
+	
+	Rappel sur le fonctionnement du jeu, et notre travail du premier semestre.
+	
+
+	\section{Determiner le meilleur vaisseau}
+
+	Introduction sur la logique derriere les algorithmes utilises
+
+		\subsection{Algorithme génétique}
+		
+		
+		\subsection{Système expert}

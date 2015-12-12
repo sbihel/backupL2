@@ -1,0 +1,299 @@
+\indexentry{combat \textit{(module)}|(hyperpage}{4}
+\indexentry{combat \textit{(module)}!combat.combat \textit{(function)}|hyperpage}{4}
+\indexentry{combat \textit{(module)}|)hyperpage}{4}
+\indexentry{crewMember \textit{(module)}|(hyperpage}{5}
+\indexentry{crewMember \textit{(module)}!crewMember.CrewMember \textit{(class)}|(hyperpage}{5}
+\indexentry{crewMember \textit{(module)}!crewMember.CrewMember \textit{(class)}!crewMember.CrewMember.initPosition \textit{(method)}|hyperpage}{5}
+\indexentry{crewMember \textit{(module)}!crewMember.CrewMember \textit{(class)}!crewMember.CrewMember.getLvlPiloting \textit{(method)}|hyperpage}{5}
+\indexentry{crewMember \textit{(module)}!crewMember.CrewMember \textit{(class)}!crewMember.CrewMember.getLvlEngines \textit{(method)}|hyperpage}{5}
+\indexentry{crewMember \textit{(module)}!crewMember.CrewMember \textit{(class)}!crewMember.CrewMember.getLvlShields \textit{(method)}|hyperpage}{5}
+\indexentry{crewMember \textit{(module)}!crewMember.CrewMember \textit{(class)}!crewMember.CrewMember.getLvlWeaponControl \textit{(method)}|hyperpage}{5}
+\indexentry{crewMember \textit{(module)}!crewMember.CrewMember \textit{(class)}!crewMember.CrewMember.getLvlRepair \textit{(method)}|hyperpage}{5}
+\indexentry{crewMember \textit{(module)}!crewMember.CrewMember \textit{(class)}!crewMember.CrewMember.getLvlCombat \textit{(method)}|hyperpage}{5}
+\indexentry{crewMember \textit{(module)}!crewMember.CrewMember \textit{(class)}!crewMember.CrewMember.getRace \textit{(method)}|hyperpage}{6}
+\indexentry{crewMember \textit{(module)}!crewMember.CrewMember \textit{(class)}!crewMember.CrewMember.getRoom \textit{(method)}|hyperpage}{6}
+\indexentry{crewMember \textit{(module)}!crewMember.CrewMember \textit{(class)}!crewMember.CrewMember.setRoom \textit{(method)}|hyperpage}{6}
+\indexentry{crewMember \textit{(module)}!crewMember.CrewMember \textit{(class)}!crewMember.CrewMember.getHP \textit{(method)}|hyperpage}{6}
+\indexentry{crewMember \textit{(module)}!crewMember.CrewMember \textit{(class)}!crewMember.CrewMember.getPosition \textit{(method)}|hyperpage}{6}
+\indexentry{crewMember \textit{(module)}!crewMember.CrewMember \textit{(class)}!crewMember.CrewMember.isInMovement \textit{(method)}|hyperpage}{6}
+\indexentry{crewMember \textit{(module)}!crewMember.CrewMember \textit{(class)}!crewMember.CrewMember.goToRoom \textit{(method)}|hyperpage}{6}
+\indexentry{crewMember \textit{(module)}!crewMember.CrewMember \textit{(class)}!crewMember.CrewMember.setInMovement \textit{(method)}|hyperpage}{6}
+\indexentry{crewMember \textit{(module)}!crewMember.CrewMember \textit{(class)}!crewMember.CrewMember.getRoomGoal \textit{(method)}|hyperpage}{6}
+\indexentry{crewMember \textit{(module)}!crewMember.CrewMember \textit{(class)}!crewMember.CrewMember.getCoordsGoal \textit{(method)}|hyperpage}{6}
+\indexentry{crewMember \textit{(module)}!crewMember.CrewMember \textit{(class)}!crewMember.CrewMember.movementAI \textit{(method)}|hyperpage}{6}
+\indexentry{crewMember \textit{(module)}!crewMember.CrewMember \textit{(class)}!crewMember.CrewMember.manningPointsAI \textit{(method)}|hyperpage}{6}
+\indexentry{crewMember \textit{(module)}!crewMember.CrewMember \textit{(class)}!crewMember.CrewMember.continueMovement \textit{(method)}|hyperpage}{6}
+\indexentry{crewMember \textit{(module)}!crewMember.CrewMember \textit{(class)}!crewMember.CrewMember.determineFastestWay \textit{(method)}|hyperpage}{6}
+\indexentry{crewMember \textit{(module)}!crewMember.CrewMember \textit{(class)}!crewMember.CrewMember.fastestWay \textit{(method)}|hyperpage}{6}
+\indexentry{crewMember \textit{(module)}!crewMember.CrewMember \textit{(class)}!crewMember.CrewMember.moveTo \textit{(method)}|hyperpage}{7}
+\indexentry{crewMember \textit{(module)}!crewMember.CrewMember \textit{(class)}!crewMember.CrewMember.getPercentageRepair \textit{(method)}|hyperpage}{7}
+\indexentry{crewMember \textit{(module)}!crewMember.CrewMember \textit{(class)}!crewMember.CrewMember.getPercentageExtinction \textit{(method)}|hyperpage}{7}
+\indexentry{crewMember \textit{(module)}!crewMember.CrewMember \textit{(class)}!crewMember.CrewMember.doDamages \textit{(method)}|hyperpage}{7}
+\indexentry{crewMember \textit{(module)}!crewMember.CrewMember \textit{(class)}!crewMember.CrewMember.fireDamages \textit{(method)}|hyperpage}{7}
+\indexentry{crewMember \textit{(module)}!crewMember.CrewMember \textit{(class)}!crewMember.CrewMember.suffocation \textit{(method)}|hyperpage}{7}
+\indexentry{crewMember \textit{(module)}!crewMember.CrewMember \textit{(class)}!crewMember.CrewMember.isDead \textit{(method)}|hyperpage}{7}
+\indexentry{crewMember \textit{(module)}!crewMember.CrewMember \textit{(class)}!crewMember.CrewMember.getDamages \textit{(method)}|hyperpage}{7}
+\indexentry{crewMember \textit{(module)}!crewMember.CrewMember \textit{(class)}!crewMember.CrewMember.getMovement \textit{(method)}|hyperpage}{7}
+\indexentry{crewMember \textit{(module)}!crewMember.CrewMember \textit{(class)}!crewMember.CrewMember.addXpPiloting \textit{(method)}|hyperpage}{7}
+\indexentry{crewMember \textit{(module)}!crewMember.CrewMember \textit{(class)}!crewMember.CrewMember.addXpEngines \textit{(method)}|hyperpage}{7}
+\indexentry{crewMember \textit{(module)}!crewMember.CrewMember \textit{(class)}!crewMember.CrewMember.addXpShields \textit{(method)}|hyperpage}{7}
+\indexentry{crewMember \textit{(module)}!crewMember.CrewMember \textit{(class)}!crewMember.CrewMember.addXpWeaponControl \textit{(method)}|hyperpage}{7}
+\indexentry{crewMember \textit{(module)}!crewMember.CrewMember \textit{(class)}!crewMember.CrewMember.addXpRepair \textit{(method)}|hyperpage}{7}
+\indexentry{crewMember \textit{(module)}!crewMember.CrewMember \textit{(class)}!crewMember.CrewMember.addXpCombat \textit{(method)}|hyperpage}{7}
+\indexentry{crewMember \textit{(module)}!crewMember.CrewMember \textit{(class)}!crewMember.CrewMember.loseExperience \textit{(method)}|hyperpage}{7}
+\indexentry{crewMember \textit{(module)}!crewMember.CrewMember \textit{(class)}|)hyperpage}{8}
+\indexentry{crewMember \textit{(module)}|)hyperpage}{8}
+\indexentry{displayShip \textit{(module)}|(hyperpage}{9}
+\indexentry{displayShip \textit{(module)}!displayShip.displayInfos \textit{(function)}|hyperpage}{9}
+\indexentry{displayShip \textit{(module)}!displayShip.displayAttack \textit{(function)}|hyperpage}{9}
+\indexentry{displayShip \textit{(module)}!displayShip.displayInfosBoth \textit{(function)}|hyperpage}{9}
+\indexentry{displayShip \textit{(module)}!displayShip.addSpaces \textit{(function)}|hyperpage}{9}
+\indexentry{displayShip \textit{(module)}!displayShip.addSpacesEnd \textit{(function)}|hyperpage}{9}
+\indexentry{displayShip \textit{(module)}!displayShip.inverseStringList \textit{(function)}|hyperpage}{9}
+\indexentry{displayShip \textit{(module)}!displayShip.maxLength \textit{(function)}|hyperpage}{9}
+\indexentry{displayShip \textit{(module)}!displayShip.InfosBoth \textit{(class)}|(hyperpage}{9}
+\indexentry{displayShip \textit{(module)}!displayShip.InfosBoth \textit{(class)}!displayShip.InfosBoth.maxL1 \textit{(method)}|hyperpage}{10}
+\indexentry{displayShip \textit{(module)}!displayShip.InfosBoth \textit{(class)}!displayShip.InfosBoth.lenColorsString \textit{(method)}|hyperpage}{10}
+\indexentry{displayShip \textit{(module)}!displayShip.InfosBoth \textit{(class)}|)hyperpage}{10}
+\indexentry{displayShip \textit{(module)}|)hyperpage}{10}
+\indexentry{door \textit{(module)}|(hyperpage}{11}
+\indexentry{door \textit{(module)}!door.Door \textit{(class)}|(hyperpage}{11}
+\indexentry{door \textit{(module)}!door.Door \textit{(class)}!door.Door.isClosed \textit{(method)}|hyperpage}{11}
+\indexentry{door \textit{(module)}!door.Door \textit{(class)}!door.Door.getPosition \textit{(method)}|hyperpage}{11}
+\indexentry{door \textit{(module)}!door.Door \textit{(class)}!door.Door.getLink \textit{(method)}|hyperpage}{12}
+\indexentry{door \textit{(module)}!door.Door \textit{(class)}!door.Door.closeDoor \textit{(method)}|hyperpage}{12}
+\indexentry{door \textit{(module)}!door.Door \textit{(class)}!door.Door.openDoor \textit{(method)}|hyperpage}{12}
+\indexentry{door \textit{(module)}!door.Door \textit{(class)}|)hyperpage}{12}
+\indexentry{door \textit{(module)}|)hyperpage}{12}
+\indexentry{drones \textit{(module)}|(hyperpage}{13}
+\indexentry{drones \textit{(module)}!drones.genDrone \textit{(function)}|hyperpage}{13}
+\indexentry{drones \textit{(module)}!drones.genCombatDrone \textit{(function)}|hyperpage}{13}
+\indexentry{drones \textit{(module)}!drones.Drone \textit{(class)}|(hyperpage}{13}
+\indexentry{drones \textit{(module)}!drones.Drone \textit{(class)}!drones.Drone.getName \textit{(method)}|hyperpage}{13}
+\indexentry{drones \textit{(module)}!drones.Drone \textit{(class)}!drones.Drone.powerIt \textit{(method)}|hyperpage}{13}
+\indexentry{drones \textit{(module)}!drones.Drone \textit{(class)}!drones.Drone.unpowerIt \textit{(method)}|hyperpage}{13}
+\indexentry{drones \textit{(module)}!drones.Drone \textit{(class)}!drones.Drone.isPowered \textit{(method)}|hyperpage}{14}
+\indexentry{drones \textit{(module)}!drones.Drone \textit{(class)}!drones.Drone.getPower \textit{(method)}|hyperpage}{14}
+\indexentry{drones \textit{(module)}!drones.Drone \textit{(class)}!drones.Drone.getCooldown \textit{(method)}|hyperpage}{14}
+\indexentry{drones \textit{(module)}!drones.Drone \textit{(class)}!drones.Drone.setCooldown \textit{(method)}|hyperpage}{14}
+\indexentry{drones \textit{(module)}!drones.Drone \textit{(class)}!drones.Drone.getType \textit{(method)}|hyperpage}{14}
+\indexentry{drones \textit{(module)}!drones.Drone \textit{(class)}|)hyperpage}{14}
+\indexentry{drones \textit{(module)}!drones.CombatDrone \textit{(class)}|(hyperpage}{14}
+\indexentry{drones \textit{(module)}!drones.CombatDrone \textit{(class)}!drones.CombatDrone.getSpeed \textit{(method)}|hyperpage}{14}
+\indexentry{drones \textit{(module)}!drones.CombatDrone \textit{(class)}|)hyperpage}{15}
+\indexentry{drones \textit{(module)}!drones.DefensiveDrone \textit{(class)}|(hyperpage}{15}
+\indexentry{drones \textit{(module)}!drones.DefensiveDrone \textit{(class)}|)hyperpage}{15}
+\indexentry{drones \textit{(module)}|)hyperpage}{15}
+\indexentry{globalVar \textit{(module)}|(hyperpage}{16}
+\indexentry{globalVar \textit{(module)}|)hyperpage}{16}
+\indexentry{room \textit{(module)}|(hyperpage}{17}
+\indexentry{room \textit{(module)}!room.Room \textit{(class)}|(hyperpage}{17}
+\indexentry{room \textit{(module)}!room.Room \textit{(class)}!room.Room.getCoords \textit{(method)}|hyperpage}{17}
+\indexentry{room \textit{(module)}!room.Room \textit{(class)}!room.Room.getNbBoxes \textit{(method)}|hyperpage}{17}
+\indexentry{room \textit{(module)}!room.Room \textit{(class)}!room.Room.getDoors \textit{(method)}|hyperpage}{17}
+\indexentry{room \textit{(module)}!room.Room \textit{(class)}!room.Room.setDoors \textit{(method)}|hyperpage}{18}
+\indexentry{room \textit{(module)}!room.Room \textit{(class)}!room.Room.getBreach \textit{(method)}|hyperpage}{18}
+\indexentry{room \textit{(module)}!room.Room \textit{(class)}!room.Room.doBreach \textit{(method)}|hyperpage}{18}
+\indexentry{room \textit{(module)}!room.Room \textit{(class)}!room.Room.repairBreach \textit{(method)}|hyperpage}{18}
+\indexentry{room \textit{(module)}!room.Room \textit{(class)}!room.Room.getFire \textit{(method)}|hyperpage}{18}
+\indexentry{room \textit{(module)}!room.Room \textit{(class)}!room.Room.startFire \textit{(method)}|hyperpage}{18}
+\indexentry{room \textit{(module)}!room.Room \textit{(class)}!room.Room.extinguishFire \textit{(method)}|hyperpage}{18}
+\indexentry{room \textit{(module)}!room.Room \textit{(class)}!room.Room.getSystem \textit{(method)}|hyperpage}{18}
+\indexentry{room \textit{(module)}!room.Room \textit{(class)}!room.Room.getNB \textit{(method)}|hyperpage}{18}
+\indexentry{room \textit{(module)}!room.Room \textit{(class)}!room.Room.getOxygen \textit{(method)}|hyperpage}{18}
+\indexentry{room \textit{(module)}!room.Room \textit{(class)}!room.Room.setOxygen \textit{(method)}|hyperpage}{18}
+\indexentry{room \textit{(module)}!room.Room \textit{(class)}!room.Room.removeOxygen \textit{(method)}|hyperpage}{18}
+\indexentry{room \textit{(module)}!room.Room \textit{(class)}!room.Room.addOxygen \textit{(method)}|hyperpage}{18}
+\indexentry{room \textit{(module)}!room.Room \textit{(class)}!room.Room.cooldowns \textit{(method)}|hyperpage}{18}
+\indexentry{room \textit{(module)}!room.Room \textit{(class)}!room.Room.crewTasks \textit{(method)}|hyperpage}{19}
+\indexentry{room \textit{(module)}!room.Room \textit{(class)}!room.Room.dotsToCrew \textit{(method)}|hyperpage}{19}
+\indexentry{room \textit{(module)}!room.Room \textit{(class)}!room.Room.testExtinction \textit{(method)}|hyperpage}{19}
+\indexentry{room \textit{(module)}!room.Room \textit{(class)}!room.Room.testBreachRepair \textit{(method)}|hyperpage}{19}
+\indexentry{room \textit{(module)}!room.Room \textit{(class)}!room.Room.expansionFire \textit{(method)}|hyperpage}{19}
+\indexentry{room \textit{(module)}!room.Room \textit{(class)}!room.Room.expansionOxygen \textit{(method)}|hyperpage}{19}
+\indexentry{room \textit{(module)}!room.Room \textit{(class)}|)hyperpage}{19}
+\indexentry{room \textit{(module)}|)hyperpage}{19}
+\indexentry{ship \textit{(module)}|(hyperpage}{20}
+\indexentry{ship \textit{(module)}!ship.Ship \textit{(class)}|(hyperpage}{20}
+\indexentry{ship \textit{(module)}!ship.Ship \textit{(class)}!ship.Ship.initGraph \textit{(method)}|hyperpage}{20}
+\indexentry{ship \textit{(module)}!ship.Ship \textit{(class)}!ship.Ship.degat \textit{(method)}|hyperpage}{20}
+\indexentry{ship \textit{(module)}!ship.Ship \textit{(class)}!ship.Ship.isCloaked \textit{(method)}|hyperpage}{21}
+\indexentry{ship \textit{(module)}!ship.Ship \textit{(class)}!ship.Ship.getGraph \textit{(method)}|hyperpage}{21}
+\indexentry{ship \textit{(module)}!ship.Ship \textit{(class)}!ship.Ship.getFastestWay \textit{(method)}|hyperpage}{21}
+\indexentry{ship \textit{(module)}!ship.Ship \textit{(class)}!ship.Ship.setFastestWay \textit{(method)}|hyperpage}{21}
+\indexentry{ship \textit{(module)}!ship.Ship \textit{(class)}!ship.Ship.getHP \textit{(method)}|hyperpage}{21}
+\indexentry{ship \textit{(module)}!ship.Ship \textit{(class)}!ship.Ship.getName \textit{(method)}|hyperpage}{21}
+\indexentry{ship \textit{(module)}!ship.Ship \textit{(class)}!ship.Ship.getID \textit{(method)}|hyperpage}{21}
+\indexentry{ship \textit{(module)}!ship.Ship \textit{(class)}!ship.Ship.getType \textit{(method)}|hyperpage}{21}
+\indexentry{ship \textit{(module)}!ship.Ship \textit{(class)}!ship.Ship.getCrew \textit{(method)}|hyperpage}{21}
+\indexentry{ship \textit{(module)}!ship.Ship \textit{(class)}!ship.Ship.setCrew \textit{(method)}|hyperpage}{21}
+\indexentry{ship \textit{(module)}!ship.Ship \textit{(class)}!ship.Ship.setMissiles \textit{(method)}|hyperpage}{21}
+\indexentry{ship \textit{(module)}!ship.Ship \textit{(class)}!ship.Ship.setDroneParts \textit{(method)}|hyperpage}{21}
+\indexentry{ship \textit{(module)}!ship.Ship \textit{(class)}!ship.Ship.getMissiles \textit{(method)}|hyperpage}{21}
+\indexentry{ship \textit{(module)}!ship.Ship \textit{(class)}!ship.Ship.getDroneParts \textit{(method)}|hyperpage}{21}
+\indexentry{ship \textit{(module)}!ship.Ship \textit{(class)}!ship.Ship.getMaxPower \textit{(method)}|hyperpage}{21}
+\indexentry{ship \textit{(module)}!ship.Ship \textit{(class)}!ship.Ship.ko \textit{(method)}|hyperpage}{21}
+\indexentry{ship \textit{(module)}!ship.Ship \textit{(class)}!ship.Ship.hasSystem \textit{(method)}|hyperpage}{22}
+\indexentry{ship \textit{(module)}!ship.Ship \textit{(class)}!ship.Ship.getSystems \textit{(method)}|hyperpage}{22}
+\indexentry{ship \textit{(module)}!ship.Ship \textit{(class)}!ship.Ship.getSystem \textit{(method)}|hyperpage}{22}
+\indexentry{ship \textit{(module)}!ship.Ship \textit{(class)}!ship.Ship.getRooms \textit{(method)}|hyperpage}{22}
+\indexentry{ship \textit{(module)}!ship.Ship \textit{(class)}!ship.Ship.getLvlCrewRoomSystem \textit{(method)}|hyperpage}{22}
+\indexentry{ship \textit{(module)}!ship.Ship \textit{(class)}!ship.Ship.getRoomSystem \textit{(method)}|hyperpage}{22}
+\indexentry{ship \textit{(module)}!ship.Ship \textit{(class)}!ship.Ship.getPowerAvailable \textit{(method)}|hyperpage}{23}
+\indexentry{ship \textit{(module)}!ship.Ship \textit{(class)}!ship.Ship.setPowerAvailable \textit{(method)}|hyperpage}{23}
+\indexentry{ship \textit{(module)}!ship.Ship \textit{(class)}!ship.Ship.addPower \textit{(method)}|hyperpage}{23}
+\indexentry{ship \textit{(module)}!ship.Ship \textit{(class)}!ship.Ship.cooldowns \textit{(method)}|hyperpage}{23}
+\indexentry{ship \textit{(module)}!ship.Ship \textit{(class)}!ship.Ship.refillOxygen \textit{(method)}|hyperpage}{23}
+\indexentry{ship \textit{(module)}!ship.Ship \textit{(class)}!ship.Ship.poweringSystems \textit{(method)}|hyperpage}{23}
+\indexentry{ship \textit{(module)}!ship.Ship \textit{(class)}!ship.Ship.attackRoom \textit{(method)}|hyperpage}{23}
+\indexentry{ship \textit{(module)}!ship.Ship \textit{(class)}!ship.Ship.attackBeam \textit{(method)}|hyperpage}{23}
+\indexentry{ship \textit{(module)}!ship.Ship \textit{(class)}!ship.Ship.addXpCrew \textit{(method)}|hyperpage}{23}
+\indexentry{ship \textit{(module)}!ship.Ship \textit{(class)}!ship.Ship.squareOnLine \textit{(method)}|hyperpage}{24}
+\indexentry{ship \textit{(module)}!ship.Ship \textit{(class)}!ship.Ship.linesIntersect \textit{(method)}|hyperpage}{24}
+\indexentry{ship \textit{(module)}!ship.Ship \textit{(class)}!ship.Ship.attackRoomCombatDrone \textit{(method)}|hyperpage}{24}
+\indexentry{ship \textit{(module)}!ship.Ship \textit{(class)}!ship.Ship.attackOpponent \textit{(method)}|hyperpage}{24}
+\indexentry{ship \textit{(module)}!ship.Ship \textit{(class)}!ship.Ship.ioniseIncoming \textit{(method)}|hyperpage}{24}
+\indexentry{ship \textit{(module)}!ship.Ship \textit{(class)}!ship.Ship.tryUseCloaking \textit{(method)}|hyperpage}{25}
+\indexentry{ship \textit{(module)}!ship.Ship \textit{(class)}!ship.Ship.deactivateCloaking \textit{(method)}|hyperpage}{25}
+\indexentry{ship \textit{(module)}!ship.Ship \textit{(class)}!ship.Ship.activateCloaking \textit{(method)}|hyperpage}{25}
+\indexentry{ship \textit{(module)}!ship.Ship \textit{(class)}|)hyperpage}{25}
+\indexentry{ship \textit{(module)}|)hyperpage}{25}
+\indexentry{ships\_layouts \textit{(module)}|(hyperpage}{26}
+\indexentry{ships\_layouts \textit{(module)}!ships\_layouts.genShip \textit{(function)}|hyperpage}{26}
+\indexentry{ships\_layouts \textit{(module)}!ships\_layouts.listString2listInt \textit{(function)}|hyperpage}{26}
+\indexentry{ships\_layouts \textit{(module)}|)hyperpage}{26}
+\indexentry{systems \textit{(module)}|(hyperpage}{27}
+\indexentry{systems \textit{(module)}!systems.System \textit{(class)}|(hyperpage}{27}
+\indexentry{systems \textit{(module)}!systems.System \textit{(class)}!systems.System.getPowerIonised \textit{(method)}|hyperpage}{27}
+\indexentry{systems \textit{(module)}!systems.System \textit{(class)}!systems.System.setPowerIonised \textit{(method)}|hyperpage}{27}
+\indexentry{systems \textit{(module)}!systems.System \textit{(class)}!systems.System.getCooldownIon \textit{(method)}|hyperpage}{27}
+\indexentry{systems \textit{(module)}!systems.System \textit{(class)}!systems.System.setCooldownIon \textit{(method)}|hyperpage}{27}
+\indexentry{systems \textit{(module)}!systems.System \textit{(class)}!systems.System.getCooldownIonDone \textit{(method)}|hyperpage}{28}
+\indexentry{systems \textit{(module)}!systems.System \textit{(class)}!systems.System.setCooldownIonDone \textit{(method)}|hyperpage}{28}
+\indexentry{systems \textit{(module)}!systems.System \textit{(class)}!systems.System.getShip \textit{(method)}|hyperpage}{28}
+\indexentry{systems \textit{(module)}!systems.System \textit{(class)}!systems.System.getMaxPowerMax \textit{(method)}|hyperpage}{28}
+\indexentry{systems \textit{(module)}!systems.System \textit{(class)}!systems.System.getPowerInIt \textit{(method)}|hyperpage}{28}
+\indexentry{systems \textit{(module)}!systems.System \textit{(class)}!systems.System.setPowerInIt \textit{(method)}|hyperpage}{28}
+\indexentry{systems \textit{(module)}!systems.System \textit{(class)}!systems.System.getCurrentMaxPower \textit{(method)}|hyperpage}{28}
+\indexentry{systems \textit{(module)}!systems.System \textit{(class)}!systems.System.setCurrentMaxPower \textit{(method)}|hyperpage}{28}
+\indexentry{systems \textit{(module)}!systems.System \textit{(class)}!systems.System.getMaxPower \textit{(method)}|hyperpage}{28}
+\indexentry{systems \textit{(module)}!systems.System \textit{(class)}!systems.System.getName \textit{(method)}|hyperpage}{28}
+\indexentry{systems \textit{(module)}!systems.System \textit{(class)}!systems.System.getNameAbbreviation \textit{(method)}|hyperpage}{28}
+\indexentry{systems \textit{(module)}!systems.System \textit{(class)}!systems.System.getDots \textit{(method)}|hyperpage}{28}
+\indexentry{systems \textit{(module)}!systems.System \textit{(class)}!systems.System.setDots \textit{(method)}|hyperpage}{28}
+\indexentry{systems \textit{(module)}!systems.System \textit{(class)}!systems.System.getRepair \textit{(method)}|hyperpage}{28}
+\indexentry{systems \textit{(module)}!systems.System \textit{(class)}!systems.System.setRepair \textit{(method)}|hyperpage}{28}
+\indexentry{systems \textit{(module)}!systems.System \textit{(class)}!systems.System.isIonised \textit{(method)}|hyperpage}{28}
+\indexentry{systems \textit{(module)}!systems.System \textit{(class)}!systems.System.addPower \textit{(method)}|hyperpage}{28}
+\indexentry{systems \textit{(module)}!systems.System \textit{(class)}!systems.System.upgradeMaxPower \textit{(method)}|hyperpage}{29}
+\indexentry{systems \textit{(module)}!systems.System \textit{(class)}!systems.System.doDamages \textit{(method)}|hyperpage}{29}
+\indexentry{systems \textit{(module)}!systems.System \textit{(class)}!systems.System.ionise \textit{(method)}|hyperpage}{29}
+\indexentry{systems \textit{(module)}!systems.System \textit{(class)}!systems.System.cooldownIon \textit{(method)}|hyperpage}{29}
+\indexentry{systems \textit{(module)}!systems.System \textit{(class)}!systems.System.reparation \textit{(method)}|hyperpage}{29}
+\indexentry{systems \textit{(module)}!systems.System \textit{(class)}!systems.System.dotFire \textit{(method)}|hyperpage}{29}
+\indexentry{systems \textit{(module)}!systems.System \textit{(class)}!systems.System.explode \textit{(method)}|hyperpage}{30}
+\indexentry{systems \textit{(module)}!systems.System \textit{(class)}|)hyperpage}{30}
+\indexentry{systems \textit{(module)}!systems.Shields \textit{(class)}|(hyperpage}{30}
+\indexentry{systems \textit{(module)}!systems.Shields \textit{(class)}!systems.Shields.getLayers \textit{(method)}|hyperpage}{30}
+\indexentry{systems \textit{(module)}!systems.Shields \textit{(class)}!systems.Shields.incomingDamages \textit{(method)}|hyperpage}{30}
+\indexentry{systems \textit{(module)}!systems.Shields \textit{(class)}!systems.Shields.cooldownLayer \textit{(method)}|hyperpage}{31}
+\indexentry{systems \textit{(module)}!systems.Shields \textit{(class)}|)hyperpage}{31}
+\indexentry{systems \textit{(module)}!systems.Engines \textit{(class)}|(hyperpage}{31}
+\indexentry{systems \textit{(module)}!systems.Engines \textit{(class)}!systems.Engines.incomingDamages \textit{(method)}|hyperpage}{32}
+\indexentry{systems \textit{(module)}!systems.Engines \textit{(class)}|)hyperpage}{33}
+\indexentry{systems \textit{(module)}!systems.Piloting \textit{(class)}|(hyperpage}{33}
+\indexentry{systems \textit{(module)}!systems.Piloting \textit{(class)}|)hyperpage}{33}
+\indexentry{systems \textit{(module)}!systems.WeaponControl \textit{(class)}|(hyperpage}{33}
+\indexentry{systems \textit{(module)}!systems.WeaponControl \textit{(class)}!systems.WeaponControl.getWeapons \textit{(method)}|hyperpage}{34}
+\indexentry{systems \textit{(module)}!systems.WeaponControl \textit{(class)}!systems.WeaponControl.addWeapon \textit{(method)}|hyperpage}{34}
+\indexentry{systems \textit{(module)}!systems.WeaponControl \textit{(class)}!systems.WeaponControl.powerWeapon \textit{(method)}|hyperpage}{34}
+\indexentry{systems \textit{(module)}!systems.WeaponControl \textit{(class)}!systems.WeaponControl.unpowerWeapon \textit{(method)}|hyperpage}{34}
+\indexentry{systems \textit{(module)}!systems.WeaponControl \textit{(class)}!systems.WeaponControl.cooldownWeapons \textit{(method)}|hyperpage}{35}
+\indexentry{systems \textit{(module)}!systems.WeaponControl \textit{(class)}!systems.WeaponControl.useWeapon \textit{(method)}|hyperpage}{35}
+\indexentry{systems \textit{(module)}!systems.WeaponControl \textit{(class)}!systems.WeaponControl.testUnpowerWeapons \textit{(method)}|hyperpage}{35}
+\indexentry{systems \textit{(module)}!systems.WeaponControl \textit{(class)}!systems.WeaponControl.weaponHasBeenUsed \textit{(method)}|hyperpage}{35}
+\indexentry{systems \textit{(module)}!systems.WeaponControl \textit{(class)}|)hyperpage}{36}
+\indexentry{systems \textit{(module)}!systems.Oxygen \textit{(class)}|(hyperpage}{36}
+\indexentry{systems \textit{(module)}!systems.Oxygen \textit{(class)}|)hyperpage}{37}
+\indexentry{systems \textit{(module)}!systems.Medbay \textit{(class)}|(hyperpage}{37}
+\indexentry{systems \textit{(module)}!systems.Medbay \textit{(class)}!systems.Medbay.amountHealPerSecond \textit{(method)}|hyperpage}{37}
+\indexentry{systems \textit{(module)}!systems.Medbay \textit{(class)}|)hyperpage}{38}
+\indexentry{systems \textit{(module)}!systems.Sensors \textit{(class)}|(hyperpage}{38}
+\indexentry{systems \textit{(module)}!systems.Sensors \textit{(class)}|)hyperpage}{39}
+\indexentry{systems \textit{(module)}!systems.DoorSystem \textit{(class)}|(hyperpage}{39}
+\indexentry{systems \textit{(module)}!systems.DoorSystem \textit{(class)}|)hyperpage}{40}
+\indexentry{systems \textit{(module)}!systems.DroneControl \textit{(class)}|(hyperpage}{40}
+\indexentry{systems \textit{(module)}!systems.DroneControl \textit{(class)}!systems.DroneControl.getDrones \textit{(method)}|hyperpage}{40}
+\indexentry{systems \textit{(module)}!systems.DroneControl \textit{(class)}!systems.DroneControl.addDrone \textit{(method)}|hyperpage}{40}
+\indexentry{systems \textit{(module)}!systems.DroneControl \textit{(class)}!systems.DroneControl.powerDrone \textit{(method)}|hyperpage}{40}
+\indexentry{systems \textit{(module)}!systems.DroneControl \textit{(class)}!systems.DroneControl.cooldownDrones \textit{(method)}|hyperpage}{40}
+\indexentry{systems \textit{(module)}!systems.DroneControl \textit{(class)}!systems.DroneControl.useDrone \textit{(method)}|hyperpage}{40}
+\indexentry{systems \textit{(module)}!systems.DroneControl \textit{(class)}!systems.DroneControl.testUnpowerDrones \textit{(method)}|hyperpage}{41}
+\indexentry{systems \textit{(module)}!systems.DroneControl \textit{(class)}|)hyperpage}{41}
+\indexentry{systems \textit{(module)}!systems.BackupBattery \textit{(class)}|(hyperpage}{41}
+\indexentry{systems \textit{(module)}!systems.BackupBattery \textit{(class)}|)hyperpage}{42}
+\indexentry{systems \textit{(module)}!systems.CrewTeleporter \textit{(class)}|(hyperpage}{42}
+\indexentry{systems \textit{(module)}!systems.CrewTeleporter \textit{(class)}|)hyperpage}{43}
+\indexentry{systems \textit{(module)}!systems.Cloaking \textit{(class)}|(hyperpage}{43}
+\indexentry{systems \textit{(module)}!systems.Cloaking \textit{(class)}!systems.Cloaking.isUsed \textit{(method)}|hyperpage}{44}
+\indexentry{systems \textit{(module)}!systems.Cloaking \textit{(class)}!systems.Cloaking.getTimesIonised \textit{(method)}|hyperpage}{44}
+\indexentry{systems \textit{(module)}!systems.Cloaking \textit{(class)}!systems.Cloaking.cooldownCloaking \textit{(method)}|hyperpage}{44}
+\indexentry{systems \textit{(module)}!systems.Cloaking \textit{(class)}!systems.Cloaking.generalCooldown \textit{(method)}|hyperpage}{44}
+\indexentry{systems \textit{(module)}!systems.Cloaking \textit{(class)}!systems.Cloaking.ionisedCloaking \textit{(method)}|hyperpage}{44}
+\indexentry{systems \textit{(module)}!systems.Cloaking \textit{(class)}!systems.Cloaking.useCloaking \textit{(method)}|hyperpage}{44}
+\indexentry{systems \textit{(module)}!systems.Cloaking \textit{(class)}!systems.Cloaking.weaponIsUsed \textit{(method)}|hyperpage}{44}
+\indexentry{systems \textit{(module)}!systems.Cloaking \textit{(class)}|)hyperpage}{45}
+\indexentry{systems \textit{(module)}!systems.CloneBay \textit{(class)}|(hyperpage}{45}
+\indexentry{systems \textit{(module)}!systems.CloneBay \textit{(class)}!systems.CloneBay.getDeadCrew \textit{(method)}|hyperpage}{45}
+\indexentry{systems \textit{(module)}!systems.CloneBay \textit{(class)}!systems.CloneBay.addDeadCrew \textit{(method)}|hyperpage}{45}
+\indexentry{systems \textit{(module)}!systems.CloneBay \textit{(class)}!systems.CloneBay.cooldownRevive \textit{(method)}|hyperpage}{45}
+\indexentry{systems \textit{(module)}!systems.CloneBay \textit{(class)}!systems.CloneBay.reviveCrewMember \textit{(method)}|hyperpage}{45}
+\indexentry{systems \textit{(module)}!systems.CloneBay \textit{(class)}|)hyperpage}{46}
+\indexentry{systems \textit{(module)}!systems.MindControl \textit{(class)}|(hyperpage}{46}
+\indexentry{systems \textit{(module)}!systems.MindControl \textit{(class)}|)hyperpage}{47}
+\indexentry{systems \textit{(module)}!systems.Hacking \textit{(class)}|(hyperpage}{47}
+\indexentry{systems \textit{(module)}!systems.Hacking \textit{(class)}|)hyperpage}{47}
+\indexentry{systems \textit{(module)}|)hyperpage}{47}
+\indexentry{test\_combats \textit{(module)}|(hyperpage}{48}
+\indexentry{test\_combats \textit{(module)}!test\_combats.nfight \textit{(function)}|hyperpage}{48}
+\indexentry{test\_combats \textit{(module)}!test\_combats.oneEqualFight \textit{(function)}|hyperpage}{48}
+\indexentry{test\_combats \textit{(module)}!test\_combats.oneInequalFight \textit{(function)}|hyperpage}{48}
+\indexentry{test\_combats \textit{(module)}|)hyperpage}{48}
+\indexentry{tournament\_test \textit{(module)}|(hyperpage}{49}
+\indexentry{tournament\_test \textit{(module)}!tournament\_test.generation \textit{(function)}|hyperpage}{49}
+\indexentry{tournament\_test \textit{(module)}|)hyperpage}{49}
+\indexentry{weapon\_module\_WIP \textit{(module)}|(hyperpage}{50}
+\indexentry{weapon\_module\_WIP \textit{(module)}!weapon\_module\_WIP.genMissile \textit{(function)}|hyperpage}{50}
+\indexentry{weapon\_module\_WIP \textit{(module)}!weapon\_module\_WIP.genBeam \textit{(function)}|hyperpage}{50}
+\indexentry{weapon\_module\_WIP \textit{(module)}!weapon\_module\_WIP.genLaser \textit{(function)}|hyperpage}{50}
+\indexentry{weapon\_module\_WIP \textit{(module)}!weapon\_module\_WIP.genIon \textit{(function)}|hyperpage}{50}
+\indexentry{weapon\_module\_WIP \textit{(module)}!weapon\_module\_WIP.genWeapon \textit{(function)}|hyperpage}{50}
+\indexentry{weapon\_module\_WIP \textit{(module)}!weapon\_module\_WIP.Weapon \textit{(class)}|(hyperpage}{50}
+\indexentry{weapon\_module\_WIP \textit{(module)}!weapon\_module\_WIP.Weapon \textit{(class)}!weapon\_module\_WIP.Weapon.getName \textit{(method)}|hyperpage}{51}
+\indexentry{weapon\_module\_WIP \textit{(module)}!weapon\_module\_WIP.Weapon \textit{(class)}!weapon\_module\_WIP.Weapon.getType \textit{(method)}|hyperpage}{51}
+\indexentry{weapon\_module\_WIP \textit{(module)}!weapon\_module\_WIP.Weapon \textit{(class)}!weapon\_module\_WIP.Weapon.getDamage \textit{(method)}|hyperpage}{51}
+\indexentry{weapon\_module\_WIP \textit{(module)}!weapon\_module\_WIP.Weapon \textit{(class)}!weapon\_module\_WIP.Weapon.getPower \textit{(method)}|hyperpage}{51}
+\indexentry{weapon\_module\_WIP \textit{(module)}!weapon\_module\_WIP.Weapon \textit{(class)}!weapon\_module\_WIP.Weapon.getCooldown \textit{(method)}|hyperpage}{51}
+\indexentry{weapon\_module\_WIP \textit{(module)}!weapon\_module\_WIP.Weapon \textit{(class)}!weapon\_module\_WIP.Weapon.getCurrentCooldown \textit{(method)}|hyperpage}{51}
+\indexentry{weapon\_module\_WIP \textit{(module)}!weapon\_module\_WIP.Weapon \textit{(class)}!weapon\_module\_WIP.Weapon.setCurrentCooldown \textit{(method)}|hyperpage}{51}
+\indexentry{weapon\_module\_WIP \textit{(module)}!weapon\_module\_WIP.Weapon \textit{(class)}!weapon\_module\_WIP.Weapon.getCost \textit{(method)}|hyperpage}{51}
+\indexentry{weapon\_module\_WIP \textit{(module)}!weapon\_module\_WIP.Weapon \textit{(class)}!weapon\_module\_WIP.Weapon.getHits \textit{(method)}|hyperpage}{51}
+\indexentry{weapon\_module\_WIP \textit{(module)}!weapon\_module\_WIP.Weapon \textit{(class)}!weapon\_module\_WIP.Weapon.getFireChance \textit{(method)}|hyperpage}{51}
+\indexentry{weapon\_module\_WIP \textit{(module)}!weapon\_module\_WIP.Weapon \textit{(class)}!weapon\_module\_WIP.Weapon.getBreachChance \textit{(method)}|hyperpage}{51}
+\indexentry{weapon\_module\_WIP \textit{(module)}!weapon\_module\_WIP.Weapon \textit{(class)}!weapon\_module\_WIP.Weapon.getStunChance \textit{(method)}|hyperpage}{51}
+\indexentry{weapon\_module\_WIP \textit{(module)}!weapon\_module\_WIP.Weapon \textit{(class)}!weapon\_module\_WIP.Weapon.isPowered \textit{(method)}|hyperpage}{51}
+\indexentry{weapon\_module\_WIP \textit{(module)}!weapon\_module\_WIP.Weapon \textit{(class)}!weapon\_module\_WIP.Weapon.powerIt \textit{(method)}|hyperpage}{51}
+\indexentry{weapon\_module\_WIP \textit{(module)}!weapon\_module\_WIP.Weapon \textit{(class)}!weapon\_module\_WIP.Weapon.unpowerIt \textit{(method)}|hyperpage}{52}
+\indexentry{weapon\_module\_WIP \textit{(module)}!weapon\_module\_WIP.Weapon \textit{(class)}|)hyperpage}{52}
+\indexentry{weapon\_module\_WIP \textit{(module)}!weapon\_module\_WIP.Missile \textit{(class)}|(hyperpage}{52}
+\indexentry{weapon\_module\_WIP \textit{(module)}!weapon\_module\_WIP.Missile \textit{(class)}|)hyperpage}{53}
+\indexentry{weapon\_module\_WIP \textit{(module)}!weapon\_module\_WIP.Beam \textit{(class)}|(hyperpage}{53}
+\indexentry{weapon\_module\_WIP \textit{(module)}!weapon\_module\_WIP.Beam \textit{(class)}!weapon\_module\_WIP.Beam.getBeamLength \textit{(method)}|hyperpage}{53}
+\indexentry{weapon\_module\_WIP \textit{(module)}!weapon\_module\_WIP.Beam \textit{(class)}|)hyperpage}{53}
+\indexentry{weapon\_module\_WIP \textit{(module)}!weapon\_module\_WIP.Laser \textit{(class)}|(hyperpage}{53}
+\indexentry{weapon\_module\_WIP \textit{(module)}!weapon\_module\_WIP.Laser \textit{(class)}!weapon\_module\_WIP.Laser.getSpeed \textit{(method)}|hyperpage}{54}
+\indexentry{weapon\_module\_WIP \textit{(module)}!weapon\_module\_WIP.Laser \textit{(class)}|)hyperpage}{54}
+\indexentry{weapon\_module\_WIP \textit{(module)}!weapon\_module\_WIP.Ion \textit{(class)}|(hyperpage}{54}
+\indexentry{weapon\_module\_WIP \textit{(module)}!weapon\_module\_WIP.Ion \textit{(class)}!weapon\_module\_WIP.Ion.getSpeed \textit{(method)}|hyperpage}{55}
+\indexentry{weapon\_module\_WIP \textit{(module)}!weapon\_module\_WIP.Ion \textit{(class)}|)hyperpage}{55}
+\indexentry{weapon\_module\_WIP \textit{(module)}|)hyperpage}{55}

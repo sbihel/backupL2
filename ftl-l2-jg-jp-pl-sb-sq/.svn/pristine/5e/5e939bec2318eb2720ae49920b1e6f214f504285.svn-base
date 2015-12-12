@@ -1,0 +1,111 @@
+from fightsWithVariousShips import *
+
+
+def runTournament(maxCost, nbShips, nbfights, **kwargs):
+    """
+    kwargs['nameShip'] and kwargs['typeShip'] are lists of strings.
+    """
+    if 'nameShip' in kwargs:
+        nameS = kwargs['nameShip']
+        if len(nameS) < nbShips:
+            nameS += [nameS[-1]] * (nbShips - len(nameS))
+    if 'typeShip' in kwargs:
+        typeS = kwargs['typeShip']
+        if len(typeS) < nbShips:
+            typeS += [typeS[-1]] * (nbShips - len(typeS))
+
+    t1 = time()
+
+    listShip = []
+    victories = {}
+
+    for i in range(nbShips):
+
+        if 'nameShip' in kwargs and 'typeShip' in kwargs:
+            listShip += [createRandomShip(maxCost, nameShip=nameS[0], typeShip=typeS[0])]
+            nameS = nameS[1:]
+            typeS = typeS[1:]
+        else:  # There isn't nameShip AND typeShip
+            listShip += [createRandomShip(maxCost)]
+
+        victories[listShip[i]] = 0
+
+    print('\nList of ships : '+str(listShip))
+
+    nb = 0
+
+    for indexT in range(len(listShip)):
+        ship = listShip[0]
+        del (listShip[0])
+        for ship2 in listShip:
+
+            # l=fights(nbfights, nameS, typeS, ship[len(nameS)+1:-4], nameS, typeS, ship2[len(nameS)+1:-4] )
+
+            # test sur vaisseaux vides (pas de problèmes dans combat)
+
+            l = fightsWithFileName(nbfights, ship, ship2)
+            print(l)
+            cpt1 = l.count("Ship 1 won")
+            cpt2 = len(l)-cpt1
+            tot = cpt1 + cpt2
+
+            if cpt1 == 0:
+                victories[ship2] += 1
+            elif cpt2 == 0:
+                victories[ship] += 1
+            else:
+                if cpt1/tot > 0.55:
+                    victories[ship] += 1
+                elif cpt2/tot > 0.55:
+                    victories[ship2] += 1
+            nb += nbfights
+
+    t2 = time()
+    print('Total time : '+str((t2-t1)/60)+'mn')
+    print('Number of fights : '+str(nb))
+    print('Time for one fight : '+str((t2-t1)/nb))
+
+    print(victories)
+
+
+def tournament(listShips, nbFights):
+    listShip = listShips[:]
+    t1 = time()
+
+    victories = {}
+    for s in listShips:
+        victories[s] = 0
+
+    nb = nbFights * ((len(listShip)-1)*(len(listShip)/2))
+
+    for indexT in range(len(listShip)):
+        ship = listShip[0]
+        listShip = listShip[1:]
+        for ship2 in listShip:
+            l = fightsWithFileName(nbFights, ship, ship2)
+            # print(l)
+            cpt1 = l.count("Ship 1 won")
+            cpt2 = len(l)-cpt1
+            tot = cpt1 + cpt2
+
+            if cpt1 == 0:
+                victories[ship2] += 1
+            elif cpt2 == 0:
+                victories[ship] += 1
+            else:
+                if cpt1/tot > 0.55:
+                    victories[ship] += 1
+                elif cpt2/tot > 0.55:
+                    victories[ship2] += 1
+
+    t2 = time()
+    # print('Total time : '+str((t2-t1)/60)+'mn')
+    # print('Number of fights : '+str(nb))
+    # print('Time for one fight : '+str((t2-t1)/nb))
+
+    print(victories)
+    return victories
+
+
+if __name__ == '__main__':
+    runTournament(500, 10, 10)

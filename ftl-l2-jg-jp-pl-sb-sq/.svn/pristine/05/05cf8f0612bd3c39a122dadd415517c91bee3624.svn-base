@@ -1,0 +1,13 @@
+<html lang="fr-FR"><head><meta charset="utf-8"> 
+ <link rel="stylesheet"  type="text/css"  media="screen" href="style.css" /> 
+ <title>Results0_03-24_23-14.</title> 
+ </head> 
+ <body> <h1>Tournament results </h1> <table> 
+<tr> 
+<td>X</td><td><a href="../xmlShips/kestrelC128.xml" target="_blank" >1</a></td><td><a href="../xmlShips/kestrelA164.xml" target="_blank" >2</a></td><td> Victories Sum</td></tr> 
+<tr> 
+<td>1_kestrelC128.xml</td><td> X </td><td bgcolor="#32A43B">2</td><td bgcolor="#32A43B">2</td></tr> 
+<tr> 
+<td>2_kestrelA164.xml</td><td bgcolor="#D1B873">0</td><td> X </td><td bgcolor="#D1B873">0</td></tr> 
+</table> 
+</body></html><p>Tournament with 2 ships with 2 fights.</p>

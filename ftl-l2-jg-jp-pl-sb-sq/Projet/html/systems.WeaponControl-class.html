@@ -1,0 +1,721 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>systems.WeaponControl</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="systems-module.html">Module&nbsp;systems</a> ::
+        Class&nbsp;WeaponControl
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="systems.WeaponControl-class.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS DESCRIPTION ==================== -->
+<h1 class="epydoc">Class WeaponControl</h1><p class="nomargin-top"><span class="codelink"><a href="systems-pysrc.html#WeaponControl">source&nbsp;code</a></span></p>
+<center>
+<center>  <map id="uml_class_diagram_for_systems__16" name="uml_class_diagram_for_systems__16">
+<area shape="rect" id="node1_27" href="systems.WeaponControl-class.html#__init__" title="x.__init__(...) initializes x; see help(type(x)) for signature" alt="" coords="17,377,321,396"/>
+<area shape="rect" id="node1_28" href="systems.WeaponControl-class.html#getNameAbbreviation" title="systems.WeaponControl.getNameAbbreviation" alt="" coords="17,396,321,415"/>
+<area shape="rect" id="node1_29" href="systems.WeaponControl-class.html#getWeapons" title="systems.WeaponControl.getWeapons" alt="" coords="17,415,321,433"/>
+<area shape="rect" id="node1_30" href="systems.WeaponControl-class.html#addWeapon" title="Add a weapon to the dock." alt="" coords="17,433,321,452"/>
+<area shape="rect" id="node1_31" href="systems.WeaponControl-class.html#powerWeapon" title="Power a weapon if it possible." alt="" coords="17,452,321,471"/>
+<area shape="rect" id="node1_32" href="systems.WeaponControl-class.html#unpowerWeapon" title="Unpower a weapon." alt="" coords="17,471,321,489"/>
+<area shape="rect" id="node1_33" href="systems.WeaponControl-class.html#cooldownWeapons" title="At every tick of the clock, it recharge the weapons that are powered." alt="" coords="17,489,321,508"/>
+<area shape="rect" id="node1_34" href="systems.WeaponControl-class.html#useWeapon" title="Use a weapon against the opposite ship." alt="" coords="17,508,321,527"/>
+<area shape="rect" id="node1_35" href="systems.WeaponControl-class.html#doDamages" title="Returns: &#160;Return is the damages changed something." alt="" coords="17,527,321,545"/>
+<area shape="rect" id="node1_36" href="systems.WeaponControl-class.html#testUnpowerWeapons" title="Unpower weapons if there is not enough power." alt="" coords="17,545,321,564"/>
+<area shape="rect" id="node1_37" href="systems.WeaponControl-class.html#weaponHasBeenUsed" title="systems.WeaponControl.weaponHasBeenUsed" alt="" coords="17,564,321,583"/>
+<area shape="rect" id="node1_38" href="systems.WeaponControl-class.html#cooldownIon" title="At every tick of the clock it should be called and it manages the cooldown &#160;of the ionisation of the system." alt="" coords="17,583,321,601"/>
+<area shape="rect" id="node1_39" href="systems.WeaponControl-class.html#ionise" title="Manage the ion attack of a system." alt="" coords="17,601,321,620"/>
+<area shape="rect" id="node1" href="systems.WeaponControl-class.html" title="systems.WeaponControl" alt="" coords="5,345,333,626"/>
+<area shape="rect" id="node2_40" href="systems.System-class.html#__repr__" title="repr(x)" alt="" coords="75,39,263,57"/>
+<area shape="rect" id="node2_41" href="systems.System-class.html#getPowerIonised" title="systems.System.getPowerIonised" alt="" coords="75,57,263,76"/>
+<area shape="rect" id="node2_42" href="systems.System-class.html#setPowerIonised" title="systems.System.setPowerIonised" alt="" coords="75,76,263,95"/>
+<area shape="rect" id="node2_43" href="systems.System-class.html#getCooldownIon" title="systems.System.getCooldownIon" alt="" coords="75,95,263,113"/>
+<area shape="rect" id="node2_44" href="systems.System-class.html#setCooldownIon" title="systems.System.setCooldownIon" alt="" coords="75,113,263,132"/>
+<area shape="rect" id="node2_45" href="systems.System-class.html#getCooldownIonDone" title="systems.System.getCooldownIonDone" alt="" coords="75,132,263,151"/>
+<area shape="rect" id="node2_46" href="systems.System-class.html#setCooldownIonDone" title="systems.System.setCooldownIonDone" alt="" coords="75,151,263,169"/>
+<area shape="rect" id="node2_47" href="systems.System-class.html#getShip" title="systems.System.getShip" alt="" coords="75,169,263,188"/>
+<area shape="rect" id="node2_48" href="systems.System-class.html#getMaxPowerMax" title="systems.System.getMaxPowerMax" alt="" coords="75,188,263,207"/>
+<area shape="rect" id="node2_49" href="systems.System-class.html#getPowerInIt" title="systems.System.getPowerInIt" alt="" coords="75,207,263,225"/>
+<area shape="rect" id="node2_50" href="systems.System-class.html#setPowerInIt" title="systems.System.setPowerInIt" alt="" coords="75,225,263,244"/>
+<area shape="rect" id="node2_51" href="systems.System-class.html#getCurrentMaxPower" title="Get the maximum of power you can put a the moment." alt="" coords="75,244,263,263"/>
+<area shape="rect" id="node2_52" href="systems.System-class.html#setCurrentMaxPower" title="systems.System.setCurrentMaxPower" alt="" coords="75,263,263,281"/>
+<area shape="rect" id="node2_53" href="systems.System-class.html#explode" title="systems.System.explode" alt="" coords="75,300,263,319"/>
+<area shape="rect" id="node2" href="systems.System-class.html" title="Class which operate a system that is is in a room of the ship." alt="" coords="62,6,274,325"/>
+</map>
+  <img src="uml_class_diagram_for_systems__16.gif" alt='' usemap="#uml_class_diagram_for_systems__16" ismap="ismap" class="graph-without-title" />
+</center>
+</center>
+<hr />
+<!-- ==================== INSTANCE METHODS ==================== -->
+<a name="section-InstanceMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Instance Methods</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-InstanceMethods"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="systems.WeaponControl-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">ship</span>,
+        <span class="summary-sig-arg">maxPower</span>=<span class="summary-sig-default">1</span>,
+        <span class="summary-sig-arg">maxWeapons</span>=<span class="summary-sig-default">4</span>)</span><br />
+      x.__init__(...) initializes x; see help(type(x)) for signature</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="systems-pysrc.html#WeaponControl.__init__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="systems.WeaponControl-class.html#getNameAbbreviation" class="summary-sig-name">getNameAbbreviation</a>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="systems-pysrc.html#WeaponControl.getNameAbbreviation">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getWeapons"></a><span class="summary-sig-name">getWeapons</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="systems-pysrc.html#WeaponControl.getWeapons">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">Boolean.</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="systems.WeaponControl-class.html#addWeapon" class="summary-sig-name">addWeapon</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">weapon</span>)</span><br />
+      Add a weapon to the dock.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="systems-pysrc.html#WeaponControl.addWeapon">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="systems.WeaponControl-class.html#powerWeapon" class="summary-sig-name">powerWeapon</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">indexWeapon</span>)</span><br />
+      Power a weapon if it possible.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="systems-pysrc.html#WeaponControl.powerWeapon">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">Integer.</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="systems.WeaponControl-class.html#unpowerWeapon" class="summary-sig-name">unpowerWeapon</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">indexWeapon</span>)</span><br />
+      Unpower a weapon.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="systems-pysrc.html#WeaponControl.unpowerWeapon">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="systems.WeaponControl-class.html#cooldownWeapons" class="summary-sig-name">cooldownWeapons</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">lvlCrew</span>)</span><br />
+      At every tick of the clock, it recharge the weapons that are powered.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="systems-pysrc.html#WeaponControl.cooldownWeapons">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="systems.WeaponControl-class.html#useWeapon" class="summary-sig-name">useWeapon</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">indexWeapon</span>,
+        <span class="summary-sig-arg">ship2</span>)</span><br />
+      Use a weapon against the opposite ship.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="systems-pysrc.html#WeaponControl.useWeapon">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">Boolean.</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="systems.WeaponControl-class.html#doDamages" class="summary-sig-name">doDamages</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">damages</span>=<span class="summary-sig-default">1</span>)</span><br />
+      Returns:
+      Return is the damages changed something.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="systems-pysrc.html#WeaponControl.doDamages">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="testUnpowerWeapons"></a><span class="summary-sig-name">testUnpowerWeapons</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Unpower weapons if there is not enough power.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="systems-pysrc.html#WeaponControl.testUnpowerWeapons">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="weaponHasBeenUsed"></a><span class="summary-sig-name">weaponHasBeenUsed</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="systems-pysrc.html#WeaponControl.weaponHasBeenUsed">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="systems.WeaponControl-class.html#cooldownIon" class="summary-sig-name">cooldownIon</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      At every tick of the clock it should be called and it manages the 
+      cooldown of the ionisation of the system.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="systems-pysrc.html#WeaponControl.cooldownIon">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="systems.WeaponControl-class.html#ionise" class="summary-sig-name">ionise</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Manage the ion attack of a system.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="systems-pysrc.html#WeaponControl.ionise">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="systems.System-class.html">System</a></code></b>:
+      <code><a href="systems.System-class.html#__repr__">__repr__</a></code>,
+      <code><a href="systems.System-class.html#addPower">addPower</a></code>,
+      <code><a href="systems.System-class.html#dotFire">dotFire</a></code>,
+      <code><a href="systems.System-class.html#explode">explode</a></code>,
+      <code><a href="systems.System-class.html#getCooldownIon">getCooldownIon</a></code>,
+      <code><a href="systems.System-class.html#getCooldownIonDone">getCooldownIonDone</a></code>,
+      <code><a href="systems.System-class.html#getCurrentMaxPower">getCurrentMaxPower</a></code>,
+      <code><a href="systems.System-class.html#getDots">getDots</a></code>,
+      <code><a href="systems.System-class.html#getMaxPower">getMaxPower</a></code>,
+      <code><a href="systems.System-class.html#getMaxPowerMax">getMaxPowerMax</a></code>,
+      <code><a href="systems.System-class.html#getName">getName</a></code>,
+      <code><a href="systems.System-class.html#getPowerInIt">getPowerInIt</a></code>,
+      <code><a href="systems.System-class.html#getPowerIonised">getPowerIonised</a></code>,
+      <code><a href="systems.System-class.html#getRepair">getRepair</a></code>,
+      <code><a href="systems.System-class.html#getShip">getShip</a></code>,
+      <code><a href="systems.System-class.html#isIonised">isIonised</a></code>,
+      <code><a href="systems.System-class.html#reparation">reparation</a></code>,
+      <code><a href="systems.System-class.html#setCooldownIon">setCooldownIon</a></code>,
+      <code><a href="systems.System-class.html#setCooldownIonDone">setCooldownIonDone</a></code>,
+      <code><a href="systems.System-class.html#setCurrentMaxPower">setCurrentMaxPower</a></code>,
+      <code><a href="systems.System-class.html#setDots">setDots</a></code>,
+      <code><a href="systems.System-class.html#setPowerInIt">setPowerInIt</a></code>,
+      <code><a href="systems.System-class.html#setPowerIonised">setPowerIonised</a></code>,
+      <code><a href="systems.System-class.html#setRepair">setRepair</a></code>,
+      <code><a href="systems.System-class.html#upgradeMaxPower">upgradeMaxPower</a></code>
+      </p>
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__delattr__</code>,
+      <code>__format__</code>,
+      <code>__getattribute__</code>,
+      <code>__hash__</code>,
+      <code>__new__</code>,
+      <code>__reduce__</code>,
+      <code>__reduce_ex__</code>,
+      <code>__setattr__</code>,
+      <code>__sizeof__</code>,
+      <code>__str__</code>,
+      <code>__subclasshook__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== PROPERTIES ==================== -->
+<a name="section-Properties"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Properties</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Properties"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__class__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== METHOD DETAILS ==================== -->
+<a name="section-MethodDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Method Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-MethodDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="__init__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">ship</span>,
+        <span class="sig-arg">maxPower</span>=<span class="sig-default">1</span>,
+        <span class="sig-arg">maxWeapons</span>=<span class="sig-default">4</span>)</span>
+    <br /><em class="fname">(Constructor)</em>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="systems-pysrc.html#WeaponControl.__init__">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>x.__init__(...) initializes x; see help(type(x)) for signature</p>
+  <dl class="fields">
+    <dt>Overrides:
+        object.__init__
+        <dd><em class="note">(inherited documentation)</em></dd>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getNameAbbreviation"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getNameAbbreviation</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="systems-pysrc.html#WeaponControl.getNameAbbreviation">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  
+  <dl class="fields">
+    <dt>Overrides:
+        <a href="systems.System-class.html#getNameAbbreviation">System.getNameAbbreviation</a>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="addWeapon"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">addWeapon</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">weapon</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="systems-pysrc.html#WeaponControl.addWeapon">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Add a weapon to the dock.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>weapon</code></strong> (Object of the class Weapon.) - Weapon of the class Weapon.</li>
+    </ul></dd>
+    <dt>Returns: Boolean.</dt>
+        <dd>Return True if it could add the weapon.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="powerWeapon"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">powerWeapon</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">indexWeapon</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="systems-pysrc.html#WeaponControl.powerWeapon">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Power a weapon if it possible.</p>
+  <p>Check if there is enough power available, if the weapon isn't already 
+  powered and if you can put more power into the weapon control.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>indexWeapon</code></strong> (Integer.) - The index of the weapon in the list of weapons.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="unpowerWeapon"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">unpowerWeapon</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">indexWeapon</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="systems-pysrc.html#WeaponControl.unpowerWeapon">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Unpower a weapon.</p>
+  <p>Check if the weapon is powered.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>indexWeapon</code></strong> (Integer.) - The index of the weapon in the list of weapons.</li>
+    </ul></dd>
+    <dt>Returns: Integer.</dt>
+        <dd>Return the power to add to the available power of the ship.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="cooldownWeapons"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">cooldownWeapons</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">lvlCrew</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="systems-pysrc.html#WeaponControl.cooldownWeapons">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>At every tick of the clock, it recharge the weapons that are 
+  powered.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>lvlCrew</code></strong> (Integer.) - Lvl in weapons of a crew member in the room containing the weapon
+          control system, -1 if there is no crew member.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="useWeapon"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">useWeapon</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">indexWeapon</span>,
+        <span class="sig-arg">ship2</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="systems-pysrc.html#WeaponControl.useWeapon">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Use a weapon against the opposite ship.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>indexWeapon</code></strong> (Integer.) - The index of the weapon in the list of weapons.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="doDamages"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">doDamages</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">damages</span>=<span class="sig-default">1</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="systems-pysrc.html#WeaponControl.doDamages">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  
+  <dl class="fields">
+    <dt>Returns: Boolean.</dt>
+        <dd>Return is the damages changed something.</dd>
+    <dt>Overrides:
+        <a href="systems.System-class.html#doDamages">System.doDamages</a>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="cooldownIon"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">cooldownIon</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="systems-pysrc.html#WeaponControl.cooldownIon">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>At every tick of the clock it should be called and it manages the 
+  cooldown of the ionisation of the system.</p>
+  <dl class="fields">
+    <dt>Overrides:
+        <a href="systems.System-class.html#cooldownIon">System.cooldownIon</a>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="ionise"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">ionise</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="systems-pysrc.html#WeaponControl.ionise">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Manage the ion attack of a system.</p>
+  <p>http://www.ftlgame.com/forum/viewtopic.php?f=7&amp;t=21942 Explanation
+  of the ions.</p>
+  <dl class="fields">
+    <dt>Overrides:
+        <a href="systems.System-class.html#ionise">System.ionise</a>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Sat Dec  6 17:26:51 2014
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

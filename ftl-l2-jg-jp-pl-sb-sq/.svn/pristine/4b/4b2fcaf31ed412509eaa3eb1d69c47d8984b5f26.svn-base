@@ -1,0 +1,30 @@
+\chapter{Réalisation}	
+
+	\section{Installation et configuration de l'application}
+	
+	Notre projet est codé en Python 3. Pour la partie système expert il nécessaire d'avoir un shell pour que le programme puisse appeler des commandes externes (par exemple cygwin sur Windows). \\
+
+
+	\section{Gestion du projet : organisation et répartition des tâches}
+
+	Un liste des taches accomplies par membre du groupe ? .....
+	
+	
+	\section{Détermination de divers paramètres}
+	
+	Minimum de combats pour avoir un truc equilibre (pour ce point on peut aussi dire qu'il faut un nombre impair pour eviter 50/50 de victoires), degre de confiance dans le taux de croissance, etc.
+	
+	
+	\section{Divers résultats de meilleurs vaisseaux}
+	
+	
+	
+	
+	\section{Failles et inexactitude des résultats}
+	
+	L'algorithme génétique pour s'enfermer dans un matchup. \\
+	
+	
+	L'IA (si on peut parler d'IA) fait les choses betement et n'utilise pas forcement des techniques de jeu. \\
+	
+	

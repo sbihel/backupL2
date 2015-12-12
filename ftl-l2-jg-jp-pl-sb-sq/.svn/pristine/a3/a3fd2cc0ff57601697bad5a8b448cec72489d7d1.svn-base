@@ -1,0 +1,15 @@
+<html lang="fr-FR"><head><meta charset="utf-8"> 
+ <link rel="stylesheet"  type="text/css"  media="screen" href="style.css" /> 
+ <title>Results03-15_22-40.</title> 
+ </head> 
+ <body> <h1>Tournament results </h1> <table> 
+<tr> 
+<td>X</td><td><a href="../xmlShips/kestrelB151.xml" target="_blank" >kestrelB151.xml</a></td><td><a href="../xmlShips/kestrelA117.xml" target="_blank" >kestrelA117.xml</a></td><td><a href="../xmlShips/kestrelA118.xml" target="_blank" >kestrelA118.xml</a></td></tr> 
+<tr> 
+<td>kestrelB151.xml</td><td><span style="bgcolor:#D1B873">0</span> </td><td><span style="bgcolor:#D1B873">0</span> </td><td><span style="bgcolor:#32A43B">3</span> </td></tr> 
+<tr> 
+<td>kestrelA117.xml</td><td><span style="bgcolor:#32A43B">3</span> </td><td><span style="bgcolor:#D1B873">0</span> </td><td><span style="bgcolor:#32A43B">3</span> </td></tr> 
+<tr> 
+<td>kestrelA118.xml</td><td><span style="bgcolor:#D1B873">0</span> </td><td><span style="bgcolor:#D1B873">0</span> </td><td><span style="bgcolor:#D1B873">0</span> </td></tr> 
+</table> 
+</body></html>

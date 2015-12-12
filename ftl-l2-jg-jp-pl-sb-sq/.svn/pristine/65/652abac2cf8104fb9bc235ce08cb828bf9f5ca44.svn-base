@@ -1,0 +1,154 @@
+beam1 (2)
+
+weaponControl4 (1)
+
+droneControl1 (1)
+
+droneControl1 weaponControl4 (1)
+
+droneControl3 (1)
+
+droneControl3 beam1 (1)
+
+droneControl6 (1)
+
+droneControl6 beam1 (1)
+
+breach (1)
+
+breach droneControl1 (1)
+
+breach weaponControl4 (1)
+
+breach weaponControl4 droneControl1 (1)
+
+heavyLaserI (1)
+
+heavyLaserI breach (1)
+
+heavyLaserI droneControl1 (1)
+
+heavyLaserI droneControl1 breach (1)
+
+heavyLaserI weaponControl4 (1)
+
+heavyLaserI weaponControl4 breach (1)
+
+heavyLaserI weaponControl4 droneControl1 (1)
+
+heavyLaserI weaponControl4 droneControl1 breach (1)
+
+combat2 (1)
+
+combat2 droneControl6 (1)
+
+combat2 beam1 (1)
+
+combat2 beam1 droneControl6 (1)
+
+beamFire (1)
+
+beamFire droneControl3 (1)
+
+beamFire beam1 (1)
+
+beamFire beam1 droneControl3 (1)
+
+ (1)
+
+ combat2 (1)
+
+ droneControl6 (1)
+
+ droneControl6 combat2 (1)
+
+ beam1 (1)
+
+ beam1 combat2 (1)
+
+ beam1 droneControl6 (1)
+
+ beam1 droneControl6 combat2 (1)
+
+ (1)
+
+ heavyLaserI (1)
+
+ breach (1)
+
+ breach heavyLaserI (1)
+
+ droneControl1 (1)
+
+ droneControl1 heavyLaserI (1)
+
+ droneControl1 breach (1)
+
+ droneControl1 breach heavyLaserI (1)
+
+ weaponControl4 (1)
+
+ weaponControl4 heavyLaserI (1)
+
+ weaponControl4 breach (1)
+
+ weaponControl4 breach heavyLaserI (1)
+
+ weaponControl4 droneControl1 (1)
+
+ weaponControl4 droneControl1 heavyLaserI (1)
+
+ weaponControl4 droneControl1 breach (1)
+
+ weaponControl4 droneControl1 breach heavyLaserI (1)
+
+shields2 (1)
+
+shields2 beamFire (1)
+
+shields2 droneControl3 (1)
+
+shields2 droneControl3 beamFire (1)
+
+shields2 beam1 (1)
+
+shields2 beam1 beamFire (1)
+
+shields2 beam1 droneControl3 (1)
+
+shields2 beam1 droneControl3 beamFire (1)
+
+ (1)
+
+ shields2 (1)
+
+ beamFire (1)
+
+ beamFire shields2 (1)
+
+ droneControl3 (1)
+
+ droneControl3 shields2 (1)
+
+ droneControl3 beamFire (1)
+
+ droneControl3 beamFire shields2 (1)
+
+ beam1 (1)
+
+ beam1 shields2 (1)
+
+ beam1 beamFire (1)
+
+ beam1 beamFire shields2 (1)
+
+ beam1 droneControl3 (1)
+
+ beam1 droneControl3 shields2 (1)
+
+ beam1 droneControl3 beamFire (1)
+
+ beam1 droneControl3 beamFire shields2 (1)
+
+(3)
+

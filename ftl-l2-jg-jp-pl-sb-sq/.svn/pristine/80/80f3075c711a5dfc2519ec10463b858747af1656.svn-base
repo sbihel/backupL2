@@ -1,0 +1,260 @@
+from geneticAlgorithm import *
+from subprocess import call
+from sys import platform as _platform
+
+
+def buildLCMInputFile(listShips):
+    """
+
+    @param listShips: Like 'kestrelA0.xml'
+    """
+    if 'xmlShips' in os.getcwd() or 'pictures' in os.getcwd():
+        os.chdir('..')
+    nameF = 'inputLCM'
+    while nameF in os.listdir():
+        nameF += '2'
+    with open(nameF, 'w') as fileTransitions:
+        for shipF in listShips:
+            tree = ET.parse('xmlShips/'+shipF)
+            root = tree.getroot()
+
+            shipN = root.findall('name')[0].text
+            shipT = root.findall('type')[0].text
+            systemsUpgrades1, weaponsAdded1, dronesAdded1, energyAdded1 = extractInfos(shipF)
+            systemsUpgrades2, weaponsAdded2, dronesAdded2, energyAdded2 = extractBasicInfos(shipN, shipT)
+
+            weaponsAdded, dronesAdded = weaponsAdded1+weaponsAdded2, dronesAdded1+dronesAdded2
+            energyAdded = energyAdded1+energyAdded2
+            systemsUpgrades = {}
+            for k in systemsUpgrades1:
+                if k in systemsUpgrades2:
+                    systemsUpgrades[k] = systemsUpgrades2[k] + systemsUpgrades1[k]
+                else:
+                    systemsUpgrades[k] = systemsUpgrades1[k]
+            for k in systemsUpgrades2:
+                if k not in systemsUpgrades2:
+                    systemsUpgrades[k] = systemsUpgrades2[k]
+
+            if energyAdded > 0:  # 0-20
+                fileTransitions.write(str(energyAdded)+' ')
+
+            if systemsUpgrades != {}:  # 21-169
+                numberSystem = {'shields': 2, 'engines': 3, 'weaponControl': 4, 'oxygen': 5, 'medbay': 6,
+                                'cloneBay': 7, 'droneControl': 8, 'hacking': 9, 'mindControl': 10,
+                                'crewTeleporter': 11, 'cloaking': 12, 'piloting': 13, 'sensors': 14,
+                                'doorSystem': 15, 'backupBattery': 16}
+                for s in systemsUpgrades:
+                    fileTransitions.write(str(numberSystem[s])+str(systemsUpgrades[s])+' ')
+
+            if weaponsAdded:  # 1001-1030
+                weapons = [('leto', 20, 1), ('artemisPL', 38, 1), ('hermes', 45, 3), ('pegasus', 60, 3),
+                           ('breach', 65, 3), ('hull', 65, 2), ('miniBeam', 20, 1), ('pikeBeam', 55, 2),
+                           ('halberdBeam', 65, 3), ('glaiveBeam', 95, 4), ('fireBeam', 50, 2), ('hullBeam', 70, 2),
+                           ('antibioBeam', 50, 2), ('basicLaser', 20, 1), ('dualLaser', 25, 1),
+                           ('burstLaserI', 50, 2), ('burstLaserII', 80, 2), ('burstLaserIII', 95, 4),
+                           ('heavyPierceI', 55, 2), ('heavyLaserI', 55, 1), ('heavyLaserII', 65, 3),
+                           ('hullLaserI', 55, 2), ('hullLaserII', 75, 3), ('ionBlastI', 30, 1),
+                           ('ionBlastII', 70, 3), ('heavyIon', 45, 2), ('ionStunner', 35, 1)]
+                for w in weaponsAdded:
+                    for indexX in range(len(weapons)):
+                        if weapons[indexX][0] == w:
+                            numberW = indexX
+                    fileTransitions.write(str(1001+numberW)+' ')
+            if dronesAdded:  # 1101-1120
+                drones = [('combat1', 50, 2), ('combat2', 75, 4), ('beam1', 50, 2), ('beam2', 60, 3),
+                          ('beamFire', 50, 3)]
+                for d in dronesAdded:
+                    for indexX in range(len(drones)):
+                        if drones[indexX][0] == d:
+                            numberD = indexX
+                    fileTransitions.write(str(1101+numberD)+' ')
+            fileTransitions.write('\n')
+        fileTransitions.write('[EOF]')
+    return nameF
+
+
+def getBestFeatures(fileLCM):
+    cwd = os.getcwd()
+    rootF = cwd.split('Projet')[0]
+    os.chdir(rootF+'lcm21/')
+    if _platform == "win32":
+        return 0
+    else:
+        call(['make'])
+        print('\033[32m'+"Don't worry, it's ok. It's just warnings."+'\033[0m')
+    nameF = 'outputLCM'
+    while nameF in os.listdir():
+        nameF += '2'
+    if _platform == "win32":
+        return 0
+    else:
+        call(['./fim_all', '-U', '3', '../Projet/'+fileLCM, '1', '../Projet/'+nameF])
+    orderLCMoutput('../Projet/'+nameF)
+    translateLCMoutput(rootF+'Projet/'+nameF+'sorted')
+    os.chdir(cwd)
+    return nameF+'sorted'+'translated'
+
+
+def translateLCMoutput(pathF):
+    newF = ''
+    with open(pathF) as lcmO:
+        line = lcmO.readline()
+        while line != '':
+            for num in line.split('(')[0].split(' ')[:-1]:
+                newF += translateNumber(num) + ' '
+            newF += '(' + line.split('(')[1]
+            line = lcmO.readline()
+    with open(pathF+'translated', 'w') as lcmO:
+        lcmO.write(newF)
+
+
+def translateNumber(num):
+    numI = int(num)
+    if 0 <= numI <= 20:
+        return 'energy'+num
+    if 21 <= numI <= 169:
+        numberSystem = {2: 'shields', 3: 'engines', 4: 'weaponControl', 5: 'oxygen', 6: 'medbay',
+                        7: 'cloneBay', 8: 'droneControl', 9: 'hacking', 10: 'mindControl',
+                        11: 'crewTeleporter', 12: 'cloaking', 13: 'piloting', 14: 'sensors',
+                        15: 'doorSystem', 16: 'backupBattery'}
+        return numberSystem[int(num[:-1])]+num[-1]
+    if 1001 <= numI <= 1040:
+        weapons = [('leto', 20, 1), ('artemisPL', 38, 1), ('hermes', 45, 3), ('pegasus', 60, 3),
+                   ('breach', 65, 3), ('hull', 65, 2), ('miniBeam', 20, 1), ('pikeBeam', 55, 2),
+                   ('halberdBeam', 65, 3), ('glaiveBeam', 95, 4), ('fireBeam', 50, 2), ('hullBeam', 70, 2),
+                   ('antibioBeam', 50, 2), ('basicLaser', 20, 1), ('dualLaser', 25, 1),
+                   ('burstLaserI', 50, 2), ('burstLaserII', 80, 2), ('burstLaserIII', 95, 4),
+                   ('heavyPierceI', 55, 2), ('heavyLaserI', 55, 1), ('heavyLaserII', 65, 3),
+                   ('hullLaserI', 55, 2), ('hullLaserII', 75, 3), ('ionBlastI', 30, 1),
+                   ('ionBlastII', 70, 3), ('heavyIon', 45, 2), ('ionStunner', 35, 1)]
+        for w in range(len(weapons)):
+            if w == numI-1001:
+                return weapons[w][0]
+    if 1101 <= numI <= 1120:
+        drones = [('combat1', 50, 2), ('combat2', 75, 4), ('beam1', 50, 2), ('beam2', 60, 3),
+                  ('beamFire', 50, 3)]
+        for d in range(len(drones)):
+            if d == numI - 1101:
+                return drones[d][0]
+    return ''
+
+
+def orderLCMoutput(filePath):
+    newF = ''
+    tableLCM = []
+    with open(filePath) as lcmO:
+        line = lcmO.readline()
+        while line != '':
+            numberAppereance = int(line.split('(')[1].split(')')[0])
+            while len(tableLCM) < numberAppereance:
+                tableLCM += [[]]
+            tableLCM[numberAppereance-1] += [line]
+            line = lcmO.readline()
+    for iT in range(len(tableLCM)):
+        for j in tableLCM[-iT-1]:
+            newF += j
+    with open(filePath+'sorted', 'w') as lcmOs:
+        lcmOs.write(newF)
+
+
+def translateOneLineLCM(line):
+    costs = {'energy': [30]*5 + [20]*5 + [25]*5 + [30]*5 + [35]*5,
+             'shields': [125, 100, 20, 30, 40, 60, 80, 100],
+             'engines': [0, 10, 15, 30, 40, 60, 80, 120],
+             'weaponControl': [0, 40, 25, 35, 50, 75, 90, 100],
+             'oxygen': [0, 25, 50],
+             'medbay': [60, 35, 45],
+             'cloneBay': [55, 35, 45],
+             'droneControl': [35, 0, 20, 30, 45, 60, 80, 100],
+             'hacking': [80, 35, 60],
+             'mindControl': [75, 30, 60],
+             'crewTeleporter': [90, 30, 60],
+             'cloaking': [150, 30, 50],
+             'piloting': [0, 20, 50],
+             'sensors': [40, 25, 40],
+             'doorSystem': [60, 35, 50],
+             'backupBattery': [35, 50]}
+    weapons = [('leto', 20, 1), ('artemisPL', 38, 1), ('hermes', 45, 3), ('pegasus', 60, 3), ('breach', 65, 3),
+               ('hull', 65, 2), ('miniBeam', 20, 1), ('pikeBeam', 55, 2), ('halberdBeam', 65, 3), ('glaiveBeam', 95, 4),
+               ('fireBeam', 50, 2), ('hullBeam', 70, 2), ('antibioBeam', 50, 2), ('basicLaser', 20, 1),
+               ('dualLaser', 25, 1), ('burstLaserI', 50, 2), ('burstLaserII', 80, 2), ('burstLaserIII', 95, 4),
+               ('heavyPierceI', 55, 2), ('heavyLaserI', 55, 1), ('heavyLaserII', 65, 3), ('hullLaserI', 55, 2),
+               ('hullLaserII', 75, 3), ('ionBlastI', 30, 1), ('ionBlastII', 70, 3), ('heavyIon', 45, 2),
+               ('ionStunner', 35, 1)]
+    drones = [('combat1', 50, 2), ('combat2', 75, 4), ('beam1', 50, 2), ('beam2', 60, 3), ('beamFire', 50, 3)]
+    line = line.split('(')[0][:-1].split(' ')
+    systemsUpgrades = {}
+    energyAdded = 0
+    weaponsAdded, dronesAdded = [], []
+    for w in line:
+        if 'energy' in w:
+            energyAdded += int(w.split('energy')[1])
+            continue
+        for k in costs:
+            if k in w:
+                systemsUpgrades[k] = int(w.split(k)[1])
+                break
+        for weapon in [wpn[0] for wpn in weapons]:
+            if weapon == w:
+                weaponsAdded += [weapon]
+                break
+        for drone in [drn[0] for drn in drones]:
+            if drone == w:
+                dronesAdded += [drone]
+                break
+    return systemsUpgrades, weaponsAdded, dronesAdded, energyAdded
+
+
+def addingToShipFromLCMLine(lineLCM, shipName, shipType):
+    systemsUpgrades1, weaponsAdded1, dronesAdded1, energyAdded1 = translateOneLineLCM(lineLCM)
+
+    if 'xmlShips' not in os.getcwd():
+        tree1 = ET.parse('ftl_ships_layouts.xml')
+    else:
+        tree1 = ET.parse('../'+'ftl_ships_layouts.xml')
+    root1 = tree1.getroot()
+    if 'type' in shipType:
+        ship = root1.findall(shipName)[0].findall(shipType)[0]
+    else:
+        ship = root1.findall(shipName)[0].findall('type'+shipType)[0]
+    systemsUpgrades, weaponsPurchased, dronesPurchased, energyPurchased = {}, [], [], 0
+
+    for s in systemsUpgrades1:
+        if not ship.findall('systems')[0].findall(s):
+            systemsUpgrades[s] = systemsUpgrades1[s]
+        elif systemsUpgrades1[s] > int(ship.findall('systems')[0].findall(s)[0].text):
+            systemsUpgrades[s] = systemsUpgrades1[s] - int(ship.findall('systems')[0].findall(s)[0].text)
+
+    for w in weaponsAdded1:
+        if w not in [n.text for n in ship.findall('weapons')[0]]:
+            weaponsPurchased += [w]
+        elif len([wpn for wpn in weaponsPurchased if wpn == w]) + \
+            len([wpn for wpn in [n.text for n in ship.findall('weapons')[0]] if wpn == w]) < \
+                len([wpn for wpn in weaponsAdded1 if wpn == w]):
+            weaponsPurchased += [w]
+
+    for d in dronesAdded1:
+        if d not in [n.text for n in ship.findall('drones')[0]]:
+            dronesPurchased += [d]
+        elif len([wpn for wpn in dronesPurchased if wpn == d]) + \
+            len([wpn for wpn in [n.text for n in ship.findall('drones')[0]] if wpn == d]) < \
+                len([wpn for wpn in dronesAdded1 if wpn == d]):
+            dronesPurchased += [d]
+
+    if int(ship.findall('energy')[0].text) < energyAdded1:
+        energyPurchased = energyAdded1 - int(ship.findall('energy')[0].text)
+
+    return systemsUpgrades, weaponsPurchased, dronesPurchased, energyPurchased
+
+
+if __name__ == '__main__':
+    # with open('ExampleoutputLCMtranslated') as oP:
+    #     for lineT in oP:
+    #         print(lineT, translateOneLineLCM(lineT))
+    #
+    # with open('ExampleoutputLCMtranslated') as oP:
+    #     for i in range(1):
+    #         oP.readline()
+    #     print(addingToShipFromLCMLine(oP.readline(), 'engiCruiser', 'A'))
+
+    print(getBestFeatures(buildLCMInputFile(['kestrelC1.xml', 'kestrelA1.xml', 'engiCruiserA2.xml'])))

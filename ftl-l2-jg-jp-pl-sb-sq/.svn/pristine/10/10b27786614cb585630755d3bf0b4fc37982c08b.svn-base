@@ -1,0 +1,177 @@
+from tkinter import *
+from variousShips import *
+import os
+
+
+def fileToShip(fileShip1, ID):
+
+    if fileShip1[-4:] == '.xml':
+        fileShip1 = fileShip1[:-4]
+
+    xmlID1, type1, name1 = '',  'type', ''
+    for i in range(len(fileShip1)):
+        if fileShip1[len(fileShip1)-1-i] not in 'ABC':
+            xmlID1 = fileShip1[len(fileShip1)-1-i] + xmlID1
+        else:
+            type1 += fileShip1[len(fileShip1)-1-i]
+            name1 = fileShip1[:len(fileShip1)-1-i]
+            break
+
+    ship = extractShip(name1, type1, xmlID1, ID)
+
+    return ship
+
+def displayShipTK(ship):
+
+    tk = Tk()
+    can = Canvas(tk, bg="black", width=750, height=500)
+        
+    tk.title("Ship " + ship.getName()+' ' + ship.getType() + ' ' + str(ship.getID()))
+
+    #print(os.getcwd())
+    if 'xmlShips' in os.getcwd():
+        os.chdir('..')
+
+    wall = PhotoImage(file="pictures/fond.gif")
+    can.create_image((0,0), image=wall)
+
+    can.pack()
+
+    m = 20 #margin
+    c = 3  #coefficient
+
+        #Display rooms and systems in them
+    for r in ship.getRooms():
+        c1, c2 = r.getCoords()
+        can.create_rectangle(c1[0]*c + m, c1[1]*c + m, c2[0]*c + m, c2[1]*c + m, fill="grey", outline="black")
+        system = r.getSystem()
+
+        if system != False :
+
+            locals()['img' + str(r.getNB())] = PhotoImage(file="pictures/systems/"+str(system)+".gif").subsample(5,5)
+            cm1, cm2 = c1[0], c1[1]
+            if c2[0] - c1[0] != 10:
+                cm1 += 5
+            if c2[1] - c1[1] != 10:
+                cm2 += 5
+            can.create_image((cm1*c + m + 15, cm2*c + m + 15), image=locals()['img'+str(r.getNB())])
+
+        #Basic coords for the statistics for the ship
+        c1, c2 = 50, 250
+        nb = 20 #Increment for the for
+
+    #Display the stats
+    for s in ship.getSystems():
+        locals()['img' + str(nb)] = PhotoImage(file="pictures/systems/"+s.getName()+".gif").subsample(5, 5)
+        can.create_image((c1, c2 + (nb-20)*20), image=locals()['img'+str(nb)])
+        nb += 1
+
+        for i in range(s.getCurrentMaxPower()):
+            can.create_rectangle(c1 +10 + i*15, c2 +((nb-20)*20)-25 , c1+20+i*15, c2 + ((nb-20)*20)-15, fill="green", outline="black")
+
+        if s.getName() == 'weaponControl': #Save sur weapon system in sysweap
+            sysweap = s
+        if s.getName() == 'droneControl': #Save sur weapon system in sysweap
+            sysdrone = s
+
+        #Display weapons
+    lw=sysweap.getWeapons()
+    for weap in range(len(lw)):
+        # One place for every weapons
+        if weap==0:
+            wx, wy = 300, 300
+        elif weap==1:
+            wx, wy = 300, 400
+        elif weap==2:
+            wx, wy = 400, 300
+        else:
+            wx, wy = 400, 400
+
+        #print(lw[weap].getName())
+        locals()['img' + str(nb)] = PhotoImage(file="pictures/weapons/"+lw[weap].getName()+".gif")
+        can.create_image(wx, wy, image=locals()['img'+str(nb)])
+        nb += 1
+
+        #Display drones
+    if ship.hasSystem('droneControl'):
+        ld=sysdrone.getDrones()
+        for drone in range(len(ld)):
+            # One place for every weapons
+            if drone==0:
+                wx, wy = 500, 300
+            elif drone==1:
+                wx, wy = 500, 400
+            elif drone==2:
+                wx, wy = 600, 300
+            else:
+                wx, wy = 600, 400
+
+            #print(ld[drone].getName())
+            locals()['img' + str(nb)] = PhotoImage(file="pictures/drones/"+ld[drone].getName()+".gif")
+            can.create_image(wx, wy, image=locals()['img'+str(nb)])
+            nb += 1
+    else:
+        can.create_text((550,350), text='No drones', fill='green', width=40)
+
+        #Display the doors
+    doors = ship.getDoors()
+    for d in doors:
+        coords = d.getPosition()
+        if str(coords[0])[-1]=='5':
+            x1, y1, x2, y2 = coords[0]-2, coords[1], coords[0]+2, coords[1]
+        else:
+            x1, y1, x2, y2 = coords[0], coords[1]-2, coords[0], coords[1]+2
+        can.create_line(x1*c+m, y1*c+m, x2*c+m, y2*c+m, fill="red", width=3)
+
+        #Display crew
+    for crew in ship.getCrew():
+        race = crew.getRace()
+        x,y = crew.getPosition()
+
+        locals()['img' + str(nb)] = PhotoImage(file="pictures/crew/"+race+".gif").subsample(3, 3)
+        can.create_image(x*c+m, y*c+m, image=locals()['img'+str(nb)])
+        nb += 1
+
+    HP = ship.getHP()
+    can.create_rectangle(10,10,20+30*20,30, fill='red')
+    can.create_rectangle(10,10,20+HP*20,30, fill='green')
+
+    can.update()
+    nbID = '0'
+
+    nameFile = ship.getName()+'-' + ship.getType() + '-' + str(ship.getID()) + '-' + str(nbID)
+
+    os.chdir('ps')
+    files = os.listdir()
+
+    #print(nameFile in files, nameFile)
+    #print([name for name in files if "kestrel" in name])
+
+    while nameFile in files:
+        oldNBID = nbID[:]
+        nbID = str(int(nbID)+1)
+        nameFile = nameFile[:-len(oldNBID)] + nbID
+        
+    print(nameFile[:-len(nbID)], nameFile)
+    
+    can.postscript(file=nameFile, colormode='color')
+    os.chdir('..')
+
+    tk.quit()
+    tk.destroy()
+    #tk.mainloop()
+
+
+def quitter(self):
+    self.quit()
+    self.destroy()
+
+def displayTK(ship):
+    ship2=FileToShip(ship)
+    displayShipTK(ship2)
+
+
+
+
+
+

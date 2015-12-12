@@ -1,0 +1,23 @@
+\BOOKMARK [0][-]{chapter*.2}{Introduction}{}% 1
+\BOOKMARK [0][-]{chapter.1}{Moteur de combats}{}% 2
+\BOOKMARK [1][-]{section.1.1}{Repr\351sentation des vaisseaux}{chapter.1}% 3
+\BOOKMARK [1][-]{section.1.2}{Le d\351roulement d'un combat}{chapter.1}% 4
+\BOOKMARK [2][-]{subsection.1.2.1}{Le d\351roulement d'une attaque}{section.1.2}% 5
+\BOOKMARK [2][-]{subsection.1.2.2}{La gestion des cooldowns}{section.1.2}% 6
+\BOOKMARK [1][-]{section.1.3}{La discr\351tisation des \351v\350nements}{chapter.1}% 7
+\BOOKMARK [1][-]{section.1.4}{Repr\351sentation graphique}{chapter.1}% 8
+\BOOKMARK [1][-]{section.1.5}{Diverses techniques de jeu}{chapter.1}% 9
+\BOOKMARK [0][-]{chapter.2}{Recherche du meilleur vaisseau}{}% 10
+\BOOKMARK [1][-]{section.2.1}{Algorithmes de g\351n\351ration de vaisseaux}{chapter.2}% 11
+\BOOKMARK [2][-]{subsection.2.1.1}{G\351n\351rateur al\351atoire}{section.2.1}% 12
+\BOOKMARK [2][-]{subsection.2.1.2}{Algorithme g\351n\351tique}{section.2.1}% 13
+\BOOKMARK [1][-]{section.2.2}{Data Mining}{chapter.2}% 14
+\BOOKMARK [1][-]{section.2.3}{D\351roulement de l'algorithme final d'optimisation}{chapter.2}% 15
+\BOOKMARK [0][-]{chapter.3}{R\351alisation}{}% 16
+\BOOKMARK [1][-]{section.3.1}{Installation et configuration de l'application}{chapter.3}% 17
+\BOOKMARK [1][-]{section.3.2}{Organisation et r\351partition des t\342ches}{chapter.3}% 18
+\BOOKMARK [1][-]{section.3.3}{Importation des modules}{chapter.3}% 19
+\BOOKMARK [1][-]{section.3.4}{D\351termination de divers param\350tres}{chapter.3}% 20
+\BOOKMARK [1][-]{section.3.5}{Divers r\351sultats d'optimisation}{chapter.3}% 21
+\BOOKMARK [1][-]{section.3.6}{Failles et inexactitude des r\351sultats}{chapter.3}% 22
+\BOOKMARK [0][-]{chapter*.16}{Conclusion}{}% 23

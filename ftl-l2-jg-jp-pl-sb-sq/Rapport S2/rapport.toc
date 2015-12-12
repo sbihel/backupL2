@@ -1,0 +1,37 @@
+\select@language {french}
+\contentsline {chapter}{Introduction}{2}{chapter*.2}
+\contentsline {chapter}{\numberline {1}Moteur de combats}{4}{chapter.1}
+\contentsline {section}{\numberline {1.1}Repr\IeC {\'e}sentation des vaisseaux}{4}{section.1.1}
+\contentsline {section}{\numberline {1.2}Le d\IeC {\'e}roulement d'un combat}{4}{section.1.2}
+\contentsline {subsection}{\numberline {1.2.1}Le d\IeC {\'e}roulement d'une attaque}{5}{subsection.1.2.1}
+\contentsline {paragraph}{L'utilisation d'une arme}{5}{section*.3}
+\contentsline {paragraph}{L'utilisation d'un drone}{8}{section*.4}
+\contentsline {subsection}{\numberline {1.2.2}La gestion des cooldowns}{8}{subsection.1.2.2}
+\contentsline {paragraph}{Le vaisseau}{8}{section*.5}
+\contentsline {paragraph}{Les syst\IeC {\`e}mes}{9}{section*.6}
+\contentsline {paragraph}{Les salles}{9}{section*.7}
+\contentsline {section}{\numberline {1.3}La discr\IeC {\'e}tisation des \IeC {\'e}v\IeC {\`e}nements}{9}{section.1.3}
+\contentsline {section}{\numberline {1.4}Repr\IeC {\'e}sentation graphique}{10}{section.1.4}
+\contentsline {section}{\numberline {1.5}Diverses techniques de jeu}{11}{section.1.5}
+\contentsline {paragraph}{Buffer}{11}{section*.8}
+\contentsline {chapter}{\numberline {2}Recherche du meilleur vaisseau}{12}{chapter.2}
+\contentsline {section}{\numberline {2.1}Algorithmes de g\IeC {\'e}n\IeC {\'e}ration de vaisseaux}{12}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}G\IeC {\'e}n\IeC {\'e}rateur al\IeC {\'e}atoire}{13}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}Algorithme g\IeC {\'e}n\IeC {\'e}tique}{14}{subsection.2.1.2}
+\contentsline {section}{\numberline {2.2}Data Mining}{16}{section.2.2}
+\contentsline {section}{\numberline {2.3}D\IeC {\'e}roulement de l'algorithme final d'optimisation}{17}{section.2.3}
+\contentsline {chapter}{\numberline {3}R\IeC {\'e}alisation}{19}{chapter.3}
+\contentsline {section}{\numberline {3.1}Installation et configuration de l'application}{19}{section.3.1}
+\contentsline {section}{\numberline {3.2}Organisation et r\IeC {\'e}partition des t\IeC {\^a}ches}{19}{section.3.2}
+\contentsline {section}{\numberline {3.3}Importation des modules}{20}{section.3.3}
+\contentsline {section}{\numberline {3.4}D\IeC {\'e}termination de divers param\IeC {\`e}tres}{21}{section.3.4}
+\contentsline {paragraph}{Les tournois}{21}{section*.9}
+\contentsline {paragraph}{Les algorithmes g\IeC {\'e}n\IeC {\'e}tiques}{21}{section*.10}
+\contentsline {paragraph}{L'algorithme final}{21}{section*.11}
+\contentsline {section}{\numberline {3.5}Divers r\IeC {\'e}sultats d'optimisation}{22}{section.3.5}
+\contentsline {section}{\numberline {3.6}Failles et inexactitude des r\IeC {\'e}sultats}{22}{section.3.6}
+\contentsline {paragraph}{Le moteur de combats}{22}{section*.12}
+\contentsline {paragraph}{La g\IeC {\'e}n\IeC {\'e}ration al\IeC {\'e}atoire de vaisseaux}{23}{section*.13}
+\contentsline {paragraph}{L'algorithme g\IeC {\'e}n\IeC {\'e}tique}{23}{section*.14}
+\contentsline {paragraph}{L'algorithme final}{23}{section*.15}
+\contentsline {chapter}{Conclusion}{24}{chapter*.16}

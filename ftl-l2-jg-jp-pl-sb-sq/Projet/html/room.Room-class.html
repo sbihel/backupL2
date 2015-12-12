@@ -1,0 +1,761 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>room.Room</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="room-module.html">Module&nbsp;room</a> ::
+        Class&nbsp;Room
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="room.Room-class.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS DESCRIPTION ==================== -->
+<h1 class="epydoc">Class Room</h1><p class="nomargin-top"><span class="codelink"><a href="room-pysrc.html#Room">source&nbsp;code</a></span></p>
+<center>
+<center>  <map id="uml_class_diagram_for_room_roo" name="uml_class_diagram_for_room_roo">
+<area shape="rect" id="node1_14" href="room.Room-class.html#__init__" title="x.__init__(...) initializes x; see help(type(x)) for signature" alt="" coords="17,39,225,57"/>
+<area shape="rect" id="node1_15" href="room.Room-class.html#getCoords" title="Renvoie les coordonnees d&#39;une salle" alt="" coords="17,57,225,76"/>
+<area shape="rect" id="node1_16" href="room.Room-class.html#getNbBoxes" title="Return the number of boxes that compose the room, normally only 2 or 4." alt="" coords="17,76,225,95"/>
+<area shape="rect" id="node1_17" href="room.Room-class.html#getDoors" title="room.Room.getDoors" alt="" coords="17,95,225,113"/>
+<area shape="rect" id="node1_18" href="room.Room-class.html#setDoors" title="room.Room.setDoors" alt="" coords="17,113,225,132"/>
+<area shape="rect" id="node1_19" href="room.Room-class.html#getBreach" title="Renvoie s&#39;il y a une breche dans la coque" alt="" coords="17,132,225,151"/>
+<area shape="rect" id="node1_20" href="room.Room-class.html#doBreach" title="room.Room.doBreach" alt="" coords="17,151,225,169"/>
+<area shape="rect" id="node1_21" href="room.Room-class.html#repairBreach" title="room.Room.repairBreach" alt="" coords="17,169,225,188"/>
+<area shape="rect" id="node1_22" href="room.Room-class.html#getFire" title="Renvoie s&#39;il y a du feu" alt="" coords="17,188,225,207"/>
+<area shape="rect" id="node1_23" href="room.Room-class.html#startFire" title="room.Room.startFire" alt="" coords="17,207,225,225"/>
+<area shape="rect" id="node1_24" href="room.Room-class.html#extinguishFire" title="room.Room.extinguishFire" alt="" coords="17,225,225,244"/>
+<area shape="rect" id="node1_25" href="room.Room-class.html#getSystem" title="Renvoie le nom du systeme present dans la salle." alt="" coords="17,244,225,263"/>
+<area shape="rect" id="node1_26" href="room.Room-class.html#getNB" title="room.Room.getNB" alt="" coords="17,263,225,281"/>
+<area shape="rect" id="node1_27" href="room.Room-class.html#expansionOxygen" title="room.Room.expansionOxygen" alt="" coords="17,300,225,319"/>
+<area shape="rect" id="node1" href="room.Room-class.html" title="Class which allow you to monitor each room." alt="" coords="5,6,237,325"/>
+</map>
+  <img src="uml_class_diagram_for_room_roo.gif" alt='' usemap="#uml_class_diagram_for_room_roo" ismap="ismap" class="graph-without-title" />
+</center>
+</center>
+<hr />
+<p>Class which allow you to monitor each room.</p>
+
+<!-- ==================== INSTANCE METHODS ==================== -->
+<a name="section-InstanceMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Instance Methods</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-InstanceMethods"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="room.Room-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">kw</span>,
+        <span class="summary-sig-arg">nb</span>,
+        <span class="summary-sig-arg">doors</span>)</span><br />
+      x.__init__(...) initializes x; see help(type(x)) for signature</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="room-pysrc.html#Room.__init__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="room.Room-class.html#getCoords" class="summary-sig-name">getCoords</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Renvoie les coordonnees d'une salle</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="room-pysrc.html#Room.getCoords">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">Integer.</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="room.Room-class.html#getNbBoxes" class="summary-sig-name">getNbBoxes</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Return the number of boxes that compose the room, normally only 2 or 
+      4.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="room-pysrc.html#Room.getNbBoxes">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getDoors"></a><span class="summary-sig-name">getDoors</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="room-pysrc.html#Room.getDoors">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="setDoors"></a><span class="summary-sig-name">setDoors</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">d</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="room-pysrc.html#Room.setDoors">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">Integer</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getBreach"></a><span class="summary-sig-name">getBreach</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Renvoie s'il y a une breche dans la coque</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="room-pysrc.html#Room.getBreach">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="doBreach"></a><span class="summary-sig-name">doBreach</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="room-pysrc.html#Room.doBreach">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="repairBreach"></a><span class="summary-sig-name">repairBreach</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="room-pysrc.html#Room.repairBreach">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">Integer</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getFire"></a><span class="summary-sig-name">getFire</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Renvoie s'il y a du feu</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="room-pysrc.html#Room.getFire">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="startFire"></a><span class="summary-sig-name">startFire</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="room-pysrc.html#Room.startFire">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="extinguishFire"></a><span class="summary-sig-name">extinguishFire</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="room-pysrc.html#Room.extinguishFire">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="room.Room-class.html#getSystem" class="summary-sig-name">getSystem</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Renvoie le nom du systeme present dans la salle.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="room-pysrc.html#Room.getSystem">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getNB"></a><span class="summary-sig-name">getNB</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="room-pysrc.html#Room.getNB">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getOxygen"></a><span class="summary-sig-name">getOxygen</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="room-pysrc.html#Room.getOxygen">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="setOxygen"></a><span class="summary-sig-name">setOxygen</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">nb</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="room-pysrc.html#Room.setOxygen">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="removeOxygen"></a><span class="summary-sig-name">removeOxygen</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">nb</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="room-pysrc.html#Room.removeOxygen">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="addOxygen"></a><span class="summary-sig-name">addOxygen</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">nb</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="room-pysrc.html#Room.addOxygen">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="cooldowns"></a><span class="summary-sig-name">cooldowns</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">crew</span>,
+        <span class="summary-sig-arg">system</span>,
+        <span class="summary-sig-arg">listRooms</span>)</span><br />
+      Fires, repair, boarders...</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="room-pysrc.html#Room.cooldowns">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="room.Room-class.html#crewTasks" class="summary-sig-name">crewTasks</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">crew</span>,
+        <span class="summary-sig-arg">system</span>)</span><br />
+      The tasks crew members have to do each turn, like repair, extinguish 
+      fires...</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="room-pysrc.html#Room.crewTasks">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="room.Room-class.html#dotsToCrew" class="summary-sig-name">dotsToCrew</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">crew</span>)</span><br />
+      Damages over time to the crewmen in the room, due to fire and 
+      suffocation.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="room-pysrc.html#Room.dotsToCrew">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="testExtinction"></a><span class="summary-sig-name">testExtinction</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="room-pysrc.html#Room.testExtinction">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="testBreachRepair"></a><span class="summary-sig-name">testBreachRepair</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="room-pysrc.html#Room.testBreachRepair">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="expansionFire"></a><span class="summary-sig-name">expansionFire</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">listRooms</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="room-pysrc.html#Room.expansionFire">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="expansionOxygen"></a><span class="summary-sig-name">expansionOxygen</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">listRooms</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="room-pysrc.html#Room.expansionOxygen">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__delattr__</code>,
+      <code>__format__</code>,
+      <code>__getattribute__</code>,
+      <code>__hash__</code>,
+      <code>__new__</code>,
+      <code>__reduce__</code>,
+      <code>__reduce_ex__</code>,
+      <code>__repr__</code>,
+      <code>__setattr__</code>,
+      <code>__sizeof__</code>,
+      <code>__str__</code>,
+      <code>__subclasshook__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== PROPERTIES ==================== -->
+<a name="section-Properties"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Properties</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Properties"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__class__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== METHOD DETAILS ==================== -->
+<a name="section-MethodDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Method Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-MethodDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="__init__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">kw</span>,
+        <span class="sig-arg">nb</span>,
+        <span class="sig-arg">doors</span>)</span>
+    <br /><em class="fname">(Constructor)</em>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="room-pysrc.html#Room.__init__">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>x.__init__(...) initializes x; see help(type(x)) for signature</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>kw</code></strong> - List of the holes, their position and the tuple of the 2 rooms 
+          they link.</li>
+    </ul></dd>
+    <dt>Overrides:
+        object.__init__
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getCoords"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getCoords</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="room-pysrc.html#Room.getCoords">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Renvoie les coordonnees d'une salle</p>
+  <dl class="fields">
+    <dt>Returns:</dt>
+        <dd>liste de deux points</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getNbBoxes"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getNbBoxes</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="room-pysrc.html#Room.getNbBoxes">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Return the number of boxes that compose the room, normally only 2 or 
+  4.</p>
+  <dl class="fields">
+    <dt>Returns: Integer.</dt>
+        <dd>Return the number of boxes composing the room.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getSystem"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getSystem</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="room-pysrc.html#Room.getSystem">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Renvoie le nom du systeme present dans la salle.</p>
+  <dl class="fields">
+    <dt>Returns:</dt>
+        <dd>Return the name of the system that is in the room or False if 
+          there is no system. @rtype String or Boolean.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="crewTasks"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">crewTasks</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">crew</span>,
+        <span class="sig-arg">system</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="room-pysrc.html#Room.crewTasks">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>The tasks crew members have to do each turn, like repair, extinguish 
+  fires...</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>crew</code></strong> (List of objects of the class CrewMember.) - List of the crew members of the entire ship.</li>
+        <li><strong class="pname"><code>system</code></strong> (Object of the class System, something else if there's no system.) - System in the room.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="dotsToCrew"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">dotsToCrew</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">crew</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="room-pysrc.html#Room.dotsToCrew">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Damages over time to the crewmen in the room, due to fire and 
+  suffocation.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>crew</code></strong> (List of objects of the class CrewMember.) - List of the crew members of the entire ship.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Sat Dec  6 17:26:50 2014
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

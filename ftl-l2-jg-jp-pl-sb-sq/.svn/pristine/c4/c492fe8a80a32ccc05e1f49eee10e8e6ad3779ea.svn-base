@@ -1,0 +1,925 @@
+from random import randint, randrange
+from globalVar import *
+from math import sqrt
+
+"""
+Module which modelize systemes.
+"""
+
+
+class System(object):
+    """
+    Class which operate a system that is is in a room of the ship.
+    """
+
+    def __init__(self, name, ship, maxPower=1, maxPowerMax=4):
+        self.__name = name
+        self.__maxPower = maxPower
+        self.__currentMaxPower = maxPower
+        self.__powerInIt = 0
+        self.__maxPowerMax = maxPowerMax  # Maximum of upgrades you can buy
+        self.__ship = ship
+        self.__powerIonised = 0
+        self.__cooldownIon = 0
+        self.__cooldownIonDone = 0
+        self.__reparation = 0
+        self.__dots = 0
+
+    def __repr__(self):
+        res = ''
+        res += '  Nom : ' + self.__name
+        res += '  Emax : ' + str(self.__maxPower)
+        res += '  Ecour : ' + str(self.__currentMaxPower)
+        res += '  E : ' + str(self.__powerInIt)
+        res += '  Repair% : ' + str(self.__reparation)
+        res += '  maxEmax : ' + str(self.__maxPowerMax) + '\n'
+        return res
+
+    def getPowerIonised(self):
+        return self.__powerIonised
+
+    def setPowerIonised(self, val):
+        self.__powerIonised = val
+
+    def getCooldownIon(self):
+        return self.__cooldownIon
+
+    def setCooldownIon(self, val):
+        self.__cooldownIon = val
+
+    def getCooldownIonDone(self):
+        return self.__cooldownIonDone
+
+    def setCooldownIonDone(self, val):
+        self.__cooldownIonDone = val
+
+    def getShip(self):
+        return self.__ship
+
+    def getMaxPowerMax(self):
+        return self.__maxPowerMax
+
+    def getPowerInIt(self):
+        if self.__powerInIt > self.__currentMaxPower:
+            print('\033[31m'+str(self.__powerInIt)+" power in "+self.__name+'\033[0m', '\033[31m'+str(self.__currentMaxPower)+" currentmaxpower in "+self.__name+'\033[0m', '\033[31m'+str(self.__maxPower)+" maxpower in "+self.__name+'\033[0m')
+            return self.__currentMaxPower
+        return self.__powerInIt
+
+    def setPowerInIt(self, nb):
+        self.__powerInIt = nb
+        if self.__powerInIt > self.__currentMaxPower:
+            print('\033[31m'+str(self.__powerInIt-self.__currentMaxPower)+" too much power in "+self.__name+'\033[0m')
+            self.__powerInIt = self.__currentMaxPower
+
+    def getCurrentMaxPower(self):
+        """
+        Get the maximum of power you can put a the moment.
+        """
+        return self.__currentMaxPower
+
+    def setCurrentMaxPower(self, nb):
+        self.__currentMaxPower = nb
+        if self.__currentMaxPower > self.__maxPower:
+            self.__currentMaxPower = self.__maxPower
+    
+    def getMaxPower(self):
+        return self.__maxPower
+
+    def setMaxPower(self, n):
+        self.__maxPower = n
+        if self.__maxPower > self.__maxPowerMax:
+            self.__maxPower = self.__maxPowerMax
+
+    def getName(self):
+        return self.__name
+
+    def getNameAbbreviation(self):
+        return self.__name
+
+    def getDots(self):
+        return self.__dots
+
+    def setDots(self, nb):
+        self.__dots = nb
+
+    def getRepair(self):
+        return self.__reparation
+
+    def setRepair(self, nb):
+        self.__reparation = nb
+
+    def isIonised(self):
+        return self.__cooldownIon > 0
+
+    def addPower(self, nb=1):
+        """
+        Add power to the system.
+
+        @param nb: Number of power to add.
+        @type nb: Integer.
+        """
+        if self.__cooldownIon == 0:
+            if int(self.__currentMaxPower) - int(self.__powerInIt) >= nb and nb <= self.__ship.getPowerAvailable():
+                self.__powerInIt += nb
+                self.__ship.setPowerAvailable(self.__ship.getPowerAvailable()-nb)
+            elif 0 < int(self.__currentMaxPower) - int(self.__powerInIt) < nb <= self.__ship.getPowerAvailable():
+                k = int(self.__currentMaxPower) - int(self.__powerInIt)
+                self.__powerInIt = self.__currentMaxPower
+                self.__ship.setPowerAvailable(self.__ship.getPowerAvailable()-k)
+
+    def removePower(self, nb=1):
+        if self.__cooldownIon == 0:
+            if nb <= self.__powerInIt:
+                self.__powerInIt -= nb
+                self.__ship.setPowerAvailable(self.__ship.getPowerAvailable()+nb)
+            else:
+                self.__ship.setPowerAvailable(self.__ship.getPowerAvailable()+self.__powerInIt)
+                self.__powerInIt = 0
+
+    def upgradeMaxPower(self):
+        """
+        Upgrade of 1 the maximum of power you can put in your system.
+        @return: Return True if it actually upgraded the maximum.
+        @rtype: Boolean.
+        """
+        if self.__maxPower != self.__maxPowerMax:
+            self.__maxPower += 1
+            return True
+        return False
+
+    def doDamages(self, damages=1):
+        """
+
+        @return: Return is the damages changed something.
+        @rtype: Boolean.
+        """
+        if self.__currentMaxPower != 0:
+            freePower = 0
+            if self.__powerInIt != 0:
+                if self.__currentMaxPower == self.__powerInIt:
+                    if self.__powerInIt >= damages:
+                        self.__powerInIt -= damages
+                        freePower = damages
+                    else:
+                        freePower = self.__powerInIt
+                        self.__powerInIt = 0
+                elif self.__currentMaxPower - self.__powerInIt < damages:
+                    freePower = damages - self.__currentMaxPower + self.__powerInIt
+                    self.__powerInIt -= freePower
+            if self.__currentMaxPower - damages >= 0:
+                self.__currentMaxPower -= damages
+            else:
+                self.__currentMaxPower = 0
+                self.__dots = 0  # no more dmgs due to dots
+            self.__ship.addPower(freePower)
+            self.endIonise()
+            return True
+        self.__reparation = 0  # remove repair done
+        return False
+
+    def ionise(self):  # remember that we multiply the  division of the time by 25
+        """
+        Manage the ion attack of a system.
+
+        http://www.ftlgame.com/forum/viewtopic.php?f=7&t=21942 Explanation of the ions.
+        """
+        self.__cooldownIon = 5*divisionTime
+        if self.__powerInIt > 0:
+            self.__powerInIt -= 1  # whenever an ion touch a system it removes a point of power
+            self.__ship.setPowerAvailable(self.__ship.getPowerAvailable()+1)  # return the lost power to the ship
+            self.__powerIonised += 1
+            self.discreteIonise()
+
+    def discreteIonise(self):
+        if not self.testInstructionCooldownShip('self.getSystem("'+self.__name+'").endMaxTimeIonised()'):
+            self.addInstructionCooldownShip('self.getSystem("'+self.__name+'").endMaxTimeIonised()', -1+25*divisionTime)
+        else:
+            self.delInstructionCooldownShip('self.getSystem("'+self.__name+'").endIonise()')
+        self.addInstructionCooldownShip('self.getSystem("'+self.__name+'").endIonise()', -1+5*divisionTime)
+
+    def endMaxTimeIonised(self):
+        self.delInstructionCooldownShip('self.getSystem("'+self.__name+'").endIonise()')
+        self.__cooldownIonDone = 25*divisionTime
+        self.cooldownIon()
+
+    def endIonise(self):
+        self.__cooldownIon = 0
+        self.cooldownIon()
+        self.delInstructionCooldownShip('self.getSystem("'+self.__name+'").endMaxTimeIonised()')
+
+    def cooldownIon(self):
+        """
+        At every tick of the clock it should be called and it manages the cooldown of the ionisation of the system.
+        """
+        if self.__cooldownIon > 0:
+            self.__cooldownIon -= 1
+            self.__cooldownIonDone += 1
+        if self.__cooldownIon <= 0 or self.__cooldownIonDone >= 25*divisionTime:
+            self.__cooldownIonDone = 0
+            self.__cooldownIon = 0
+            self.addPower(self.__powerIonised)
+            self.__powerIonised = 0
+
+    def reparation(self, crew):
+        """
+        At every tick of the clock every crewman repair the system.
+
+        This function is called only if there is at least one crewman to repair the system (if not, it won't work),
+        it add xp when it should.
+        @param crew: List of the crew members in the room of the system.
+        @type crew: List of objects of the class CrewMember.
+        """
+        for k in crew:
+            if self.__reparation < 100 and self.__maxPower > self.__currentMaxPower:
+                self.__reparation += k.getPercentageRepair()/divisionTime  # division of the time
+                if self.__reparation >= 100:
+                    self.__reparation = 0
+                    self.__currentMaxPower += 1
+                    k.addXpRepair()
+
+    def dotFire(self, nbFires):
+        """
+        At every tick of the clock, every fire do damages to the system.
+
+        This function manage the dots and do true damages when there has been enough dots.
+        @param nbFires: Number of fires in the room.
+        @type nbFires: Integer.
+        """
+        if self.__currentMaxPower != 0:
+            for i in range(nbFires):
+                self.__dots += 7.5/divisionTime  # unknown stat and division of the time
+            if self.__dots >= 100:
+                self.__dots -= 100  # don't forget the over damages
+                self.doDamages()
+                if self.__currentMaxPower == 0:
+                    self.explode()
+
+    def explode(self):
+        for k in self.__ship.getRooms():
+            if k.getSystem() == self.__name:
+                room = k
+        self.__ship.degat(1)  # hull damage
+        for k in self.__ship.getCrew():  # crew damage
+            if k.getRoom().getNB() == room.getNB():
+                k.doDamages(15)  # unknown stat
+        room.startFire()
+
+    def addInstructionCooldownShip(self, instruc, roundNB):
+        i = self.__ship.getInstructionsCooldown()
+        if len(i) <= roundNB:
+            i += [[] for _ in range(roundNB-len(i)+1)]
+        i[roundNB] += [instruc]
+
+    def addInstructionAttackShip(self, instruc, roundNB):
+        i = self.__ship.getInstructionsAttack()
+        if len(i) <= roundNB:
+            i += [[] for _ in range(roundNB-len(i)+1)]
+        i[roundNB] += [instruc]
+
+    def delInstructionCooldownShip(self, instruc):
+        i = self.__ship.getInstructionsCooldown()
+        for l in i:
+            if instruc in l:
+                l.remove(instruc)
+                break
+
+    def delInstructionAttackShip(self, instruc):
+        i = self.__ship.getInstructionsAttack()
+        for l in i:
+            if instruc in l:
+                l.remove(instruc)
+                break
+
+    def testInstructionCooldownShip(self, instruc):
+        i = self.__ship.getInstructionsCooldown()
+        for l in i:
+            if instruc in l:
+                return True
+        return False
+
+    def testInstructionAttackShip(self, instruc):
+        i = self.__ship.getInstructionsAttack()
+        for l in i:
+            if instruc in l:
+                return True
+        return False
+
+    def getInstructionCooldownShip(self, instruc):
+        i = self.__ship.getInstructionsCooldown()
+        for l in range(len(i)):
+            if instruc in i[l]:
+                return l
+
+    def getInstructionAttackShip(self, instruc):
+        i = self.__ship.getInstructionsAttack()
+        for l in range(len(i)):
+            if instruc in i[l]:
+                return l
+        
+
+class Shields(System):
+
+    def __init__(self, ship, maxPower=1):
+        System.__init__(self, 'shields', ship, maxPower, 10)
+        self.__layers = 0
+        self.__cooldown = 0
+
+    def getLayers(self):
+        return self.__layers
+
+    def incomingDamages(self, typeOfWeapon):
+        """
+        Try block the damages and say if it did it.
+
+        @return: Return True if it blocked the damages.
+        @rtype: Boolean.
+        """
+        listOfWeapons = ['laser', 'asteroids', 'combat']
+        if typeOfWeapon in listOfWeapons and self.__layers > 0:
+            self.__layers -= 1
+            return True
+        return False
+
+    def cooldownLayer(self, lvlCrew):
+        """
+        At every tick of the clock it recharge the shield's layers if they're not at max.
+
+        @param lvlCrew: Maximum level of the eventual multiple crew members. -1 if there's no crewman.
+        @type lvlCrew: Integer.
+        """
+        if self.__layers < self.getPowerInIt() // 2:
+            rechargeCrew = {-1: 0, 0: 10/100, 1: 20/100, 2: 29/100}
+            self.__cooldown += 1 * (1+rechargeCrew[lvlCrew]) / divisionTime
+            if self.__cooldown >= 5:
+                # unknown stats, reduce the division of time by 25
+                self.__cooldown = 0
+                self.__layers += 1
+
+    def ionise(self):  # remember that we multiply the  division of the time by 25
+        """
+        Manage the ion attack of a system.
+
+        http://www.ftlgame.com/forum/viewtopic.php?f=7&t=21942 Explanation of the ions.
+        """
+        System.ionise(self)
+        if self.getPowerInIt() % 2 != 0 and self.__layers > 0:
+            self.__layers -= 1
+
+
+class Engines(System):
+    # evade=dodge
+
+    def __init__(self, ship, maxPower):
+        System.__init__(self, 'engines', ship, maxPower, 8)
+        
+    def incomingDamages(self, lvlCrewWeaponControl, lvlCrewPiloting, powerPiloting=1):
+        """
+        @param lvlCrewPiloting: Lvl in piloting of the member of the crew in it, value of -1 if the room is unmanned.
+        @type lvlCrewPiloting: Integer.
+        @param powerPiloting: Number of power put in the piloting system.
+        @type powerPiloting: Integer.
+        @return: Return True if the damages are dodged.
+        @rtype: Boolean.
+        """
+        dodgeChance = {0: 0, 1: 5, 2: 10, 3: 15, 4: 20, 5: 25, 6: 28, 7: 31, 8: 35}
+        # add dodge depending of the power in the engines
+        evasionCrew = {'-1': 0, '0': 5, '1': 7, '2': 10}
+        # add dodge depending of the lvl of the crew
+        evasionUnmanned = {0: 0, 1: 0, 2: 50/100, 3: 80/100}
+        # divide dodge when piloting is unmanned
+        evasionEngines = evasionCrew[str(lvlCrewWeaponControl)]
+        evasionPiloting = evasionCrew[str(lvlCrewPiloting)]
+        try:
+            baseRate = dodgeChance[self.getPowerInIt()] + evasionEngines + evasionPiloting  # Total of dodge chances
+            if not self.isIonised():
+                if lvlCrewPiloting != -1:
+                    return baseRate >= randint(0, 100)
+                if powerPiloting >= 2:
+                    return (baseRate*evasionUnmanned[powerPiloting]) >= randint(0, 100)
+        except KeyError:
+            print('\033[31m'+" engines "+str(self.getPowerInIt())+' '+str(self.getCurrentMaxPower())+' '+str(self.getMaxPower())+'\033[0m')
+            print('\033[31m'+" piloting "+str(powerPiloting)+'\033[0m')
+        return False
+
+
+class Piloting(System):
+
+    def __init__(self, ship, maxPower=1):
+        System.__init__(self, 'piloting', ship, maxPower, 8)
+        
+
+class WeaponControl(System):
+
+    def __init__(self, ship, maxPower=1, maxWeapons=4):
+        System.__init__(self, 'weaponControl', ship, maxPower)
+        self.__maxWeapons = maxWeapons
+        self.__weapons = []
+
+    def getNameAbbreviation(self):
+        return 'wpnCtrl'
+
+    def getMaxWeapons(self):
+        """
+        Maximum capacity of storage.
+        """
+        return self.__maxWeapons
+
+    def getWeapons(self):
+        return self.__weapons
+
+    def addWeapon(self, weapon):
+        """
+        Add a weapon to the dock.
+        @param weapon: Weapon of the class Weapon.
+        @type weapon: Object of the class Weapon.
+        @return: Return True if it could add the weapon.
+        @rtype: Boolean.
+        """
+        if len(self.__weapons) != self.__maxWeapons:
+            self.__weapons += [weapon] 
+            return True
+        return False
+
+    def removeWeapon(self, weaponIndex):
+        self.__weapons.pop(weaponIndex)
+
+    def removeWeaponByName(self, weaponName):
+        for i in range(len(self.__weapons)):
+            if self.__weapons[len(self.__weapons)-1-i].getName() == weaponName:
+                self.__weapons.pop(len(self.__weapons)-1-i)
+                break
+
+    def powerWeapon(self, indexWeapon):
+        """
+        Power a weapon if it possible.
+
+        Check if there is enough power available, if the weapon isn't already powered and
+        if you can put more power into the weapon control.
+        @param indexWeapon: The index of the weapon in the list of weapons.
+        @type indexWeapon: Integer.
+        """
+        weapon = self.__weapons[indexWeapon]
+        if self.getShip().getPowerAvailable() >= weapon.getPower() \
+                and not weapon.isPowered() \
+                and self.getCurrentMaxPower()-self.getPowerInIt() >= weapon.getPower():
+            weapon.powerIt()
+            self.addPower(weapon.getPower())
+
+    def unpowerWeapon(self, indexWeapon):
+        """
+        Unpower a weapon.
+
+        Check if the weapon is powered.
+        @param indexWeapon: The index of the weapon in the list of weapons.
+        @type indexWeapon: Integer.
+        @return: Return the power to add to the available power of the ship.
+        @rtype: Integer.
+        """
+        weapon = self.__weapons[indexWeapon]
+        if weapon.isPowered():
+            weapon.unpowerIt()
+            weapon.setCurrentCooldown(0)
+            self.getShip().setPowerAvailable(weapon.getPower()+self.getShip().getPowerAvailable())
+
+    def cooldownWeapons(self, lvlCrew):
+        """
+        At every tick of the clock, it recharge the weapons that are powered.
+        @param lvlCrew: Lvl in weapons of a crew member in the room containing the weapon control system,
+        -1 if there is no crew member.
+        @type lvlCrew: Integer.
+        """
+        rechargeCrew = {-1: 1, 0: 1+(10/100), 1: 1+(15/100), 2: 1+(20/100)}
+        for k in self.__weapons:
+            if k.isPowered():  # is it powered
+                if k.getCurrentCooldown() < k.getCooldown():  # is it still uncharged
+                    k.setCurrentCooldown(k.getCurrentCooldown() + 1 * rechargeCrew[lvlCrew] / divisionTime)
+
+    def useWeapon(self, indexWeapon, ship2):
+        """
+        Use a weapon against the opposite ship.
+        @param indexWeapon: The index of the weapon in the list of weapons.
+        @type indexWeapon: Integer.
+        """
+        weapon = self.__weapons[indexWeapon]
+        if ship2.isCloaked():
+            weapon.setCurrentCooldown(0)
+        if weapon.isPowered() and weapon.getCurrentCooldown() >= weapon.getCooldown():
+            weapon.setCurrentCooldown(0)
+            if weapon.getType() == 'missile':
+                if self.getShip().getMissiles() <= 0:
+                    return False, None
+                self.getShip().setMissiles(self.getShip().getMissiles()-1)
+                r = randrange(len(ship2.getRooms()))
+                for i in range(weapon.getHits()):
+                    ship2.attackRoom(weapon, r)
+            elif weapon.getType() == 'laser':
+                r = randrange(len(ship2.getRooms()))
+                for i in range(weapon.getHits()):
+                    ship2.attackRoom(weapon, r)
+            elif weapon.getType() == 'ion':
+                roomsWithSystem = []
+                for k in ship2.getRooms():
+                    if k.getSystem() != False:
+                        roomsWithSystem += [k]
+                r = roomsWithSystem[randrange(len(roomsWithSystem))].getNB()
+                for i in range(weapon.getHits()):
+                    ship2.ioniseIncoming(r)
+            elif weapon.getType() == 'beam':
+                # no care of the time and completely random targeting
+                maxCoords = [0, 0]
+                for r in ship2.getRooms():
+                    roomCoords = r.getCoords()[1]
+                    for i in range(2):
+                        if roomCoords[i] > maxCoords[i]:
+                            maxCoords[i] = roomCoords[i]
+                coord1 = [randrange(maxCoords[0]+1), randrange(maxCoords[1]+1)]
+                # 1 tile diagonally = 45 beam length (pixels).
+                beamLength = round(weapon.getBeamLength() * (10 / sqrt((45**2) / 2)))
+                x = randrange(- beamLength, beamLength+1)
+                y = [-1, 1][randrange(2)] * sqrt(beamLength**2 - x**2)
+                coord2 = [coord1[0]+x, coord1[1]+y]
+                r = (coord1, coord2)
+                ship2.attackBeam(weapon, coord1, coord2)
+            self.weaponHasBeenUsed()
+            return True, r
+        return False, None
+
+    def doDamages(self, damages=1):
+        """
+
+        @return: Return is the damages changed something.
+        @rtype: Boolean.
+        """
+        if self.getCurrentMaxPower() != 0:
+            freePower = 0
+            if self.getPowerInIt() != 0:
+                if self.getCurrentMaxPower() == self.getPowerInIt():
+                    if self.getPowerInIt() >= damages:
+                        self.setPowerInIt(self.getPowerInIt()-damages)
+                        freePower = damages
+                    else:
+                        freePower = self.getPowerInIt()
+                        self.setPowerInIt(0)
+                elif self.getCurrentMaxPower() - self.getPowerInIt() < damages:
+                    freePower = damages - self.getCurrentMaxPower() + self.getPowerInIt()
+                    self.setPowerInIt(self.getPowerInIt()-freePower)
+            if self.getCurrentMaxPower() - damages >= 0:
+                self.setCurrentMaxPower(self.getCurrentMaxPower()-damages)
+            else:
+                self.setCurrentMaxPower(0)
+                self.setDots(0)  # no more dmgs due to dots
+            self.getShip().addPower(freePower)
+            self.testUnpowerWeapons()
+            return True
+        self.setRepair(0)  # remove repair done
+        return False
+
+    def testUnpowerWeapons(self):
+        """
+        Unpower weapons if there is not enough power.
+        """
+        courant = 0  # Power used
+        for k in self.__weapons:
+            if k.isPowered():
+                if k.getPower()+courant > self.getCurrentMaxPower():
+                    k.unpowerIt()
+                else:
+                    courant += k.getPower()
+        freePower = self.getPowerInIt() - courant
+        self.setPowerInIt(courant)
+        self.getShip().setPowerAvailable(self.getShip().getPowerAvailable() + freePower)
+
+    def weaponHasBeenUsed(self):
+        if self.getShip().hasSystem('cloaking'):
+            self.getShip().getSystem('cloaking').weaponIsUsed()
+
+    def cooldownIon(self):
+        """
+        At every tick of the clock it should be called and it manages the cooldown of the ionisation of the system.
+        """
+        if self.getCooldownIon() > 0:
+            self.setCooldownIon(self.getCooldownIon()-1)
+            self.setCooldownIonDone(self.getCooldownIonDone()+1)
+        if self.getCooldownIon() == 0 or self.getCooldownIonDone() >= 25*divisionTime:
+            self.setCooldownIonDone(0)
+            self.setCooldownIon(0)
+            self.setPowerIonised(0)
+
+    def ionise(self):  # remember that we multiply the  division of the time by 25
+        """
+        Manage the ion attack of a system.
+
+        http://www.ftlgame.com/forum/viewtopic.php?f=7&t=21942 Explanation of the ions.
+        """
+        System.ionise(self)
+        self.testUnpowerWeapons()
+
+
+class Oxygen(System):
+
+    def __init__(self, ship, maxPower=1):
+        System.__init__(self, 'oxygen', ship, maxPower, 3)    
+
+
+class Medbay(System):
+
+    def __init__(self, ship, maxPower=1):
+        System.__init__(self, 'medbay', ship, maxPower, 3)
+
+    def amountHealPerSecond(self):
+        d = {0: 0, 1: 1, 2: 1.5, 3: 3}
+        return d[self.getPowerInIt()] * 20 / divisionTime  # unknown stat
+
+
+class Sensors(System):
+
+    def __init__(self, ship, maxPower=1):
+        System.__init__(self, 'sensors', ship, maxPower, 3)
+
+
+class DoorSystem(System):
+
+    def __init__(self, ship, maxPower=1):
+        System.__init__(self, 'doorSystem', ship, maxPower, 3)
+
+    def getNameAbbreviation(self):
+        return 'doorStm'
+
+
+class DroneControl(System):
+
+    def __init__(self, ship, maxPower=1, maxDrones=3):
+        System.__init__(self, 'droneControl', ship, maxPower, 8)
+        self.__maxDrones = maxDrones
+        self.__drones = []
+
+    def getNameAbbreviation(self):
+        return 'droneCtrl'
+
+    def getDrones(self):
+        return self.__drones
+
+    def getMaxDrones(self):
+        return self.__maxDrones
+
+    def addDrone(self, drone):
+        if len(self.__drones) != self.__maxDrones:
+            self.__drones += [drone]
+            return True
+        return False
+
+    def removeDrone(self, droneIndex):
+        self.__drones.pop(droneIndex)
+
+    def removeDroneByName(self, droneName):
+        for i in range(len(self.__drones)):
+            if self.__drones[len(self.__drones)-1-i].getName() == droneName:
+                self.__drones.pop(len(self.__drones)-1-i)
+                break
+
+    def powerDrone(self, indexDrone):
+        drone = self.__drones[indexDrone]
+        if self.getShip().getPowerAvailable() >= drone.getPower() \
+                and not drone.isPowered() \
+                and self.getCurrentMaxPower()-self.getPowerInIt() >= drone.getPower():
+            drone.powerIt()
+            if drone.getType() in ['combat']:
+                self.getShip().setDroneParts(self.getShip().getDroneParts()-1)
+                self.addInstructionAttackShip('self.attackUsingDrone('+str(indexDrone)+', ship2)',
+                                              int(divisionTime*100/drone.getSpeed()))
+            self.addPower(drone.getPower())
+
+    def cooldownDrones(self):
+        for d in self.__drones:
+            if d.getType() == 'combat' and d.isPowered() and d.getCooldown() < 100:
+                d.setCooldown(d.getCooldown() + 18 / divisionTime)
+
+    def useDrone(self, indexDrone, ship2):
+        drone = self.__drones[indexDrone]
+        if ship2.isCloaked():
+            # drone.setCooldown(0)
+            self.addInstructionAttackShip('self.attackUsingDrone('+str(indexDrone)+', ship2)',
+                                          int(divisionTime*100/drone.getSpeed()))
+        if drone.isPowered():  # and drone.getCooldown() >= 100:
+            r = randrange(len(ship2.getRooms()))
+            if drone.getName() in ['combat1', 'combat2']:
+                ship2.attackRoomCombatDrone(drone, r)
+            if 'beam' in drone.getName():
+                # no care of the time and completely random targeting
+                maxCoords = [0, 0]
+                for r in ship2.getRooms():
+                    roomCoords = r.getCoords()[1]
+                    for i in range(2):
+                        if roomCoords[i] > maxCoords[i]:
+                            maxCoords[i] = roomCoords[i]
+                coord1 = [randrange(maxCoords[0]+1), randrange(maxCoords[1]+1)]
+                # 1 tile diagonally = 45 beam length (pixels).
+                beamLength = round(drone.getBeamLength() * (10 / sqrt((45**2) / 2)))
+                x = randrange(- beamLength, beamLength+1)
+                y = [-1, 1][randrange(2)] * sqrt(beamLength**2 - x**2)
+                coord2 = [coord1[0]+x, coord1[1]+y]
+                r = (coord1, coord2)
+                ship2.attackBeam(drone, coord1, coord2)
+            # drone.setCooldown(0)
+            self.addInstructionAttackShip('self.attackUsingDrone('+str(indexDrone)+', ship2)',
+                                          int(divisionTime*100/drone.getSpeed()))
+            return True, r
+        return False, None
+
+    def doDamages(self, damages=1):
+        """
+
+        @return: Return is the damages changed something.
+        @rtype: Boolean.
+        """
+        if self.getCurrentMaxPower() != 0:
+            freePower = 0
+            if self.getPowerInIt() != 0:
+                if self.getCurrentMaxPower() == self.getPowerInIt():
+                    if self.getPowerInIt() >= damages:
+                        self.setPowerInIt(self.getPowerInIt()-damages)
+                        freePower = damages
+                    else:
+                        freePower = self.getPowerInIt()
+                        self.setPowerInIt(0)
+                elif self.getCurrentMaxPower() - self.getPowerInIt() < damages:
+                    freePower = damages - self.getCurrentMaxPower() + self.getPowerInIt()
+                    self.setPowerInIt(self.getPowerInIt()-freePower)
+            if self.getCurrentMaxPower() - damages >= 0:
+                self.setCurrentMaxPower(self.getCurrentMaxPower()-damages)
+            else:
+                self.setCurrentMaxPower(0)
+                self.setDots(0)  # no more dmgs due to dots
+            self.getShip().addPower(freePower)
+            self.testUnpowerDrones()
+            return True
+        self.setRepair(0)  # remove repair done
+        return False
+
+    def testUnpowerDrones(self):
+        """
+        Unpower weapons if there is not enough power.
+        """
+        courant = 0  # Power used
+        for i in range(len(self.__drones)):
+            k = self.__drones[i]
+            if k.isPowered():
+                if k.getPower()+courant > self.getCurrentMaxPower():
+                    k.unpowerIt()
+                    # k.setCooldown(0)
+                    self.delInstructionAttackShip('self.attackUsingDrone('+str(i)+', ship2)')
+                else:
+                    courant += k.getPower()
+        freePower = self.getPowerInIt() - courant
+        self.setPowerInIt(courant)
+        self.getShip().setPowerAvailable(self.getShip().getPowerAvailable() + freePower)
+
+    def cooldownIon(self):
+        """
+        At every tick of the clock it should be called and it manages the cooldown of the ionisation of the system.
+        """
+        if self.getCooldownIon() > 0:
+            self.setCooldownIon(self.getCooldownIon()-1)
+            self.setCooldownIonDone(self.getCooldownIonDone()+1)
+        if self.getCooldownIon == 0 or self.getCooldownIonDone == 25*divisionTime:
+            self.setCooldownIonDone(0)
+            self.setCooldownIon(0)
+            self.setPowerIonised(0)
+
+    def ionise(self):  # remember that we multiply the  division of the time by 25
+        """
+        Manage the ion attack of a system.
+
+        http://www.ftlgame.com/forum/viewtopic.php?f=7&t=21942 Explanation of the ions.
+        """
+        System.ionise(self)
+        self.testUnpowerDrones()
+
+
+class BackupBattery(System):
+
+    def __init__(self, ship, maxPower=1):
+        System.__init__(self, 'backupBattery', ship, maxPower, 2)
+
+    def getNameAbbreviation(self):
+        return 'buBattery'
+
+
+class CrewTeleporter(System):
+
+    def __init__(self, ship, maxPower=1):
+        System.__init__(self, 'crewTeleporter', ship, maxPower, 3)
+
+    def getNameAbbreviation(self):
+        return 'crewTP'
+
+
+class Cloaking(System):
+
+    def __init__(self, ship, maxPower=1):
+        System.__init__(self, 'cloaking', ship, maxPower, 3)
+        self.__timeSpent = 0
+        self.__isUsed = False
+        self.__timesIonised = 0
+        self.addInstructionCooldownShip('self.tryUseCloaking()', 0)
+
+    def ionise(self):
+        System.ionise(self)
+        self.addInstructionCooldownShip('self.tryUseCloaking()', 1+5*divisionTime)
+
+    def addPower(self, nb=1):
+        System.addPower(self, nb)
+        self.addInstructionCooldownShip('self.tryUseCloaking()', 1)
+
+    def isUsed(self):
+        return self.__isUsed
+
+    def getTimesIonised(self):
+        return self.__timesIonised
+
+    def cooldownCloaking(self):
+        d = {1: 5, 2: 10, 3: 15}
+        self.__timeSpent += 1 / divisionTime
+        if self.__timeSpent >= d[self.getPowerInIt()]:
+            self.__timeSpent = 0
+            self.__isUsed = False
+            self.__timesIonised = 5
+            self.ionise()
+
+    def generalCooldown(self):
+        if self.isUsed():
+            self.cooldownCloaking()
+            if not self.isUsed():
+                self.getShip().deactivateCloaking()
+        elif self.getTimesIonised() > 0 and not self.isIonised:
+            self.ionisedCloaking()
+        elif not self.isIonised() and self.getPowerInIt() > 0:
+            self.useCloaking()
+            self.getShip().activateCloaking()
+            d = {1: 5, 2: 10, 3: 15}
+            self.addInstructionCooldownShip('self.tryUseCloaking()', d[self.getPowerInIt()]*divisionTime)
+            self.__timeSpent = 15
+
+    def ionisedCloaking(self):
+        self.ionise()
+        self.__timesIonised -= 1
+
+    def useCloaking(self):
+        self.__isUsed = True
+
+    def weaponIsUsed(self):
+        if self.__isUsed:
+            # self.__timeSpent += 0.5 / divisionTime
+            # unknown stat
+            c = self.getInstructionCooldownShip('self.tryUseCloaking()')
+            self.delInstructionCooldownShip('self.tryUseCloaking()')
+            self.addInstructionCooldownShip('self.tryUseCloaking()', int((c/divisionTime)-(0.5/divisionTime)))
+
+
+class CloneBay(System):
+
+    def __init__(self, ship, maxPower=1):
+        System.__init__(self, 'cloneBay', ship, maxPower, 3)
+        self.__deadCrew = []
+        self.__revive = 0
+
+    def getDeadCrew(self):
+        return self.__deadCrew
+
+    def addDeadCrew(self, crewman):
+        self.__deadCrew += [crewman]
+
+    def cooldownRevive(self):
+        try:
+            if self.getPowerInIt() > 0:
+                timeRevive = {1: 12, 2: 9, 3: 7}
+                self.__revive += 1 / divisionTime
+                if self.__revive >= timeRevive[self.getPowerInIt()]:
+                    self.reviveCrewMember(self.__deadCrew[0])
+                    self.__deadCrew.pop(0)
+                    if not self.__deadCrew:
+                        self.__revive = 0
+                    else:
+                        self.__revive -= timeRevive[self.getPowerInIt()]
+        except KeyError:
+            print('\033[31m'+" cloneBay "+str(self.getPowerInIt())+' '+str(self.getCurrentMaxPower())+' '+str(self.getMaxPower())+'\033[0m')
+
+    def reviveCrewMember(self, crewman):
+        crewman.loseExperience(20)
+        crewman.setRoom(self.getShip().getRoomSystem('cloneBay'))
+        self.getShip().setCrew(self.getShip().getCrew()+[crewman])
+
+
+class MindControl(System):
+
+    def __init__(self, ship, maxPower=1):
+        System.__init__(self, 'mindControl', ship, maxPower, 3)
+
+    def getNameAbbreviation(self):
+        return 'mindCtrl'
+
+
+class Hacking(System):
+
+    def __init__(self, ship, maxPower=1):
+        System.__init__(self, 'hacking', ship, maxPower, 3)

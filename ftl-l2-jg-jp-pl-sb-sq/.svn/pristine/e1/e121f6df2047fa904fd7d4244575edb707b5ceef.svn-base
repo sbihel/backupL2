@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ship>
+	<add>
+		<energy>4</energy>
+		<system>
+			<shields>2</shields>
+		</system>
+		<weapon>basicLaser</weapon>
+	</add>
+	<cost>170</cost>
+</ship>

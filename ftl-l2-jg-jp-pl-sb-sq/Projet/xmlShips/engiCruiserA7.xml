@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='us-ascii'?>
+<ship>
+  <name>engiCruiser</name>
+  <type>A</type>
+  <add>
+    <energy>4</energy>
+    <system>
+      <droneControl>5</droneControl>
+      <engines>1</engines>
+      <weaponControl>1</weaponControl>
+    </system>
+    <weapons>
+      <weapon0>basicLaser</weapon0>
+    </weapons>
+    <drones>
+      <drone0>beamFire</drone0>
+      <drone1>beam2</drone1>
+    </drones>
+  </add>
+  <cost>595</cost>
+</ship>

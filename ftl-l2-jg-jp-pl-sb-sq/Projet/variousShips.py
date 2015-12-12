@@ -1,0 +1,718 @@
+from ships_layouts import *
+from random import shuffle
+
+from xml.dom import minidom
+import xml.etree.ElementTree as ET
+import os
+
+
+def extractShipFromFileName(fileShip, ID=1):
+    if fileShip[-4:] == '.xml':
+        fileShip = fileShip[:-4]
+
+    xmlID1, type1, name1 = '',  'type', ''
+    for i in range(len(fileShip)):
+        if fileShip[len(fileShip)-1-i] not in 'ABC':
+            xmlID1 = fileShip[len(fileShip)-1-i] + xmlID1
+        else:
+            type1 += fileShip[len(fileShip)-1-i]
+            name1 = fileShip[:len(fileShip)-1-i]
+            break
+
+    return extractShip(name1, type1, xmlID1, ID)
+
+
+def extractShipNameTypeFromFileName(fileShip):
+    if fileShip[-4:] == '.xml':
+        fileShip = fileShip[:-4]
+
+    xmlID1, typeS, nameS = '',  'type', ''
+    for i in range(len(fileShip)):
+        if fileShip[len(fileShip)-1-i] not in 'ABC':
+            xmlID1 = fileShip[len(fileShip)-1-i] + xmlID1
+        else:
+            typeS += fileShip[len(fileShip)-1-i]
+            nameS = fileShip[:len(fileShip)-1-i]
+            break
+
+    return nameS, typeS
+
+
+def extractShip(nameShip, typeShip, xmlID, ID=1):
+    if 'xmlShips' not in os.getcwd():
+        tree = ET.parse('xmlShips/'+nameShip+typeShip[-1]+str(xmlID)+'.xml')
+    else:
+        tree = ET.parse(nameShip+typeShip[-1]+str(xmlID)+'.xml')
+    root = tree.getroot()
+    ship = genShip(ID, nameShip, typeShip)
+
+    node = root
+
+    if node.findall('del'):
+        k = node.findall('del')[0]
+        if k.findall('weapons'):
+            for w in k.findall('weapons')[0]:
+                ship.getSystem('weaponControl').removeWeaponByName(w.text)
+        if k.findall('drones'):
+            for d in k.findall('drones')[0]:
+                ship.getSystem('droneControl').removeDroneByName(d.text)
+
+    if node.findall('add'):
+        k = node.findall('add')[0]
+        if k.findall('energy'):
+            e = int(k.findall('energy')[0].text)
+            ship.setPowerAvailable(ship.getPowerAvailable()+e)
+            ship.setMaxPower(ship.getMaxPower()+e)
+
+        if k.findall('system'):
+            for s in k.findall('system')[0]:
+                if not ship.hasSystem(s.tag):
+                    ship.addSystem(s.tag)
+                    system = ship.getSystem(s.tag)
+                    system.setMaxPower(system.getMaxPower()+int(s.text)-1)
+                    system.setCurrentMaxPower(system.getCurrentMaxPower()+int(s.text)-1)
+                else:
+                    system = ship.getSystem(s.tag)
+                    system.setMaxPower(system.getMaxPower()+int(s.text))
+                    system.setCurrentMaxPower(system.getCurrentMaxPower()+int(s.text))
+
+        if k.findall('weapons'):
+            for w in k.findall('weapons')[0]:
+                ship.getSystem('weaponControl').addWeapon(genWeapon(w.text))
+        if k.findall('drones'):
+            for d in k.findall('drones')[0]:
+                ship.getSystem('droneControl').addDrone(genDrone(d.text))
+
+    return ship
+
+
+def createRandomShip(maxCost, **kwargs):
+    costs = {'energy': [30]*5 + [20]*5 + [25]*5 + [30]*5 + [35]*5,
+             'shields': [125, 100, 20, 30, 40, 60, 80, 100],
+             'engines': [0, 10, 15, 30, 40, 60, 80, 120],
+             'weaponControl': [0, 40, 25, 35, 50, 75, 90, 100],
+             'oxygen': [0, 25, 50],
+             'medbay': [60, 35, 45],
+             'cloneBay': [55, 35, 45],
+             'droneControl': [35, 0, 20, 30, 45, 60, 80, 100],
+             'hacking': [80, 35, 60],
+             'mindControl': [75, 30, 60],
+             'crewTeleporter': [90, 30, 60],
+             'cloaking': [150, 30, 50],
+             'piloting': [0, 20, 50],
+             'sensors': [40, 25, 40],
+             'doorSystem': [60, 35, 50],
+             'backupBattery': [35, 50]}
+    weapons = weaponsSupported[:]
+    # (weaponName, cost, powerRequired)
+    drones = dronesSupported[:]
+    # (droneName, cost, powerRequired)
+
+    # ships = {'kestrel': ['typeA', 'typeB', 'typeC'],
+    #          'engiCruiser': ['typeA']}
+
+    nameShip, typeShip = None, None
+    for k in shipsSupported:
+        nameShip = k
+        typeShip = shipsSupported[k][randrange(len(shipsSupported[k]))]
+        break
+    if 'nameShip' in kwargs:
+        nameShip = kwargs['nameShip']
+    if 'typeShip' in kwargs:
+        typeShip = kwargs['typeShip']
+    totalCost = 0
+    ship = genShip(1, nameShip, typeShip)
+    systemsUpgrades = {}
+    energyAdded = 0
+    weaponsAdded, dronesAdded = [], []
+    if 'systemsUpgradesWanted' in kwargs:  # doesn't buy automatically energy
+        for s in kwargs['systemsUpgradesWanted']:
+            for nbU in range(kwargs['systemsUpgradesWanted'][s]):
+                if ship.hasSystem(s):
+                    syst = ship.getSystem(s)
+                    if syst.getMaxPower() < len(costs) and \
+                            maxUpgradeCanBuySystem(syst.getMaxPower(), s, maxCost-totalCost) > 0:
+                        totalCost += costs[s][syst.getMaxPower()]
+                        syst.setMaxPower(syst.getMaxPower()+1)
+                        if s in systemsUpgrades:
+                            systemsUpgrades[s] += 1
+                        else:
+                            systemsUpgrades[s] = 1
+                else:
+                    if maxUpgradeCanBuySystem(0, s, maxCost-totalCost) > 0:
+                        ship.addSystem(s)
+                        totalCost += costs[s][0]
+                        systemsUpgrades[s] = 1
+    if 'weaponsWanted' in kwargs:  # doesn't buy automatically energy
+        # kwargs['weaponsWanted'] is a list of the names of weapons
+        s = ship.getSystem('weaponControl')
+        for nameW in kwargs['weaponsWanted']:
+            try:
+                w = [x for x in weapons if x[0] == nameW][0]
+            except IndexError:
+                continue
+            c = w[1]  # cost of the weapon
+            if c < maxCost-totalCost and len(s.getWeapons()) < s.getMaxWeapons():
+                totalCost += c
+                s.addWeapon(genWeapon(w[0]))
+                weaponsAdded += [w[0]]
+    if 'dronesWanted' in kwargs and ship.hasSystem('droneControl'):  # doesn't buy automatically energy
+        s = ship.getSystem('droneControl')
+        for nameD in kwargs['dronesWanted']:
+            try:
+                d = [x for x in drones if x[0] == nameD][0]
+            except IndexError:
+                continue
+            c = d[1]
+            if c < maxCost-totalCost and len(s.getDrones()) < s.getMaxDrones():
+                totalCost += c
+                s.addDrone(genDrone(d[0]))
+                dronesAdded += [d[0]]
+    if 'energyWanted' in kwargs:
+        for nbE in range(kwargs['energyWanted']):
+            if ship.getMaxPower() < len(costs['energy']) and costs['energy'][ship.getMaxPower()] <= maxCost-totalCost:
+                totalCost += costs['energy'][ship.getMaxPower()]
+                ship.setMaxPower(ship.getMaxPower()+1)
+                energyAdded += 1
+
+    nbLoop = 0
+    while totalCost < maxCost - 10 and nbLoop < 50:
+        nbLoop += 1
+        # Shields
+        if randrange(100) < 100/6:
+            tryAgain = 100
+            s = ship.getSystem('shields')
+            while tryAgain > 50 and totalCost < maxCost - 30 and s.getMaxPower() < 8:
+                lvl = levelSystem(ship, 'shields')
+                maxBuy = maxUpgradeCanBuySystem(lvl, 'shields', maxCost-totalCost)
+                if maxBuy != 0 and (lvl % 2 == 1 or randrange(100) > 90):
+                    totalCost += costs['shields'][lvl]
+                    s.setMaxPower(s.getMaxPower()+1)
+                    if 'shields' in systemsUpgrades:
+                        systemsUpgrades['shields'] += 1
+                    else:
+                        systemsUpgrades['shields'] = 1
+                elif maxBuy > 1:
+                    totalCost += costs['shields'][lvl] + costs['shields'][lvl+1]
+                    s.setMaxPower(s.getMaxPower()+2)
+                    if 'shields' not in systemsUpgrades:
+                        systemsUpgrades['shields'] = 2
+                    else:
+                        systemsUpgrades['shields'] += 2
+                maxBuy = maxUpgradeCanBuySystem(ship.getMaxPower(), 'energy', maxCost-totalCost)
+                if randrange(100) > 50 and maxBuy > 0:
+                    totalCost += costs['energy'][ship.getMaxPower()]
+                    ship.setMaxPower(ship.getMaxPower()+1)
+                    energyAdded += 1
+                tryAgain = randrange(100)
+
+        # Piloting
+        if randrange(100) < 100/15:
+            s = ship.getSystem('piloting')
+            lvl = levelSystem(ship, 'piloting')
+            maxBuy = maxUpgradeCanBuySystem(lvl, 'piloting', maxCost-totalCost)
+            if maxBuy > 0:
+                nbBuy = randrange(maxBuy)
+            else:
+                nbBuy = 0
+            if nbBuy > 0:
+                if nbBuy == 1:
+                    totalCost += costs['piloting'][lvl]
+                    s.setMaxPower(s.getMaxPower()+1)
+                    if 'piloting' not in systemsUpgrades:
+                        systemsUpgrades['piloting'] = 1
+                    else:
+                        systemsUpgrades['piloting'] += 1
+                if nbBuy == 2:
+                    totalCost += costs['piloting'][lvl] + costs['piloting'][lvl+1]
+                    s.setMaxPower(s.getMaxPower()+2)
+                    systemsUpgrades['piloting'] = 2
+                maxBuy = maxUpgradeCanBuySystem(ship.getMaxPower(), 'energy', maxCost-totalCost)
+                if maxBuy > nbBuy:
+                    maxBuy = nbBuy
+                for i in range(maxBuy):
+                    if randrange(100) > 50:
+                        totalCost += costs['energy'][ship.getMaxPower()]
+                        ship.setMaxPower(ship.getMaxPower()+1)
+                        energyAdded += 1
+
+        shuffle(weapons)
+        # Weapons and weaponControl
+        if randrange(100) < 100/6:
+            s = ship.getSystem('weaponControl')
+            for w in weapons:
+                c = w[1]  # cost of the weapon
+                if c < maxCost-totalCost and len(s.getWeapons()) < s.getMaxWeapons():
+                    need = upgradeNeededWeapons(s, w[2])
+                    needBought = 0
+                    if need > 0:
+                        for i in range(need):
+                            if s.getMaxPower()+i < len(costs['weaponControl']) and randrange(100) > 15:
+                                c += costs['weaponControl'][s.getMaxPower()+i]
+                                needBought += 1
+                    if c < maxCost-totalCost:
+                        totalCost += c
+                        s.addWeapon(genWeapon(w[0]))
+                        s.setMaxPower(s.getMaxPower()+needBought)
+                        if 'weaponControl' not in systemsUpgrades and needBought > 0:
+                            systemsUpgrades['weaponControl'] = needBought
+                        elif needBought > 0:
+                            systemsUpgrades['weaponControl'] += needBought
+                        weaponsAdded += [w[0]]
+                        maxBuy = maxUpgradeCanBuySystem(ship.getMaxPower(), 'energy', maxCost-totalCost)
+                        if maxBuy > need:
+                            maxBuy = need
+                        for i in range(maxBuy):
+                            if randrange(100) < 75:
+                                totalCost += costs['energy'][ship.getMaxPower()]
+                                ship.setMaxPower(ship.getMaxPower()+1)
+                                energyAdded += 1
+
+        shuffle(drones)
+        # Drones and droneControl
+        if randrange(100) < 100/8:
+            if not ship.hasSystem('droneControl'):
+                # Not really like the real game cause you normally automatically get a drone
+                # But if you don't get one there, the ship won't be a good ship and will be forgotten
+                maxBuy = maxUpgradeCanBuySystem(0, 'droneControl', maxCost-totalCost)
+                if maxBuy > 0:
+                    totalCost += costs['droneControl'][0]
+                    ship.addSystem('droneControl')
+                    systemsUpgrades['droneControl'] = 1
+                    maxBuy = maxUpgradeCanBuySystem(ship.getMaxPower(), 'energy', maxCost-totalCost)
+                    if maxBuy > 0 and randrange(100) < 75:
+                        totalCost += costs['energy'][ship.getMaxPower()]
+                        ship.setMaxPower(ship.getMaxPower()+1)
+                        energyAdded += 1
+            if ship.hasSystem('droneControl'):
+                s = ship.getSystem('droneControl')
+                for d in drones:
+                    c = d[1]  # cost of the drone
+                    if c < maxCost-totalCost and len(s.getDrones()) < s.getMaxDrones():
+                        need = upgradeNeededDrones(s, d[2])
+                        needBought = 0
+                        if need > 0:
+                            for i in range(need):
+                                if s.getMaxPower()+i < len(costs['droneControl']) and randrange(100) > 15:
+                                    c += costs['droneControl'][s.getMaxPower()+i]
+                                    needBought += 1
+                        if c < maxCost-totalCost:
+                            totalCost += c
+                            s.addDrone(genDrone(d[0]))
+                            s.setMaxPower(s.getMaxPower()+needBought)
+                            if 'droneControl' not in systemsUpgrades and needBought > 0:
+                                systemsUpgrades['droneControl'] = needBought
+                            elif needBought > 0:
+                                systemsUpgrades['droneControl'] += needBought
+                            dronesAdded += [d[0]]
+                            maxBuy = maxUpgradeCanBuySystem(ship.getMaxPower(), 'energy', maxCost-totalCost)
+                            if maxBuy > need:
+                                maxBuy = need
+                            for i in range(maxBuy):
+                                if randrange(100) < 75:
+                                    totalCost += costs['energy'][ship.getMaxPower()]
+                                    ship.setMaxPower(ship.getMaxPower()+1)
+                                    energyAdded += 1
+
+        # Engines
+        if randrange(100) < 100/10:
+            totalCost, systemsUpgrades, energyAdded = systemUpgradeGenerator(ship, 'engines', costs, maxCost,
+                                                                             totalCost, systemsUpgrades, energyAdded)
+
+        # Cloaking
+        if randrange(100) < 100/8:
+            totalCost, systemsUpgrades, energyAdded = systemUpgradeGenerator(ship, 'cloaking', costs, maxCost,
+                                                                             totalCost, systemsUpgrades, energyAdded)
+
+    return writeNewShip(nameShip, typeShip, systemsUpgrades, weaponsAdded, dronesAdded, energyAdded, totalCost)
+
+
+def systemUpgradeGenerator(ship, nameSystem, costs, maxCost, totalCost, systemsUpgrades, energyAdded):
+    if not ship.hasSystem(nameSystem):
+        maxBuy = maxUpgradeCanBuySystem(0, nameSystem, maxCost-totalCost)
+        if maxBuy > 0:
+            totalCost += costs[nameSystem][0]
+            ship.addSystem(nameSystem)
+            systemsUpgrades[nameSystem] = 1
+            maxBuy = maxUpgradeCanBuySystem(ship.getMaxPower(), 'energy', maxCost-totalCost)
+            if maxBuy > 0 and randrange(100) < 75:
+                totalCost += costs['energy'][ship.getMaxPower()]
+                ship.setMaxPower(ship.getMaxPower()+1)
+                energyAdded += 1
+    if ship.hasSystem(nameSystem):
+        s = ship.getSystem(nameSystem)
+        lvl = levelSystem(ship, nameSystem)
+        maxBuy = maxUpgradeCanBuySystem(lvl, nameSystem, maxCost-totalCost)
+        if maxBuy > 0:
+            nbBuy = randrange(maxBuy)
+        else:
+            nbBuy = 0
+        if nbBuy > 0:
+            for i in range(nbBuy):
+                totalCost += costs[nameSystem][lvl+i]
+            s.setMaxPower(s.getMaxPower()+nbBuy)
+            if nameSystem not in systemsUpgrades:
+                systemsUpgrades[nameSystem] = nbBuy
+            else:
+                systemsUpgrades[nameSystem] += nbBuy
+            maxBuy = maxUpgradeCanBuySystem(ship.getMaxPower(), 'energy', maxCost-totalCost)
+            if maxBuy > nbBuy:
+                maxBuy = nbBuy
+            for i in range(maxBuy):
+                if randrange(100) > 50:
+                    totalCost += costs['energy'][ship.getMaxPower()]
+                    ship.setMaxPower(ship.getMaxPower()+1)
+                    energyAdded += 1
+    return totalCost, systemsUpgrades, energyAdded
+
+
+def levelSystem(ship, nameSystem):
+    if not ship.hasSystem(nameSystem):
+        return 0
+    else:
+        return ship.getSystem(nameSystem).getMaxPower()
+
+
+def maxUpgradeCanBuySystem(lvlSystem, nameSystem, scrapsAvailable):
+    """
+    @param lvlSystem: 0->no system
+    """
+    costs = {'energy': [30]*5 + [20]*5 + [25]*5 + [30]*5 + [35]*5,
+             'shields': [125, 100, 20, 30, 40, 60, 80, 100],
+             'engines': [0, 10, 15, 30, 40, 60, 80, 120],
+             'weaponControl': [0, 40, 25, 35, 50, 75, 90, 100],
+             'oxygen': [0, 25, 50],
+             'medbay': [60, 35, 45],
+             'cloneBay': [55, 35, 45],
+             'droneControl': [35, 0, 20, 30, 45, 60, 80, 100],
+             'hacking': [80, 35, 60],
+             'mindControl': [75, 30, 60],
+             'crewTeleporter': [90, 30, 60],
+             'cloaking': [150, 30, 50],
+             'piloting': [0, 20, 50],
+             'sensors': [40, 25, 40],
+             'doorSystem': [60, 35, 50],
+             'backupBattery': [35, 50]}
+    lvl = lvlSystem
+    scraps = scrapsAvailable
+    while lvl != len(costs[nameSystem]) and scraps >= costs[nameSystem][lvl]:
+        scraps -= costs[nameSystem][lvl]
+        lvl += 1
+    return lvl-lvlSystem
+
+
+def upgradeNeededWeapons(system, powerNewWeapon):
+    total = powerNewWeapon
+    for w in system.getWeapons():
+        total += w.getPower()
+    result = system.getMaxPower() - total
+    if result < 0:
+        return - result
+    return 0
+
+
+def upgradeNeededDrones(system, powerNewDrone):
+    total = powerNewDrone
+    for d in system.getDrones():
+        total += d.getPower()
+    result = system.getMaxPower() - total
+    if result < 0:
+        return - result
+    return 0
+
+
+def writeNewShip(nameShip, typeShip, systemsUpgrades, weaponsPurchased, dronesPurchased, energyPurchased, cost):
+    """ create new xml file for this ship
+    """
+    ship = ET.Element('ship')
+    nameS = ET.SubElement(ship, 'name').text = nameShip
+    typeS = ET.SubElement(ship, 'type').text = typeShip[-1]
+    add = ET.SubElement(ship, 'add')
+    costB = ET.SubElement(ship, 'cost').text = str(cost)
+    energy = ET.SubElement(add, 'energy').text = str(energyPurchased)
+    system = ET.SubElement(add, 'system')
+    for s in systemsUpgrades:
+        if systemsUpgrades[s] > 0:
+            locals()[s] = ET.SubElement(system, s).text = str(systemsUpgrades[s])
+    if weaponsPurchased:
+        weapons = ET.SubElement(add, 'weapons')
+        for index in range(len(weaponsPurchased)):
+            w = weaponsPurchased[index]
+            locals()['weapon'+str(index)] = ET.SubElement(weapons, 'weapon'+str(index)).text = w
+    if dronesPurchased:
+        drones = ET.SubElement(add, 'drones')
+        for index in range(len(dronesPurchased)):
+            d = dronesPurchased[index]
+            locals()['drone'+str(index)] = ET.SubElement(drones, 'drone'+str(index)).text = d
+
+    if 'xmlShips' not in os.getcwd():
+        os.chdir('xmlShips/')
+    nameFile = nameShip+typeShip[-1]
+    files = sorted([f for f in os.listdir(os.getcwd()) if nameFile in f],
+                   key=lambda x: int(x[len(nameShip)+1:-4]))
+    xmlID = '0'
+    while nameFile+xmlID+'.xml' in files:
+        xmlID = str(int(xmlID)+1)
+    ship = prettify(ship)
+    print(ship)
+    ship = ET.fromstring(ship)
+    tree = ET.ElementTree(ship)
+    tree.write(nameFile+xmlID+'.xml', xml_declaration=True)
+    print('New file is : '+nameFile+xmlID+'.xml')
+    return nameFile+xmlID+'.xml'
+
+
+def prettify(elem):
+    """
+    Return a pretty-printed XML string for the Element.
+    """
+    rough_string = ET.tostring(elem, 'utf-8')
+    reparsed = minidom.parseString(rough_string)
+    return reparsed.toprettyxml(indent="  ")
+
+
+def crossover(shipFile1, shipFile2, maxCost):
+    """
+    Cross two ships to make a new one of the same cost.
+
+    @param shipFile1: Name of the xml file of the first ship.
+    @param shipFile2: Name of the xml file of the second ship.
+    @param maxCost: Maximum cost of the ships.
+    @return: A new ship of the same cost.
+    """
+    costs = {'energy': [30]*5 + [20]*5 + [25]*5 + [30]*5 + [35]*5,
+             'shields': [125, 100, 20, 30, 40, 60, 80, 100],
+             'engines': [0, 10, 15, 30, 40, 60, 80, 120],
+             'weaponControl': [0, 40, 25, 35, 50, 75, 90, 100],
+             'oxygen': [0, 25, 50],
+             'medbay': [60, 35, 45],
+             'cloneBay': [55, 35, 45],
+             'droneControl': [35, 0, 20, 30, 45, 60, 80, 100],
+             'hacking': [80, 35, 60],
+             'mindControl': [75, 30, 60],
+             'crewTeleporter': [90, 30, 60],
+             'cloaking': [150, 30, 50],
+             'piloting': [0, 20, 50],
+             'sensors': [40, 25, 40],
+             'doorSystem': [60, 35, 50],
+             'backupBattery': [35, 50]}
+    weapons = [('leto', 20, 1), ('artemisPL', 38, 1), ('hermes', 45, 3), ('pegasus', 60, 3), ('breach', 65, 3),
+               ('hull', 65, 2), ('miniBeam', 20, 1), ('pikeBeam', 55, 2), ('halberdBeam', 65, 3), ('glaiveBeam', 95, 4),
+               ('fireBeam', 50, 2), ('hullBeam', 70, 2), ('antibioBeam', 50, 2), ('basicLaser', 20, 1),
+               ('dualLaser', 25, 1), ('burstLaserI', 50, 2), ('burstLaserII', 80, 2), ('burstLaserIII', 95, 4),
+               ('heavyPierceI', 55, 2), ('heavyLaserI', 55, 1), ('heavyLaserII', 65, 3), ('hullLaserI', 55, 2),
+               ('hullLaserII', 75, 3), ('ionBlastI', 30, 1), ('ionBlastII', 70, 3), ('heavyIon', 45, 2),
+               ('ionStunner', 35, 1)]
+    drones = [('combat1', 50, 2), ('combat2', 75, 4)]
+
+    # ships = {'kestrel': ['typeA', 'typeB', 'typeC'],
+    #          'engiCruiser': ['typeA']}
+
+    if 'xmlShips' not in os.getcwd():
+        tree1 = ET.parse('xmlShips/'+shipFile1)
+        tree2 = ET.parse('xmlShips/'+shipFile2)
+    else:
+        tree1 = ET.parse(shipFile1)
+        tree2 = ET.parse(shipFile2)
+    root1 = tree1.getroot()
+    root2 = tree2.getroot()
+
+    if randrange(100) > 50:
+        shipOrigin = [root1, root2][randrange(2)]
+        nameShip = shipOrigin.findall('name')[0].text
+        typeShip = 'type' + shipOrigin.findall('type')[0].text
+    else:
+        for k in shipsSupported:
+            nameShip = k
+            typeShip = shipsSupported[k][randrange(len(shipsSupported[k]))]
+            break
+
+    systemsUpgrades1, weaponsPurchased1, dronesPurchased1, energyPurchased1 = extractInfos(shipFile1)
+    systemsUpgrades2, weaponsPurchased2, dronesPurchased2, energyPurchased2 = extractInfos(shipFile2)
+
+    totalCost = 0
+    ship = genShip(1, nameShip, typeShip)
+    systemsUpgrades = {}
+    energyAdded = 0
+    weaponsAdded, dronesAdded = [], []
+
+    nb = 0
+    while totalCost < maxCost - 30 and nb < 75:
+        nb += 1
+        l = [systemsUpgrades1, weaponsPurchased1, energyPurchased1,
+             systemsUpgrades2, weaponsPurchased2, energyPurchased2]
+        choice = l[randrange(len(l))]
+        # Energy
+        if (choice == energyPurchased1 or choice == energyPurchased2) and choice > 0:
+            maxBuy = maxUpgradeCanBuySystem(ship.getMaxPower(), 'energy', maxCost-totalCost)
+            if maxBuy > choice:
+                maxBuy = choice
+            bought = randint(0, maxBuy)
+            for i in range(bought):
+                totalCost += costs['energy'][ship.getMaxPower()]
+                ship.setMaxPower(ship.getMaxPower()+1)
+                energyAdded += 1
+            if choice == energyPurchased1:
+                energyPurchased1 -= bought
+            else:
+                energyPurchased2 -= bought
+        # Weapons
+        if (choice == weaponsPurchased1 or choice == weaponsPurchased2) and ship.hasSystem('weaponControl') \
+                and choice != []:
+            wpnCtrl = ship.getSystem('weaponControl')
+            if wpnCtrl.getMaxWeapons() > len(wpnCtrl.getWeapons()):
+                w = choice[randrange(len(choice))]
+                weapon = [wp for wp in weapons if wp[0] == w][0]
+                if weapon[1] <= maxCost-totalCost:
+                    weaponsAdded += [w]
+                    totalCost += weapon[1]
+                    ship.getSystem('weaponControl').addWeapon(genWeapon(w))
+                if choice == weaponsPurchased1:
+                    weaponsPurchased1.remove(w)
+                else:
+                    weaponsPurchased2.remove(w)
+        # Drones
+        if (choice == dronesPurchased1 or choice == dronesPurchased2) and ship.hasSystem('droneControl') \
+                and choice != []:
+            drnCtrl = ship.getSystem('droneControl')
+            if drnCtrl.getMaxDrones() > len(drnCtrl.getDrones()):
+                d = choice[randrange(len(choice))]
+                drone = [dn for dn in drones if dn[0] == d][0]
+                if drone[1] <= maxCost-totalCost:
+                    dronesAdded += [d]
+                    totalCost += drone[1]
+                    ship.getSystem('droneControl').addDrone(genDrone(d))
+                if choice == dronesPurchased1:
+                    dronesPurchased1.remoce(d)
+                else:
+                    dronesPurchased2.remove(d)
+        # Systems upgrades
+        if (choice == systemsUpgrades1 or choice == systemsUpgrades2) and choice != {}:
+            for k in choice:
+                s = k
+                break
+            maxBuy = maxUpgradeCanBuySystem(levelSystem(ship, s), s, maxCost-totalCost)
+            if maxBuy > 0:
+                if maxBuy > choice[s]:
+                    maxBuy = choice[s]
+                bought = randint(1, maxBuy)
+                if s not in systemsUpgrades:
+                    systemsUpgrades[s] = bought
+                else:
+                    systemsUpgrades[s] += bought
+                for i in range(bought):
+                    if not ship.hasSystem(s):
+                        ship.addSystem(s)
+                        totalCost += costs[s][0]
+                    else:
+                        syst = ship.getSystem(s)
+                        totalCost += costs[s][syst.getMaxPower()]
+                        syst.setMaxPower(syst.getMaxPower()+1)
+                if choice == systemsUpgrades1:
+                    systemsUpgrades1[s] -= bought
+                    if systemsUpgrades1[s] <= 0:
+                        systemsUpgrades1.pop(s, None)
+                else:
+                    systemsUpgrades2[s] -= bought
+                    if systemsUpgrades2[s] <= 0:
+                        systemsUpgrades2.pop(s, None)
+
+    return writeNewShip(nameShip, typeShip, systemsUpgrades, weaponsAdded, dronesAdded, energyAdded, totalCost)
+
+
+def extractInfos(nameFileShip):
+    if 'xmlShips' not in os.getcwd():
+        tree1 = ET.parse('xmlShips/'+nameFileShip)
+    else:
+        tree1 = ET.parse(nameFileShip)
+    root1 = tree1.getroot()
+    systemsUpgrades, weaponsPurchased, dronesPurchased, energyPurchased = {}, [], [], 0
+    if root1.findall('add'):
+        node = root1.findall('add')[0]
+        if node.findall('energy'):
+            energyPurchased = int(node.findall('energy')[0].text)
+        if node.findall('system'):
+            for s in node.findall('system')[0]:
+                systemsUpgrades[s.tag] = int(s.text)
+        if node.findall('weapons'):
+            for w in node.findall('weapons')[0]:
+                weaponsPurchased += [w.text]
+        if node.findall('drones'):
+            for d in node.findall('drones')[0]:
+                dronesPurchased += [d.text]
+    return systemsUpgrades, weaponsPurchased, dronesPurchased, energyPurchased
+
+
+def extractBasicInfos(shipName, shipType):
+    if 'xmlShips' not in os.getcwd():
+        tree1 = ET.parse('ftl_ships_layouts.xml')
+    else:
+        tree1 = ET.parse('../'+'ftl_ships_layouts.xml')
+    root1 = tree1.getroot()
+    if 'type' in shipType:
+        shipType = shipType[-1]
+    ship = root1.findall(shipName)[0].findall('type'+shipType)[0]
+    systemsUpgrades, weaponsPurchased, dronesPurchased, energyPurchased = {}, [], [], 0
+    if ship.findall('energy'):
+        energyPurchased = int(ship.findall('energy')[0].text)
+    if ship.findall('systems'):
+        for s in ship.findall('systems')[0]:
+            systemsUpgrades[s.tag] = int(s.text)
+    if ship.findall('weapons'):
+        for w in ship.findall('weapons')[0]:
+            if w.text is not None:
+                weaponsPurchased += [w.text]
+    if ship.findall('drones'):
+        for d in ship.findall('drones')[0]:
+            if d.text is not None:
+                dronesPurchased += [d.text]
+    return systemsUpgrades, weaponsPurchased, dronesPurchased, energyPurchased
+
+
+def mutation(shipFile1, maxCost):
+    if 'xmlShips' not in os.getcwd():
+        tree = ET.parse('xmlShips/'+shipFile1)
+    else:
+        tree = ET.parse(shipFile1)
+    root = tree.getroot()
+    name = root.findall('name')[0].text
+    typeS = root.findall('type')[0].text
+
+    shipFile2 = createRandomShip(maxCost, nameShip=name, typeShip='type'+typeS)
+    newShip = crossover(shipFile1, shipFile2, maxCost)
+    deleteShip(shipFile2)
+    return newShip
+
+
+def deleteShip(shipFile):
+    try:
+        if 'xmlShips' not in os.getcwd():
+            os.remove('xmlShips/'+shipFile)
+        else:
+            os.remove(shipFile)
+    except OSError:
+        pass
+
+
+def extractAllInfos(ship):
+    shipN, shipT = extractShipNameTypeFromFileName(ship)
+    systemsUpgrades1, weaponsAdded1, dronesAdded1, energyAdded1 = extractInfos(ship)
+    systemsUpgrades2, weaponsAdded2, dronesAdded2, energyAdded2 = extractBasicInfos(shipN, shipT)
+
+    weaponsAdded, dronesAdded = weaponsAdded1+weaponsAdded2, dronesAdded1+dronesAdded2
+    energyAdded = energyAdded1+energyAdded2
+    systemsUpgrades = {}
+    for k in systemsUpgrades1:
+        if k in systemsUpgrades2:
+            systemsUpgrades[k] = systemsUpgrades2[k] + systemsUpgrades1[k]
+        else:
+            systemsUpgrades[k] = systemsUpgrades1[k]
+    for k in systemsUpgrades2:
+        if k not in systemsUpgrades2:
+            systemsUpgrades[k] = systemsUpgrades2[k]
+
+    return systemsUpgrades, weaponsAdded, dronesAdded, energyAdded
+
+
+if __name__ == '__main__':
+    displayShipTK(extractShipFromFileName(createRandomShip(400, nameShip='engiCruiser', typeShip='typeC'), 1), None, None, None)

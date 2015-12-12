@@ -1,0 +1,38 @@
+\chapter{Organisation générale}
+
+	\section{Importation des modules}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=1\linewidth]{packageDiagram.pdf}
+	\end{figure}
+	
+	Comme on peut le voir, notre programme est divisé en 3 grandes parties :
+	\begin{itemize}
+		\item une partie qui gère les combats entre vaisseau (réalisé au semestre 1) ;
+		\item une partie qui gère les vaisseaux personnalisés ;
+		\item une partie qui utilise les 2 parties précédentes pour determiner le meilleur vaisseau.
+	\end{itemize}
+	En plus de cela, il y a aussi diverses fonctions d'affichage (graphiques ou textuelles) ainsi qu'un fichier qui contient des variables globales qui determine si il y doit y avoir certains affichages, combien de "cycles" il y a par seconde, etc.
+
+
+	\section{Algorithme génétique}
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=1\linewidth]{geneticalgorithm.pdf}
+	\end{figure}
+	
+	
+	\section{Data Mining avec LCM}
+	
+	Pour les parties de data mining nous avons utilisé le programme \textit{Linear time Closed itemset Miner} de Takeaki Uno.
+	Ce programme prend en entrée un fichier où chaque ligne contient des entiers séparés par des espaces, chacun de ces lignes représente un ensemble d'entiers. 
+	Le programme retourne ensuite tous les sous-ensembles de chaque ligne et donne le nombre d'occurences de ces sous-ensembles dans toutes les lignes. On peut ensuite décider de ne garder que les sous-ensembles qui apparaissent dans au moins n lignes.
+	Nous n'utilisons que les fonctionnalités basiques qui sont relativement simple à programmer mais ce programme est rapide et contient d'autres fonctionnalités qui pourraient nous être utiles pour enrichir notre programme qui détermine les meilleurs vaisseaux. \\
+	
+	Nous utilisons ce programme pour extraire les caractéristiques les plus courantes dans une liste de vaisseaux. 
+	Pour utiliser ce programme il nous a donc fallu traduire les caractéristiques des vaisseaux en entiers....
+	
+	
+	\section{Déroulement de l'algorithme final d'optimisation}

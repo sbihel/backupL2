@@ -1,0 +1,13 @@
+	\chapter{Introduction}
+	
+	\section{Résumé de l'état du projet après le premier semestre}
+	
+	Au cours du premier semestre, nous avons réussi à réaliser un moteur de combat qui, même s'il n'est pas complet, se rapproche du jeu original, ce qui nous permet maintennt de finaliser notre projet : optimiser la recherche d'un vaisseau meilleur que les autres.
+	
+	\section{Objectifs du second semestre}
+	
+	\begin{itemize}
+			\item \checkedbox Obtenir un générateur de vaisseaux selon le coût et la classe
+	\end{itemize}
+	
+	

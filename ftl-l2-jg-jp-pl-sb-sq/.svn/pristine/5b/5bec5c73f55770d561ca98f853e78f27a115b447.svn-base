@@ -1,0 +1,59 @@
+from tkinter import *
+from variousShips import *
+
+
+
+def displayShipTK(fileShip1):
+
+
+
+
+    t = Tk()
+    t.title("Transparency")
+
+    frame = Frame(t)
+    frame.pack()
+
+    can= Canvas(frame, bg="black", width=500, height=300)
+
+    if fileShip1[-4:] == '.xml':
+        fileShip1 = fileShip1[:-4]
+
+    xmlID1, type1, name1 = '',  'type', ''
+    for i in range(len(fileShip1)):
+        if fileShip1[len(fileShip1)-1-i] not in 'ABC':
+            xmlID1 = fileShip1[len(fileShip1)-1-i] + xmlID1
+        else:
+            type1 += fileShip1[len(fileShip1)-1-i]
+            name1 = fileShip1[:len(fileShip1)-1-i]
+            break
+
+    ship2 = extractShip(name1, type1, xmlID1, 1)
+
+    t.title("Ship " + ship2.getName()+' ' + ship2.getType() + ' ' + str(ship2.getID()))
+
+    m = 20
+    c = 3
+    for r in ship2.getRooms():
+        c1, c2 = r.getCoords()
+        can.create_rectangle(c1[0]*c + m, c1[1]*c + m, c2[0]*c + m, c2[1]*c + m, fill="grey", outline="black")
+        system = r.getSystem()
+
+        if system != False :
+            if 'xmlShips' in os.getcwd():
+                os.chdir('..')
+            globals()['img' + str(r.getNB())] = PhotoImage(file="pictures/systems/"+str(system)+".png").subsample(5, 5)
+            print(c1[0], c1[1], system)
+            cm1, cm2 = c1[0], c1[1]
+            if c2[0] - c1[0] != 10:
+                cm1 += 5
+            if c2[1] - c1[1] != 10:
+                cm2 += 5
+            can.create_image((cm1*c + m + 15, cm2*c + m + 15), image=globals()['img'+str(r.getNB())])
+        can.update()
+
+    can.pack()
+
+
+
+    t.mainloop()

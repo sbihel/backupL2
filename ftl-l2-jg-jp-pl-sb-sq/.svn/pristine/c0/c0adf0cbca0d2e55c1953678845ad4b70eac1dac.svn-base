@@ -1,0 +1,54 @@
+from tournament import *
+
+
+def geneticAlgorithm(populationSize, maxCost, nbFights, **kwargs):
+    if 'initChampions' in kwargs:
+        population = kwargs['initChampions']
+        population += [createRandomShip(maxCost) for i in range(populationSize-len(kwargs['initChampions']))]
+    else:
+        population = [createRandomShip(maxCost) for i in range(populationSize)]
+    tournamentResult = tournament(population, nbFights)
+    nbChampions = 2
+    if 'nbChampions' in kwargs:
+        nbChampions = kwargs['nbChampions']
+    nbGeneration = 2
+    if 'nbGeneration' in kwargs:
+        nbChampions = kwargs['nbGeneration']
+    nbMutations = 2
+    if 'nbMutations' in kwargs:
+        nbChampions = kwargs['nbMutations']
+    for nbG in range(nbGeneration):
+        # Determine the parents
+        champions = [(population[i], tournamentResult[population[i]]) for i in range(len(population[:nbChampions]))]
+        for shipResult in tournamentResult:
+            mini = min([result[1] for result in champions])
+            if tournamentResult[shipResult] > mini:
+                for indexR in range(len(champions)):
+                    if champions[indexR] == mini:
+                        champions[indexR] = (shipResult, tournamentResult[shipResult])
+                        break
+        # Create new population with crossovers of the parents
+        for shipD in population:
+            if shipD not in [champ[0] for champ in champions]:
+                deleteShip(shipD)
+        population = [shipC[0] for shipC in champions]
+        for cantFindName in range(populationSize-len(champions)):
+            parent1 = randrange(nbChampions)
+            # We'll assume that there's at least 2 champions
+            parent2 = randrange(nbChampions)
+            while parent2 == parent1:
+                parent2 = randrange(nbChampions)
+            population += [crossover(population[parent1], population[parent2], maxCost)]
+        # Mutation
+        for nbM in range(nbMutations):
+            population[randrange(len(population))] = mutation(population[randrange(len(population))], maxCost)
+        # Determine the fitness of the population
+        tournamentResult = tournament(population, nbFights)
+    bestIndividual = population[0]
+    for key in tournamentResult:
+        if tournamentResult[key] > tournamentResult[bestIndividual]:
+            bestIndividual = key
+    return bestIndividual
+
+if __name__ == '__main__':
+    print(geneticAlgorithm(5, 400, 1))

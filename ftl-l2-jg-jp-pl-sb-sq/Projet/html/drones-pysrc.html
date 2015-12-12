@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>drones</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        Module&nbsp;drones
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="drones-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="drones-module.html">Module drones</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno"> 1</tt>  <tt class="py-line"> </tt>
+<a name="L2"></a><tt class="py-lineno"> 2</tt>  <tt class="py-line"> </tt>
+<a name="L3"></a><tt class="py-lineno"> 3</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">xml</tt><tt class="py-op">.</tt><tt class="py-name">etree</tt><tt class="py-op">.</tt><tt class="py-name">ElementTree</tt> <tt class="py-keyword">as</tt> <tt class="py-name">ET</tt> </tt>
+<a name="L4"></a><tt class="py-lineno"> 4</tt>  <tt class="py-line"><tt id="link-0" class="py-name" targets="Variable drones.tree=drones-module.html#tree,Variable ship.tree=ship-module.html#tree,Variable ships_layouts.tree=ships_layouts-module.html#tree,Variable weapon_module_WIP.tree=weapon_module_WIP-module.html#tree"><a title="drones.tree
+ship.tree
+ships_layouts.tree
+weapon_module_WIP.tree" class="py-name" href="#" onclick="return doclink('link-0', 'tree', 'link-0');">tree</a></tt> <tt class="py-op">=</tt> <tt class="py-name">ET</tt><tt class="py-op">.</tt><tt class="py-name">parse</tt><tt class="py-op">(</tt><tt class="py-string">'ftl_drones_resources.xml'</tt><tt class="py-op">)</tt> </tt>
+<a name="L5"></a><tt class="py-lineno"> 5</tt>  <tt class="py-line"><tt id="link-1" class="py-name" targets="Variable drones.root=drones-module.html#root,Variable ship.root=ship-module.html#root,Variable ships_layouts.root=ships_layouts-module.html#root,Variable weapon_module_WIP.root=weapon_module_WIP-module.html#root"><a title="drones.root
+ship.root
+ships_layouts.root
+weapon_module_WIP.root" class="py-name" href="#" onclick="return doclink('link-1', 'root', 'link-1');">root</a></tt> <tt class="py-op">=</tt> <tt id="link-2" class="py-name"><a title="drones.tree
+ship.tree
+ships_layouts.tree
+weapon_module_WIP.tree" class="py-name" href="#" onclick="return doclink('link-2', 'tree', 'link-0');">tree</a></tt><tt class="py-op">.</tt><tt class="py-name">getroot</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L6"></a><tt class="py-lineno"> 6</tt>  <tt class="py-line"> </tt>
+<a name="L7"></a><tt class="py-lineno"> 7</tt>  <tt class="py-line"> </tt>
+<a name="Drone"></a><div id="Drone-def"><a name="L8"></a><tt class="py-lineno"> 8</tt> <a class="py-toggle" href="#" id="Drone-toggle" onclick="return toggle('Drone');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="drones.Drone-class.html">Drone</a><tt class="py-op">(</tt><tt class="py-base-class">object</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Drone-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="Drone-expanded"><a name="L9"></a><tt class="py-lineno"> 9</tt>  <tt class="py-line"> </tt>
+<a name="Drone.__init__"></a><div id="Drone.__init__-def"><a name="L10"></a><tt class="py-lineno">10</tt> <a class="py-toggle" href="#" id="Drone.__init__-toggle" onclick="return toggle('Drone.__init__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="drones.Drone-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">name</tt><tt class="py-op">,</tt> <tt class="py-param">typeD</tt><tt class="py-op">,</tt> <tt class="py-param">power</tt><tt class="py-op">,</tt> <tt class="py-param">cost</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Drone.__init__-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="Drone.__init__-expanded"><a name="L11"></a><tt class="py-lineno">11</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">__name</tt> <tt class="py-op">=</tt> <tt class="py-name">name</tt> </tt>
+<a name="L12"></a><tt class="py-lineno">12</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">__type</tt> <tt class="py-op">=</tt> <tt class="py-name">typeD</tt> </tt>
+<a name="L13"></a><tt class="py-lineno">13</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">__power</tt> <tt class="py-op">=</tt> <tt class="py-name">power</tt> </tt>
+<a name="L14"></a><tt class="py-lineno">14</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">__cost</tt> <tt class="py-op">=</tt> <tt class="py-name">cost</tt> </tt>
+<a name="L15"></a><tt class="py-lineno">15</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">__isPowered</tt> <tt class="py-op">=</tt> <tt class="py-name">False</tt> </tt>
+<a name="L16"></a><tt class="py-lineno">16</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">__cooldown</tt> <tt class="py-op">=</tt> <tt class="py-number">0</tt> </tt>
+</div><a name="L17"></a><tt class="py-lineno">17</tt>  <tt class="py-line"> </tt>
+<a name="Drone.__repr__"></a><div id="Drone.__repr__-def"><a name="L18"></a><tt class="py-lineno">18</tt> <a class="py-toggle" href="#" id="Drone.__repr__-toggle" onclick="return toggle('Drone.__repr__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="drones.Drone-class.html#__repr__">__repr__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Drone.__repr__-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="Drone.__repr__-expanded"><a name="L19"></a><tt class="py-lineno">19</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-string">'Name: '</tt><tt class="py-op">+</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">__name</tt><tt class="py-op">+</tt><tt class="py-string">'  Active: '</tt><tt class="py-op">+</tt><tt class="py-name">str</tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">__isPowered</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L20"></a><tt class="py-lineno">20</tt>  <tt class="py-line"> </tt>
+<a name="Drone.getName"></a><div id="Drone.getName-def"><a name="L21"></a><tt class="py-lineno">21</tt> <a class="py-toggle" href="#" id="Drone.getName-toggle" onclick="return toggle('Drone.getName');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="drones.Drone-class.html#getName">getName</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Drone.getName-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="Drone.getName-expanded"><a name="L22"></a><tt class="py-lineno">22</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">__name</tt> </tt>
+</div><a name="L23"></a><tt class="py-lineno">23</tt>  <tt class="py-line"> </tt>
+<a name="Drone.powerIt"></a><div id="Drone.powerIt-def"><a name="L24"></a><tt class="py-lineno">24</tt> <a class="py-toggle" href="#" id="Drone.powerIt-toggle" onclick="return toggle('Drone.powerIt');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="drones.Drone-class.html#powerIt">powerIt</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Drone.powerIt-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="Drone.powerIt-expanded"><a name="L25"></a><tt class="py-lineno">25</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">__isPowered</tt> <tt class="py-op">=</tt> <tt class="py-name">True</tt> </tt>
+</div><a name="L26"></a><tt class="py-lineno">26</tt>  <tt class="py-line"> </tt>
+<a name="Drone.unpowerIt"></a><div id="Drone.unpowerIt-def"><a name="L27"></a><tt class="py-lineno">27</tt> <a class="py-toggle" href="#" id="Drone.unpowerIt-toggle" onclick="return toggle('Drone.unpowerIt');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="drones.Drone-class.html#unpowerIt">unpowerIt</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Drone.unpowerIt-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="Drone.unpowerIt-expanded"><a name="L28"></a><tt class="py-lineno">28</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">__isPowered</tt> <tt class="py-op">=</tt> <tt class="py-name">False</tt> </tt>
+</div><a name="L29"></a><tt class="py-lineno">29</tt>  <tt class="py-line"> </tt>
+<a name="Drone.isPowered"></a><div id="Drone.isPowered-def"><a name="L30"></a><tt class="py-lineno">30</tt> <a class="py-toggle" href="#" id="Drone.isPowered-toggle" onclick="return toggle('Drone.isPowered');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="drones.Drone-class.html#isPowered">isPowered</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Drone.isPowered-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="Drone.isPowered-expanded"><a name="L31"></a><tt class="py-lineno">31</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">__isPowered</tt> </tt>
+</div><a name="L32"></a><tt class="py-lineno">32</tt>  <tt class="py-line"> </tt>
+<a name="Drone.getPower"></a><div id="Drone.getPower-def"><a name="L33"></a><tt class="py-lineno">33</tt> <a class="py-toggle" href="#" id="Drone.getPower-toggle" onclick="return toggle('Drone.getPower');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="drones.Drone-class.html#getPower">getPower</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Drone.getPower-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="Drone.getPower-expanded"><a name="L34"></a><tt class="py-lineno">34</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">__power</tt> </tt>
+</div><a name="L35"></a><tt class="py-lineno">35</tt>  <tt class="py-line"> </tt>
+<a name="Drone.getCooldown"></a><div id="Drone.getCooldown-def"><a name="L36"></a><tt class="py-lineno">36</tt> <a class="py-toggle" href="#" id="Drone.getCooldown-toggle" onclick="return toggle('Drone.getCooldown');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="drones.Drone-class.html#getCooldown">getCooldown</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Drone.getCooldown-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="Drone.getCooldown-expanded"><a name="L37"></a><tt class="py-lineno">37</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">__cooldown</tt> </tt>
+</div><a name="L38"></a><tt class="py-lineno">38</tt>  <tt class="py-line"> </tt>
+<a name="Drone.setCooldown"></a><div id="Drone.setCooldown-def"><a name="L39"></a><tt class="py-lineno">39</tt> <a class="py-toggle" href="#" id="Drone.setCooldown-toggle" onclick="return toggle('Drone.setCooldown');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="drones.Drone-class.html#setCooldown">setCooldown</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">val</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Drone.setCooldown-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="Drone.setCooldown-expanded"><a name="L40"></a><tt class="py-lineno">40</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">__cooldown</tt> <tt class="py-op">=</tt> <tt class="py-name">val</tt> </tt>
+</div><a name="L41"></a><tt class="py-lineno">41</tt>  <tt class="py-line"> </tt>
+<a name="Drone.getType"></a><div id="Drone.getType-def"><a name="L42"></a><tt class="py-lineno">42</tt> <a class="py-toggle" href="#" id="Drone.getType-toggle" onclick="return toggle('Drone.getType');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="drones.Drone-class.html#getType">getType</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="Drone.getType-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="Drone.getType-expanded"><a name="L43"></a><tt class="py-lineno">43</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">__type</tt> </tt>
+</div></div><a name="L44"></a><tt class="py-lineno">44</tt>  <tt class="py-line"> </tt>
+<a name="L45"></a><tt class="py-lineno">45</tt>  <tt class="py-line"> </tt>
+<a name="CombatDrone"></a><div id="CombatDrone-def"><a name="L46"></a><tt class="py-lineno">46</tt> <a class="py-toggle" href="#" id="CombatDrone-toggle" onclick="return toggle('CombatDrone');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="drones.CombatDrone-class.html">CombatDrone</a><tt class="py-op">(</tt><tt class="py-base-class">Drone</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="CombatDrone-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="CombatDrone-expanded"><a name="L47"></a><tt class="py-lineno">47</tt>  <tt class="py-line"> </tt>
+<a name="CombatDrone.__init__"></a><div id="CombatDrone.__init__-def"><a name="L48"></a><tt class="py-lineno">48</tt> <a class="py-toggle" href="#" id="CombatDrone.__init__-toggle" onclick="return toggle('CombatDrone.__init__');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="drones.CombatDrone-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">name</tt><tt class="py-op">,</tt> <tt class="py-param">power</tt><tt class="py-op">,</tt> <tt class="py-param">cost</tt><tt class="py-op">,</tt> <tt class="py-param">speed</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="CombatDrone.__init__-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="CombatDrone.__init__-expanded"><a name="L49"></a><tt class="py-lineno">49</tt>  <tt class="py-line">        <tt id="link-3" class="py-name" targets="Class drones.Drone=drones.Drone-class.html"><a title="drones.Drone" class="py-name" href="#" onclick="return doclink('link-3', 'Drone', 'link-3');">Drone</a></tt><tt class="py-op">.</tt><tt id="link-4" class="py-name" targets="Method crewMember.CrewMember.__init__()=crewMember.CrewMember-class.html#__init__,Method displayShip.InfosBoth.__init__()=displayShip.InfosBoth-class.html#__init__,Method door.Door.__init__()=door.Door-class.html#__init__,Method drones.CombatDrone.__init__()=drones.CombatDrone-class.html#__init__,Method drones.Drone.__init__()=drones.Drone-class.html#__init__,Method room.Room.__init__()=room.Room-class.html#__init__,Method ship.Ship.__init__()=ship.Ship-class.html#__init__,Method systems.BackupBattery.__init__()=systems.BackupBattery-class.html#__init__,Method systems.Cloaking.__init__()=systems.Cloaking-class.html#__init__,Method systems.CloneBay.__init__()=systems.CloneBay-class.html#__init__,Method systems.CrewTeleporter.__init__()=systems.CrewTeleporter-class.html#__init__,Method systems.DoorSystem.__init__()=systems.DoorSystem-class.html#__init__,Method systems.DroneControl.__init__()=systems.DroneControl-class.html#__init__,Method systems.Engines.__init__()=systems.Engines-class.html#__init__,Method systems.Hacking.__init__()=systems.Hacking-class.html#__init__,Method systems.Medbay.__init__()=systems.Medbay-class.html#__init__,Method systems.MindControl.__init__()=systems.MindControl-class.html#__init__,Method systems.Oxygen.__init__()=systems.Oxygen-class.html#__init__,Method systems.Piloting.__init__()=systems.Piloting-class.html#__init__,Method systems.Sensors.__init__()=systems.Sensors-class.html#__init__,Method systems.Shields.__init__()=systems.Shields-class.html#__init__,Method systems.System.__init__()=systems.System-class.html#__init__,Method systems.WeaponControl.__init__()=systems.WeaponControl-class.html#__init__,Method weapon_module_WIP.Beam.__init__()=weapon_module_WIP.Beam-class.html#__init__,Method weapon_module_WIP.Ion.__init__()=weapon_module_WIP.Ion-class.html#__init__,Method weapon_module_WIP.Laser.__init__()=weapon_module_WIP.Laser-class.html#__init__,Method weapon_module_WIP.Missile.__init__()=weapon_module_WIP.Missile-class.html#__init__,Method weapon_module_WIP.Weapon.__init__()=weapon_module_WIP.Weapon-class.html#__init__"><a title="crewMember.CrewMember.__init__
+displayShip.InfosBoth.__init__
+door.Door.__init__
+drones.CombatDrone.__init__
+drones.Drone.__init__
+room.Room.__init__
+ship.Ship.__init__
+systems.BackupBattery.__init__
+systems.Cloaking.__init__
+systems.CloneBay.__init__
+systems.CrewTeleporter.__init__
+systems.DoorSystem.__init__
+systems.DroneControl.__init__
+systems.Engines.__init__
+systems.Hacking.__init__
+systems.Medbay.__init__
+systems.MindControl.__init__
+systems.Oxygen.__init__
+systems.Piloting.__init__
+systems.Sensors.__init__
+systems.Shields.__init__
+systems.System.__init__
+systems.WeaponControl.__init__
+weapon_module_WIP.Beam.__init__
+weapon_module_WIP.Ion.__init__
+weapon_module_WIP.Laser.__init__
+weapon_module_WIP.Missile.__init__
+weapon_module_WIP.Weapon.__init__" class="py-name" href="#" onclick="return doclink('link-4', '__init__', 'link-4');">__init__</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">,</tt> <tt class="py-name">name</tt><tt class="py-op">,</tt> <tt class="py-string">'combat'</tt><tt class="py-op">,</tt> <tt class="py-name">power</tt><tt class="py-op">,</tt> <tt class="py-name">cost</tt><tt class="py-op">)</tt> </tt>
+<a name="L50"></a><tt class="py-lineno">50</tt>  <tt class="py-line">        <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">__speed</tt> <tt class="py-op">=</tt> <tt class="py-name">speed</tt> </tt>
+</div><a name="L51"></a><tt class="py-lineno">51</tt>  <tt class="py-line"> </tt>
+<a name="CombatDrone.getSpeed"></a><div id="CombatDrone.getSpeed-def"><a name="L52"></a><tt class="py-lineno">52</tt> <a class="py-toggle" href="#" id="CombatDrone.getSpeed-toggle" onclick="return toggle('CombatDrone.getSpeed');">-</a><tt class="py-line">    <tt class="py-keyword">def</tt> <a class="py-def-name" href="drones.CombatDrone-class.html#getSpeed">getSpeed</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="CombatDrone.getSpeed-collapsed" style="display:none;" pad="++" indent="++++++++"></div><div id="CombatDrone.getSpeed-expanded"><a name="L53"></a><tt class="py-lineno">53</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">__speed</tt> </tt>
+</div></div><a name="L54"></a><tt class="py-lineno">54</tt>  <tt class="py-line"> </tt>
+<a name="L55"></a><tt class="py-lineno">55</tt>  <tt class="py-line"> </tt>
+<a name="DefensiveDrone"></a><div id="DefensiveDrone-def"><a name="L56"></a><tt class="py-lineno">56</tt> <a class="py-toggle" href="#" id="DefensiveDrone-toggle" onclick="return toggle('DefensiveDrone');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="drones.DefensiveDrone-class.html">DefensiveDrone</a><tt class="py-op">(</tt><tt class="py-base-class">Drone</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="DefensiveDrone-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="DefensiveDrone-expanded"><a name="L57"></a><tt class="py-lineno">57</tt>  <tt class="py-line">    <tt class="py-keyword">pass</tt> </tt>
+</div><a name="L58"></a><tt class="py-lineno">58</tt>  <tt class="py-line"> </tt>
+<a name="L59"></a><tt class="py-lineno">59</tt>  <tt class="py-line"> </tt>
+<a name="genDrone"></a><div id="genDrone-def"><a name="L60"></a><tt class="py-lineno">60</tt> <a class="py-toggle" href="#" id="genDrone-toggle" onclick="return toggle('genDrone');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="drones-module.html#genDrone">genDrone</a><tt class="py-op">(</tt><tt class="py-param">nameDrone</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="genDrone-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="genDrone-expanded"><a name="L61"></a><tt class="py-lineno">61</tt>  <tt class="py-line">    <tt class="py-name">combatDrone</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-string">'combat1'</tt><tt class="py-op">]</tt> </tt>
+<a name="L62"></a><tt class="py-lineno">62</tt>  <tt class="py-line"> </tt>
+<a name="L63"></a><tt class="py-lineno">63</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt class="py-name">nameDrone</tt> <tt class="py-keyword">in</tt> <tt class="py-name">combatDrone</tt><tt class="py-op">:</tt> </tt>
+<a name="L64"></a><tt class="py-lineno">64</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt id="link-5" class="py-name" targets="Function drones.genCombatDrone()=drones-module.html#genCombatDrone"><a title="drones.genCombatDrone" class="py-name" href="#" onclick="return doclink('link-5', 'genCombatDrone', 'link-5');">genCombatDrone</a></tt><tt class="py-op">(</tt><tt class="py-name">nameDrone</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L65"></a><tt class="py-lineno">65</tt>  <tt class="py-line"> </tt>
+<a name="L66"></a><tt class="py-lineno">66</tt>  <tt class="py-line"> </tt>
+<a name="genCombatDrone"></a><div id="genCombatDrone-def"><a name="L67"></a><tt class="py-lineno">67</tt> <a class="py-toggle" href="#" id="genCombatDrone-toggle" onclick="return toggle('genCombatDrone');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="drones-module.html#genCombatDrone">genCombatDrone</a><tt class="py-op">(</tt><tt class="py-param">nameDrone</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="genCombatDrone-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="genCombatDrone-expanded"><a name="L68"></a><tt class="py-lineno">68</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt>  <tt id="link-6" class="py-name" targets="Class drones.CombatDrone=drones.CombatDrone-class.html"><a title="drones.CombatDrone" class="py-name" href="#" onclick="return doclink('link-6', 'CombatDrone', 'link-6');">CombatDrone</a></tt><tt class="py-op">(</tt><tt class="py-name">name</tt> <tt class="py-op">=</tt> <tt class="py-name">nameDrone</tt><tt class="py-op">,</tt> </tt>
+<a name="L69"></a><tt class="py-lineno">69</tt>  <tt class="py-line">                        <tt class="py-name">power</tt> <tt class="py-op">=</tt> <tt class="py-name">int</tt><tt class="py-op">(</tt><tt id="link-7" class="py-name"><a title="drones.root
+ship.root
+ships_layouts.root
+weapon_module_WIP.root" class="py-name" href="#" onclick="return doclink('link-7', 'root', 'link-1');">root</a></tt><tt class="py-op">.</tt><tt class="py-name">find</tt><tt class="py-op">(</tt><tt class="py-string">'.//'</tt><tt class="py-op">+</tt><tt class="py-name">nameDrone</tt><tt class="py-op">+</tt><tt class="py-string">'/power'</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt class="py-name">text</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
+<a name="L70"></a><tt class="py-lineno">70</tt>  <tt class="py-line">                        <tt class="py-name">cost</tt> <tt class="py-op">=</tt> <tt class="py-name">int</tt><tt class="py-op">(</tt><tt id="link-8" class="py-name"><a title="drones.root
+ship.root
+ships_layouts.root
+weapon_module_WIP.root" class="py-name" href="#" onclick="return doclink('link-8', 'root', 'link-1');">root</a></tt><tt class="py-op">.</tt><tt class="py-name">find</tt><tt class="py-op">(</tt><tt class="py-string">'.//'</tt><tt class="py-op">+</tt><tt class="py-name">nameDrone</tt><tt class="py-op">+</tt><tt class="py-string">'/cost'</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt class="py-name">text</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> </tt>
+<a name="L71"></a><tt class="py-lineno">71</tt>  <tt class="py-line">                        <tt class="py-name">speed</tt> <tt class="py-op">=</tt> <tt class="py-name">int</tt><tt class="py-op">(</tt><tt id="link-9" class="py-name"><a title="drones.root
+ship.root
+ships_layouts.root
+weapon_module_WIP.root" class="py-name" href="#" onclick="return doclink('link-9', 'root', 'link-1');">root</a></tt><tt class="py-op">.</tt><tt class="py-name">find</tt><tt class="py-op">(</tt><tt class="py-string">'.//'</tt><tt class="py-op">+</tt><tt class="py-name">nameDrone</tt><tt class="py-op">+</tt><tt class="py-string">'/speed'</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt class="py-name">text</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L72"></a><tt class="py-lineno">72</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Sat Dec  6 17:26:51 2014
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

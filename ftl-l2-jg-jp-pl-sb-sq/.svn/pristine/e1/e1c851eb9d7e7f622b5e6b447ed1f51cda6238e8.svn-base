@@ -1,0 +1,178 @@
+\documentclass{beamer}
+ 
+\usepackage[utf8]{inputenc} 
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{graphicx}
+\usepackage[french]{babel}
+\usepackage{animate}
+\usepackage{movie15}
+ 
+\usetheme{Madrid}
+
+\title[Soutenance]{Soutenance du TPA}
+\subtitle[\ldots]{Rapport}
+\author[FTL]{Simon \textsc{Bihel}, Sebastien \textsc{Gamblin}, Josselin \textsc{Gueneron}, Julien \textsc{Pezant}, Paul \textsc{Lemenager}}
+\institute[UCBN]{UCBN L2 Informatique Semestre 2}
+\date{\today}
+ 
+\begin{document}
+\begin{frame}
+	\maketitle
+\end{frame}
+
+\begin{frame}
+	\frametitle{Plan}
+	\tableofcontents
+\end{frame}
+
+\begin{frame}
+	\section{Introduction}
+	\frametitle{Présentation du jeu}
+	%\subsection{Présentation du jeu}
+	\begin{center}
+		\Large{\textit{FTL : Faster Than Light}, Subset Games.}
+	\end{center}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.7\linewidth]{screen.jpg}
+	\end{figure}
+	
+\end{frame}
+
+\begin{frame}
+	%\subsection{Présentation du projet}
+	\frametitle{Présentation du projet}
+	Réalisation d'un programme permettant la modélisation de vaisseau FTL afin de les optimiser au mieux.
+	Le but du second semestre est de faire un programme déterminant le meilleur vaisseau pour un coût maximal donné.
+	C'est-à-dire :
+	\begin{itemize}
+		\item faire un générateur de vaisseaux selon un coût donné ;
+		\item faire un algorithme déterminant le meilleur vaisseau.
+	\end{itemize}
+	
+\end{frame}
+
+
+
+\begin{frame}
+	\section{Le moteur de combats}
+	\subsection{Rappel sur le moteur de combats}
+	\frametitle{Rappel sur le moteur de combats}
+	
+	Eléments inchangés du premier semestre :
+	\begin{itemize}
+		\item en tour par tour ;
+		\item cooldowns et phases d'attaque gérés séparément
+	\end{itemize}
+	
+\end{frame}
+
+\begin{frame}
+	\subsection{Ajouts au moteur de combats}
+	\frametitle{Ajouts au moteur de combats}
+	Spécificités du combat :
+	\begin{itemize}
+		\item discrétisation des évènements ;
+		\item nouvelle représentation graphique avec tkinter.
+	\end{itemize}
+	
+\end{frame}
+
+\begin{frame}
+	\subsection{Affichage graphique}
+	\frametitle{Affichage graphique}
+	
+	\begin{figure}[H]
+		\centering
+		%\includemovie{1cm}{1cm}{finalgif3.gif}
+		%\includegraphics[width=0.75\linewidth]{finalgif3.gif}
+		\animategraphics[scale=0.287]{2}{finalgif3-}{0}{22}
+	\end{figure}
+	
+\end{frame}
+
+\begin{frame}
+	\section{Recherche du meilleur vaisseau}
+	\frametitle{Recherche du meilleur vaisseau}
+	On appellera "meilleur vaisseau" celui qui gagne plus de combats que les autres. Ainsi, on a :
+	\begin{itemize}
+		\item Un générateur de vaisseaux
+		\item Un algorithme génétique
+		\item Un système expert
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Générateur aléatoire de vaisseaux}
+	\subsection{Générateur aléatoire de vaisseaux}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[height=0.75\textheight]{randomGeneratorCut.pdf}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Générateur aléatoire : les moteurs}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[height=0.75\textheight]{randomGeneratorExample.pdf}
+	\end{figure}
+\end{frame}
+
+\begin{frame}		
+	\frametitle{Algorithme génétique}
+	\subsection{Algorithme génétique}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[height=0.75\textheight]{geneticAlgorithm.pdf}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Data Mining}
+	\subsection{Data Mining}
+	Utilisation du programme 'Linear time Closed itemset Miner' de Takeaki Uno.
+\end{frame}
+
+\begin{frame}
+	\frametitle{Algorithme final d'optimisation}
+	\subsection{Algorithme final d'optimisation}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[height=0.6\textheight]{finalAlgorithm.pdf}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+	\section{Réalisation}
+	\subsection{Les modules}
+	\frametitle{Les modules}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[height=0.85\textheight]{packageDiagram.pdf}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+	\subsection{Failles du programme}
+	\frametitle{Failles du programme}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Conclusion}
+	\section{Conclusion}
+	
+	On peut considérer, dans une certaine mesure, que les objectifs du second semestre ont été atteints. Le moteur de combat, bien qu'incomplet, fonctionne correctement et le nouvel affichage est clair. La recherche du meilleur vaisseau retourne des résultats assez pertinents. Néanmoins, certains éléments restent améliorables et on pourrait encore enrichir le programme.
+	
+	Future pistes :
+	\begin{itemize}
+			
+		\item Les déplacements de l'équipage ne sont toujours pas au point. Peut-être pourrait-on utiliser l'affichage graphique pour débuger plus aisément le programme, en générant un graphe des chemins possibles dans le vaisseau.
+		\item Les tournois sont encore très longs. Il serait peut-être bon  d'arrêter un match quand un des vaisseaux à déjà gagné la moitié de ses combats.
+	\end{itemize}
+\end{frame}
+
+\end{document}
+

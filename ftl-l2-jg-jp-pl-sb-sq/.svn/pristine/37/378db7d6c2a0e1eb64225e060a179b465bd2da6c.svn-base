@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ship>
+    <kestrel>
+        <typeA>
+            <ship0>
+                <cost>0</cost>
+            </ship0>
+        </typeA>
+        <typeB>
+            <ship0>
+                <cost>0</cost>
+            </ship0>
+        </typeB>
+    </kestrel>
+    <engiCruiser>
+        <typeA>
+            <ship0>
+                <cost>0</cost>
+            </ship0>
+            <ship1>
+                <add>
+                    <energy>4</energy>
+                    <system>
+                        <shields>2</shields>
+                    </system>
+                    <weapon>basicLaser</weapon>
+                </add>
+                <cost>170</cost>
+            </ship1>
+        </typeA>
+    </engiCruiser>
+</ship>

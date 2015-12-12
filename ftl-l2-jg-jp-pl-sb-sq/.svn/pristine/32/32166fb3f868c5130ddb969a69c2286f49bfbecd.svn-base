@@ -1,0 +1,11 @@
+<ship>
+  <add>
+    <energy>5</energy>
+    <system>
+      <shields>4</shields>
+      <weaponControl>3</weaponControl>
+    </system>
+    <weapon>heavyIon basicLaser</weapon>
+  </add>
+  <cost>490</cost>
+</ship>

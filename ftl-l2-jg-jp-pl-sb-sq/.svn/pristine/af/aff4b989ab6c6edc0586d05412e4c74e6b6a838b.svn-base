@@ -1,0 +1,38 @@
+<html><head><title>Epydoc Redirect Page</title>
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="expires" content="0" />
+<meta http-equiv="pragma" content="no-cache" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+<!--
+var pages = ["weapon_module_WIP.Missile-c", "weapon_module_WIP.Weapon-c", "weapon_module_WIP.Laser-c", "systems.CrewTeleporter-c", "weapon_module_WIP.Beam-c", "crewMember.CrewMember-c", "displayShip.InfosBoth-c", "drones.DefensiveDrone-c", "systems.BackupBattery-c", "systems.WeaponControl-c", "weapon_module_WIP.Ion-c", "systems.DroneControl-c", "systems.MindControl-c", "drones.CombatDrone-c", "systems.DoorSystem-c", "weapon_module_WIP-m", "systems.Cloaking-c", "systems.CloneBay-c", "systems.Piloting-c", "tournament_test-m", "systems.Engines-c", "systems.Hacking-c", "systems.Sensors-c", "systems.Shields-c", "systems.Medbay-c", "systems.Oxygen-c", "systems.System-c", "ships_layouts-m", "test_combats-m", "drones.Drone-c", "displayShip-m", "crewMember-m", "globalVar-m", "door.Door-c", "room.Room-c", "ship.Ship-c", "systems-m", "combat-m", "drones-m", "door-m", "room-m", "ship-m"];
+var dottedName = get_anchor();
+if (dottedName) {
+    var target = redirect_url(dottedName);
+    if (target) window.location.replace(target);
+}
+// -->
+</script>
+
+<h3>Epydoc Auto-redirect page</h3>
+
+<p>When javascript is enabled, this page will redirect URLs of
+the form <tt>redirect.html#<i>dotted.name</i></tt> to the
+documentation for the object with the given fully-qualified
+dotted name.</p>
+<p><a id="message"> &nbsp; </a></p>
+
+<script type="text/javascript">
+<!--
+if (dottedName) {
+    var msg = document.getElementById("message");
+    msg.innerHTML = "No documentation found for <tt>"+
+                    dottedName+"</tt>";
+}
+// -->
+</script>
+
+</body>
+</html>

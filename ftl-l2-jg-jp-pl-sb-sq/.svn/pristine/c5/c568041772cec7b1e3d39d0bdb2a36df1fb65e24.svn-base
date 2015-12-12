@@ -1,0 +1,46 @@
+\documentclass{beamer}
+ 
+\usepackage[utf8]{inputenc} 
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{graphicx}
+\usepackage[french]{babel}
+ 
+\usetheme{Madrid}
+
+\title[Présentation]{Soutenance du TPA}
+\subtitle[\ldots]{Rapport}
+\author[FTL]{Simon \textsc{Bihel}, Sebastien \textsc{Gamblin}, Josselin \textsc{Gueneron}, Julien \textsc{Pezant}, Paul \textsc{Lemenager}}
+\institute[UCBN]{UCBN L2 Informatique Semestre 2}
+\date{\today}
+ 
+\begin{document}
+\begin{frame}
+	\maketitle
+\end{frame}
+
+\begin{frame}
+	\frametitle{Plan}
+	\tableofcontents
+\end{frame}
+
+\begin{frame}
+	\frametitle{Présentation du jeu}
+	\section{Présentation du jeu}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.7\linewidth]{screen.jpg}
+	\end{figure}
+	
+\end{frame}
+
+\begin{frame}
+	\frametitle{Présentation du projet}
+	\section{Présentation du projet}
+	
+\end{frame}
+
+ 
+\end{document}
+

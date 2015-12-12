@@ -1,0 +1,45 @@
+#! /bin/bash
+
+python3 randomFight.py
+
+cd ps/
+
+nb=0
+for i in `ls`
+do
+	convert $i $i.png
+	rm $i
+	nb=$(($nb+1))
+done
+nb=$(($nb))
+
+echo $nb "Conversion in jpg has ended"
+
+for j in $(seq -f "%05g" 0 $(($nb-1)))
+do
+	montage -geometry 600x500 -tile 2x1 *-$j.ps.jpg together$j.png
+	rm *-$j.ps.jpg
+done
+
+n=0
+
+l=`ls ../gifCombat/` 
+for file in $l
+do
+	v="%05g" $n
+	if [ "final$v.gif" == $file ]
+	then 
+		n=$(($n+1))
+	fi
+done
+
+echo "Writing ../gifCombat/final$n.gif"
+convert  -delay 80 -loop 0 together*.png "../gifCombat/final$n.gif"
+
+rm together*.jpg
+
+cd ../
+
+animate "gifCombat/final$n.gif" &
+
+exit 1

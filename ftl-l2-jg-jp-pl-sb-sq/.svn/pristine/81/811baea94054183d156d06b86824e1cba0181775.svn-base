@@ -1,0 +1,16 @@
+<ship>
+  <name>kestrel</name>
+  <type>A</type>
+  <add>
+    <energy>8</energy>
+    <system>
+      <weaponControl>2</weaponControl>
+      <shields>4</shields>
+    </system>
+    <weapons>
+      <weapon0>antibioBeam</weapon0>
+      <weapon1>basicLaser</weapon1>
+    </weapons>
+  </add>
+  <cost>500</cost>
+</ship>

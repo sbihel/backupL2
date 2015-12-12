@@ -1,0 +1,123 @@
+\contentsline {section}{Contents}{1}{section*.1}
+\contentsline {section}{\numberline {1}Module combat}{4}{section.1}
+\contentsline {subsection}{\numberline {1.1}Functions}{4}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}Variables}{4}{subsection.1.2}
+\contentsline {section}{\numberline {2}Module crewMember}{5}{section.2}
+\contentsline {subsection}{\numberline {2.1}Variables}{5}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Class CrewMember}{5}{subsection.2.2}
+\contentsline {subsubsection}{\numberline {2.2.1}Methods}{5}{subsubsection.2.2.1}
+\contentsline {subsubsection}{\numberline {2.2.2}Properties}{7}{subsubsection.2.2.2}
+\contentsline {section}{\numberline {3}Module displayShip}{9}{section.3}
+\contentsline {subsection}{\numberline {3.1}Functions}{9}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Variables}{9}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}Class InfosBoth}{9}{subsection.3.3}
+\contentsline {subsubsection}{\numberline {3.3.1}Methods}{10}{subsubsection.3.3.1}
+\contentsline {subsubsection}{\numberline {3.3.2}Properties}{10}{subsubsection.3.3.2}
+\contentsline {subsubsection}{\numberline {3.3.3}Class Variables}{10}{subsubsection.3.3.3}
+\contentsline {section}{\numberline {4}Module door}{11}{section.4}
+\contentsline {subsection}{\numberline {4.1}Variables}{11}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Class Door}{11}{subsection.4.2}
+\contentsline {subsubsection}{\numberline {4.2.1}Methods}{11}{subsubsection.4.2.1}
+\contentsline {subsubsection}{\numberline {4.2.2}Properties}{12}{subsubsection.4.2.2}
+\contentsline {section}{\numberline {5}Module drones}{13}{section.5}
+\contentsline {subsection}{\numberline {5.1}Functions}{13}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.2}Variables}{13}{subsection.5.2}
+\contentsline {subsection}{\numberline {5.3}Class Drone}{13}{subsection.5.3}
+\contentsline {subsubsection}{\numberline {5.3.1}Methods}{13}{subsubsection.5.3.1}
+\contentsline {subsubsection}{\numberline {5.3.2}Properties}{14}{subsubsection.5.3.2}
+\contentsline {subsection}{\numberline {5.4}Class CombatDrone}{14}{subsection.5.4}
+\contentsline {subsubsection}{\numberline {5.4.1}Methods}{14}{subsubsection.5.4.1}
+\contentsline {subsubsection}{\numberline {5.4.2}Properties}{15}{subsubsection.5.4.2}
+\contentsline {subsection}{\numberline {5.5}Class DefensiveDrone}{15}{subsection.5.5}
+\contentsline {subsubsection}{\numberline {5.5.1}Methods}{15}{subsubsection.5.5.1}
+\contentsline {subsubsection}{\numberline {5.5.2}Properties}{15}{subsubsection.5.5.2}
+\contentsline {section}{\numberline {6}Module globalVar}{16}{section.6}
+\contentsline {subsection}{\numberline {6.1}Variables}{16}{subsection.6.1}
+\contentsline {section}{\numberline {7}Module room}{17}{section.7}
+\contentsline {subsection}{\numberline {7.1}Variables}{17}{subsection.7.1}
+\contentsline {subsection}{\numberline {7.2}Class Room}{17}{subsection.7.2}
+\contentsline {subsubsection}{\numberline {7.2.1}Methods}{17}{subsubsection.7.2.1}
+\contentsline {subsubsection}{\numberline {7.2.2}Properties}{19}{subsubsection.7.2.2}
+\contentsline {section}{\numberline {8}Module ship}{20}{section.8}
+\contentsline {subsection}{\numberline {8.1}Variables}{20}{subsection.8.1}
+\contentsline {subsection}{\numberline {8.2}Class Ship}{20}{subsection.8.2}
+\contentsline {subsubsection}{\numberline {8.2.1}Methods}{20}{subsubsection.8.2.1}
+\contentsline {subsubsection}{\numberline {8.2.2}Properties}{25}{subsubsection.8.2.2}
+\contentsline {subsubsection}{\numberline {8.2.3}Class Variables}{25}{subsubsection.8.2.3}
+\contentsline {section}{\numberline {9}Module ships\_layouts}{26}{section.9}
+\contentsline {subsection}{\numberline {9.1}Functions}{26}{subsection.9.1}
+\contentsline {subsection}{\numberline {9.2}Variables}{26}{subsection.9.2}
+\contentsline {section}{\numberline {10}Module systems}{27}{section.10}
+\contentsline {subsection}{\numberline {10.1}Variables}{27}{subsection.10.1}
+\contentsline {subsection}{\numberline {10.2}Class System}{27}{subsection.10.2}
+\contentsline {subsubsection}{\numberline {10.2.1}Methods}{27}{subsubsection.10.2.1}
+\contentsline {subsubsection}{\numberline {10.2.2}Properties}{30}{subsubsection.10.2.2}
+\contentsline {subsection}{\numberline {10.3}Class Shields}{30}{subsection.10.3}
+\contentsline {subsubsection}{\numberline {10.3.1}Methods}{30}{subsubsection.10.3.1}
+\contentsline {subsubsection}{\numberline {10.3.2}Properties}{31}{subsubsection.10.3.2}
+\contentsline {subsection}{\numberline {10.4}Class Engines}{32}{subsection.10.4}
+\contentsline {subsubsection}{\numberline {10.4.1}Methods}{32}{subsubsection.10.4.1}
+\contentsline {subsubsection}{\numberline {10.4.2}Properties}{33}{subsubsection.10.4.2}
+\contentsline {subsection}{\numberline {10.5}Class Piloting}{33}{subsection.10.5}
+\contentsline {subsubsection}{\numberline {10.5.1}Methods}{33}{subsubsection.10.5.1}
+\contentsline {subsubsection}{\numberline {10.5.2}Properties}{33}{subsubsection.10.5.2}
+\contentsline {subsection}{\numberline {10.6}Class WeaponControl}{34}{subsection.10.6}
+\contentsline {subsubsection}{\numberline {10.6.1}Methods}{34}{subsubsection.10.6.1}
+\contentsline {subsubsection}{\numberline {10.6.2}Properties}{36}{subsubsection.10.6.2}
+\contentsline {subsection}{\numberline {10.7}Class Oxygen}{36}{subsection.10.7}
+\contentsline {subsubsection}{\numberline {10.7.1}Methods}{37}{subsubsection.10.7.1}
+\contentsline {subsubsection}{\numberline {10.7.2}Properties}{37}{subsubsection.10.7.2}
+\contentsline {subsection}{\numberline {10.8}Class Medbay}{37}{subsection.10.8}
+\contentsline {subsubsection}{\numberline {10.8.1}Methods}{37}{subsubsection.10.8.1}
+\contentsline {subsubsection}{\numberline {10.8.2}Properties}{38}{subsubsection.10.8.2}
+\contentsline {subsection}{\numberline {10.9}Class Sensors}{38}{subsection.10.9}
+\contentsline {subsubsection}{\numberline {10.9.1}Methods}{38}{subsubsection.10.9.1}
+\contentsline {subsubsection}{\numberline {10.9.2}Properties}{39}{subsubsection.10.9.2}
+\contentsline {subsection}{\numberline {10.10}Class DoorSystem}{39}{subsection.10.10}
+\contentsline {subsubsection}{\numberline {10.10.1}Methods}{39}{subsubsection.10.10.1}
+\contentsline {subsubsection}{\numberline {10.10.2}Properties}{40}{subsubsection.10.10.2}
+\contentsline {subsection}{\numberline {10.11}Class DroneControl}{40}{subsection.10.11}
+\contentsline {subsubsection}{\numberline {10.11.1}Methods}{40}{subsubsection.10.11.1}
+\contentsline {subsubsection}{\numberline {10.11.2}Properties}{41}{subsubsection.10.11.2}
+\contentsline {subsection}{\numberline {10.12}Class BackupBattery}{42}{subsection.10.12}
+\contentsline {subsubsection}{\numberline {10.12.1}Methods}{42}{subsubsection.10.12.1}
+\contentsline {subsubsection}{\numberline {10.12.2}Properties}{42}{subsubsection.10.12.2}
+\contentsline {subsection}{\numberline {10.13}Class CrewTeleporter}{43}{subsection.10.13}
+\contentsline {subsubsection}{\numberline {10.13.1}Methods}{43}{subsubsection.10.13.1}
+\contentsline {subsubsection}{\numberline {10.13.2}Properties}{43}{subsubsection.10.13.2}
+\contentsline {subsection}{\numberline {10.14}Class Cloaking}{44}{subsection.10.14}
+\contentsline {subsubsection}{\numberline {10.14.1}Methods}{44}{subsubsection.10.14.1}
+\contentsline {subsubsection}{\numberline {10.14.2}Properties}{45}{subsubsection.10.14.2}
+\contentsline {subsection}{\numberline {10.15}Class CloneBay}{45}{subsection.10.15}
+\contentsline {subsubsection}{\numberline {10.15.1}Methods}{45}{subsubsection.10.15.1}
+\contentsline {subsubsection}{\numberline {10.15.2}Properties}{46}{subsubsection.10.15.2}
+\contentsline {subsection}{\numberline {10.16}Class MindControl}{46}{subsection.10.16}
+\contentsline {subsubsection}{\numberline {10.16.1}Methods}{46}{subsubsection.10.16.1}
+\contentsline {subsubsection}{\numberline {10.16.2}Properties}{46}{subsubsection.10.16.2}
+\contentsline {subsection}{\numberline {10.17}Class Hacking}{47}{subsection.10.17}
+\contentsline {subsubsection}{\numberline {10.17.1}Methods}{47}{subsubsection.10.17.1}
+\contentsline {subsubsection}{\numberline {10.17.2}Properties}{47}{subsubsection.10.17.2}
+\contentsline {section}{\numberline {11}Module test\_combats}{48}{section.11}
+\contentsline {subsection}{\numberline {11.1}Functions}{48}{subsection.11.1}
+\contentsline {section}{\numberline {12}Module tournament\_test}{49}{section.12}
+\contentsline {subsection}{\numberline {12.1}Functions}{49}{subsection.12.1}
+\contentsline {subsection}{\numberline {12.2}Variables}{49}{subsection.12.2}
+\contentsline {section}{\numberline {13}Module weapon\_module\_WIP}{50}{section.13}
+\contentsline {subsection}{\numberline {13.1}Functions}{50}{subsection.13.1}
+\contentsline {subsection}{\numberline {13.2}Variables}{50}{subsection.13.2}
+\contentsline {subsection}{\numberline {13.3}Class Weapon}{50}{subsection.13.3}
+\contentsline {subsubsection}{\numberline {13.3.1}Methods}{51}{subsubsection.13.3.1}
+\contentsline {subsubsection}{\numberline {13.3.2}Properties}{52}{subsubsection.13.3.2}
+\contentsline {subsection}{\numberline {13.4}Class Missile}{52}{subsection.13.4}
+\contentsline {subsubsection}{\numberline {13.4.1}Methods}{52}{subsubsection.13.4.1}
+\contentsline {subsubsection}{\numberline {13.4.2}Properties}{53}{subsubsection.13.4.2}
+\contentsline {subsection}{\numberline {13.5}Class Beam}{53}{subsection.13.5}
+\contentsline {subsubsection}{\numberline {13.5.1}Methods}{53}{subsubsection.13.5.1}
+\contentsline {subsubsection}{\numberline {13.5.2}Properties}{53}{subsubsection.13.5.2}
+\contentsline {subsection}{\numberline {13.6}Class Laser}{54}{subsection.13.6}
+\contentsline {subsubsection}{\numberline {13.6.1}Methods}{54}{subsubsection.13.6.1}
+\contentsline {subsubsection}{\numberline {13.6.2}Properties}{54}{subsubsection.13.6.2}
+\contentsline {subsection}{\numberline {13.7}Class Ion}{54}{subsection.13.7}
+\contentsline {subsubsection}{\numberline {13.7.1}Methods}{55}{subsubsection.13.7.1}
+\contentsline {subsubsection}{\numberline {13.7.2}Properties}{55}{subsubsection.13.7.2}
+\contentsline {section}{Index}{56}{section*.2}

@@ -1,0 +1,97 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\gdef \LT@xxxviii {\LT@entry 
+    {1}{152.92793pt}\LT@entry 
+    {1}{258.72162pt}\LT@entry 
+    {1}{12.0pt}}
+\@writefile{toc}{\contentsline {section}{\numberline {13}Module weapon\_module\_WIP}{50}{section.13}}
+\newlabel{weapon_module_WIP}{{13}{50}{Module weapon\_module\_WIP}{section.13}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {13.1}Functions}{50}{subsection.13.1}}
+\newlabel{weapon_module_WIP:genMissile}{{13.1}{50}{Functions}{subsection.13.1}{}}
+\newlabel{weapon_module_WIP:genBeam}{{13.1}{50}{Functions}{subsection.13.1}{}}
+\newlabel{weapon_module_WIP:genLaser}{{13.1}{50}{Functions}{subsection.13.1}{}}
+\newlabel{weapon_module_WIP:genIon}{{13.1}{50}{Functions}{subsection.13.1}{}}
+\newlabel{weapon_module_WIP:genWeapon}{{13.1}{50}{Functions}{subsection.13.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {13.2}Variables}{50}{subsection.13.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {13.3}Class Weapon}{50}{subsection.13.3}}
+\newlabel{weapon_module_WIP:Weapon}{{13.3}{50}{Class Weapon}{subsection.13.3}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {13.3.1}Methods}{51}{subsubsection.13.3.1}}
+\newlabel{weapon_module_WIP:Weapon:getName}{{13.3.1}{51}{Methods}{subsubsection.13.3.1}{}}
+\newlabel{weapon_module_WIP:Weapon:getType}{{13.3.1}{51}{Methods}{subsubsection.13.3.1}{}}
+\newlabel{weapon_module_WIP:Weapon:getDamage}{{13.3.1}{51}{Methods}{subsubsection.13.3.1}{}}
+\newlabel{weapon_module_WIP:Weapon:getPower}{{13.3.1}{51}{Methods}{subsubsection.13.3.1}{}}
+\newlabel{weapon_module_WIP:Weapon:getCooldown}{{13.3.1}{51}{Methods}{subsubsection.13.3.1}{}}
+\newlabel{weapon_module_WIP:Weapon:getCurrentCooldown}{{13.3.1}{51}{Methods}{subsubsection.13.3.1}{}}
+\newlabel{weapon_module_WIP:Weapon:setCurrentCooldown}{{13.3.1}{51}{Methods}{subsubsection.13.3.1}{}}
+\newlabel{weapon_module_WIP:Weapon:getCost}{{13.3.1}{51}{Methods}{subsubsection.13.3.1}{}}
+\newlabel{weapon_module_WIP:Weapon:getHits}{{13.3.1}{51}{Methods}{subsubsection.13.3.1}{}}
+\newlabel{weapon_module_WIP:Weapon:getFireChance}{{13.3.1}{51}{Methods}{subsubsection.13.3.1}{}}
+\newlabel{weapon_module_WIP:Weapon:getBreachChance}{{13.3.1}{51}{Methods}{subsubsection.13.3.1}{}}
+\newlabel{weapon_module_WIP:Weapon:getStunChance}{{13.3.1}{51}{Methods}{subsubsection.13.3.1}{}}
+\newlabel{weapon_module_WIP:Weapon:isPowered}{{13.3.1}{51}{Methods}{subsubsection.13.3.1}{}}
+\newlabel{weapon_module_WIP:Weapon:powerIt}{{13.3.1}{51}{Methods}{subsubsection.13.3.1}{}}
+\gdef \LT@xxxix {\LT@entry 
+    {1}{152.92793pt}\LT@entry 
+    {1}{258.72162pt}\LT@entry 
+    {1}{12.0pt}}
+\newlabel{weapon_module_WIP:Weapon:unpowerIt}{{13.3.1}{52}{Methods}{subsubsection.13.3.1}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {13.3.2}Properties}{52}{subsubsection.13.3.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {13.4}Class Missile}{52}{subsection.13.4}}
+\newlabel{weapon_module_WIP:Missile}{{13.4}{52}{Class Missile}{subsection.13.4}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {13.4.1}Methods}{52}{subsubsection.13.4.1}}
+\gdef \LT@xl {\LT@entry 
+    {1}{152.92793pt}\LT@entry 
+    {1}{258.72162pt}\LT@entry 
+    {1}{12.0pt}}
+\gdef \LT@xli {\LT@entry 
+    {1}{152.92793pt}\LT@entry 
+    {1}{258.72162pt}\LT@entry 
+    {1}{12.0pt}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {13.4.2}Properties}{53}{subsubsection.13.4.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {13.5}Class Beam}{53}{subsection.13.5}}
+\newlabel{weapon_module_WIP:Beam}{{13.5}{53}{Class Beam}{subsection.13.5}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {13.5.1}Methods}{53}{subsubsection.13.5.1}}
+\newlabel{weapon_module_WIP:Beam:getBeamLength}{{13.5.1}{53}{Methods}{subsubsection.13.5.1}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {13.5.2}Properties}{53}{subsubsection.13.5.2}}
+\gdef \LT@xlii {\LT@entry 
+    {1}{152.92793pt}\LT@entry 
+    {1}{258.72162pt}\LT@entry 
+    {1}{12.0pt}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {13.6}Class Laser}{54}{subsection.13.6}}
+\newlabel{weapon_module_WIP:Laser}{{13.6}{54}{Class Laser}{subsection.13.6}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {13.6.1}Methods}{54}{subsubsection.13.6.1}}
+\newlabel{weapon_module_WIP:Laser:getSpeed}{{13.6.1}{54}{Methods}{subsubsection.13.6.1}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {13.6.2}Properties}{54}{subsubsection.13.6.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {13.7}Class Ion}{54}{subsection.13.7}}
+\newlabel{weapon_module_WIP:Ion}{{13.7}{54}{Class Ion}{subsection.13.7}{}}
+\gdef \LT@xliii {\LT@entry 
+    {1}{152.92793pt}\LT@entry 
+    {1}{258.72162pt}\LT@entry 
+    {1}{12.0pt}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {13.7.1}Methods}{55}{subsubsection.13.7.1}}
+\newlabel{weapon_module_WIP:Ion:getSpeed}{{13.7.1}{55}{Methods}{subsubsection.13.7.1}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {13.7.2}Properties}{55}{subsubsection.13.7.2}}
+\@setckpt{weapon_module_WIP-module}{
+\setcounter{page}{56}
+\setcounter{equation}{0}
+\setcounter{enumi}{0}
+\setcounter{enumii}{0}
+\setcounter{enumiii}{0}
+\setcounter{enumiv}{0}
+\setcounter{footnote}{0}
+\setcounter{mpfootnote}{0}
+\setcounter{part}{0}
+\setcounter{section}{13}
+\setcounter{subsection}{7}
+\setcounter{subsubsection}{2}
+\setcounter{paragraph}{0}
+\setcounter{subparagraph}{0}
+\setcounter{figure}{0}
+\setcounter{table}{43}
+\setcounter{LT@tables}{43}
+\setcounter{LT@chunks}{4}
+\setcounter{Item}{0}
+\setcounter{Hfootnote}{0}
+\setcounter{bookmark@seq@number}{122}
+\setcounter{section@level}{3}
+}

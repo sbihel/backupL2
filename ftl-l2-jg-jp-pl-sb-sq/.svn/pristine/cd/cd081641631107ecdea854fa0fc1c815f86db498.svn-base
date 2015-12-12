@@ -1,0 +1,71 @@
+from expertSystem import *
+
+
+def multipleOptimization(maxCost, nbCombats, sizeFirstPopulation, nbInitGeneticAlgo=1):
+    """
+    Takes a lot of time to do multiple techniques to determine the best
+    """
+    nbChampions = sizeFirstPopulation//3
+    if nbChampions < 2:
+        nbChampions = 2
+    hallOfFame, hallOfShame = [], []
+    for _ in range(nbInitGeneticAlgo):
+        gAlgo = autoStopGeneticAlgorithm(sizeFirstPopulation, maxCost, nbCombats, nbChampions=nbChampions)
+        for bC in gAlgo[0]:
+            hallOfFame += [bC]
+        for bC in gAlgo[1]:
+            hallOfShame += [bC]
+
+    bestFeaturesF = getBestFeatures(buildLCMInputFile(hallOfFame))
+    worstFeaturesF = getBestFeatures(buildLCMInputFile(hallOfShame))
+    newShips = hallOfFame[:]
+
+    newShips += expertSystem(bestFeaturesF, worstFeaturesF, maxCost)
+
+    return autoStopGeneticAlgorithm(len(newShips), maxCost, nbCombats, initChampions=newShips)
+
+
+def expertSystem(bestFeaturesF, worstFeaturesF, maxCost):
+    newShips = []
+
+    ships = {'kestrel': ['typeA', 'typeB', 'typeC'],
+             'engiCruiser': ['typeA']}
+
+    with open(bestFeaturesF) as bF:
+        for line in bF:
+            if int(line.split('(')[1].split(')')[0]) > 3:
+                for s in ships:
+                    for t in ships[s]:
+                        nameN = s
+                        typeN = t
+                        systemsUpgrades, weaponsP, dronesP, energyP = addingToShipFromLCMLine(line, nameN, typeN)
+                        newShips += [createRandomShip(maxCost,
+                                                      nameShip=nameN, typeShip=typeN,
+                                                      systemsUpgradesWanted=systemsUpgrades,
+                                                      weaponsWanted=weaponsP,
+                                                      dronesWanted=dronesP,
+                                                      energyWanted=energyP)]
+            else:
+                break
+    # with open(worstFeaturesF) as wF:
+    #     for line in wF:
+    #         if int(line.split('(')[1].split(')')[0]) > 3:
+    #             for s in ships:
+    #                 for t in ships[s]:
+    #                     nameN = s
+    #                     typeN = t
+    #                     systemsUpgrades, weaponsP, dronesP, energyP = addingToShipFromLCMLine(line, nameN, typeN)
+    #                     newShips += [createRandomShip(maxCost,
+    #                                                   nameShip=nameN, typeShip=typeN,
+    #                                                   systemsUpgradesWanted=systemsUpgrades,
+    #                                                   weaponsWanted=weaponsP,
+    #                                                   dronesWanted=dronesP,
+    #                                                   energyWanted=energyP)]
+    #         else:
+    #             break
+
+    return newShips
+
+
+if __name__ == '__main__':
+    print(multipleOptimization(500, 4, 4, nbInitGeneticAlgo=3))

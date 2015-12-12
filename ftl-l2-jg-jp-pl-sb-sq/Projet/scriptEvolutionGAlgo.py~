@@ -1,0 +1,12 @@
+res = ''
+with open('xmlShips/shipsGAlgo') as file:
+    for line in file:
+        newLine = line.split('.xml')
+        if not newLine[-1]:
+            newLine = newLine[:-1]
+        for ship in newLine:
+            res += ship + '.xml '
+        res += '\n'
+with open('xmlShips/shipsGAlgo', 'w') as file:
+    file.write(res)
+

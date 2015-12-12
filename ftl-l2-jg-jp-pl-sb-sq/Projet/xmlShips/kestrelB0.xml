@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ship>
+    <name>kestrel</name>
+    <type>B</type>
+	<cost>0</cost>
+</ship>

@@ -1,0 +1,12 @@
+<ship>
+  <add>
+    <energy>2</energy>
+    <system>
+      <cloaking>1</cloaking>
+      <weaponControl>3</weaponControl>
+      <shields>2</shields>
+    </system>
+    <weapon>heavyIon artemisPL</weapon>
+  </add>
+  <cost>483</cost>
+</ship>

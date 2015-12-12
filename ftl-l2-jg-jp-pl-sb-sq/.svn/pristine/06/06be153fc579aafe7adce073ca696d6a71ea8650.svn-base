@@ -1,0 +1,38 @@
+\chapter{Concepts à maîtriser}
+
+Tout d'abord pour comprendre comment la génération de vaisseaux fonctionne, il faut comprendre comment un vaisseau est représenté. 
+Ensuite, pour déterminer le meilleur vaisseau, nous avons appliqué plusieurs méthodes connues d'optimisation que nous allons expliquer. 
+
+
+	\section{Représentation des vaisseaux}
+	
+	On peut distinguer deux types de représentations qui sont complémentaires. En premier lieu il y a la représentation des vaisseaux de base, ensuite il y a la représentation des vaisseaux personnalisés, c'est-à-dire les vaisseaux auxquels on a ajouté ou enlevé des armes, améliorations, etc. \\
+	
+	Dans la représentation de base on stocke différentes données :
+	\begin{itemize}
+		\item les systèmes présents et leurs énergies de base ;
+		\item les armes, les drones et les améliorations (ce sont des ) ;
+		\item les salles avec : leurs coordonnées, le système qui est dedans ou celui qui peut être dedans, les portes, les membres d'équipage.
+	\end{itemize}
+	\ 
+	
+	Ensuite, dans la représentation des vaisseaux personnalisés, on stocke les ajouts et suppressions d'équipement, comme on peut le faire dans le magasin dans le jeu original.
+
+
+	\section{Algorithmes de génération de vaisseaux}
+	
+	Un vaisseau est considéré comme bon lorsqu'il gagne plus de combats que ses concurrents. 
+	On voit donc une logique évolutive où on compare tout le temps les vaisseaux entre eux et en s'inspirant des meilleurs pour essayer de créer d'encore meilleurs vaisseaux. 
+	Pour cela, il nous a tout d'abord fallu un générateur de vaisseaux. A partir de ce générateur nous avons pu utilisé un algorithme génétique qui permet d'avoir cette logique évolutive. 
+	Pour compléter l'optimisation des meilleurs vaisseaux, nous avons utilisé un système expert qui puise ses connaissance dans une base de données où sont stockés les différentes caractéristiques des vaisseaux.
+	
+		\subsection{Générateur aléatoire}
+		
+		Schema pour visualiser toutes les parties d'un vaisseau ? 
+		
+		
+		\subsection{Algorithme génétique}
+		
+		
+
+		\subsection{Data Mining}

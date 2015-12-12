@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='us-ascii'?>
+<ship>
+  <name>kestrel</name>
+  <type>C</type>
+  <add>
+    <energy>2</energy>
+    <system>
+      <weaponControl>3</weaponControl>
+      <cloaking>1</cloaking>
+    </system>
+    <weapons>
+      <weapon0>antibioBeam</weapon0>
+      <weapon1>ionStunner</weapon1>
+    </weapons>
+  </add>
+  <cost>385</cost>
+</ship>

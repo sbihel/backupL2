@@ -1,0 +1,558 @@
+from systems import *
+from weapon_module_WIP import *
+from drones import *
+from room import *
+from crewMember import *
+from math import fabs
+from displayShip import *
+from door import *
+
+"""
+Module which modelize a ship
+"""
+
+
+class Ship(object):
+    """
+    Class which modelize a ship
+    Have :
+    -self.__life=life
+    -self.__powerAvailable = maxPower
+    -self.__missiles = missiles
+    """
+
+    def __init__(self, systems, listWeapons, rooms, nameShip, typeShip, listDrones, ID, maxPower=10, life=30,
+                 missiles=10, droneParts=6):
+        """
+        @param systems: Dictionary in which the keys are the name of the systems and the value is the number of power
+        that you can put in each.
+        @type systems: Dictionary
+        """
+        self.__life = life
+        self.__maxPower = maxPower
+        self.__powerAvailable = maxPower
+        self.__missiles = missiles
+        self.__droneParts = droneParts
+        self.__nameShip = nameShip
+        self.__typeShip = typeShip
+        self.__ID = ID
+
+        self.__instructionsCooldown = []
+        self.__instructionsAttack = []
+
+        self.__maxNBdrones = len(listDrones)
+
+        self.__systems = []
+        for i in systems:
+            if i == 'weaponControl':
+                self.__weaponControl = WeaponControl(self, systems[i], len(listWeapons))
+            elif i == 'droneControl':
+                self.__droneControl = DroneControl(self, systems[i], len(listDrones))
+            else:
+                self.__setattr__('_Ship__' + i, globals()[i[0].upper() + i[1:]](self, systems[i]))
+            self.__systems += [self.__getattribute__('_Ship__' + i)]
+
+        for i in listWeapons:
+            if i is not None:
+                self.__weaponControl.addWeapon(genWeapon(i))
+        if self.hasSystem('droneControl'):
+            for i in listDrones:
+                if i is not None:
+                    self.__droneControl.addDrone(genDrone(i))
+        else:
+            self.__sizeDroneControl = len(listDrones)
+
+        self.__rooms = []
+        self.__crew = []
+        self.__doors = []
+        positionsDoors = []
+        for i in range(len(rooms)):
+            for j in rooms[i]['doors']:
+                if j[0] not in positionsDoors:
+                    self.__doors += [Door(j[0], j[1], j[2])]
+                    positionsDoors += [j[0]]
+            doors = [j for j in self.__doors if i in j.getLink()]
+            self.__rooms += [Room(rooms[i], i, doors)]
+            if rooms[i]['crew'] is not False:
+                for k in rooms[i]['crew']:
+                    self.__crew += [CrewMember(k, self.__rooms[i], self)]
+        if self.hasSystem('oxygen'):
+            for r in self.__rooms:
+                r.setOxygen(100)
+        self.__graph = self.initGraph()
+        self.__fastestWayAlreadyComputed = [[None] * len(self.__rooms)] * len(self.__rooms)
+
+        self.__isCloaked = False
+
+    def initGraph(self):
+        graph = []
+        for k in self.__rooms:
+            r = []
+            for d in k.getDoors():
+                if -1 not in d.getLink():
+                    otherRoom = [r for r in d.getLink() if r != k.getNB()][0]
+                    r += [(otherRoom, d.getPosition())]
+            graph += [r]
+        return graph
+
+    def __repr__(self):
+        
+        res = "\n " + str(self.__nameShip) + str(self.__typeShip) + " \n \n"
+        res += "HP : "+str(self.__life)+"\n"
+        res += "Available energy : "+str(self.__powerAvailable)+"\n"
+        res += "Missiles : "+str(self.__missiles)+"\n"
+        res += "Systems : \n"+str(self.__systems.__repr__())+"\n"
+        res += 'Weapons : \n'
+        for i in self.__weaponControl.getWeapons():
+            res += i.__repr__() + '\n'
+        for k in self.__crew:
+            res += '\n'+k.__repr__()+'\n'
+        return res
+
+    def degat(self, nb):
+        """
+        Do nb damages to the ship.
+        """
+        if self.__life > nb:
+            self.__life -= nb
+        else:
+            self.__life = 0
+
+    def isCloaked(self):
+        return self.__isCloaked
+
+    def getGraph(self):
+        return self.__graph
+
+    def getFastestWay(self):
+        return self.__fastestWayAlreadyComputed
+
+    def setFastestWay(self, r):
+        self.__fastestWayAlreadyComputed = r
+
+    def getHP(self):
+        """
+        Get the health points of the ship.
+        @return: Return the health points of the ship.
+        @rtype: Integer.
+        """
+        return self.__life
+
+    def getName(self):
+        return self.__nameShip
+
+    def getID(self):
+        return self.__ID
+
+    def getType(self):
+        return self.__typeShip
+
+    def getCrew(self):
+        return self.__crew
+
+    def setCrew(self, crew):
+        self.__crew = crew
+
+    def setMissiles(self, val):
+        self.__missiles = val
+
+    def setDroneParts(self, val):
+        self.__droneParts = val
+
+    def getMissiles(self):
+        return self.__missiles
+
+    def getDroneParts(self):
+        return self.__droneParts
+
+    def getMaxPower(self):
+        return self.__maxPower
+
+    def setMaxPower(self, n):
+        self.__maxPower = n
+
+    def getInstructionsCooldown(self):
+        return self.__instructionsCooldown
+
+    def getInstructionsAttack(self):
+        return self.__instructionsAttack
+
+    def setInstructionsCooldown(self, l):
+        self.__instructionsCooldown = l
+
+    def setInstructionsAttack(self, l):
+        self.__instructionsAttack = l
+
+    def ko(self):
+        """
+        Return if the ship is dead or not.
+        """
+        return self.__life <= 0
+
+    def hasSystem(self, nameSystem):
+        """
+        Permet de savoir si le vaisseau a tel systeme.
+
+        @param nameSystem: Nom du systeme dont on veut savoir l'existence.
+        @type nameSystem: Nom en minuscule, en toute lettres, d'un systeme.
+        """
+        for k in self.__systems:
+            if k.getName() == nameSystem:
+                return True
+        return False
+
+    def getSystems(self):
+        return self.__systems
+
+    def addSystem(self, name, maxDrone=1):
+        if name == 'droneControl':
+            self.__droneControl = DroneControl(self, 1, self.__maxNBdrones)
+        else:
+            self.__setattr__('_Ship__' + name, globals()[name[0].upper() + name[1:]](self, 1))
+        self.__systems += [self.__getattribute__('_Ship__' + name)]
+
+    def getSystem(self, nameSystem):
+        """
+        Get the object corresponding to the system asked.
+        @param nameSystem: Name of the system asked.
+        @type nameSystem: String.
+        @return: Return an object of the subclass of System, or return False if the ship don't have the system asked.
+        @rtype: Object of subclass of System or Boolean.
+        """
+        if not self.hasSystem(nameSystem):
+            return False
+        for k in self.__systems:
+            if k.getName() == nameSystem:
+                return k
+
+    def getRooms(self):
+        """
+        Get the list of all the rooms of the ship. The index in the list correspond to the number of the room.
+        @return: Return the list of the rooms which are objects of the class Room.
+        @rtype: List of Room class's objects.
+        """
+        return self.__rooms
+
+    def getLvlCrewRoomSystem(self, nameSystem):
+        """
+        From the name of a system, it will return the highest lvl in this system of the crew member
+        in the room of the system.
+        @return: Return the highest lvl of the crew members or -1 if there's nobody.
+        @rtype: Integer.
+        """
+        maxLvl = -1
+        for k in self.__crew:
+            if not k.isInMovement() and k.getRoom().getSystem() == nameSystem:
+                i = CrewMember.__dict__['getLvl' + nameSystem[0].upper() + nameSystem[1:]](k)
+                if i > maxLvl:
+                    maxLvl = i
+        return maxLvl
+
+    def getRoomSystem(self, nameSystem):
+        for k in self.__rooms:
+            if k.getSystem() == nameSystem:
+                return k
+        return False
+
+    def getPowerAvailable(self):
+        """
+        Get the number of power that is available/unused.
+        @return: Number of power available.
+        @rtype: Integer.
+        """
+        return self.__powerAvailable
+
+    def setPowerAvailable(self, nb=1):
+        """
+        Set the number of available power.
+        @param nb: Number to set of available power.
+        @type nb: Positiv integer.
+        """
+        self.__powerAvailable = nb
+
+    def addPower(self, nb):
+        self.__powerAvailable += nb
+
+    def cooldowns(self):
+        """
+        Various cooldowns.
+        """
+        # doesn't care of the order as the opponent's already fired
+        if self.__powerAvailable > 0:
+            self.usePower()
+        if self.hasSystem('shields'):
+            self.__shields.cooldownLayer(self.getLvlCrewRoomSystem('shields'))
+        if self.hasSystem('weaponControl'):
+            self.__weaponControl.cooldownWeapons(self.getLvlCrewRoomSystem('weaponControl'))
+        #if self.hasSystem('droneControl'):
+        #    self.__droneControl.cooldownDrones()
+        for k in self.__systems:
+            # k.cooldownIon()
+            if k.getRepair() > 0 and not [c for c in self.__crew if c.getRoom().getSystem() == k]:
+                k.setRepair(0)
+        for k in self.__rooms:
+            k.cooldowns(self.__crew, self.getSystem(k.getSystem()), self.__rooms)
+        # for k in self.__crew:
+        #     k.movementAI()
+        #     if k.isInMovement():
+        #         k.continueMovement()
+
+        self.refillOxygen()
+
+        # self.tryUseCloaking()
+        # we don't care if the cloaking add 60% evasion as the sip already took the damages
+
+        if self.hasSystem('cloneBay') and self.__cloneBay.getDeadCrew():
+            self.__cloneBay.cooldownRevive()
+
+        if self.__instructionsCooldown:
+            for i in self.__instructionsCooldown[0]:
+                exec(i)
+            self.__instructionsCooldown = self.__instructionsCooldown[1:]
+
+    def refillOxygen(self):
+        if self.hasSystem('oxygen') and self.getSystem('oxygen').getPowerInIt() > 0:
+            advantageRefill = {1: 1, 2: 3, 3: 6}
+            boost = advantageRefill[self.getSystem('oxygen').getPowerInIt()]
+            for k in self.__rooms:
+                k.addOxygen(boost*5/divisionTime)  # unknown stat
+        else:
+            for k in self.__rooms:
+                k.removeOxygen(1/divisionTime)
+
+    def usePower(self):
+        r = randint(1, 2)
+        if r == 1:
+            self.poweringSystems()
+        if self.__powerAvailable > 0:
+            if self.hasSystem('weaponControl'):
+                for i in range(len(self.__weaponControl.getWeapons())):
+                    self.__weaponControl.powerWeapon(i)
+                    # tries to power all weapon because of when you unpower them when weapon control takes damages
+            if self.hasSystem('droneControl'):
+                for i in range(len(self.__droneControl.getDrones())):
+                    self.__droneControl.powerDrone(i)
+        if r == 2:
+            self.poweringSystems()
+
+    def poweringSystems(self):
+        d = {'piloting': 22, 'engines': 18, 'shields': 14, 'doorSystem': 12, 'sensors': 10,
+             'oxygen': 25}
+        for i in range(self.__powerAvailable):
+            s = (self.__piloting, 5)
+            for k in self.__systems:
+                if k.getName() not in ['weaponControl', 'droneControl'] \
+                        and k.getPowerInIt() != k.getCurrentMaxPower() \
+                        and not k.isIonised() \
+                        and d.get(k.getName(), 7) > s[1]:
+                    s = (k, d.get(k.getName(), 7))
+            s[0].addPower()
+
+    def attackRoom(self, weapon, indexRoom):
+        """
+        Room is under attack.
+
+        Add xp to crew and manage the attack (damages to systems, start fire/breach, double damages to hull.
+        @param weapon: Weapon used to do this single attack.
+        @type weapon: Object of the class Weapon.
+        @param indexRoom: Index in the list of rooms of the room attacked.
+        @type indexRoom: Integer between 0 and len(self.__weapons)-1.
+        """
+        if not self.__engines.incomingDamages(self.getLvlCrewRoomSystem('weaponControl'),
+                                              self.getLvlCrewRoomSystem('piloting'),
+                                              self.__piloting.getPowerInIt()):
+            if not self.hasSystem('shields') or not self.__shields.incomingDamages(weapon.getType()):
+                room = self.__rooms[indexRoom]
+                if room.getSystem() is not False:  # Do damages to the system
+                    self.getSystem(room.getSystem()).doDamages(weapon.getDamage())
+                if randint(0, 100) < weapon.getFireChance()*100:  # start a fire in the room
+                    room.startFire()
+                if randint(0, 100) < weapon.getBreachChance()*100:  # do a breach in the room
+                    room.doBreach()
+                if weapon.getName() in ['hull', 'hullLaserI', 'hullLaserII']:
+                    self.degat(weapon.getDamage()*2)  # special damages for room systemless
+                else:
+                    self.degat(weapon.getDamage())
+                for k in self.__crew:  # do damages to crewmen
+                    if indexRoom == k.getRoom().getNB() and not k.isDead():
+                        k.doDamages(weapon.getDamage()*15)
+
+            else:  # add xp to crew for blocking
+                self.addXpCrew('shields')
+        else:  # add xp to crew for dodging
+            self.addXpCrew('engines')
+            self.addXpCrew('piloting')
+
+    def attackBeam(self, weapon, coord1, coord2):
+        if not self.hasSystem('shields') or self.__shields.getLayers() == 0:
+            dmg = weapon.getDamage()
+        else:
+            self.addXpCrew('shields')
+            dmg = weapon.getDamage() - self.__shields.getLayers()
+        for k in self.__rooms:
+            if self.squareOnLine(k.getCoords(), coord1, coord2):
+                if not k.getSystem() and weapon.getName() == 'hullBeam':
+                    self.degat(dmg*2)
+                elif not k.getSystem() and weapon.getName() != 'antibioBeam':
+                    self.degat(dmg)
+                elif weapon.getName() != 'antibioBeam':
+                    self.getSystem(k.getSystem()).doDamages(dmg)
+                    self.degat(dmg)
+                c = k.getCoords()
+                for i in range(int(fabs(c[0][0]-c[1][0])//10)):
+                    for j in range(int(fabs(c[0][1]-c[1][1])//10)):
+                        x1, y1 = c[0][0] + 10*i, c[0][1] + 10*j
+                        x2, y2 = x1+10, y1+10
+                        if self.squareOnLine([[x1, y1], [x2, y2]], coord1, coord2) and \
+                           randint(0, 100) < weapon.getFireChance() * 100:
+                            k.startFire()
+        for k in self.__crew:
+            p = k.getPosition()
+            if self.squareOnLine([[p[0]-3, p[1]-3], [p[0]+3, p[1]+3]], coord1, coord2):
+                if weapon.getName() == 'antibioBeam':
+                    k.doDamages(60)
+                else:
+                    k.doDamages(dmg*15)
+
+    def addXpCrew(self, nameSystem):
+        """
+        Add xp the crew for using certain systems.
+
+        @param nameSystem: Name of the system where crew can get xp.
+        @type nameSystem: String.
+        """
+        highestCrew = False
+        for k in self.__crew:
+            if k.getRoom().getSystem() == nameSystem and \
+                    (highestCrew is False or k.getLvlEngines() > highestCrew.getLvlEngines()):
+                highestCrew = k
+        if highestCrew is not False:
+            CrewMember.__dict__['addXp' + nameSystem[0].upper() + nameSystem[1:]](highestCrew)
+
+    def squareOnLine(self, square, coord1, coord2):
+        """
+        Test if a square is intersected (even partially) by a line.
+
+        @param square: Coordinates of the square, top left-hand corner and bottom right-hand corner.
+        @type square: List of 2 lists of 2 integers.
+        @param coord1: Coordinates of the first point of the line.
+        @type coord1: List of 2 integers.
+        @param coord2: Coordinates of the second point of the line.
+        @type coord2: List of 2 integers.
+        """
+        inversedCoordsSquare = [[square[1][0], square[0][1]], [square[0][0], square[1][1]]]
+        return self.linesIntersect([square[0], inversedCoordsSquare[0]], [coord1, coord2]) \
+            or self.linesIntersect([inversedCoordsSquare[0], square[1]], [coord1, coord2]) \
+            or self.linesIntersect([square[1], inversedCoordsSquare[1]], [coord1, coord2]) \
+            or self.linesIntersect([inversedCoordsSquare[1], square[0]], [coord1, coord2])
+
+    def linesIntersect(self, line1, line2):
+        """
+        Test if two lines intersect.
+
+        @param line1: List of a line in the plan.
+        @type line1: List of 2 lists of 2 integers.
+        @param line2: List of a line in the plan.
+        @type line2: List of 2 lists of 2 integers.
+        @return: True if the lines intersect, False else.
+        @rtype: Boolean.
+        """
+        X1, Y1, X2, Y2 = line1[0][0], line1[0][1], line1[1][0], line1[1][1]
+        X3, Y3, X4, Y4 = line2[0][0], line2[0][1], line2[1][0], line2[1][1]
+        if max(X1, X2) < min(X3, X4) or min(X1, X2) > max(X3, X4) \
+                or max(Y1, Y2) < min(Y3, Y4) or min(Y1, Y2) > max(Y3, Y4):
+            return False
+        try:
+            A1 = (Y1-Y2)/(X1-X2)
+        except ZeroDivisionError:
+            if X3 == X4:  # parallel
+                return True
+            else:
+                A2 = (Y3-Y4)/(X3-X4)
+            B2 = Y3-A2*X3
+            return min(Y1, Y2) < (A2*X1) + B2 < max(Y1, Y2)
+        B1 = Y1-A1*X1
+        try:
+            A2 = (Y3-Y4)/(X3-X4)
+        except ZeroDivisionError:
+            return min(Y3, Y4) < (A1*X3) + B1 < max(Y3, Y4)
+        B2 = Y3-A2*X3
+        if A1 == A2:  # parallel segments
+            return False
+        Xa = (B2 - B1) / (A1 - A2)
+        if A1 * Xa + B1 != A2 * Xa + B2:
+            return False
+        if (Xa < max(min(X1, X2), min(X3, X4))) or (Xa > min(max(X1, X2), max(X3, X4))):
+            return False
+        return True
+
+    def attackRoomCombatDrone(self, drone, indexRoom):
+        if not self.__engines.incomingDamages(self.getLvlCrewRoomSystem('weaponControl'),
+                                              self.getLvlCrewRoomSystem('piloting'),
+                                              self.__piloting.getPowerInIt()):
+            if not self.hasSystem('shields') or not self.__shields.incomingDamages(drone.getType()):
+                room = self.__rooms[indexRoom]
+                if room.getSystem() is not False:  # Do damages to the system
+                    self.getSystem(room.getSystem()).doDamages(1)
+                self.degat(1)
+                for k in self.__crew:  # do damages to crewmen
+                    if indexRoom == k.getRoom().getNB() and not k.isDead():
+                        k.doDamages(1*15)
+
+            else:  # add xp to crew for blocking
+                self.addXpCrew('shields')
+        else:  # add xp to crew for dodging
+            self.addXpCrew('engines')
+            self.addXpCrew('piloting')
+
+    def attackOpponent(self, ship2):
+        """
+        Use every weapons to attack the opponent's ship.
+        @param ship2: The target of the attack.
+        @type ship2: Object of the class Ship.
+        """
+        # print(self.__instructionsAttack)
+        for k in range(len(self.__weaponControl.getWeapons())):
+            if k is not None:
+                use = self.__weaponControl.useWeapon(k, ship2)
+                if use[0]:
+                    # add xp for each weapon used
+                    self.addXpCrew('weaponControl')
+                    if showShipState:
+                        displayAttack(self.__weaponControl.getWeapons()[k], self, ship2, use[1])
+        #if self.hasSystem('droneControl'):
+        #    for d in range(len(self.__droneControl.getDrones())):
+        #        self.attackUsingDrone(d, ship2)
+
+        if self.__instructionsAttack:
+            for i in self.__instructionsAttack[0]:
+                exec(i)
+            self.__instructionsAttack = self.__instructionsAttack[1:]
+
+    def attackUsingDrone(self, d, ship2):
+        use = self.__droneControl.useDrone(d, ship2)
+        if use[0] and showShipState:
+            displayAttack(self.__droneControl.getDrones()[d], self, ship2, use[1])
+
+    def ioniseIncoming(self, indexRoom):
+        if self.hasSystem('shields') and self.__shields.getLayers() > 0:
+            self.__shields.ionise()
+        else:
+            self.getSystem(self.__rooms[indexRoom].getSystem()).ionise()
+
+    def tryUseCloaking(self):
+        """
+        This method is called each tick of the clock, check if there's the system for cloaking
+        and it tries to activate the cloaking and do the cooldown of the system.
+        """
+        if self.hasSystem('cloaking'):
+            self.__cloaking.generalCooldown()
+
+    def deactivateCloaking(self):
+        self.__isCloaked = False
+
+    def activateCloaking(self):
+        self.__isCloaked = True
+
+    def cooldownReviveCrew(self):
+        self.__cloneBay.cooldownRevive()

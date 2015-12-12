@@ -1,0 +1,11 @@
+<ship>
+  <add>
+    <energy>2</energy>
+    <system>
+      <weaponControl>3</weaponControl>
+      <shields>4</shields>
+    </system>
+    <weapon>miniBeam glaiveBeam</weapon>
+  </add>
+  <cost>475</cost>
+</ship>

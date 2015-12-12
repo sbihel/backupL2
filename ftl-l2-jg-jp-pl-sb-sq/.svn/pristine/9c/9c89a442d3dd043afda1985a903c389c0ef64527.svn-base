@@ -1,0 +1,4 @@
+energy1
+energy2 energy1
+energy3 energy1 energy2
+energy4 energy1 energy2 energy3

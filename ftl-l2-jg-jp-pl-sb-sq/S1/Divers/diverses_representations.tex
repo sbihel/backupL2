@@ -1,0 +1,143 @@
+%%!TEX encoding = UTF-8 Unicode
+\documentclass[a4paper, 11pt]{article}
+\usepackage[utf8]{inputenc} 
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage[french]{babel}
+\usepackage{multirow,multicol}
+\usepackage{amsmath, amssymb, latexsym}
+\usepackage{pstricks,pst-node,pst-coil,pst-grad,pst-plot}
+\usepackage{epsfig,subfigure}
+\usepackage[lined,boxed]{algorithm}
+\usepackage{algorithmic}
+\usepackage{tikz}
+\usepackage{lscape}
+
+\usepackage{rotate}
+\usepackage{url}
+
+\usepackage{setspace}
+
+
+\title{FTL : Fit the fittest}
+\author{Sébastien \textsc{Gamblin} \and  Simon \textsc{Bihel} \and Julien \textsc{Pezant} \and  Paul \textsc{Leménager} \and  Josselin \textsc{Gueneron}}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\section{Relations entre les modules}
+
+%:-+-+-+- Engendré par : http://math.et.info.free.fr/TikZ/Arbre/
+\begin{center}
+	% Racine en Haut, développement vers le bas
+	\begin{tikzpicture}[xscale=1,yscale=1]
+		% Styles (MODIFIABLES)
+		\tikzstyle{fleche}=[->,>=latex,thick]
+		\tikzstyle{noeud}=[fill=yellow,circle,draw]
+		\tikzstyle{feuille}=[fill=yellow,circle,draw]
+		\tikzstyle{etiquette}=[midway,fill=white,draw]
+		% Dimensions (MODIFIABLES)
+		\def\DistanceInterNiveaux{3}
+		\def\DistanceInterFeuilles{2}
+		% Dimensions calculées (NON MODIFIABLES)
+		\def\NiveauA{(-0)*\DistanceInterNiveaux}
+		\def\NiveauB{(-1)*\DistanceInterNiveaux}
+		\def\NiveauC{(-2)*\DistanceInterNiveaux}
+		\def\NiveauD{(-3)*\DistanceInterNiveaux}
+		\def\InterFeuilles{(1)*\DistanceInterFeuilles}
+		% Noeuds (MODIFIABLES : Styles et Coefficients d'InterFeuilles)
+		\node[feuille] (R) at ({(0)*\InterFeuilles},{\NiveauA}) {$Combat$};
+		\node[feuille] (Ra) at ({(1)*\InterFeuilles},{\NiveauB}) {$Ships layouts$};
+		\node[feuille] (Raa) at ({(3)*\InterFeuilles},{\NiveauC}) {$Vaisseau$};
+		\node[feuille] (Raaa) at ({(1)*\InterFeuilles},{\NiveauD}) {$Systems$};
+		\node[feuille] (Raab) at ({(5)*\InterFeuilles},{\NiveauD}) {$Weapons$};
+		% Arcs (MODIFIABLES : Styles)
+		\draw[fleche] (Ra)--(R);
+		\draw[fleche] (Raa)--(Ra);
+		\draw[fleche] (Raaa)--(Raa);
+		\draw[fleche] (Raab)--(Raa);
+	\end{tikzpicture}
+\end{center}
+%:-+-+-+-+- Fin
+\medskip	
+Combat : Gere les combats entre deux vaisseaux \newline
+Ships layouts : Generation des vaisseaux de bases a partir d'une base de donnees\newline
+Vaisseau : Module de base qui contient la majorite des classes relatives aux vaisseaux\newline
+Systems : Gere les systemes \newline
+Weapons : Gere et genere les armes\newline
+
+
+\section{Elements constituants des armes}
+
+Not in order and (probably) incomplete.
+
+\begin{itemize}
+	\item cost in scrap
+	\item cost in ressources
+	\item reload time
+	\item necessary energy
+	\item chance of fire
+	\item chance of breach
+	\item special damages on systemless rooms ?
+	\item damages
+	\item reactions to opponent's shields 
+	\begin{itemize}
+		\item does it do damages to shields ?
+		\item can it go through shields ?
+		\item can it work if the opponent's shields are on ?
+	\end{itemize}
+	\item can it do damages to opponent ship ?
+	\item is it bombs ?
+	\item can it stun opponent's crew ?
+	\item can it disable systems ?
+	\item number of shots
+\end{itemize}
+
+
+\section{Elements constituants des salles}
+
+\begin{itemize}
+	\item 1x2 or 2x2 room (squares of 10x10)
+	\item crew in it
+	\item breach
+	\item fire
+	\item oxygen
+	\item doors
+	\item x,y of top left hand corner and bottom right hand corner
+\end{itemize}
+
+\section{Elements constituants des portes}
+
+\begin{itemize}
+	\item Une porte existe ou non, il peut y avoir un trou à la porte.
+	\item Une porte contient les deux salles qu'elle relie.
+	\item Une porte fait 1 de largeur et 0 d'epaisseur, il faudra preciser deux points pour sa position.
+	\item Une porte est soit fermee soit ouverte. Si il n'y a pas de porte on dira que la porte est toujours ouverte.
+	\item Si les portes sont renforcees alors les ennemis doivent taper les portes pour passer. STATS INCONNUES
+\end{itemize}
+
+\section{Les couches de bouclier}
+
+\begin{itemize}
+	\item Lasers et asteroids enlevent une couche de bouclier si il y en a une.
+	\item Ion ionise le systeme si il touche une couche de bouclier.
+	\item Les couches se regenerent en fonction de l'energie mise dans le systeme. STATS INCONNUES
+	\item Un membre de l'equipage augmente le temps de recharge de 10, 20 ou 29% en fonction de son niveau en boucliers.
+	\item Un rayon ne peut pas endommager les couches de bouclier mais certains peuvent passer a travers.
+	\item Avoir des couches de bouclier reduit les degats faits au points de vie par les eruptions solaires. STATS INCONNUES
+	\item Missiles, bombes, teleporteurs, drone d'appareillage et les rayons d'artillerie ignorent les boucliers. (l'invisibilite et les drones de defense peuvent contrer certains)
+\end{itemize}
+
+\section{Les reacteurs}
+
+How FTL dodge : http://videogamegeek.com/thread/1149948/engines-pilots-shields-vs-blasters-how-ftls-dodge
+Je crois que certaines armes ne peuvent pas etre esquivees.
+\begin{itemize}
+	\item Plus de puissance, plus d'esquive
+\end{itemize}
+
+\end{document}

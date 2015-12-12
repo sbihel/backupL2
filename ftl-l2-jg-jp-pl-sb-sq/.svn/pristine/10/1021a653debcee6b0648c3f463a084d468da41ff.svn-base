@@ -1,0 +1,26 @@
+#!/usr/local/bin/python3
+
+from variousShips import *
+import sys
+import getopt
+import random
+
+####################################
+# s == seed
+# w == weapons wanted list
+####################################
+myopts, args = getopt.getopt(sys.argv[1:], "s:")
+
+scrapsValue = int(args[0])
+seed = None
+weaponsWanted = []
+
+for o, a in myopts:
+    if o == '-s':
+        seed = int(a)
+    elif o == '-w':
+        weaponsWanted = a.split(',')
+
+
+random.seed(seed)
+createRandomShip(scrapsValue, weaponsWanted=weaponsWanted)

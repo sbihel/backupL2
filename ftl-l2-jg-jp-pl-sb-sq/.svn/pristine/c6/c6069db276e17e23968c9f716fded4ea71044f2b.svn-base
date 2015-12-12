@@ -1,0 +1,19 @@
+<ship>
+  <name>kestrel</name>
+  <type>C</type>
+  <add>
+    <energy>5</energy>
+    <system>
+      <droneControl>2</droneControl>
+      <weaponControl>4</weaponControl>
+    </system>
+    <weapons>
+      <weapon0>hullLaserI</weapon0>
+      <weapon1>antibioBeam</weapon1>
+    </weapons>
+    <drones>
+      <drone0>combat1</drone0>
+    </drones>
+  </add>
+  <cost>490</cost>
+</ship>

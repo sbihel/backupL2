@@ -1,0 +1,16 @@
+\beamer@endinputifotherversion {3.33pt}
+\select@language {french}
+\beamer@sectionintoc {1}{Introduction}{3}{0}{1}
+\beamer@sectionintoc {2}{Le moteur de combats}{5}{0}{2}
+\beamer@subsectionintoc {2}{1}{Rappels sur le moteur de combats}{5}{0}{2}
+\beamer@subsectionintoc {2}{2}{Ajouts au moteur de combats}{6}{0}{2}
+\beamer@subsectionintoc {2}{3}{Affichage graphique}{7}{0}{2}
+\beamer@sectionintoc {3}{Recherche du meilleur vaisseau}{8}{0}{3}
+\beamer@subsectionintoc {3}{1}{G\IeC {\'e}n\IeC {\'e}rateur al\IeC {\'e}atoire de vaisseaux}{9}{0}{3}
+\beamer@subsectionintoc {3}{2}{Algorithme g\IeC {\'e}n\IeC {\'e}tique}{11}{0}{3}
+\beamer@subsectionintoc {3}{3}{Data Mining}{12}{0}{3}
+\beamer@subsectionintoc {3}{4}{Algorithme final d'optimisation}{13}{0}{3}
+\beamer@sectionintoc {4}{R\IeC {\'e}alisation}{14}{0}{4}
+\beamer@subsectionintoc {4}{1}{Les modules}{14}{0}{4}
+\beamer@subsectionintoc {4}{2}{Failles du programme}{15}{0}{4}
+\beamer@sectionintoc {5}{Conclusion}{16}{0}{5}

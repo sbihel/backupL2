@@ -1,0 +1,182 @@
+from combat import *
+from time import time
+from ships_layouts import *
+
+t1 = time()
+n = 1
+
+ship1Won = 0
+ship2Won = 0
+ship3Won = 0
+ship4Won = 0
+ship5Won = 0
+ship6Won = 0
+
+
+def generation():
+    global ship1, ship2, ship3, ship4, ship5, ship6
+
+    ##ship1 & 2
+
+    ship1 = genShip()
+    ship2 = genShip()
+    ship1.getSystem('weaponControl').powerWeapon(0)
+    ship2.getSystem('weaponControl').powerWeapon(0)
+    ship1.getSystem('weaponControl').powerWeapon(1)
+    ship2.getSystem('weaponControl').powerWeapon(1)
+    ship1.getSystem('shields').addPower(2)
+    ship2.getSystem('shields').addPower(2)
+    ship1.getSystem('piloting').addPower(1)
+    ship2.getSystem('piloting').addPower(1)
+    ship1.getSystem('engines').addPower(1)
+    ship2.getSystem('engines').addPower(1)
+    ship1.getSystem('weaponControl').addWeapon(genWeapon('dualLaser'))
+    ship1.getSystem('weaponControl').powerWeapon(2)
+
+    ##ship3
+
+    ship3 = genShip()
+    ship3.getSystem('weaponControl').powerWeapon(0)
+    ship3.getSystem('weaponControl').powerWeapon(1)
+    ship3.getSystem('piloting').addPower(1)
+    ship3.getSystem('engines').addPower(1)
+    ##ship4
+    ship4 = genShip()
+    ship4.getSystem('weaponControl').powerWeapon(0)
+    ship4.getSystem('weaponControl').powerWeapon(1)
+    ship4.getSystem('piloting').addPower(1)
+    ship4.getSystem('engines').addPower(1)
+    ship4.getSystem('weaponControl').addWeapon(genWeapon('dualLaser'))
+    ship4.getSystem('weaponControl').powerWeapon(2)
+    #ship5
+    ship5 = genShip()
+    ship5.getSystem('weaponControl').powerWeapon(0)
+    ship5.getSystem('weaponControl').powerWeapon(1)
+    ship5.getSystem('shields').addPower(2)
+    ship5.getSystem('piloting').addPower(1)
+    ship5.getSystem('engines').addPower(1)
+    ship5.getSystem('weaponControl').addWeapon(genWeapon('burstLaserI'))
+    ship5.getSystem('weaponControl').powerWeapon(2)
+    #ship6
+    ship6 = genShip()
+    ship6.getSystem('weaponControl').powerWeapon(0)
+    ship6.getSystem('weaponControl').powerWeapon(1)
+    ship6.getSystem('shields').addPower(4)
+    ship6.getSystem('piloting').addPower(1)
+    ship6.getSystem('engines').addPower(1)
+
+for k in range(n):
+    generation()
+    print('ship1 against ship2')
+    if combat(ship1, ship2) == 'Ship 1 won':
+        ship1Won += 1
+    else:
+        ship2Won += 1
+    #
+    generation()
+    print('ship1 against ship3')
+    if combat(ship1, ship3) == 'Ship 1 won':
+        ship1Won += 1
+    else:
+        ship3Won += 1
+    #
+    generation()
+    print('ship1 against ship4')
+    if combat(ship1, ship4) == 'Ship 1 won':
+        ship1Won += 1
+    else:
+        ship4Won += 1
+    #
+    generation()
+    print('ship1 against ship5')
+    if combat(ship1, ship5) == 'Ship 1 won':
+        ship1Won += 1
+    else:
+        ship5Won += 1
+    #
+    generation()
+    print('ship1 against ship6')
+    if combat(ship1, ship6) == 'Ship 1 won':
+        ship1Won += 1
+    else:
+        ship6Won += 1
+    #
+    generation()
+    print('ship2 against ship3')
+    if combat(ship2, ship3) == 'Ship 1 won':
+        ship2Won += 1
+    else:
+        ship3Won += 1
+    #
+    generation()
+    print('ship2 against ship4')
+    if combat(ship2, ship4) == 'Ship 1 won':
+        ship2Won += 1
+    else:
+        ship4Won += 1
+    #
+    generation()
+    print('ship2 against ship5')
+    if combat(ship2, ship5) == 'Ship 1 won':
+        ship2Won += 1
+    else:
+        ship5Won += 1
+    #
+    generation()
+    print('ship2 against ship6')
+    if combat(ship2, ship6) == 'Ship 1 won':
+        ship2Won += 1
+    else:
+        ship6Won += 1
+    #
+    generation()
+    print('ship3 against ship4')
+    if combat(ship3, ship4) == 'Ship 1 won':
+        ship3Won += 1
+    else:
+        ship4Won += 1
+    #
+    generation()
+    print('ship3 against ship5')
+    if combat(ship3, ship5) == 'Ship 1 won':
+        ship3Won += 1
+    else:
+        ship5Won += 1
+    #
+    generation()
+    print('ship3 against ship6')
+    if combat(ship3, ship6) == 'Ship 1 won':
+        ship3Won += 1
+    else:
+        ship6Won += 1
+    #
+    generation()
+    print('ship4 against ship5')
+    if combat(ship4, ship5) == 'Ship 1 won':
+        ship4Won += 1
+    else:
+        ship5Won += 1
+    #
+    generation()
+    print('ship4 against ship6')
+    if combat(ship4, ship6) == 'Ship 1 won':
+        ship4Won += 1
+    else:
+        ship6Won += 1
+    #
+    generation()
+    print('ship5 against ship6')
+    if combat(ship5, ship6) == 'Ship 1 won':
+        ship5Won += 1
+    else:
+        ship6Won += 1
+
+t2 = time()
+
+print('Ship 1 won '+str(ship1Won)+'times on 50')
+print('Ship 2 won '+str(ship2Won)+'times on 50')
+print('Ship 3 won '+str(ship3Won)+'times on 50')
+print('Ship 4 won '+str(ship4Won)+'times on 50')
+print('Ship 5 won '+str(ship5Won)+'times on 50')
+print('Ship 6 won '+str(ship6Won)+'times on 50')
+print('Round time : '+str(((t2-t1)/n)/15)+' secondes per fight')

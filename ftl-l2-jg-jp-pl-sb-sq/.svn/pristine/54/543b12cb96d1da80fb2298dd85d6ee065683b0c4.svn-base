@@ -1,0 +1,7 @@
+\chapter*{Conclusion}
+\addcontentsline{toc}{chapter}{Conclusion}
+
+	À la fin de ce second semestre, les tâches prévues ont été réalisées. Le moteur de combats fonctionne bien même s'il n'est pas aussi complet que le jeu originel. Les représentations graphiques premettent de visualiser des combats et des tournois aisément pour des humains. La recherche du meilleur vaisseau fonctionne et semble donner des résultats cohérents par rapport aux éléments gérés par le moteur de combats. 	
+	
+	Cependant, certanes parties du travail réalisé peuvent être améliorées et des extensions peuvent s'ajouter au programme présent.\\
+Un des gros points noirs de l'optimisation est la durée des tournois. Une première solution serait d'arrêter un match lorsque un vaisseau a déjà gagné plus de la moitié des combats. Actuellement, chaque combat est un processus et on créé une \textit{pool} de plusieurs combats pour pouvoir faire du parallélisme, il faudrait donc faire une fonction qui divise cette pool des combats pour évaluer à intervalle régulier le nombre de victoires.

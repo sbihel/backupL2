@@ -1,0 +1,90 @@
+from ship import *
+
+"""
+Module qui importe les informations type d'une classe de vaisseau.
+"""
+
+
+import xml.etree.ElementTree as ET
+tree = ET.parse('ftl_ships_layouts.xml')
+root = tree.getroot()
+
+
+def genShip(ID=1, nameShip='kestrel', typeShip='typeA'):
+    """
+    Return the basic ship of a certain name and type.
+    @param nameShip: Name of the ship you want.
+    @type nameShip: String.
+    @param typeShip: Type of the ship you want.
+    @type typeShip: String.
+    @return: Return the starter ship.
+    @rtype: Object of the class Ship.
+    """
+    node = root.findall(nameShip)[0].findall(typeShip)[0]
+    # go to the node of the ship that we want
+    
+    systems = {}
+    for k in node.findall('systems')[0]:
+        # get the maximum power for each system that is present
+        systems[k.tag] = int(k.text)
+
+    listWeapons = []
+    for k in node.findall('weapons')[0]:
+        # get the list (of the length of the maximum weapons
+        # you can have simultaneously) of the weapons that you have from the start
+        listWeapons += [k.text]
+        # all ships come with the weapon control so it's ok to do that
+    listDrones = []
+    for k in node.findall('drones')[0]:
+        listDrones += [k.text]
+
+    rooms = []
+    for k in node.findall('rooms')[0]:
+        # get all the infos for each room
+        d = {}
+        coord1 = tuple(listString2listInt(k.findall('coord1')[0].text.split('(')[1].split(')')[0].split(',')))
+        coord2 = tuple(listString2listInt(k.findall('coord2')[0].text.split('(')[1].split(')')[0].split(',')))
+        d['coords'] = (coord1, coord2)
+        
+        if k.findall('crew')[0].text == 'False':
+            d['crew'] = False
+        else:
+            d['crew'] = k.findall('crew')[0].text.split('*')
+            for i in range(len(d['crew'])):
+                d['crew'][i] = d['crew'][i].split(' ')
+                for j in range(1, len(d['crew'][i])):
+                    d['crew'][i][j] = float(d['crew'][i][j])
+                    
+        d['system'] = k.findall('system')[0].text
+        d['hasSystem'] = k.findall('hasSystem')[0].text == 'True'
+        
+        d['doors'] = []
+        for i in k.findall('doors')[0]:
+            d['doors'] += [[i.text.split('[')[1].split(']')[0]]]
+        for j in range(len(d['doors'])):
+            d['doors'][j] = d['doors'][j][0].split(', ')
+            if d['doors'][j][2] == 'False':
+                d['doors'][j][2] = False
+            else:
+                d['doors'][j][2] = True
+            d['doors'][j][0] = tuple(listString2listInt(d['doors'][j][0].split('(')[1].split(')')[0].split(',')))
+            d['doors'][j][1] = tuple(listString2listInt(d['doors'][j][1].split('(')[1].split(')')[0].split(',')))
+
+        rooms += [d]
+
+    energy = int(node.findall('energy')[0].text)
+            
+    return Ship(systems, listWeapons, rooms, nameShip, typeShip, listDrones, ID, energy)
+
+
+def listString2listInt(l):
+    """
+    Transcript a list of integers in strings into a list of integers.
+    @param l: List of the integers written in strings.
+    @type l: List of strings.
+    @return: Return a list of integers.
+    @rtype: List of integers.
+    """
+    for k in range(len(l)):
+        l[k] = int(l[k])
+    return l

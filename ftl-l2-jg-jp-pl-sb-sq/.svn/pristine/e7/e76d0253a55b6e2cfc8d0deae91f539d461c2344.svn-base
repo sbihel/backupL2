@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>systems.Engines</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="systems-module.html">Module&nbsp;systems</a> ::
+        Class&nbsp;Engines
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="systems.Engines-class.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS DESCRIPTION ==================== -->
+<h1 class="epydoc">Class Engines</h1><p class="nomargin-top"><span class="codelink"><a href="systems-pysrc.html#Engines">source&nbsp;code</a></span></p>
+<center>
+<center>  <map id="uml_class_diagram_for_systems__7" name="uml_class_diagram_for_systems__7">
+<area shape="rect" id="node1_16" href="systems.Engines-class.html#__init__" title="x.__init__(...) initializes x; see help(type(x)) for signature" alt="" coords="17,377,504,396"/>
+<area shape="rect" id="node1_17" href="systems.Engines-class.html#incomingDamages" title="Returns: &#160;Return True if the damages are dodged." alt="" coords="17,396,504,415"/>
+<area shape="rect" id="node1" href="systems.Engines-class.html" title="systems.Engines" alt="" coords="5,345,515,421"/>
+<area shape="rect" id="node2_18" href="systems.System-class.html#__repr__" title="repr(x)" alt="" coords="167,39,355,57"/>
+<area shape="rect" id="node2_19" href="systems.System-class.html#getPowerIonised" title="systems.System.getPowerIonised" alt="" coords="167,57,355,76"/>
+<area shape="rect" id="node2_20" href="systems.System-class.html#setPowerIonised" title="systems.System.setPowerIonised" alt="" coords="167,76,355,95"/>
+<area shape="rect" id="node2_21" href="systems.System-class.html#getCooldownIon" title="systems.System.getCooldownIon" alt="" coords="167,95,355,113"/>
+<area shape="rect" id="node2_22" href="systems.System-class.html#setCooldownIon" title="systems.System.setCooldownIon" alt="" coords="167,113,355,132"/>
+<area shape="rect" id="node2_23" href="systems.System-class.html#getCooldownIonDone" title="systems.System.getCooldownIonDone" alt="" coords="167,132,355,151"/>
+<area shape="rect" id="node2_24" href="systems.System-class.html#setCooldownIonDone" title="systems.System.setCooldownIonDone" alt="" coords="167,151,355,169"/>
+<area shape="rect" id="node2_25" href="systems.System-class.html#getShip" title="systems.System.getShip" alt="" coords="167,169,355,188"/>
+<area shape="rect" id="node2_26" href="systems.System-class.html#getMaxPowerMax" title="systems.System.getMaxPowerMax" alt="" coords="167,188,355,207"/>
+<area shape="rect" id="node2_27" href="systems.System-class.html#getPowerInIt" title="systems.System.getPowerInIt" alt="" coords="167,207,355,225"/>
+<area shape="rect" id="node2_28" href="systems.System-class.html#setPowerInIt" title="systems.System.setPowerInIt" alt="" coords="167,225,355,244"/>
+<area shape="rect" id="node2_29" href="systems.System-class.html#getCurrentMaxPower" title="Get the maximum of power you can put a the moment." alt="" coords="167,244,355,263"/>
+<area shape="rect" id="node2_30" href="systems.System-class.html#setCurrentMaxPower" title="systems.System.setCurrentMaxPower" alt="" coords="167,263,355,281"/>
+<area shape="rect" id="node2_31" href="systems.System-class.html#explode" title="systems.System.explode" alt="" coords="167,300,355,319"/>
+<area shape="rect" id="node2" href="systems.System-class.html" title="Class which operate a system that is is in a room of the ship." alt="" coords="154,6,366,325"/>
+</map>
+  <img src="uml_class_diagram_for_systems__7.gif" alt='' usemap="#uml_class_diagram_for_systems__7" ismap="ismap" class="graph-without-title" />
+</center>
+</center>
+<hr />
+<!-- ==================== INSTANCE METHODS ==================== -->
+<a name="section-InstanceMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Instance Methods</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-InstanceMethods"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="systems.Engines-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">ship</span>,
+        <span class="summary-sig-arg">maxPower</span>)</span><br />
+      x.__init__(...) initializes x; see help(type(x)) for signature</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="systems-pysrc.html#Engines.__init__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">Boolean.</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="systems.Engines-class.html#incomingDamages" class="summary-sig-name">incomingDamages</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">lvlCrewWeaponControl</span>,
+        <span class="summary-sig-arg">lvlCrewPiloting</span>,
+        <span class="summary-sig-arg">powerPiloting</span>=<span class="summary-sig-default">1</span>)</span><br />
+      Returns:
+      Return True if the damages are dodged.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="systems-pysrc.html#Engines.incomingDamages">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="systems.System-class.html">System</a></code></b>:
+      <code><a href="systems.System-class.html#__repr__">__repr__</a></code>,
+      <code><a href="systems.System-class.html#addPower">addPower</a></code>,
+      <code><a href="systems.System-class.html#cooldownIon">cooldownIon</a></code>,
+      <code><a href="systems.System-class.html#doDamages">doDamages</a></code>,
+      <code><a href="systems.System-class.html#dotFire">dotFire</a></code>,
+      <code><a href="systems.System-class.html#explode">explode</a></code>,
+      <code><a href="systems.System-class.html#getCooldownIon">getCooldownIon</a></code>,
+      <code><a href="systems.System-class.html#getCooldownIonDone">getCooldownIonDone</a></code>,
+      <code><a href="systems.System-class.html#getCurrentMaxPower">getCurrentMaxPower</a></code>,
+      <code><a href="systems.System-class.html#getDots">getDots</a></code>,
+      <code><a href="systems.System-class.html#getMaxPower">getMaxPower</a></code>,
+      <code><a href="systems.System-class.html#getMaxPowerMax">getMaxPowerMax</a></code>,
+      <code><a href="systems.System-class.html#getName">getName</a></code>,
+      <code><a href="systems.System-class.html#getNameAbbreviation">getNameAbbreviation</a></code>,
+      <code><a href="systems.System-class.html#getPowerInIt">getPowerInIt</a></code>,
+      <code><a href="systems.System-class.html#getPowerIonised">getPowerIonised</a></code>,
+      <code><a href="systems.System-class.html#getRepair">getRepair</a></code>,
+      <code><a href="systems.System-class.html#getShip">getShip</a></code>,
+      <code><a href="systems.System-class.html#ionise">ionise</a></code>,
+      <code><a href="systems.System-class.html#isIonised">isIonised</a></code>,
+      <code><a href="systems.System-class.html#reparation">reparation</a></code>,
+      <code><a href="systems.System-class.html#setCooldownIon">setCooldownIon</a></code>,
+      <code><a href="systems.System-class.html#setCooldownIonDone">setCooldownIonDone</a></code>,
+      <code><a href="systems.System-class.html#setCurrentMaxPower">setCurrentMaxPower</a></code>,
+      <code><a href="systems.System-class.html#setDots">setDots</a></code>,
+      <code><a href="systems.System-class.html#setPowerInIt">setPowerInIt</a></code>,
+      <code><a href="systems.System-class.html#setPowerIonised">setPowerIonised</a></code>,
+      <code><a href="systems.System-class.html#setRepair">setRepair</a></code>,
+      <code><a href="systems.System-class.html#upgradeMaxPower">upgradeMaxPower</a></code>
+      </p>
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__delattr__</code>,
+      <code>__format__</code>,
+      <code>__getattribute__</code>,
+      <code>__hash__</code>,
+      <code>__new__</code>,
+      <code>__reduce__</code>,
+      <code>__reduce_ex__</code>,
+      <code>__setattr__</code>,
+      <code>__sizeof__</code>,
+      <code>__str__</code>,
+      <code>__subclasshook__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== PROPERTIES ==================== -->
+<a name="section-Properties"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Properties</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Properties"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__class__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== METHOD DETAILS ==================== -->
+<a name="section-MethodDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Method Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-MethodDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="__init__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">ship</span>,
+        <span class="sig-arg">maxPower</span>)</span>
+    <br /><em class="fname">(Constructor)</em>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="systems-pysrc.html#Engines.__init__">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>x.__init__(...) initializes x; see help(type(x)) for signature</p>
+  <dl class="fields">
+    <dt>Overrides:
+        object.__init__
+        <dd><em class="note">(inherited documentation)</em></dd>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="incomingDamages"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">incomingDamages</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">lvlCrewWeaponControl</span>,
+        <span class="sig-arg">lvlCrewPiloting</span>,
+        <span class="sig-arg">powerPiloting</span>=<span class="sig-default">1</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="systems-pysrc.html#Engines.incomingDamages">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>lvlCrewPiloting</code></strong> (Integer.) - Lvl in piloting of the member of the crew in it, value of -1 if 
+          the room is unmanned.</li>
+        <li><strong class="pname"><code>powerPiloting</code></strong> (Integer.) - Number of power put in the piloting system.</li>
+    </ul></dd>
+    <dt>Returns: Boolean.</dt>
+        <dd>Return True if the damages are dodged.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Sat Dec  6 17:26:51 2014
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

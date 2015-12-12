@@ -1,0 +1,26 @@
+\chapter{Réalisation}	
+
+	\section{Installation et configuration de l'application}
+	
+Notre projet est codé en Python 3 Pour tester notre programme il faut donc utiliser un terminal python correspondant. Pour la partie système expert il necessaire d'avoir un shell pour que le programme puisse appeler des commandes externes (par exemple cygwin sur Windows). \\
+
+
+	\section{Gestion du projet : organisation et répartition des tâches}
+
+
+
+	\section{Tests et expérimentations réalisées}
+	
+	Peut-etre identique a la section suivante VVVVV
+	
+	\section{Détermination de divers paramètres}
+	
+	Minimum de combats pour avoir un truc equilibre, etc.
+	
+	
+	
+	\section{Divers résultats de meilleurs vaisseaux}
+	
+	
+	
+	\section{Failles et inexactitude des résultats}

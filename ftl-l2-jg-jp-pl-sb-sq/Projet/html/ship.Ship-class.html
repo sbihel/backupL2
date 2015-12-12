@@ -1,0 +1,1331 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>ship.Ship</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="ship-module.html">Module&nbsp;ship</a> ::
+        Class&nbsp;Ship
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="ship.Ship-class.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS DESCRIPTION ==================== -->
+<h1 class="epydoc">Class Ship</h1><p class="nomargin-top"><span class="codelink"><a href="ship-pysrc.html#Ship">source&nbsp;code</a></span></p>
+<center>
+<center>  <map id="uml_class_diagram_for_ship_shi" name="uml_class_diagram_for_ship_shi">
+<area shape="rect" id="node1_15" href="ship.Ship-class.html#ID" title="ship.Ship.ID" alt="" coords="17,31,779,49"/>
+<area shape="rect" id="node1_16" href="ship.Ship-class.html#__init__" title="x.__init__(...) initializes x; see help(type(x)) for signature" alt="" coords="17,52,779,71"/>
+<area shape="rect" id="node1_17" href="ship.Ship-class.html#initGraph" title="ship.Ship.initGraph" alt="" coords="17,71,779,89"/>
+<area shape="rect" id="node1_18" href="ship.Ship-class.html#__repr__" title="repr(x)" alt="" coords="17,89,779,108"/>
+<area shape="rect" id="node1_19" href="ship.Ship-class.html#degat" title="Do nb damages to the ship." alt="" coords="17,108,779,127"/>
+<area shape="rect" id="node1_20" href="ship.Ship-class.html#isCloaked" title="ship.Ship.isCloaked" alt="" coords="17,127,779,145"/>
+<area shape="rect" id="node1_21" href="ship.Ship-class.html#getGraph" title="ship.Ship.getGraph" alt="" coords="17,145,779,164"/>
+<area shape="rect" id="node1_22" href="ship.Ship-class.html#getFastestWay" title="ship.Ship.getFastestWay" alt="" coords="17,164,779,183"/>
+<area shape="rect" id="node1_23" href="ship.Ship-class.html#setFastestWay" title="ship.Ship.setFastestWay" alt="" coords="17,183,779,201"/>
+<area shape="rect" id="node1_24" href="ship.Ship-class.html#getHP" title="Get the health points of the ship." alt="" coords="17,201,779,220"/>
+<area shape="rect" id="node1_25" href="ship.Ship-class.html#getName" title="ship.Ship.getName" alt="" coords="17,220,779,239"/>
+<area shape="rect" id="node1_26" href="ship.Ship-class.html#getID" title="ship.Ship.getID" alt="" coords="17,239,779,257"/>
+<area shape="rect" id="node1_27" href="ship.Ship-class.html#getType" title="ship.Ship.getType" alt="" coords="17,257,779,276"/>
+<area shape="rect" id="node1_28" href="ship.Ship-class.html#getCrew" title="ship.Ship.getCrew" alt="" coords="17,276,779,295"/>
+<area shape="rect" id="node1_29" href="ship.Ship-class.html#activateCloaking" title="ship.Ship.activateCloaking" alt="" coords="17,313,779,332"/>
+<area shape="rect" id="node1" href="ship.Ship-class.html" title="Class which modelize a ship Have : &#45;self.__life=life &#45;self.__powerAvailable = maxPower &#45;self.__missiles = missiles" alt="" coords="5,6,790,338"/>
+</map>
+  <img src="uml_class_diagram_for_ship_shi.gif" alt='' usemap="#uml_class_diagram_for_ship_shi" ismap="ismap" class="graph-without-title" />
+</center>
+</center>
+<hr />
+<p>Class which modelize a ship Have : -self.__life=life 
+  -self.__powerAvailable = maxPower -self.__missiles = missiles</p>
+
+<!-- ==================== INSTANCE METHODS ==================== -->
+<a name="section-InstanceMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Instance Methods</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-InstanceMethods"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ship.Ship-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">systems</span>,
+        <span class="summary-sig-arg">listWeapons</span>,
+        <span class="summary-sig-arg">rooms</span>,
+        <span class="summary-sig-arg">nameShip</span>,
+        <span class="summary-sig-arg">typeShip</span>,
+        <span class="summary-sig-arg">listDrones</span>,
+        <span class="summary-sig-arg">life</span>=<span class="summary-sig-default">30</span>,
+        <span class="summary-sig-arg">maxPower</span>=<span class="summary-sig-default">10</span>,
+        <span class="summary-sig-arg">missiles</span>=<span class="summary-sig-default">10</span>,
+        <span class="summary-sig-arg">droneParts</span>=<span class="summary-sig-default">6</span>)</span><br />
+      x.__init__(...) initializes x; see help(type(x)) for signature</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ship-pysrc.html#Ship.__init__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="initGraph"></a><span class="summary-sig-name">initGraph</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ship-pysrc.html#Ship.initGraph">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ship.Ship-class.html#__repr__" class="summary-sig-name">__repr__</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      repr(x)</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ship-pysrc.html#Ship.__repr__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="degat"></a><span class="summary-sig-name">degat</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">nb</span>)</span><br />
+      Do nb damages to the ship.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ship-pysrc.html#Ship.degat">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="isCloaked"></a><span class="summary-sig-name">isCloaked</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ship-pysrc.html#Ship.isCloaked">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getGraph"></a><span class="summary-sig-name">getGraph</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ship-pysrc.html#Ship.getGraph">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getFastestWay"></a><span class="summary-sig-name">getFastestWay</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ship-pysrc.html#Ship.getFastestWay">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="setFastestWay"></a><span class="summary-sig-name">setFastestWay</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">r</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ship-pysrc.html#Ship.setFastestWay">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">Integer.</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ship.Ship-class.html#getHP" class="summary-sig-name">getHP</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Get the health points of the ship.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ship-pysrc.html#Ship.getHP">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getName"></a><span class="summary-sig-name">getName</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ship-pysrc.html#Ship.getName">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getID"></a><span class="summary-sig-name">getID</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ship-pysrc.html#Ship.getID">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getType"></a><span class="summary-sig-name">getType</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ship-pysrc.html#Ship.getType">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getCrew"></a><span class="summary-sig-name">getCrew</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ship-pysrc.html#Ship.getCrew">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="setCrew"></a><span class="summary-sig-name">setCrew</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">crew</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ship-pysrc.html#Ship.setCrew">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="setMissiles"></a><span class="summary-sig-name">setMissiles</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">val</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ship-pysrc.html#Ship.setMissiles">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="setDroneParts"></a><span class="summary-sig-name">setDroneParts</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">val</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ship-pysrc.html#Ship.setDroneParts">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getMissiles"></a><span class="summary-sig-name">getMissiles</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ship-pysrc.html#Ship.getMissiles">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getDroneParts"></a><span class="summary-sig-name">getDroneParts</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ship-pysrc.html#Ship.getDroneParts">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getMaxPower"></a><span class="summary-sig-name">getMaxPower</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ship-pysrc.html#Ship.getMaxPower">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="ko"></a><span class="summary-sig-name">ko</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Return if the ship is dead or not.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ship-pysrc.html#Ship.ko">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ship.Ship-class.html#hasSystem" class="summary-sig-name">hasSystem</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">nameSystem</span>)</span><br />
+      Permet de savoir si le vaisseau a tel systeme.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ship-pysrc.html#Ship.hasSystem">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getSystems"></a><span class="summary-sig-name">getSystems</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ship-pysrc.html#Ship.getSystems">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">Object of subclass of System or Boolean.</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ship.Ship-class.html#getSystem" class="summary-sig-name">getSystem</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">nameSystem</span>)</span><br />
+      Get the object corresponding to the system asked.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ship-pysrc.html#Ship.getSystem">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">List of Room class's objects.</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ship.Ship-class.html#getRooms" class="summary-sig-name">getRooms</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Get the list of all the rooms of the ship.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ship-pysrc.html#Ship.getRooms">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">Integer.</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ship.Ship-class.html#getLvlCrewRoomSystem" class="summary-sig-name">getLvlCrewRoomSystem</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">nameSystem</span>)</span><br />
+      From the name of a system, it will return the highest lvl in this 
+      system of the crew member in the room of the system.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ship-pysrc.html#Ship.getLvlCrewRoomSystem">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="getRoomSystem"></a><span class="summary-sig-name">getRoomSystem</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">nameSystem</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ship-pysrc.html#Ship.getRoomSystem">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">Integer.</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ship.Ship-class.html#getPowerAvailable" class="summary-sig-name">getPowerAvailable</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Get the number of power that is available/unused.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ship-pysrc.html#Ship.getPowerAvailable">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ship.Ship-class.html#setPowerAvailable" class="summary-sig-name">setPowerAvailable</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">nb</span>=<span class="summary-sig-default">1</span>)</span><br />
+      Set the number of available power.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ship-pysrc.html#Ship.setPowerAvailable">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="addPower"></a><span class="summary-sig-name">addPower</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">nb</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ship-pysrc.html#Ship.addPower">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="cooldowns"></a><span class="summary-sig-name">cooldowns</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Various cooldowns.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ship-pysrc.html#Ship.cooldowns">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="refillOxygen"></a><span class="summary-sig-name">refillOxygen</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ship-pysrc.html#Ship.refillOxygen">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="poweringSystems"></a><span class="summary-sig-name">poweringSystems</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ship-pysrc.html#Ship.poweringSystems">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ship.Ship-class.html#attackRoom" class="summary-sig-name">attackRoom</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">weapon</span>,
+        <span class="summary-sig-arg">indexRoom</span>)</span><br />
+      Room is under attack.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ship-pysrc.html#Ship.attackRoom">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="attackBeam"></a><span class="summary-sig-name">attackBeam</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">weapon</span>,
+        <span class="summary-sig-arg">coord1</span>,
+        <span class="summary-sig-arg">coord2</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ship-pysrc.html#Ship.attackBeam">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ship.Ship-class.html#addXpCrew" class="summary-sig-name">addXpCrew</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">nameSystem</span>)</span><br />
+      Add xp the crew for using certain systems.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ship-pysrc.html#Ship.addXpCrew">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ship.Ship-class.html#squareOnLine" class="summary-sig-name">squareOnLine</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">square</span>,
+        <span class="summary-sig-arg">coord1</span>,
+        <span class="summary-sig-arg">coord2</span>)</span><br />
+      Test if a square is intersected (even partially) by a line.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ship-pysrc.html#Ship.squareOnLine">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">Boolean.</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ship.Ship-class.html#linesIntersect" class="summary-sig-name">linesIntersect</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">line1</span>,
+        <span class="summary-sig-arg">line2</span>)</span><br />
+      Test if two lines intersect.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ship-pysrc.html#Ship.linesIntersect">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="attackRoomCombatDrone"></a><span class="summary-sig-name">attackRoomCombatDrone</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">drone</span>,
+        <span class="summary-sig-arg">indexRoom</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ship-pysrc.html#Ship.attackRoomCombatDrone">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="ship.Ship-class.html#attackOpponent" class="summary-sig-name">attackOpponent</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">ship2</span>)</span><br />
+      Use every weapons to attack the opponent's ship.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ship-pysrc.html#Ship.attackOpponent">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="ioniseIncoming"></a><span class="summary-sig-name">ioniseIncoming</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">indexRoom</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ship-pysrc.html#Ship.ioniseIncoming">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="tryUseCloaking"></a><span class="summary-sig-name">tryUseCloaking</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      This method is called each tick of the clock, check if there's the 
+      system for cloaking and it tries to activate the cloaking and do the 
+      cooldown of the system.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ship-pysrc.html#Ship.tryUseCloaking">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="deactivateCloaking"></a><span class="summary-sig-name">deactivateCloaking</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ship-pysrc.html#Ship.deactivateCloaking">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="activateCloaking"></a><span class="summary-sig-name">activateCloaking</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="ship-pysrc.html#Ship.activateCloaking">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__delattr__</code>,
+      <code>__format__</code>,
+      <code>__getattribute__</code>,
+      <code>__hash__</code>,
+      <code>__new__</code>,
+      <code>__reduce__</code>,
+      <code>__reduce_ex__</code>,
+      <code>__setattr__</code>,
+      <code>__sizeof__</code>,
+      <code>__str__</code>,
+      <code>__subclasshook__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS VARIABLES ==================== -->
+<a name="section-ClassVariables"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Class Variables</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-ClassVariables"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="ID"></a><span class="summary-name">ID</span> = <code title="1">1</code>
+    </td>
+  </tr>
+</table>
+<!-- ==================== PROPERTIES ==================== -->
+<a name="section-Properties"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Properties</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Properties"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__class__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== METHOD DETAILS ==================== -->
+<a name="section-MethodDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Method Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-MethodDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="__init__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">systems</span>,
+        <span class="sig-arg">listWeapons</span>,
+        <span class="sig-arg">rooms</span>,
+        <span class="sig-arg">nameShip</span>,
+        <span class="sig-arg">typeShip</span>,
+        <span class="sig-arg">listDrones</span>,
+        <span class="sig-arg">life</span>=<span class="sig-default">30</span>,
+        <span class="sig-arg">maxPower</span>=<span class="sig-default">10</span>,
+        <span class="sig-arg">missiles</span>=<span class="sig-default">10</span>,
+        <span class="sig-arg">droneParts</span>=<span class="sig-default">6</span>)</span>
+    <br /><em class="fname">(Constructor)</em>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ship-pysrc.html#Ship.__init__">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>x.__init__(...) initializes x; see help(type(x)) for signature</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>systems</code></strong> (Dictionary) - Dictionary in which the keys are the name of the systems and the 
+          value is the number of power that you can put in each.</li>
+    </ul></dd>
+    <dt>Overrides:
+        object.__init__
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="__repr__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__repr__</span>(<span class="sig-arg">self</span>)</span>
+    <br /><em class="fname">(Representation operator)</em>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ship-pysrc.html#Ship.__repr__">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>repr(x)</p>
+  <dl class="fields">
+    <dt>Overrides:
+        object.__repr__
+        <dd><em class="note">(inherited documentation)</em></dd>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getHP"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getHP</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ship-pysrc.html#Ship.getHP">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Get the health points of the ship.</p>
+  <dl class="fields">
+    <dt>Returns: Integer.</dt>
+        <dd>Return the health points of the ship.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="hasSystem"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">hasSystem</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">nameSystem</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ship-pysrc.html#Ship.hasSystem">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Permet de savoir si le vaisseau a tel systeme.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>nameSystem</code></strong> (Nom en minuscule, en toute lettres, d'un systeme.) - Nom du systeme dont on veut savoir l'existence.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getSystem"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getSystem</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">nameSystem</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ship-pysrc.html#Ship.getSystem">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Get the object corresponding to the system asked.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>nameSystem</code></strong> (String.) - Name of the system asked.</li>
+    </ul></dd>
+    <dt>Returns: Object of subclass of System or Boolean.</dt>
+        <dd>Return an object of the subclass of System, or return False if 
+          the ship don't have the system asked.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getRooms"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getRooms</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ship-pysrc.html#Ship.getRooms">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Get the list of all the rooms of the ship. The index in the list 
+  correspond to the number of the room.</p>
+  <dl class="fields">
+    <dt>Returns: List of Room class's objects.</dt>
+        <dd>Return the list of the rooms which are objects of the class Room.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getLvlCrewRoomSystem"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getLvlCrewRoomSystem</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">nameSystem</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ship-pysrc.html#Ship.getLvlCrewRoomSystem">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>From the name of a system, it will return the highest lvl in this 
+  system of the crew member in the room of the system.</p>
+  <dl class="fields">
+    <dt>Returns: Integer.</dt>
+        <dd>Return the highest lvl of the crew members or -1 if there's 
+          nobody.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="getPowerAvailable"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">getPowerAvailable</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ship-pysrc.html#Ship.getPowerAvailable">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Get the number of power that is available/unused.</p>
+  <dl class="fields">
+    <dt>Returns: Integer.</dt>
+        <dd>Number of power available.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="setPowerAvailable"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">setPowerAvailable</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">nb</span>=<span class="sig-default">1</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ship-pysrc.html#Ship.setPowerAvailable">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Set the number of available power.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>nb</code></strong> (Positiv integer.) - Number to set of available power.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="attackRoom"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">attackRoom</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">weapon</span>,
+        <span class="sig-arg">indexRoom</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ship-pysrc.html#Ship.attackRoom">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Room is under attack.</p>
+  <p>Add xp to crew and manage the attack (damages to systems, start 
+  fire/breach, double damages to hull.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>weapon</code></strong> (Object of the class Weapon.) - Weapon used to do this single attack.</li>
+        <li><strong class="pname"><code>indexRoom</code></strong> (Integer between 0 and len(self.__weapons)-1.) - Index in the list of rooms of the room attacked.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="addXpCrew"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">addXpCrew</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">nameSystem</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ship-pysrc.html#Ship.addXpCrew">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Add xp the crew for using certain systems.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>nameSystem</code></strong> (String.) - Name of the system where crew can get xp.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="squareOnLine"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">squareOnLine</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">square</span>,
+        <span class="sig-arg">coord1</span>,
+        <span class="sig-arg">coord2</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ship-pysrc.html#Ship.squareOnLine">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Test if a square is intersected (even partially) by a line.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>square</code></strong> (List of 2 lists of 2 integers.) - Coordinates of the square, top left-hand corner and bottom 
+          right-hand corner.</li>
+        <li><strong class="pname"><code>coord1</code></strong> (List of 2 integers.) - Coordinates of the first point of the line.</li>
+        <li><strong class="pname"><code>coord2</code></strong> (List of 2 integers.) - Coordinates of the second point of the line.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="linesIntersect"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">linesIntersect</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">line1</span>,
+        <span class="sig-arg">line2</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ship-pysrc.html#Ship.linesIntersect">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Test if two lines intersect.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>line1</code></strong> (List of 2 lists of 2 integers.) - List of a line in the plan.</li>
+        <li><strong class="pname"><code>line2</code></strong> (List of 2 lists of 2 integers.) - List of a line in the plan.</li>
+    </ul></dd>
+    <dt>Returns: Boolean.</dt>
+        <dd>True if the lines intersect, False else.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="attackOpponent"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">attackOpponent</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">ship2</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="ship-pysrc.html#Ship.attackOpponent">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Use every weapons to attack the opponent's ship.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>ship2</code></strong> (Object of the class Ship.) - The target of the attack.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Sat Dec  6 17:26:50 2014
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

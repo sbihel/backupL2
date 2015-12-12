@@ -1,0 +1,43 @@
+\chapter{Réalisation}	
+
+	\section{Installation et configuration de l'application}
+	
+	Notre projet est codé en Python 3. Pour la partie système expert il nécessaire d'avoir un shell pour que le programme puisse appeler des commandes externes (par exemple cygwin sur Windows). \\
+
+
+	\section{Organisation et répartition des tâches}
+
+	Au premier semestre, nous avions dégagé 4 domaines de travail : le programme du moteur de combat, la construction d'une base de données issues du jeu original, les tests et enfin le rapport.\\
+Le moteur de combat a été réalisé en partie par Simon BIHEL avec la contribution de Julien PEZANT pour la classe des armes et l'aide de Sébastien GAMBLIN pour une partie de l'affichage.\\
+La construction de la base de données a été faite en collaboration par Julien PEZANT, Paul LEMENAGER et Simon BIHEL.\\
+Les tests ont été faits en partie par Josselin GUENERON, Sébastien GAMBLIN et en partie par Simon BIHEL.\\
+Enfin le rapport a été construit par Simon BIHEL et Sébastien GAMBLIN avec la contribution de chacun des autres membres par rapport à leurs connaissances de notre projet.
+
+	Au second semestre, nous avons dégagé 4 domaines de travail : l'enrichissement et l'amélioration du moteur de combats ; l'optimisation et la recherche des meilleurs vaisseaux ; des affichages divers pour les vaisseaux et les tournois ; la rédaction du rapport. \\
+La travail sur le moteur de combats et sur la recherche des meilleurs vaisseaux a été effectué par Simon BIHEL. \\
+Les affichages ont été réalisés par Sébastien GAMBLIN. \\
+Le rapport a été dirigé par Simon BIHEL avec l'apport de chacun des membres. Notament, Julien PEZANT a participé à la refonte des schémas du premier semestre et Sébastien GAMBLIN a rédigé la partie des affichages.
+
+	
+	\section{Détermination de divers paramètres}
+	
+	Minimum de combats pour avoir un truc equilibre (pour ce point on peut aussi dire qu'il faut un nombre impair pour eviter 50/50 de victoires), degre de confiance dans le taux de croissance, nombre d'algos G au debut de l'algo final (en chaine?), etc.
+	
+	
+	\section{Divers résultats de meilleurs vaisseaux}
+	
+	D'abord un exemple d'un algo G -> dire que c'est dur la data vizualisation
+	
+	
+	\section{Failles et inexactitude des résultats}
+
+	Notre programme présente quelques failles et n'est pas complet par rapport au jeu originel. Voici quelques points à prendre en compte pour la validité des résultats donnés par le programme.
+	
+	
+	\paragraph{Le moteur de combats} Tous les équipements du jeu ne sont pas gérés par le moteur de combats. À cause de cela, les vaisseaux issus des algorithmes de génération et d'otpimisation n'auront pas certains équipements qui sont potentiellement bons. De plus, L'Iintelligence Artificielle qui dirige les vaisseaux fait les choses bêtement et n'utilise pas forcement des techniques de jeu. 
+
+	\paragraph{La génération aléatoire de vaisseaux} Le fait de pouvoir vendre de l'équipement n'est pas présent dans le générateur aléatoire, donc ce n'est pas présent dans les algorithmes d'optimisation. À cause de cela, il a encore beaucoup de vaisseaux potentiellement bons qui ne sont pas utilisés.
+
+	\paragraph{L'algorithme génétique} L'algorithme génétique peut s'enfermer dans un \textit{matchup}. C'est-à-dire qu'il peut créer des vaisseaux performants dans un seul type de combat et mauvais contre la plupart des vaisseaux qui ne sont pas présent dans la population de cet algorithme génétique.
+	
+	\paragraph{L'algorithme final} Dans l'algorithme final, la base de vaisseaux est constituée à partir d'algorithmes génétiques, donc les champions auront certaines caractéristiques en communs avec les mauvais, cela peut faire baisser le taux de croissance et le taux de confiance.

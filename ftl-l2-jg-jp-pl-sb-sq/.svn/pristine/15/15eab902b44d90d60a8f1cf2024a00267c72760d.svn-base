@@ -1,0 +1,42 @@
+#! /bin/bash
+
+python3 tournament.py
+
+cd ps/
+
+nb=0
+for i in `ls`
+do
+	convert $i $i.jpg
+	rm $i
+	nb=$(($nb+1))
+done
+nb=$(($nb/2))
+
+echo $nb "Conversion in jpg has ended"
+
+for j in $(seq 0 $(($nb-1)))
+do
+	montage -geometry 800x400 -tile 2x1 *-$j.ps.jpg together$j.jpg
+	rm *-$j.ps.jpg
+done
+
+n=0
+
+l=`ls ../gifCombat/` 
+for file in $l
+do
+	if [ "final$n.gif" == $file ]
+	then 
+		n=$(($n+1))
+	fi
+done
+
+echo "Writing ../gifCombat/final$n.gif"
+convert -delay 100 -loop 0 together*.jpg "../gifCombat/final$n.gif"
+
+rm together*.jpg
+
+cd ../
+
+animate "gifCombat/final$n.gif"

@@ -1,0 +1,9 @@
+from expertSystem import *
+
+
+def multipleOptimization(maxCost):
+    """
+    Takes a lot of time to do multiple techniques to determine the best
+    """
+    hallOfFame = [geneticAlgorithm(15, maxCost, 50, nbGeneration=10, nbChampions=4) for i in range(5)]
+    return getBestFeatures(buildLCMInputFile(hallOfFame))

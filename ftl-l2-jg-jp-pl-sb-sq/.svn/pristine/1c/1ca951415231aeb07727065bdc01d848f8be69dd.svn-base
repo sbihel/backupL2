@@ -1,0 +1,2200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ship>
+    <kestrel>
+        <typeA>
+            <energy>8</energy>
+            <systems> <!-- max power for the systems-->
+                <shields>2</shields>
+                <engines>2</engines>
+                <oxygen>1</oxygen>
+                <weaponControl>3</weaponControl>
+                <medbay>1</medbay>
+                <piloting>1</piloting>
+                <sensors>1</sensors>
+                <doorSystem>1</doorSystem>
+            </systems>
+            <augmentations>
+                <augmentation0></augmentation0>
+                <augmentation1></augmentation1>
+                <augmentation2></augmentation2>
+            </augmentations>
+            <weapons>
+                <weapon0>artemisPL</weapon0>
+                <weapon1>burstLaserII</weapon1>
+                <weapon2></weapon2>
+                <weapon3></weapon3>
+            </weapons>
+            <drones>
+                <drone0></drone0>
+                <drone1></drone1>
+            </drones>
+            <rooms>
+                <room0>
+                    <coord1>(60,0)</coord1>
+                    <coord2>(80,10)</coord2>
+                    <crew>False</crew>
+                    <system>False</system>
+                    <hasSystem>False</hasSystem>
+                    <doors>
+                        <door0>
+                            [(65,0), (0,-1), True]
+                        </door0>
+                        <door1>
+                            [(75,0), (0,-1), True]
+                        </door1>
+                        <door2>
+                            [(75,10), (0,3), True]
+                        </door2>
+                    </doors>
+                </room0>
+                <room1>
+                    <coord1>(10,10)</coord1>
+                    <coord2>(30,20)</coord2>
+                    <crew>False</crew>
+                    <system>oxygen</system>
+                    <hasSystem>True</hasSystem>
+                    <doors>
+                        <door0>
+                            [(25,20), (1,6), True]
+                        </door0>
+                        <door1>
+                            [(30,15), (1,2), True]
+                        </door1>
+                    </doors>
+                </room1>
+                <room2>
+                    <coord1>(30,10)</coord1>
+                    <coord2>(50,20)</coord2>
+                    <crew>False</crew>
+                    <system>backupBattery</system>
+                    <hasSystem>False</hasSystem>
+                    <doors>
+                        <door0>
+                            [(30,15), (1,2), True]
+                        </door0>
+                        <door1>
+                            [(45,20), (2,7), True]
+                        </door1>
+                    </doors>
+                </room2>
+                <room3>
+                    <coord1>(60,10)</coord1>
+                    <coord2>(80,30)</coord2>
+                    <crew>False</crew>
+                    <system>mindControl</system>
+                    <hasSystem>False</hasSystem>
+                    <doors>
+                        <door0>
+                            [(75,10), (0,3), True]
+                        </door0>
+                        <door1>
+                            [(80,15), (3,4), True]
+                        </door1>
+                        <door2>
+                            [(60,25), (7,3), True]
+                        </door2>
+                    </doors>
+                </room3>
+                <room4>
+                    <coord1>(80,10)</coord1>
+                    <coord2>(100,30)</coord2>
+                    <crew>False</crew>
+                    <system>medbay</system>
+                    <hasSystem>True</hasSystem>
+                    <doors>
+                        <door0>
+                            [(80,15), (3,4), True]
+                        </door0>
+                        <door1>
+                            [(85,30), (4,12), True]
+                        </door1>
+                        <door2>
+                            [(100,25), (4,8), True]
+                        </door2>
+                    </doors>
+                </room4>
+                <room5>
+                    <coord1>(0,20)</coord1>
+                    <coord2>(10,40)</coord2>
+                    <crew>False</crew>
+                    <system>False</system>
+                    <hasSystem>False</hasSystem>
+                    <doors>
+                        <door0>
+                            [(0,25), (5,-1), True]
+                        </door0>
+                        <door1>
+                            [(0,35), (5,-1), True]
+                        </door1>
+                        <door2>
+                            [(10,25), (5,6), True]
+                        </door2>
+                        <door3>
+                            [(10,35), (5,6), True]
+                        </door3>
+                    </doors>
+                </room5>
+                <room6>
+                    <coord1>(10,20)</coord1>
+                    <coord2>(30,40)</coord2>
+                    <crew>human 0 0 0 0 0 0</crew>
+                    <system>engines</system>
+                    <hasSystem>True</hasSystem>
+                    <doors>
+                        <door0>
+                            [(25,20), (6,1), True]
+                        </door0>
+                        <door1>
+                            [(25,40), (6,14), True]
+                        </door1>
+                        <door2>
+                            [(10,25), (6,5), True]
+                        </door2>
+                        <door3>
+                            [(10,35), (6,5), True]
+                        </door3>
+                    </doors>
+                </room6>
+                <room7>
+                    <coord1>(40,20)</coord1>
+                    <coord2>(60,40)</coord2>
+                    <crew>human 0 0 0 0 0 0</crew>
+                    <system>weaponControl</system>
+                    <hasSystem>True</hasSystem>
+                    <doors>
+                        <door0>
+                            [(45,20), (7,2), True]
+                        </door0>
+                        <door1>
+                            [(45,40), (7,15), True]
+                        </door1>
+                        <door2>
+                            [(60,25), (7,3), True]
+                        </door2>
+                        <door3>
+                            [(60,35), (7,11), True]
+                        </door3>
+                    </doors>
+                </room7>
+                <room8>
+                    <coord1>(100,20)</coord1>
+                    <coord2>(120,30)</coord2>
+                    <crew>False</crew>
+                    <system>doorSystem</system>
+                    <hasSystem>True</hasSystem>
+                    <doors>
+                        <door0>
+                            [(100,25), (8,4), True]
+                        </door0>
+                        <door1>
+                            [(120,25), (8,9), True]
+                        </door1>
+                    </doors>
+                </room8>
+                <room9>
+                    <coord1>(120,20)</coord1>
+                    <coord2>(140,40)</coord2>
+                    <crew>False</crew>
+                    <system>droneControl</system>
+                    <hasSystem>False</hasSystem>
+                    <doors>
+                        <door0>
+                            [(120,25), (9,8), True]
+                        </door0>
+                        <door1>
+                            [(120,35), (9,13), True]
+                        </door1>
+                        <door2>
+                            [(140,35), (9,10), True]
+                        </door2>
+                    </doors>
+                </room9>
+                <room10>
+                    <coord1>(140,20)</coord1>
+                    <coord2>(150,40)</coord2>
+                    <crew>human 0 0 0 0 0 0</crew>
+                    <system>piloting</system>
+                    <hasSystem>True</hasSystem>
+                    <doors>
+                        <door0>
+                            [(140,35), (10,9), True]
+                        </door0>
+                    </doors>
+                </room10>
+                <room11>
+                    <coord1>(60,30)</coord1>
+                    <coord2>(80,50)</coord2>
+                    <crew>False</crew>
+                    <system>cloaking</system>
+                    <hasSystem>False</hasSystem>
+                    <doors>
+                        <door0>
+                            [(60,35), (11,7), True]
+                        </door0>
+                        <door1>
+                            [(80,45), (11,12), True]
+                        </door1>
+                        <door2>
+                            [(75,50), (11,16), True]
+                        </door2>
+                    </doors>
+                </room11>
+                <room12>
+                    <coord1>(80,30)</coord1>
+                    <coord2>(100,50)</coord2>
+                    <crew>False</crew>
+                    <system>shields</system>
+                    <hasSystem>True</hasSystem>
+                    <doors>
+                        <door0>
+                            [(85,30), (12,4), True]
+                        </door0>
+                        <door1>
+                            [(80,45), (12,11), True]
+                        </door1>
+                        <door2>
+                            [(100,35), (12,13), True]
+                        </door2>
+                    </doors>
+                </room12>
+                <room13>
+                    <coord1>(100,30)</coord1>
+                    <coord2>(120,40)</coord2>
+                    <crew>False</crew>
+                    <system>sensors</system>
+                    <hasSystem>True</hasSystem>
+                    <doors>
+                        <door0>
+                            [(100,35), (13,12), True]
+                        </door0>
+                        <door1>
+                            [(120,35), (13,9), True]
+                        </door1>
+                    </doors>
+                </room13>
+                <room14>
+                    <coord1>(10,40)</coord1>
+                    <coord2>(30,50)</coord2>
+                    <crew>False</crew>
+                    <system>crewTeleporter</system>
+                    <hasSystem>False</hasSystem>
+                    <doors>
+                        <door0>
+                            [(25,40), (14,6), True]
+                        </door0>
+                        <door1>
+                            [(30,45), (14,15), True]
+                        </door1>
+                    </doors>
+                </room14>
+                <room15>
+                    <coord1>(30,40)</coord1>
+                    <coord2>(50,50)</coord2>
+                    <crew>False</crew>
+                    <system>hacking</system>
+                    <hasSystem>False</hasSystem>
+                    <doors>
+                        <door0>
+                            [(45,40), (15,7), True]
+                        </door0>
+                        <door1>
+                            [(30,45), (15,14), True]
+                        </door1>
+                    </doors>
+                </room15>
+                <room16>
+                    <coord1>(60,50)</coord1>
+                    <coord2>(80,60)</coord2>
+                    <crew>False</crew>
+                    <system>False</system>
+                    <hasSystem>False</hasSystem>
+                    <doors>
+                        <door0>
+                            [(65,60), (16,-1), True]
+                        </door0>
+                        <door1>
+                            [(75,60), (16,-1), True]
+                        </door1>
+                        <door2>
+                            [(75,50), (16,11), True]
+                        </door2>
+                    </doors>
+                </room16>
+            </rooms>
+        </typeA>
+        <typeB>
+            <energy>8</energy>
+            <systems> <!-- max power for the systems-->
+                <shields>2</shields>
+                <engines>2</engines>
+                <oxygen>1</oxygen>
+                <weaponControl>4</weaponControl>
+                <medbay>1</medbay>
+                <piloting>1</piloting>
+                <sensors>1</sensors>
+                <doorSystem>1</doorSystem>
+            </systems>
+            <augmentations>
+                <augmentation0></augmentation0>
+                <augmentation1></augmentation1>
+                <augmentation2></augmentation2>
+            </augmentations>
+            <weapons>
+                <weapon0>basicLaser</weapon0>
+                <weapon1>basicLaser</weapon1>
+                <weapon2>basicLaser</weapon2>
+                <weapon3>basicLaser</weapon3>
+            </weapons>
+            <drones>
+                <drone0></drone0>
+                <drone1></drone1>
+            </drones>
+            <rooms>
+                <room0>
+                    <coord1>(30,0)</coord1>
+                    <coord2>(50,20)</coord2>
+                    <crew>False</crew>
+                    <system>medbay</system>
+                    <hasSystem>True</hasSystem>
+                    <doors>
+                        <door0>
+                            [(30,15), (0,2), True]
+                        </door0>
+                        <door1>
+                            [(45,20), (0,3), True]
+                        </door1>
+                        <door2>
+                            [(50,5), (0,1), True]
+                        </door2>
+                    </doors>
+                </room0>
+                <room1>
+                    <coord1>(50,0)</coord1>
+                    <coord2>(70,10)</coord2>
+                    <crew>False</crew>
+                    <system>mindControl</system>
+                    <hasSystem>False</hasSystem>
+                    <doors>
+                        <door0>
+                            [(55,0), (1,-1), True]
+                        </door0>
+                        <door1>
+                            [(65,0), (1,-1), True]
+                        </door1>
+                        <door2>
+                            [(50,5), (1,0), True]
+                        </door2>
+                        <door3>
+                            [(65,10), (1,4), True]
+                        </door3>
+                    </doors>
+                </room1>
+                <room2>
+                    <coord1>(10, 10)</coord1>
+                    <coord2>(30, 30)</coord2>
+                    <crew>mantis 0 0 0 0 0 0</crew>
+                    <system>shields</system>
+                    <hasSystem>True</hasSystem>
+                    <doors>
+                        <door0>
+                            [(10,15), (2,-1), True]
+                        </door0>
+                        <door1>
+                            [(30,15), (2,0), True]
+                        </door1>
+                        <door2>
+                            [(15,30), (2,5), True]
+                        </door2>
+                    </doors>
+                </room2>
+                <room3>
+                    <coord1>(40,20)</coord1>
+                    <coord2>(60,30)</coord2>
+                    <crew>False</crew>
+                    <system>crewTeleporter</system>
+                    <hasSystem>False</hasSystem>
+                    <doors>
+                        <door0>
+                            [(45,20), (3,0), True]
+                        </door0>
+                        <door1>
+                            [(60,25), (3,4), True]
+                        </door1>
+                    </doors>
+                </room3>
+                <room4>
+                    <coord1>(60,10)</coord1>
+                    <coord2>(80,30)</coord2>
+                    <crew>False</crew>
+                    <system>oxygen</system>
+                    <hasSystem>True</hasSystem>
+                    <doors>
+                        <door0>
+                            [(65,10), (4,1), True]
+                        </door0>
+                        <door1>
+                            [(60,25), (4,3), True]
+                        </door1>
+                        <door2>
+                            [(65,30), (4,6), True]
+                        </door2>
+                        <door2>
+                            [(75,30), (4,6), True]
+                        </door2>
+                    </doors>
+                </room4>
+                <room5>
+                    <coord1>(0,30)</coord1>
+                    <coord2>(20,40)</coord2>
+                    <crew>False</crew>
+                    <system>engines</system>
+                    <hasSystem>True</hasSystem>
+                    <doors>
+                        <door0>
+                            [(15,30), (5,2), True]
+                        </door0>
+                        <door1>
+                            [(15,40), (5,10), True]
+                        </door1>
+                    </doors>
+                </room5>
+                <room6>
+                    <coord1>(60,30)</coord1>
+                    <coord2>(80,40)</coord2>
+                    <crew>False</crew>
+                    <system>backupBattery</system>
+                    <hasSystem>False</hasSystem>
+                    <doors>
+                        <door0>
+                            [(65,30), (6,4), True]
+                        </door0>
+                        <door1>
+                            [(75,30), (6,4), True]
+                        </door1>
+                        <door2>
+                            [(65,40), (6,12), True]
+                        </door2>
+                        <door3>
+                            [(75,40), (6,12), True]
+                        </door3>
+                        <door4>
+                            [(80,35), (6,7), True]
+                        </door4>
+                    </doors>
+                </room6>
+                <room7>
+                    <coord1>(80,30)</coord1>
+                    <coord2>(100,40)</coord2>
+                    <crew>False</crew>
+                    <system>doorSystem</system>
+                    <hasSystem>True</hasSystem>
+                    <doors>
+                        <door0>
+                            [(80,35), (7,6), True]
+                        </door0>
+                        <door1>
+                            [(100,35), (7,8), True]
+                        </door1>
+                    </doors>
+                </room7>
+                <room8>
+                    <coord1>(100,30)</coord1>
+                    <coord2>(120,40)</coord2>
+                    <crew>False</crew>
+                    <system>False</system>
+                    <hasSystem>False</hasSystem>
+                    <doors>
+                        <door0>
+                            [(100,35), (8,7), True]
+                        </door0>
+                        <door1>
+                            [(105,30), (8,-1), True]
+                        </door1>
+                        <door2>
+                            [(115,30), (8,-1), True]
+                        </door2>
+                        <door3>
+                            [(120,35), (8,9), True]
+                        </door3>
+                        <door4>
+                            [(115,40), (8,-1), True]
+                        </door4>
+                        <door5>
+                            [(105,40), (8,-1), True]
+                        </door5>
+                    </doors>
+                </room8>
+                <room9>
+                    <coord1>(120,30)</coord1>
+                    <coord2>(140,40)</coord2>
+                    <crew>human 0 0 0 0 0 0</crew>
+                    <system>piloting</system>		<!-- -->
+                    <hasSystem>True</hasSystem>
+                    <doors>
+                        <door0>
+                            [(120,35), (9,8), True]
+                        </door0>
+                    </doors>
+                </room9>
+                <room10>
+                    <coord1>(10,40)</coord1>
+                    <coord2>(30,60)</coord2>
+                    <crew>zoltan 0 0 0 0 0 0</crew>
+                    <system>weaponControl</system>
+                    <hasSystem>True</hasSystem>
+                    <doors>
+                        <door0>
+                            [(15,40), (10,5), True]
+                        </door0>
+                        <door1>
+                            [(10,55), (10,-1), True]
+                        </door1>
+                        <door2>
+                            [(30,55), (10,13), True]
+                        </door2>
+                    </doors>
+                </room10>
+                <room11>
+                    <coord1>(40,40)</coord1>
+                    <coord2>(60,50)</coord2>
+                    <crew>False</crew>
+                    <system>sensors</system>
+                    <hasSystem>True</hasSystem>
+                    <doors>
+                        <door0>
+                            [(45,50), (11,13), True]
+                        </door0>
+                        <door1>
+                            [(60,45), (11,12), True]
+                        </door1>
+                    </doors>
+                </room11>
+                <room12>
+                    <coord1>(60,40)</coord1>
+                    <coord2>(80,60)</coord2>
+                    <crew>False</crew>
+                    <system>cloaking</system>
+                    <hasSystem>False</hasSystem>
+                    <doors>
+                        <door0>
+                            [(65,40), (12,6), True]
+                        </door0>
+                        <door1>
+                            [(75,40), (12,6), True]
+                        </door1>
+                        <door2>
+                            [(60,45), (12,11), True]
+                        </door2>
+                        <door3>
+                            [(65,60), (12,14), True]
+                        </door3>
+                    </doors>
+                </room12>
+                <room13>
+                    <coord1>(30,50)</coord1>
+                    <coord2>(50,70)</coord2>
+                    <crew>False</crew>
+                    <system>droneControl</system>
+                    <hasSystem>False</hasSystem>
+                    <doors>
+                        <door0>
+                            [(30,55), (13,10), True]
+                        </door0>
+                        <door1>
+                            [(45,50), (13,11), True]
+                        </door1>
+                        <door2>
+                            [(50,65), (13,14), True]
+                        </door2>
+                    </doors>
+                </room13>
+                <room14>
+                    <coord1>(50,60)</coord1>
+                    <coord2>(70,70)</coord2>
+                    <crew>False</crew>
+                    <system>hacking</system>
+                    <hasSystem>False</hasSystem>
+                    <doors>
+                        <door0>
+                            [(50,65), (14,13), True]
+                        </door0>
+                        <door1>
+                            [(65,60), (14,12), True]
+                        </door1>
+                        <door2>
+                            [(55,70), (14,-1), True]
+                        </door2>
+                        <door3>
+                            [(65,70), (14,-1), True]
+                        </door3>
+                    </doors>
+                </room14>
+            </rooms>
+        </typeB>
+        <typeC>
+            <energy>8</energy>
+            <systems> <!-- max power for the systems-->
+                <shields>2</shields>
+                <engines>2</engines>
+                <oxygen>1</oxygen>
+                <weaponControl>2</weaponControl>
+                <cloneBay>1</cloneBay>
+                <piloting>1</piloting>
+                <sensors>2</sensors>
+                <doorSystem>1</doorSystem>
+            </systems>
+            <augmentations>
+                <augmentation0></augmentation0>
+                <augmentation1></augmentation1>
+                <augmentation2></augmentation2>
+            </augmentations>
+            <weapons>
+                <weapon0>dualLaser</weapon0>
+                <weapon1>ionStunner</weapon1>
+                <weapon2></weapon2>
+                <weapon3></weapon3>
+            </weapons>
+            <drones>
+                <drone0></drone0>
+                <drone1></drone1>
+            </drones>
+            <rooms>
+                <room0>
+                    <coord1>(60,0)</coord1>
+                    <coord2>(80,10)</coord2>
+                    <crew>False</crew>
+                    <system>False</system>
+                    <hasSystem>False</hasSystem>
+                    <doors>
+                        <door0>
+                            [(65,0), (0,-1), True]
+                        </door0>
+                        <door1>
+                            [(75,0), (0,-1), True]
+                        </door1>
+                        <door2>
+                            [(65,10), (0,3), True]
+                        </door2>
+                        <door3>
+                            [(75,10), (0,3), True]
+                        </door3>
+                    </doors>
+                </room0>
+                <room1>
+                    <coord1>(10,10)</coord1>
+                    <coord2>(30,20)</coord2>
+                    <crew>False</crew>
+                    <system>cloaking</system>
+                    <hasSystem>False</hasSystem>
+                    <doors>
+                        <door0>
+                            [(25,20), (1,6), True]
+                        </door0>
+                        <door1>
+                            [(15,20), (1,5), True]
+                        </door1>
+                    </doors>
+                </room1>
+                <room2>
+                    <coord1>(40, 10)</coord1>
+                    <coord2>(60, 30)</coord2>
+                    <crew>human 0 0 0 0 0 0</crew>
+                    <system>weaponControl</system>
+                    <hasSystem>True</hasSystem>
+                    <doors>
+                        <door0>
+                            [(60,15), (2,3), True]
+                        </door0>
+                        <door1>
+                            [(40,25), (2,6), True]
+                        </door1>
+                    </doors>
+                </room2>
+                <room3>
+                    <coord1>(60,10)</coord1>
+                    <coord2>(80,20)</coord2>
+                    <crew>False</crew>
+                    <system>False</system>
+                    <hasSystem>False</hasSystem>
+                    <doors>
+                        <door0>
+                            [(60,15), (3,2), True]
+                        </door0>
+                        <door1>
+                            [(65,10), (3,0), True]
+                        </door1>
+                        <door2>
+                            [(75,10), (3,0), True]
+                        </door2>
+                        <door3>
+                            [(80,15), (3,4), True]
+                        </door3>
+                        <door4>
+                            [(75,20), (3,7), True]
+                        </door4>
+                    </doors>
+                </room3>
+                <room4>
+                    <coord1>(80,10)</coord1>
+                    <coord2>(100,20)</coord2>
+                    <crew>False</crew>
+                    <system>crewTeleporter</system>
+                    <hasSystem>False</hasSystem>
+                    <doors>
+                        <door0>
+                            [(80,15), (4,3), True]
+                        </door0>
+                        <door1>
+                            [(95,20), (4,8), True]
+                        </door1>
+                    </doors>
+                </room4>
+                <room5>
+                    <coord1>(0,20)</coord1>
+                    <coord2>(20,40)</coord2>
+                    <crew>lanius 0 0 0 0 0 0</crew>
+                    <system>engines</system>
+                    <hasSystem>True</hasSystem>
+                    <doors>
+                        <door0>
+                            [(0,25), (5,-1), True]
+                        </door0>
+                        <door1>
+                            [(0,35), (5,-1), True]
+                        </door1>
+                        <door2>
+                            [(15,20), (5,1), True]
+                        </door2>
+                        <door3>
+                            [(15,40), (5,12), True]
+                        </door3>
+                    </doors>
+                </room5>
+                <room6>
+                    <coord1>(20,20)</coord1>
+                    <coord2>(40,40)</coord2>
+                    <crew>False</crew>
+                    <system>droneControl</system>
+                    <hasSystem>False</hasSystem>
+                    <doors>
+                        <door0>
+                            [(25,20), (6,1), True]
+                        </door0>
+                        <door1>
+                            [(40,25), (6,2), True]
+                        </door1>
+                        <door2>
+                            [(40,35), (6,13), True]
+                        </door2>
+                        <door3>
+                            [(25,40), (6,12), True]
+                        </door3>
+                    </doors>
+                </room6>
+                <room7>
+                    <coord1>(70,20)</coord1>
+                    <coord2>(80,40)</coord2>
+                    <crew>False</crew>
+                    <system>oxygen</system>
+                    <hasSystem>True</hasSystem>
+                    <doors>
+                        <door0>
+                            [(75,20), (7,3), True]
+                        </door0>
+                        <door1>
+                            [(75,40), (7,14), True]
+                        </door1>
+                    </doors>
+                </room7>
+                <room8>
+                    <coord1>(90,20)</coord1>
+                    <coord2>(100,40)</coord2>
+                    <crew>False</crew>
+                    <system>backupBattery</system>
+                    <hasSystem>False</hasSystem>
+                    <doors>
+                        <door0>
+                            [(95,20), (8,4), True]
+                        </door0>
+                        <door1>
+                            [(100,25), (8,9), True]
+                        </door1>
+                        <door2>
+                            [(100,35), (8,9), True]
+                        </door2>
+                        <door3>
+                            [(95,40), (8,15), True]
+                        </door3>
+                    </doors>
+                </room8>
+                <room9>
+                    <coord1>(100,20)</coord1>
+                    <coord2>(120,40)</coord2>
+                    <crew>False</crew>
+                    <system>cloneBay</system>
+                    <hasSystem>True</hasSystem>
+                    <doors>
+                        <door0>
+                            [(100,25), (9,8), True]
+                        </door0>
+                        <door1>
+                            [(100,35), (9,8), True]
+                        </door1>
+                        <door2>
+                            [(120,25), (9,10), True]
+                        </door2>
+                        <door3>
+                            [(120,35), (9,16), True]
+                        </door3>
+                    </doors>
+                </room9>
+                <room10>
+                    <coord1>(120,20)</coord1>
+                    <coord2>(140,30)</coord2>
+                    <crew>False</crew>
+                    <system>doorSystem</system>
+                    <hasSystem>True</hasSystem>
+                    <doors>
+                        <door0>
+                            [(120,25), (10,9), True]
+                        </door0>
+                        <door1>
+                            [(125,30), (10,16), True]
+                        </door1>
+                        <door2>
+                            [(135,30), (10,16), True]
+                        </door2>
+                        <door3>
+                            [(140,25), (10,11), True]
+                        </door3>
+                    </doors>
+                </room10>
+                <room11>
+                    <coord1>(140,20)</coord1>
+                    <coord2>(150,40)</coord2>
+                    <crew>human 0 0 0 0 0 0</crew>
+                    <system>piloting</system>
+                    <hasSystem>True</hasSystem>
+                    <doors>
+                        <door0>
+                            [(140,25), (11,10), True]
+                        </door0>
+                        <door1>
+                            [(140,35), (11,16), True]
+                        </door1>
+                    </doors>
+                </room11>
+                <room12>
+                    <coord1>(10,40)</coord1>
+                    <coord2>(30,50)</coord2>
+                    <crew>False</crew>
+                    <system>hacking</system>
+                    <hasSystem>False</hasSystem>
+                    <doors>
+                        <door0>
+                            [(15,40), (12,5), True]
+                        </door0>
+                        <door1>
+                            [(25,40), (12,6), True]
+                        </door1>
+                    </doors>
+                </room12>
+                <room13>
+                    <coord1>(40,30)</coord1>
+                    <coord2>(60,50)</coord2>
+                    <crew>False</crew>
+                    <system>shields</system>
+                    <hasSystem>True</hasSystem>
+                    <doors>
+                        <door0>
+                            [(40,35), (13,6), True]
+                        </door0>
+                        <door1>
+                            [(60,45), (13,14), True]
+                        </door1>
+                    </doors>
+                </room13>
+                <room14>
+                    <coord1>(60,40)</coord1>
+                    <coord2>(80,50)</coord2>
+                    <crew>False</crew>
+                    <system>False</system>
+                    <hasSystem>False</hasSystem>
+                    <doors>
+                        <door0>
+                            [(60,45), (14,13), True]
+                        </door0>
+                        <door1>
+                            [(65,50), (14,17), True]
+                        </door1>
+                        <door2>
+                            [(75,50), (14,17), True]
+                        </door2>
+                        <door3>
+                            [(80,45), (14,15), True]
+                        </door3>
+                        <door4>
+                            [(75,40), (14,7), True]
+                        </door4>
+                    </doors>
+                </room14>
+                <room15>
+                    <coord1>(80,40)</coord1>
+                    <coord2>(100,50)</coord2>
+                    <crew>False</crew>
+                    <system>mindControl</system>
+                    <hasSystem>False</hasSystem>
+                    <doors>
+                        <door0>
+                            [(80,45), (15,14), True]
+                        </door0>
+                        <door1>
+                            [(95,40), (15,8), True]
+                        </door1>
+                    </doors>
+                </room15>
+                <room16>
+                    <coord1>(120,30)</coord1>
+                    <coord2>(140,40)</coord2>
+                    <crew>False</crew>
+                    <system>sensors</system>
+                    <hasSystem>True</hasSystem>
+                    <doors>
+                        <door0>
+                            [(120,35), (16,9), True]
+                        </door0>
+                        <door1>
+                            [(125,30), (16,10), True]
+                        </door1>
+                        <door2>
+                            [(135,30), (16,10), True]
+                        </door2>
+                        <door3>
+                            [(140,35), (16,11), True]
+                        </door3>
+                    </doors>
+                </room16>
+                <room17>
+                    <coord1>(60,50)</coord1>
+                    <coord2>(80,60)</coord2>
+                    <crew>False</crew>
+                    <system>False</system>
+                    <hasSystem>False</hasSystem>
+                    <doors>
+                        <door0>
+                            [(65,50), (17,14), True]
+                        </door0>
+                        <door1>
+                            [(75,50), (17,14), True]
+                        </door1>
+                        <door2>
+                            [(65,60), (17,-1), True]
+                        </door2>
+                        <door3>
+                            [(75,60), (17,-1), True]
+                        </door3>
+                    </doors>
+                </room17>
+            </rooms>
+        </typeC>
+    </kestrel>
+
+    <engiCruiser>
+        <typeA>
+            <energy>10</energy>
+            <systems> <!-- max power for the systems-->
+                <shields>2</shields>
+                <engines>2</engines>
+                <oxygen>1</oxygen>
+                <weaponControl>3</weaponControl>
+                <droneControl>3</droneControl>
+                <medbay>1</medbay>
+                <piloting>1</piloting>
+                <sensors>1</sensors>
+                <doorSystem>1</doorSystem>
+            </systems>
+            <augmentations>
+                <augmentation0>Engi Med-bot Dispersal</augmentation0>
+                <augmentation1></augmentation1>
+                <augmentation2></augmentation2>
+            </augmentations>
+            <weapons>
+                <weapon0>ionBlastII</weapon0>
+                <weapon1></weapon1>
+                <weapon2></weapon2>
+            </weapons>
+            <drones>
+                <drone0>combat1</drone0>
+                <drone1></drone1>
+                <drone2></drone2>
+            </drones>
+            <rooms>
+                <room0>
+                    <coord1>(0,0)</coord1>
+                    <coord2>(20,20)</coord2>
+                    <crew>False</crew>
+                    <system>droneControl</system>
+                    <hasSystem>True</hasSystem>
+                    <doors>
+                        <door0>
+                            [(15,20), (0,6), True]
+                        </door0>
+                    </doors>
+                </room0>
+                <room1>
+                    <coord1>(30,0)</coord1>
+                    <coord2>(50,10)</coord2>
+                    <crew>False</crew>
+                    <system>False</system>
+                    <hasSystem>False</hasSystem>
+                    <doors>
+                        <door0>
+                            [(35,0), (1,-1), True]
+                        </door0>
+                        <door1>
+                            [(45,0), (1,-1), True]
+                        </door1>
+                        <door2>
+                            [(35,10), (1,4), True]
+                        </door2>
+                        <door3>
+                            [(45,10), (1,4), True]
+                        </door3>
+                    </doors>
+                </room1>
+                <room2>
+                    <coord1>(50,0)</coord1>
+                    <coord2>(60,20)</coord2>
+                    <crew>False</crew>
+                    <system>cloaking</system>
+                    <hasSystem>False</hasSystem>
+                    <doors>
+                        <door0>
+                            [(50,15), (2,4), True]
+                        </door0>
+                        <door1>
+                            [(60,15), (2,5), True]
+                        </door1>
+                    </doors>
+                </room2>
+                <room3>
+                    <coord1>(20,10)</coord1>
+                    <coord2>(30,30)</coord2>
+                    <crew>False</crew>
+                    <system>oxygen</system>
+                    <hasSystem>False</hasSystem>
+                    <doors>
+                        <door0>
+                            [(30,15), (3,4), True]
+                        </door0>
+                        <door1>
+                            [(20,25), (3,6), True]
+                        </door1>
+                    </doors>
+                </room3>
+                <room4>
+                    <coord1>(30,10)</coord1>
+                    <coord2>(50,20)</coord2>
+                    <crew>False</crew>
+                    <system>hacking</system>
+                    <hasSystem>False</hasSystem>
+                    <doors>
+                        <door0>
+                            [(30,15), (3,4), True]
+                        </door0>
+                        <door1>
+                            [(35,10), (1,4), True]
+                        </door1>
+                        <door2>
+                            [(45,10), (1,4), True]
+                        </door2>
+                        <door3>
+                            [(50,15), (2,4), True]
+                        </door3>
+                    </doors>
+                </room4>
+                <room5>
+                    <coord1>(60,10)</coord1>
+                    <coord2>(80,30)</coord2>
+                    <crew>engi 0 0 0 0 0 0</crew>
+                    <system>weaponControl</system>
+                    <hasSystem>True</hasSystem>
+                    <doors>
+                        <door0>
+                            [(60,15), (2,5), True]
+                        </door0>
+                        <door1>
+                            [(65,30), (5,8), True]
+                        </door1>
+                    </doors>
+                </room5>
+                <room6>
+                    <coord1>(10,20)</coord1>
+                    <coord2>(20,40)</coord2>
+                    <crew>False</crew>
+                    <system>backupBattery</system>
+                    <hasSystem>False</hasSystem>
+                    <doors>
+                        <door0>
+                            [(15,20), (0,6), True]
+                        </door0>
+                        <door1>
+                            [(20,25), (3,6), True]
+                        </door1>
+                        <door2>
+                            [(15,40), (6,10), True]
+                        </door2>
+                    </doors>
+                </room6>
+                <room7>
+                    <coord1>(40,30)</coord1>
+                    <coord2>(50,50)</coord2>
+                    <crew>False</crew>
+                    <system>sensors</system>
+                    <hasSystem>True</hasSystem>
+                    <doors>
+                        <door0>
+                            [(50,45), (7,12), True]
+                        </door0>
+                    </doors>
+                </room7>
+                <room8>
+                    <coord1>(60,30)</coord1>
+                    <coord2>(70,50)</coord2>
+                    <crew>False</crew>
+                    <system>crewTeleporter</system>
+                    <hasSystem>False</hasSystem>
+                    <doors>
+                        <door0>
+                            [(60,45), (8,12), True]
+                        </door0>
+                        <door1>
+                            [(65,30), (5,8), True]
+                        </door1>
+                        <door2>
+                            [(65,50), (8,14), True]
+                        </door2>
+                        <door3>
+                            [(70,35), (8,9), True]
+                        </door3>
+                    </doors>
+                </room8>
+                <room9>
+                    <coord1>(70,30)</coord1>
+                    <coord2>(80,50)</coord2>
+                    <crew>False</crew>
+                    <system>False</system>
+                    <hasSystem>False</hasSystem>
+                    <doors>
+                        <door0>
+                            [(70,35), (8,9), True]
+                        </door0>
+                        <door1>
+                            [(80,35), (9,-1), True]
+                        </door1>
+                        <door2>
+                            [(80,45), (9,-1), True]
+                        </door2>
+                    </doors>
+                </room9>
+                <room10>
+                    <coord1>(0,40)</coord1>
+                    <coord2>(20,60)</coord2>
+                    <crew>engi 0 0 0 0 0 0</crew>
+                    <system>engines</system>
+                    <hasSystem>True</hasSystem>
+                    <doors>
+                        <door0>
+                            [(15,40), (6,10), True]
+                        </door0>
+                        <door1>
+                            [(20,55), (10,11), True]
+                        </door1>
+                    </doors>
+                </room10>
+                <room11>
+                    <coord1>(20,40)</coord1>
+                    <coord2>(40,60)</coord2>
+                    <crew>False</crew>
+                    <system>shields</system>
+                    <hasSystem>True</hasSystem>
+                    <doors>
+                        <door0>
+                            [(20,55), (10,11), True]
+                        </door0>
+                        <door1>
+                            [(40,55), (11,13), True]
+                        </door1>
+                    </doors>
+                </room11>
+                <room12>
+                    <coord1>(50,40)</coord1>
+                    <coord2>(60,60)</coord2>
+                    <crew>False</crew>
+                    <system>mindControl</system>
+                    <hasSystem>False</hasSystem>
+                    <doors>
+                        <door0>
+                            [(50,45), (7,12), True]
+                        </door0>
+                        <door1>
+                            [(60,45), (8,12), True]
+                        </door1>
+                        <door2>
+                            [(60,55), (12,14), True]
+                        </door2>
+                    </doors>
+                </room12>
+                <room13>
+                    <coord1>(40,50)</coord1>
+                    <coord2>(50,70)</coord2>
+                    <crew>False</crew>
+                    <system>doorSystem</system>
+                    <hasSystem>True</hasSystem>
+                    <doors>
+                        <door0>
+                            [(40,55), (11,13), True]
+                        </door0>
+                        <door1>
+                            [(45,50), (7,13), True]
+                        </door1>
+                    </doors>
+                </room13>
+                <room14>
+                    <coord1>(60,50)</coord1>
+                    <coord2>(80,70)</coord2>
+                    <crew>False</crew>
+                    <system>medbay</system>
+                    <hasSystem>True</hasSystem>
+                    <doors>
+                        <door0>
+                            [(60,55), (12,14), True]
+                        </door0>
+                        <door1>
+                            [(65,50), (8,14), True]
+                        </door1>
+                        <door2>
+                            [(80,65), (14,15), True]
+                        </door2>
+                    </doors>
+                </room14>
+                <room15>
+                    <coord1>(80,50)</coord1>
+                    <coord2>(90,70)</coord2>
+                    <crew>human 0 0 0 0 0 0</crew>
+                    <system>piloting</system>
+                    <hasSystem>True</hasSystem>
+                    <doors>
+                        <door0>
+                            [(80,65), (14,15), True]
+                        </door0>
+                    </doors>
+                </room15>
+            </rooms>
+        </typeA>
+        <typeB>
+            <energy>9</energy>
+            <systems>
+                <shields>2</shields>
+                <engines>1</engines>
+                <oxygen>1</oxygen>
+                <weaponControl>3</weaponControl>
+                <droneControl>3</droneControl>
+                <medbay>1</medbay>
+                <piloting>1</piloting>
+                <doorSystem>1</doorSystem>
+            </systems>
+            <augmentations>
+                <augmentation0>Drone Reactor Booster</augmentation0>
+                <augmentation1></augmentation1>
+                <augmentation2></augmentation2>
+            </augmentations>
+            <weapons>
+                <weapon0>heavyIon</weapon0>
+                <weapon1>heavyLaserI</weapon1>
+                <weapon2></weapon2>
+            </weapons>
+            <drones>
+                <drone0></drone0>
+                <drone1></drone1>
+                <drone2></drone2>
+            </drones>
+            <rooms>
+                <room0>
+                    <coord1>(0,0)</coord1>
+                    <coord2>(20,20)</coord2>
+                    <crew>False</crew>
+                    <system>engines</system>
+                    <hasSystem>True</hasSystem>
+                    <doors>
+                        <door0>
+                            [(20,15), (0,1), True]
+                        </door0>
+                        <door1>
+                            [(15,20), (0,5), True]
+                        </door1>
+                    </doors>
+                </room0>
+                <room1>
+                    <coord1>(20,10)</coord1>
+                    <coord2>(40,20)</coord2>
+                    <crew>False</crew>
+                    <system>weaponControl</system>
+                    <hasSystem>True</hasSystem>
+                    <doors>
+                        <door0>
+                            [(25,15), (0,1), True]
+                        </door0>
+                        <door1>
+                            [(40,15), (1,2), True]
+                        </door1>
+                    </doors>
+                </room1>
+                <room2>
+                    <coord1>(40,10)</coord1>
+                    <coord2>(60,20)</coord2>
+                    <crew>False</crew>
+                    <system>sensors</system>
+                    <hasSystem>False</hasSystem>
+                    <doors>
+                        <door0>
+                            [(45,15), (1,2), True]
+                        </door0>
+                        <door1>
+                            [(60,15), (2,3), True]
+                        </door1>
+                    </doors>
+                </room2>
+                <room3>
+                    <coord1>(60,10)</coord1>
+                    <coord2>(70,30)</coord2>
+                    <crew>False</crew>
+                    <system>crewTeleporter</system>
+                    <hasSystem>False</hasSystem>
+                    <doors>
+                        <door0>
+                            [(60,15), (2,3), True]
+                        </door0>
+                        <door1>
+                            [(65,30), (3,6), True]
+                        </door1>
+                    </doors>
+                </room3>
+                <room4>
+                    <coord1>(00,20)</coord1>
+                    <coord2>(10,40)</coord2>
+                    <crew>False</crew>
+                    <system>mindControl</system>
+                    <hasSystem>False</hasSystem>
+                    <doors>
+                        <door0>
+                            [(00,25), (-1,4), True]
+                        </door0>
+                        <door1>
+                            [(00,35), (-1,4), True]
+                        </door1>
+                        <door2>
+                            [(10,25), (4,5), True]
+                        </door2>
+                        <door3>
+                            [(10,35), (4,5), True]
+                        </door3>
+                    </doors>
+                </room4>
+                <room5>
+                    <coord1>(10,20)</coord1>
+                    <coord2>(20,40)</coord2>
+                    <crew>False</crew>
+                    <system>oxygen</system>
+                    <hasSystem>True</hasSystem>
+                    <doors>
+                        <door0>
+                            [(15,20), (0,5), True]
+                        </door0>
+                        <door1>
+                            [(10,25), (4,5), True]
+                        </door1>
+                        <door2>
+                            [(10,35), (4,5), True]
+                        </door2>
+                        <door3>
+                            [(15,40), (5,7), True]
+                        </door3>
+                    </doors>
+                </room5>
+                <room6>
+                    <coord1>(60,30)</coord1>
+                    <coord2>(70,50)</coord2>
+                    <crew>False</crew>
+                    <system>medbay</system>
+                    <hasSystem>True</hasSystem>
+                    <doors>
+                        <door0>
+                            [(65,30), (3,6), True]
+                        </door0>
+                        <door1>
+                            [(60,45), (9,6), True]
+                        </door1>
+                        <door2>
+                            [(65,50), (6,12), True]
+                        </door2>
+                    </doors>
+                </room6>
+                <room7>
+                    <coord1>(00,40)</coord1>
+                    <coord2>(20,60)</coord2>
+                    <crew>False</crew>
+                    <system>droneControl</system>
+                    <hasSystem>True</hasSystem>
+                    <doors>
+                        <door0>
+                            [(15,40), (5,7), True]
+                        </door0>
+                        <door1>
+                            [(20,45), (7,8), True]
+                        </door1>
+                    </doors>
+                </room7>
+                <room8>
+                    <coord1>(20,40)</coord1>
+                    <coord2>(40,50)</coord2>
+                    <crew>False</crew>
+                    <system>doorSystem</system>
+                    <hasSystem>True</hasSystem>
+                    <doors>
+                        <door0>
+                            [(20,45), (7,8), True]
+                        </door0>
+                        <door1>
+                            [(25,50), (8,10), True]
+                        </door1>
+                        <door2>
+                            [(35,50), (8,10), True]
+                        </door2>
+                        <door3>
+                            [(40,45), (8,9), True]
+                        </door3>
+                    </doors>
+                </room8>
+                <room9>
+                    <coord1>(40,40)</coord1>
+                    <coord2>(60,50)</coord2>
+                    <crew>False</crew>
+                    <system>hacking</system>
+                    <hasSystem>False</hasSystem>
+                    <doors>
+                        <door0>
+                            [(40,45), (8,9), True]
+                        </door0>
+                        <door1>
+                            [(45,50), (9,11), True]
+                        </door1>
+                        <door2>
+                            [(55,50), (9,11), True]
+                        </door2>
+                        <door3>
+                            [(60,45), (9,7), True]
+                        </door3>
+                    </doors>
+                </room9>
+                <room10>
+                    <coord1>(20,50)</coord1>
+                    <coord2>(40,60)</coord2>
+                    <crew>False</crew>
+                    <system>backupBattery</system>
+                    <hasSystem>False</hasSystem>
+                    <doors>
+                        <door0>
+                            [(25,50), (8,10), True]
+                        </door0>
+                        <door1>
+                            [(35,50), (8,10), True]
+                        </door1>
+                        <door2>
+                            [(25,60), (10,-1), True]
+                        </door2>
+                        <door3>
+                            [(35,60), (10,-1), True]
+                        </door3>
+                    </doors>
+                </room10>
+                <room11>
+                    <coord1>(40,50)</coord1>
+                    <coord2>(60,60)</coord2>
+                    <crew>False</crew>
+                    <system>shields</system>
+                    <hasSystem>True</hasSystem>
+                    <doors>
+                        <door0>
+                            [(45,50), (9,11), True]
+                        </door0>
+                        <door1>
+                            [(55,50), (9,11), True]
+                        </door1>
+                    </doors>
+                </room11>
+                <room12>
+                    <coord1>(60,50)</coord1>
+                    <coord2>(80,60)</coord2>
+                    <crew>False</crew>
+                    <system>cloaking</system>
+                    <hasSystem>False</hasSystem>
+                    <doors>
+                        <door0>
+                            [(65,50), (6,12), True]
+                        </door0>
+                        <door1>
+                            [(80,55), (12,13), True]
+                        </door1>
+                    </doors>
+                </room12>
+                <room13>
+                    <coord1>(80,50)</coord1>
+                    <coord2>(90,70)</coord2>
+                    <crew>engi 0 0 0 0 0 0</crew>
+                    <system>piloting</system>
+                    <hasSystem>True</hasSystem>
+                    <doors>
+                        <door0>
+                            [(80,55), (12,13), True]
+                        </door0>
+                    </doors>
+                </room13>
+            </rooms>
+        </typeB>
+        <typeC>
+            <energy>9</energy>
+            <systems>
+                <shields>2</shields>
+                <engines>2</engines>
+                <oxygen>1</oxygen>
+                <weaponControl>1</weaponControl>
+                <droneControl>2</droneControl>
+                <piloting>1</piloting>
+                <sensors>1</sensors>
+                <doorSystem>1</doorSystem>
+                <cloneBay>1</cloneBay>
+                <hacking>1</hacking>
+            </systems>
+            <augmentations>
+                <augmentation0>Defense Scrambler</augmentation0>
+                <augmentation1></augmentation1>
+                <augmentation2></augmentation2>
+            </augmentations>
+            <weapons>
+                <weapon0>dualLaser</weapon0>
+                <weapon1></weapon1>
+                <weapon2></weapon2>
+            </weapons>
+            <drones>
+                <drone0>beam1</drone0>
+                <drone1></drone1>
+                <drone2></drone2>
+            </drones>
+            <rooms>
+                <room0>
+                    <coord1>(0,0)</coord1>
+                    <coord2>(10,20)</coord2>
+                    <crew>False</crew>
+                    <system>oxygen</system>
+                    <hasSystem>True</hasSystem>
+                    <doors>
+                        <door0>
+                            [(10,15), (0,1), True]
+                        </door0>
+                    </doors>
+                </room0>
+                <room1>
+                    <coord1>(10,00)</coord1>
+                    <coord2>(20,20)</coord2>
+                    <crew>False</crew>
+                    <system>cloaking</system>
+                    <hasSystem>False</hasSystem>
+                    <doors>
+                        <door0>
+                            [(10,15), (0,1), True]
+                        </door0>
+                        <door1>
+                            [(20,15), (1,2), True]
+                        </door1>
+                        <door2>
+                            [(15,20), (1,7), True]
+                        </door2>
+                    </doors>
+                </room1>
+                <room2>
+                    <coord1>(20,00)</coord1>
+                    <coord2>(30,20)</coord2>
+                    <crew>False</crew>
+                    <system>backupBattery</system>
+                    <hasSystem>False</hasSystem>
+                    <doors>
+                        <door0>
+                            [(20,15), (1,2), True]
+                        </door0>
+                        <door1>
+                            [(30,15), (2,3), True]
+                        </door1>
+                        <door2>
+                            [(25,00), (2,-1), True]
+                        </door2>
+                        <door3>
+                            [(25,20), (2,7), True]
+                        </door3>
+                    </doors>
+                </room2>
+                <room3>
+                    <coord1>(30,00)</coord1>
+                    <coord2>(40,20)</coord2>
+                    <crew>False</crew>
+                    <system>mindControl</system>
+                    <hasSystem>False</hasSystem>
+                    <doors>
+                        <door0>
+                            [(30,15), (2,3), True]
+                        </door0>
+                        <door1>
+                            [(40,15), (3,4), True]
+                        </door1>
+                        <door2>
+                            [(35,00), (3,-1), True]
+                        </door2>
+                    </doors>
+                </room3>
+                <room4>
+                    <coord1>(40,00)</coord1>
+                    <coord2>(50,20)</coord2>
+                    <crew>False</crew>
+                    <system>crewTeleporter</system>
+                    <hasSystem>False</hasSystem>
+                    <doors>
+                        <door0>
+                            [(40,15), (3,4), True]
+                        </door0>
+                        <door1>
+                            [(50,15), (4,5), True]
+                        </door1>
+                        <door2>
+                            [(45,00), (4,-1), True]
+                        </door2>
+                    </doors>
+                </room4>
+                <room5>
+                    <coord1>(50,00)</coord1>
+                    <coord2>(60,20)</coord2>
+                    <crew>False</crew>
+                    <system>hacking</system>
+                    <hasSystem>True</hasSystem>
+                    <doors>
+                        <door0>
+                            [(50,15), (4,5), True]
+                        </door0>
+                        <door1>
+                            [(60,15), (5,6), True]
+                        </door1>
+                    </doors>
+                </room5>
+                <room6>
+                    <coord1>(60,00)</coord1>
+                    <coord2>(80,30)</coord2>
+                    <crew>engi 0 0 0 0 0 0</crew>
+                    <system>weaponControl</system>
+                    <hasSystem>True</hasSystem>
+                    <doors>
+                        <door0>
+                            [(60,15), (5,6), True]
+                        </door0>
+                        <door1>
+                            [(65,30), (6,9), True]
+                        </door1>
+                    </doors>
+                </room6>
+                <room7>
+                    <coord1>(10,20)</coord1>
+                    <coord2>(30,40)</coord2>
+                    <crew>False</crew>
+                    <system>droneControl</system>
+                    <hasSystem>True</hasSystem>
+                    <doors>
+                        <door0>
+                            [(15,20), (1,7), True]
+                        </door0>
+                        <door1>
+                            [(25,20), (2,7), True]
+                        </door1>
+                        <door2>
+                            [(30,34), (7,-1), True]
+                        </door2>
+                        <door3>
+                            [(25,40), (7,11), True]
+                        </door3>
+                    </doors>
+                </room7>
+                <room8>
+                    <coord1>(40,30)</coord1>
+                    <coord2>(60,50)</coord2>
+                    <crew>False</crew>
+                    <system>shields</system>
+                    <hasSystem>True</hasSystem>
+                    <doors>
+                        <door0>
+                            [(40,45), (8,11), True]
+                        </door0>
+                        <door1>
+                            [(60,45), (8,9), True]
+                        </door1>
+                    </doors>
+                </room8>
+                <room9>
+                    <coord1>(60,30)</coord1>
+                    <coord2>(70,50)</coord2>
+                    <crew>False</crew>
+                    <system>False</system>
+                    <hasSystem>False</hasSystem>
+                    <doors>
+                        <door0>
+                            [(65,30), (6,9), True]
+                        </door0>
+                        <door1>
+                            [(60,45), (8,9), True]
+                        </door1>
+                    </doors>
+                </room9>
+                <room10>
+                    <coord1>(20,50)</coord1>
+                    <coord2>(40,60)</coord2>
+                    <crew>engi 0 0 0 0 0 0</crew>
+                    <system>engines</system>
+                    <hasSystem>True</hasSystem>
+                    <doors>
+                        <door0>
+                            [(10,55), (10,12), True]
+                        </door0>
+                    </doors>
+                </room10>
+                <room11>
+                    <coord1>(20,40)</coord1>
+                    <coord2>(40,50)</coord2>
+                    <crew>False</crew>
+                    <system>cloneBay</system>
+                    <hasSystem>True</hasSystem>
+                    <doors>
+                        <door0>
+                            [(25,40), (7,11), True]
+                        </door0>
+                        <door1>
+                            [(40,45), (8,11), True]
+                        </door1>
+                        <door2>
+                            [(25,50), (11,12), True]
+                        </door2>
+                    </doors>
+                </room11>
+                <room12>
+                    <coord1>(10,50)</coord1>
+                    <coord2>(30,60)</coord2>
+                    <crew>False</crew>
+                    <system>False</system>
+                    <hasSystem>False</hasSystem>
+                    <doors>
+                        <door0>
+                            [(10,55), (10,12), True]
+                        </door0>
+                        <door1>
+                            [(25,50), (11,12), True]
+                        </door1>
+                        <door2>
+                            [(30,55), (12,13), True]
+                        </door2>
+                    </doors>
+                </room12>
+                <room13>
+                    <coord1>(30,50)</coord1>
+                    <coord2>(50,60)</coord2>
+                    <crew>False</crew>
+                    <system>sensors</system>
+                    <hasSystem>True</hasSystem>
+                    <doors>
+                        <door0>
+                            [(30,55), (12,13), True]
+                        </door0>
+                        <door1>
+                            [(45,60), (13,14), True]
+                        </door1>
+                    </doors>
+                </room13>
+                <room14>
+                    <coord1>(40,60)</coord1>
+                    <coord2>(60,70)</coord2>
+                    <crew>False</crew>
+                    <system>False</system>
+                    <hasSystem>False</hasSystem>
+                    <doors>
+                        <door0>
+                            [(45,60), (13,14), True]
+                        </door0>
+                        <door1>
+                            [(55,70), (14,-1), True]
+                        </door1>
+                        <door2>
+                            [(60,65), (14,15), True]
+                        </door2>
+                    </doors>
+                </room14>
+                <room15>
+                    <coord1>(60,60)</coord1>
+                    <coord2>(80,70)</coord2>
+                    <crew>False</crew>
+                    <system>doorSystem</system>
+                    <hasSystem>True</hasSystem>
+                    <doors>
+                        <door0>
+                            [(60,65), (14,15), True]
+                        </door0>
+                        <door1>
+                            [(80,65), (15,16), True]
+                        </door1>
+                    </doors>
+                </room15>
+                <room16>
+                    <coord1>(80,50)</coord1>
+                    <coord2>(90,70)</coord2>
+                    <crew>lanius 0 0 0 0 0 0</crew>
+                    <system>piloting</system>
+                    <hasSystem>True</hasSystem>
+                    <doors>
+                        <door0>
+                            [(80,65), (15,16), True]
+                        </door0>
+                    </doors>
+                </room16>
+            </rooms>
+        </typeC>
+    </engiCruiser>
+    <mantis>
+        <typeA>
+            <energy>7</energy>
+            <systems>
+                <shields>2</shields>
+                <engines>2</engines>
+                <oxygen>1</oxygen>
+                <weaponControl>1</weaponControl>
+                <medbay>1</medbay>
+                <piloting>1</piloting>
+                <doorSystem>1</doorSystem>
+                <crewTeleporter>1</crewTeleporter>
+            </systems>
+            <augmentations>
+                <augmentation0>Mantis Pheromones</augmentation0>
+                <augmentation1></augmentation1>
+                <augmentation2></augmentation2>
+            </augmentations>
+            <weapons>
+                <weapon0>SBomb</weapon0>
+                <weapon1>basicLaser</weapon1>
+                <weapon2></weapon2>
+            </weapons>
+            <drones>
+                <drone0></drone0>
+                <drone1></drone1>
+                <drone2></drone2>
+            </drones>
+            <rooms>
+                <room0>
+                    <coord1>(0,0)</coord1>
+                    <coord2>(20,20)</coord2>
+                    <crew>mantis 0 0 0 0 0 0</crew>
+                    <system>weaponControl</system>
+                    <hasSystem>True</hasSystem>
+                    <doors>
+                        <door0>
+                            [(15,20), (0,2), True]
+                        </door0>
+                    </doors>
+                </room0>
+                <room1>
+                    <coord1>(20,10)</coord1>
+                    <coord2>(40,20)</coord2>
+                    <crew>False</crew>
+                    <system>doorSystem</system>
+                    <hasSystem>True</hasSystem>
+                    <doors>
+                        <door0>
+                            [(25,20), (1,2), True]
+                        </door0>
+                    </doors>
+                </room1>
+                <room2>
+                    <coord1>(10,20)</coord1>
+                    <coord2>(30,40)</coord2>
+                    <crew>False</crew>
+                    <system>mindControl</system>
+                    <hasSystem>False</hasSystem>
+                    <doors>
+                        <door0>
+                            [(15,20), (0,2), True]
+                        </door0>
+                        <door1>
+                            [(25,20), (1,2), True]
+                        </door1>
+                        <door2>
+                            [(25,40), (2,7), True]
+                        </door2>
+                    </doors>
+                </room2>
+                <room3>
+                    <coord1>(80,20)</coord1>
+                    <coord2>(100,40)</coord2>
+                    <crew>False</crew>
+                    <system>medbay</system>
+                    <hasSystem>True</hasSystem>
+                    <doors>
+                        <door0>
+                            [(100,35), (3,5), True]
+                        </door0>
+                        <door1>
+                            [(95,40), (3,11), True]
+                        </door1>
+                    </doors>
+                </room3>
+                <room4>
+                    <coord1>(40,00)</coord1>
+                    <coord2>(50,20)</coord2>
+                    <crew>False</crew>
+                    <system>False</system>
+                    <hasSystem>False</hasSystem>
+                    <doors>
+                        <door0>
+                            [(55,30), (4,-1), True]
+                        </door0>
+                        <door1>
+                            [(65,30), (4,-1), True]
+                        </door1>
+                        <door2>
+                            [(55,40), (4,9), True]
+                        </door2>
+                        <door3>
+                            [(65,40), (4,10), True]
+                        </door3>
+                    </doors>
+                </room4>
+                <room5>
+                    <coord1>(100,30)</coord1>
+                    <coord2>(120,40)</coord2>
+                    <crew>False</crew>
+                    <system>droneControl</system>
+                    <hasSystem>False</hasSystem>
+                    <doors>
+                        <door0>
+                            [(100,35), (3,5), True]
+                        </door0>
+                    </doors>
+                </room5>
+                <room6>
+                    <coord1>(10,40)</coord1>
+                    <coord2>(20,60)</coord2>
+                    <crew>False</crew>
+                    <system>False</system>
+                    <hasSystem>False</hasSystem>
+                    <doors>
+                        <door0>
+                            [(10,45), (6,-1), True]
+                        </door0>
+                        <door1>
+                            [(20,45), (6,7), True]
+                        </door1>
+                        <door2>
+                            [(10,55), (6,-1), True]
+                        </door2>
+                        <door3>
+                            [(20,55), (6,7), True]
+                        </door3>
+                    </doors>
+                </room6>
+                <room7>
+                    <coord1>(20,40)</coord1>
+                    <coord2>(40,60)</coord2>
+                    <crew>mantis 0 0 0 0 0 0</crew>
+                    <system>engines</system>
+                    <hasSystem>True</hasSystem>
+                    <doors>
+                        <door0>
+                            [(25,40), (2,7), True]
+                        </door0>
+                        <door1>
+                            [(20,45), (6,7), True]
+                        </door1>
+                        <door2>
+                            [(40,45), (7,8), True]
+                        </door2>
+                        <door3>
+                            [(20,55), (6,7), True]
+                        </door3>
+                        <door4>
+                            [(25,40), (7,12), True]
+                        </door4>
+                    </doors>
+                </room7>
+                <room8>
+                    <coord1>(40,40)</coord1>
+                    <coord2>(50,60)</coord2>
+                    <crew>False</crew>
+                    <system>False</system>
+                    <hasSystem>False</hasSystem>
+                    <doors>
+                        <door0>
+                            [(40,45), (7,8), True]
+                        </door0>
+                        <door1>
+                            [(50,55), (8,9), True]
+                        </door1>
+                    </doors>
+                </room8>
+                <room9>
+                    <coord1>(50,40)</coord1>
+                    <coord2>(60,60)</coord2>
+                    <crew>mantis 0 0 0 0 0 0</crew>
+                    <system>piloting</system>
+                    <hasSystem>True</hasSystem>
+                    <doors>
+                        <door0>
+                            [(55,40), (4,9), True]
+                        </door0>
+                        <door1>
+                            [(50,55), (8,9), True]
+                        </door1>
+                        <door2>
+                            [(55,60), (9,13), True]
+                        </door2>
+                    </doors>
+                </room9>
+                <room10>
+                    <coord1>(60,40)</coord1>
+                    <coord2>(80,60)</coord2>
+                    <crew>False</crew>
+                    <system>cloaking</system>
+                    <hasSystem>False</hasSystem>
+                    <doors>
+                        <door0>
+                            [(65,40), (4,10), True]
+                        </door0>
+                        <door1>
+                            [(80,45), (10,11), True]
+                        </door1>
+                        <door2>
+                            [(65,60), (10,13), True]
+                        </door2>
+                    </doors>
+                </room10>
+                <room11>
+                    <coord1>(80,40)</coord1>
+                    <coord2>(100,60)</coord2>
+                    <crew>False</crew>
+                    <system>backupBattery</system>
+                    <hasSystem>False</hasSystem>
+                    <doors>
+                        <door0>
+                            [(95,40), (3,11), True]
+                        </door0>
+                        <door1>
+                            [(80,45), (10,11), True]
+                        </door1>
+                        <door2>
+                            [(95,60), (11,14), True]
+                        </door2>
+                    </doors>
+                </room11>
+                <room12>
+                    <coord1>(10,60)</coord1>
+                    <coord2>(30,80)</coord2>
+                    <crew>False</crew>
+                    <system>hacking</system>
+                    <hasSystem>False</hasSystem>
+                    <doors>
+                        <door0>
+                            [(25,40), (7,12), True]
+                        </door0>
+                        <door1>
+                            [(15,80), (12,16), True]
+                        </door1>
+                        <door2>
+                            [(25,80), (12,17), True]
+                        </door2>
+                    </doors>
+                </room12>
+                <room13>
+                    <coord1>(50,60)</coord1>
+                    <coord2>(70,70)</coord2>
+                    <crew>False</crew>
+                    <system>False</system>
+                    <hasSystem>False</hasSystem>
+                    <doors>
+                        <door0>
+                            [(55,60), (9,13), True]
+                        </door0>
+                        <door1>
+                            [(65,60), (10,13), True]
+                        </door1>
+                        <door2>
+                            [(55,70), (13,-1), True]
+                        </door2>
+                        <door3>
+                            [(65,70), (13,-1), True]
+                        </door3>
+                    </doors>
+                </room13>
+                <room14>
+                    <coord1>(80,60)</coord1>
+                    <coord2>(100,80)</coord2>
+                    <crew>False</crew>
+                    <system>oxygen</system>
+                    <hasSystem>True</hasSystem>
+                    <doors>
+                        <door0>
+                            [(95,60), (11,14), True]
+                        </door0>
+                        <door1>
+                            [(100,65), (14,15), True]
+                        </door1>
+                    </doors>
+                </room14>
+                <room15>
+                    <coord1>(100,60)</coord1>
+                    <coord2>(120,70)</coord2>
+                    <crew>False</crew>
+                    <system>crewTeleporter</system>
+                    <hasSystem>True</hasSystem>
+                    <doors>
+                        <door0>
+                            [(100,65), (14,15), True]
+                        </door0>
+                    </doors>
+                </room15>
+                <room16>
+                    <coord1>(00,80)</coord1>
+                    <coord2>(20,100)</coord2>
+                    <crew>engi 0 0 0 0 0 0</crew>
+                    <system>shields</system>
+                    <hasSystem>True</hasSystem>
+                    <doors>
+                        <door0>
+                            [(15,80), (12,16), True]
+                        </door0>
+                    </doors>
+                </room16>
+                <room17>
+                    <coord1>(20,80)</coord1>
+                    <coord2>(40,90)</coord2>
+                    <crew>False</crew>
+                    <system>sensors</system>
+                    <hasSystem>False</hasSystem>
+                    <doors>
+                        <door0>
+                            [(25,80), (12,17), True]
+                        </door0>
+                    </doors>
+                </room17>
+            </rooms>
+        </typeA>
+    </mantis>
+</ship>

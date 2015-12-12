@@ -1,0 +1,88 @@
+from expertSystem import *
+
+
+def multipleOptimization(maxCost, nbCombats, sizeFirstPopulation, nbInitGeneticAlgo=1):
+    """
+    Takes a lot of time to do multiple techniques to determine the best
+    """
+    nbChampions = sizeFirstPopulation//3
+    if nbChampions < 2:
+        nbChampions = 2
+    hallOfFame, hallOfShame, oldChampions = [], [], []
+    for _ in range(nbInitGeneticAlgo):
+        gAlgo = autoStopGeneticAlgorithm(sizeFirstPopulation, maxCost, nbCombats, nbChampions=nbChampions)
+        hallOfFame += gAlgo[0]
+        hallOfShame += gAlgo[1]
+        oldChampions += [gAlgo[2]]
+
+    bestFeaturesF = getBestFeatures(buildLCMInputFile(hallOfFame))
+    worstFeaturesF = getBestFeatures(buildLCMInputFile(hallOfShame))
+    newShips = hallOfFame[:]
+
+    newShips += expertSystem(bestFeaturesF, worstFeaturesF, maxCost, len(hallOfFame), len(hallOfShame), oldChampions,
+                             nbChampions)
+    # shuffle(newShips)
+    # nbFinalGA = 2
+    # nbNewShips = len(newShips)
+    # newShipsFinal = []
+    # for nbGA in range(nbFinalGA):
+    #     index1 = nbGA * (nbNewShips//nbFinalGA)
+    #     index2 = (nbGA + 1) * (nbNewShips // nbFinalGA)
+    #     if nbGA == nbFinalGA - 1:
+    #         index2 = nbNewShips
+    #     newShipsFinal += autoStopGeneticAlgorithm(len(newShips[index1:index2]), maxCost, nbCombats,
+    #                                               initChampions=newShips[index1:index2])[0]
+    # return autoStopGeneticAlgorithm(len(newShips), maxCost, nbCombats, initChampions=newShips)[0]
+    finalTournament = tournament(newShips, nbCombats)
+    bestIndividual = newShips[0]
+    for k in finalTournament:
+        if finalTournament[k] > finalTournament[bestIndividual]:
+            bestIndividual = k
+    return bestIndividual
+
+
+def expertSystem(bestFeaturesF, worstFeaturesF, maxCost, nbChampions, nbNoobs, oldChampions, nbChampionsPerTurn):
+    uniqueBestFeatures = bestFeaturesNotInWorstFeatures(bestFeaturesF, worstFeaturesF, nbChampions, nbNoobs)
+    # dominantFeatures = bestFeaturesFromGrowthRate(oldChampions, nbChampionsPerTurn)
+
+    newShips = []
+
+    ships = {'kestrel': ['typeA', 'typeB', 'typeC'],
+             'engiCruiser': ['typeA']}
+
+    with open(uniqueBestFeatures) as bF:
+        for line in bF:
+            for s in ships:
+                for t in ships[s]:
+                    nameN = s
+                    typeN = t
+                    systemsUpgrades, weaponsP, dronesP, energyP = addingToShipFromLCMLine(line, nameN, typeN)
+                    newShips += [createRandomShip(maxCost,
+                                                  nameShip=nameN, typeShip=typeN,
+                                                  systemsUpgradesWanted=systemsUpgrades,
+                                                  weaponsWanted=weaponsP,
+                                                  dronesWanted=dronesP,
+                                                  energyWanted=energyP)]
+    # with open(dominantFeatures) as bF:
+    #     for line in bF:
+    #         for s in ships:
+    #             for t in ships[s]:
+    #                 nameN = s
+    #                 typeN = t
+    #                 systemsUpgrades, weaponsP, dronesP, energyP = addingToShipFromLCMLine(line, nameN, typeN)
+    #                 newShips += [createRandomShip(maxCost,
+    #                                               nameShip=nameN, typeShip=typeN,
+    #                                               systemsUpgradesWanted=systemsUpgrades,
+    #                                               weaponsWanted=weaponsP,
+    #                                               dronesWanted=dronesP,
+    #                                               energyWanted=energyP)]
+
+    return newShips
+
+
+def createSubjectivGoodShip():
+    return 0
+
+
+if __name__ == '__main__':
+    print(multipleOptimization(500, 4, 4, nbInitGeneticAlgo=3))

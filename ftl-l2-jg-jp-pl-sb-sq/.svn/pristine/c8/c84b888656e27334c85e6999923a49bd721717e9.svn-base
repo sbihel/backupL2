@@ -1,0 +1,14 @@
+<ship>
+  <name>kestrel</name>
+  <type>B</type>
+  <add>
+    <energy>5</energy>
+    <system>
+      <shields>4</shields>
+      <droneControl>1</droneControl>
+      <cloaking>2</cloaking>
+      <piloting>1</piloting>
+    </system>
+  </add>
+  <cost>500</cost>
+</ship>

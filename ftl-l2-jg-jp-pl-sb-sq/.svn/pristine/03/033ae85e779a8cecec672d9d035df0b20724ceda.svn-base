@@ -1,0 +1,9 @@
+	\chapter{Introduction}
+	
+	FTL : Faster than Light (\url{http://www.ftlgame.com/}) est un jeu de science fiction de Subset Games pour PC, mélangeant la gestion, la stratégie et le jeu de rôle à bord d'un vaisseau spatial. Le joueur a pour objectif de conduire son vaisseau d'un point A à un point B de la galaxie, tout en faisant face aux multiples situations qui se présentent à lui aléatoirement. Il doit ainsi survivre face à de nombreux événements : affronter des adversaires, négocier avec d'autres vaisseaux, échanger des ressources, etc. Le but est donc de rester le plus longtemps en vie pour aller le plus loin possible dans l'espace. Ainsi, le principe primaire du jeu est de s'adapter à un environnement hostile en optimisant son vaisseau, ses équipements (tels que des drônes ou de nombreuses armes), et son équipage qui est composé de plusieurs races possédant chacune des avantages et des inconvénients.
+	
+	
+	Au cours du premier semestre, nous avons réussi à réaliser un moteur de combat qui, même s'il n'est pas complet, se rapproche du jeu original, ce qui nous permet maintennt de finaliser notre projet : optimiser la recherche d'un vaisseau meilleur que les autres.
+	
+	
+	L'objectif de ce semestre est donc de faire un programme qui determine le meilleur vaisseau pour un coût maximal donné. Pour cela, on peut séparer le programme en deux parties : faire un générateur de vaisseaux selon le coût et faire un algorithme qui determine le meilleur vaisseau.

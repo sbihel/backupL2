@@ -1,0 +1,17 @@
+\chapter{Conclusion}
+
+	\section{Le travail effectué}
+		Au cours du premier semestre, nous avons réussi à réaliser un moteur de combat qui, même s'il n'est pas complet, se rapproche du jeu original, ce qui nous permettra de finaliser notre projet : optimiser la recherche d'un vaisseau meilleur que les autres.
+			
+			\section{L'avenir du projet}
+		Notre programme, même s'il fonctionne, pourra être amélioré. En effet, vérifier à chaque tour les différents cooldowns prend du temps. On pourrait donc réfléchir à faire un système de liste d'évènements.
+
+		Cependant, mise à part l'envie de rendre le moteur de combat encore plus complet, au second semestre il faudra arriver à un programme qui pourra determiner le meilleur vaisseau de chaque catégorie.\\
+		Pour cela il faudra d'abord dévolopper un générateur de vaisseaux qui rende la création de vaisseaux aisée et automatique.\\
+		Ensuite il faudra appliquer des algorithmes d'optimisation qui nous permettront d'arriver à notre but. Ainsi nous pourrons envisager plusieurs pistes :
+		
+		\begin{itemize}
+			\item Etablir arbitrairement des règles d'optimisation pour un vaisseau		
+			\item Utiliser des systèmes experts afin de générer une intelligence artificielle qui pourra préférer tel équipement dans tel cas, optimiser l'utilisation des énergies des vaisseaux, ne pas avoir telle arme si elle est inutilisable, etc
+			\item Utiliser un système d'algorithme génétique qui nous permettra de conserver les vaisseaux gagnants, et de les combiner pour qu'ils soient plus performants.
+		\end{itemize}

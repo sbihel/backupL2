@@ -1,0 +1,25 @@
+\chapter{Concepts à maîtriser}
+
+Pour comprendre le travail effectué au cours de ce semestre, il faut d'abord faire un rappel sur le jeu. Ensuite, nous pourrons présenter de façon générale les différents algorithmes d'optimisation et de data mining.
+
+
+	\section{Le jeu}
+	
+	Rappel sur le fonctionnement du jeu, et notre travail du premier semestre.
+	
+
+	\section{Determiner le meilleur vaisseau}
+
+	Introduction sur la logique derriere les algorithmes utilises
+
+		\subsection{Algorithme génétique}
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=1\linewidth]{geneticalgorithm.pdf}
+		\end{figure}
+		
+		\subsection{Système expert}
+		
+		A partir de deux groupe de vaisseaux, un qui correspond aux meilleurs vaisseaux et un pour le reste des vaisseaux, du data mining est effectué pour extraire les caractéristiques communes aux seins des deux groupes.
+		Le système expert extrait les caractéristiques qui se retrouvent souvent dans les meilleurs vaisseaux et peu dans les perdants.

@@ -1,0 +1,371 @@
+from copy import deepcopy
+from globalVar import *
+from math import sqrt
+
+
+class CrewMember(object):
+    """
+    Class which allow you to monitor each crewman.
+    """
+
+    def __init__(self, listInfos, room, ship):
+        """
+        @param room: Room in which is the crewman.
+        @type room: Object of the class Room.
+        """
+        self.__lvlPiloting = listInfos[1]
+        self.__lvlEngines = listInfos[2]
+        self.__lvlShields = listInfos[3]
+        self.__lvlWeaponControl = listInfos[4]
+        self.__lvlRepair = listInfos[5]
+        self.__lvlCombat = listInfos[6]
+        self.__race = listInfos[0]
+
+        if self.__race == 'rockman':
+            self.__hp = 150
+        elif self.__race == 'zoltan':
+            self.__hp = 70
+        elif self.__race == 'crystal':
+            self.__hp = 125
+        else:
+            self.__hp = 100
+        if self.__race == 'mantis':
+            self.__movement = 1.2
+        elif self.__race == 'rockman':
+            self.__movement = 0.5
+        elif self.__race == 'crystal' or self.__race == 'lanius':
+            self.__movement = 0.8
+        else:
+            self.__movement = 1
+
+        self.__ship = ship
+
+        self.__room = room
+        self.__position = (self.__room.getCoords()[0][0]+5, self.__room.getCoords()[0][1]+5)
+            #a box is 10x10 and a crewman is 6x6, in the center of the box for the initialisation
+        self.initPosition()
+        self.__isInMovement = False
+
+        self.__roomGoal = None
+        self.__coordsGoal = None
+
+    def initPosition(self):
+        room = self.__room.getNB()
+        while self.goToRoom(room) is False:
+            room = (room + 1) % len(self.__ship.getRooms())
+
+    def __repr__(self):
+        return 'Race : ' + self.__race + ' HP : ' + str(int(self.__hp)) + '  Room : ' + str(self.__room.getNB()) + \
+               '\nLvls : ' + \
+               'Piloting:' + str(round(self.__lvlPiloting, 2)) + \
+               ' Engines:' + str(round(self.__lvlEngines, 2)) + \
+               ' Shields:' + str(round(self.__lvlShields, 2)) + \
+               ' Weapons:' + str(round(self.__lvlWeaponControl, 2)) + \
+               ' Repair:' + str(round(self.__lvlRepair, 2)) + \
+               ' Combat:' + str(round(self.__lvlCombat, 2))
+
+    def getLvlPiloting(self):
+        return int(self.__lvlPiloting)
+
+    def getLvlEngines(self):
+        return int(self.__lvlEngines)
+
+    def getLvlShields(self):
+        return int(self.__lvlShields)
+
+    def getLvlWeaponControl(self):
+        return int(self.__lvlWeaponControl)
+
+    def getLvlRepair(self):
+        return int(self.__lvlRepair)
+
+    def getLvlCombat(self):
+        return int(self.__lvlCombat)
+
+    def getRace(self):
+        return self.__race
+
+    def getRoom(self):
+        return self.__room
+
+    def setRoom(self, room):
+        self.__room = room
+
+    def getHP(self):
+        return self.__hp
+
+    def getPosition(self):
+        return self.__position
+
+    def isInMovement(self):
+        return self.__isInMovement
+
+    def goToRoom(self, nb):
+        otherRoom = self.__ship.getRooms()[nb]
+        numberPersonInOtherRoom = 0
+        for k in self.__ship.getCrew():
+            if not k.isInMovement() and k.getRoom().getNB() == nb:
+                numberPersonInOtherRoom += 1
+            if k.isInMovement() and k.getRoomGoal() == nb:
+                numberPersonInOtherRoom += 1
+        if numberPersonInOtherRoom < otherRoom.getNbBoxes():
+            otherRoomCoords = otherRoom.getCoords()
+            if otherRoom.getSystem() == 'medbay' and self.__ship.hasSystem('medbay'):
+                if numberPersonInOtherRoom == 0:
+                    self.setInMovement(nb, [otherRoomCoords[0][0]+5, otherRoomCoords[0][1]+5])
+                elif numberPersonInOtherRoom == 1:
+                    self.setInMovement(nb, [otherRoomCoords[0][0]+5, otherRoomCoords[0][1]+15])
+                elif numberPersonInOtherRoom == 2:
+                    self.setInMovement(nb, [otherRoomCoords[0][0]+15, otherRoomCoords[0][1]+15])
+            elif otherRoom.getNbBoxes() == 4:
+                if numberPersonInOtherRoom == 0:
+                    self.setInMovement(nb, [otherRoomCoords[0][0]+5, otherRoomCoords[0][1]+5])
+                elif numberPersonInOtherRoom == 1:
+                    self.setInMovement(nb, [otherRoomCoords[0][0]+15, otherRoomCoords[0][1]+5])
+                elif numberPersonInOtherRoom == 2:
+                    self.setInMovement(nb, [otherRoomCoords[0][0]+5, otherRoomCoords[0][1]+15])
+                elif numberPersonInOtherRoom == 3:
+                    self.setInMovement(nb, [otherRoomCoords[0][0]+15, otherRoomCoords[0][1]+15])
+            elif otherRoomCoords[0][0] == otherRoomCoords[1][0] + 10:  # vertical room
+                self.setInMovement(nb, [otherRoomCoords[0][0]+5, otherRoomCoords[0][1]+5 + numberPersonInOtherRoom*10])
+            else:
+                self.setInMovement(nb, [otherRoomCoords[0][0]+5 + numberPersonInOtherRoom*10, otherRoomCoords[0][1]+5])
+        else:
+            return False
+
+    def setInMovement(self, nb, coords):
+        self.__isInMovement = True
+        self.__roomGoal = nb
+        self.__coordsGoal = tuple(coords)
+
+    def getRoomGoal(self):
+        return self.__roomGoal
+
+    def getCoordsGoal(self):
+        return self.__coordsGoal
+
+    def movementAI(self):
+        """
+        Determine if the crewman should go to another room. If so, it put the crewman in movement.
+        """
+        rooms = self.__ship.getRooms()
+        ptsRooms = []
+        for k in rooms:
+            p = 0
+            if k.getSystem() is not False:
+                crewInIt = [c for c in self.__ship.getCrew() if c.getRoom() == k]
+                system = self.__ship.getSystem(k.getSystem())
+                if len(crewInIt) == 0:
+                    p += self.manningPointsAI(k) + 20 * (system.getMaxPower() - system.getCurrentMaxPower())
+                else:
+                    p += 20 * (system.getMaxPower() - system.getCurrentMaxPower())
+            if not self.goToRoom(k.getNB()):
+                p -= self.fastestWay(self.__ship.getGraph()[:], self.__position, self.__room)[1] / 15
+            p += 40 * (k.getFire() + k.getBreach())
+            ptsRooms += [p]
+
+        maxi = [i for i in range(len(ptsRooms)) if ptsRooms[i] == max(ptsRooms)][0]
+        while self.goToRoom(maxi) is False:
+            ptsRooms[maxi] = -1000
+            maxi = [i for i in range(len(ptsRooms)) if ptsRooms[i] == max(ptsRooms)][0]
+
+    def manningPointsAI(self, room):
+        """
+        Evaluate the importance of manning the system in the room.
+        @param room: Room where is the system that we want to evaluate.
+        @type room: Object of the class Room.
+        @return: The points associated with the importance of manning the system.
+        @rtype: Integer.
+        """
+        d = {'piloting': 22, 'engines': 18, 'weaponControl': 16, 'shields': 14, 'doorSystem': 12, 'sensors': 10}
+        if room.getSystem() in d:
+            return d[room.getSystem()]
+        return 8
+
+    def continueMovement(self):
+        """
+        At each tick of the clock this function is called to monitor the travel of the crewman.
+        """
+        if self.__roomGoal == self.__room.getNB():
+            self.moveTo(self.__coordsGoal)
+            self.__isInMovement = not (self.__position == self.__coordsGoal)
+        else:
+            bestWay = self.fastestWay(self.__ship.getGraph()[:], self.__position, self.__room)[0]
+            self.moveTo(bestWay.getPosition())
+            if self.__position == bestWay.getPosition():
+                if bestWay.getLink()[0] == self.__room.getNB():
+                    indexOtherRoom = bestWay.getLink()[1]
+                else:
+                    indexOtherRoom = bestWay.getLink()[0]
+                self.__room = self.__ship.getRooms()[indexOtherRoom]
+        # The crewman can move on of a certain value, if he arrives to the door but haven't used all his value
+        # of movement, we'll say it replaces the time for the door to open
+
+    def determineFastestWay(self, graph, position, currentRoom):
+        """
+        The crewman is already set to go to a certain room/position and this function determine the fastest way.
+        """
+        if self.__roomGoal == currentRoom.getNB():
+            return None, sqrt((self.__coordsGoal[0] - position[0])**2 + (self.__coordsGoal[1] - position[1])**2)
+        fastestWay = None
+        if not graph[currentRoom.getNB()]:
+            return None, 1000
+        for k in graph[currentRoom.getNB()]:
+            otherRoom = self.__ship.getRooms()[k[0]]
+            newGraph = [[j[:] for j in i if currentRoom.getNB() not in j] for i in graph]
+            afterDoor = self.determineFastestWay(newGraph, k[1], otherRoom)
+            doors = [d for d in currentRoom.getDoors() if k[0] in d.getLink()]
+            closestDoor = [sqrt((i.getPosition()[0] - self.__position[0])**2
+                                + (i.getPosition()[1] - self.__position[1])**2) for i in doors]
+            maxi = [i for i in range(len(closestDoor)) if closestDoor[i] == min(closestDoor)][0]
+            distanceToDoor = min(closestDoor)
+            totalDistance = afterDoor[1] + distanceToDoor
+            if fastestWay is None or fastestWay[1] > totalDistance:
+                fastestWay = (doors[maxi], totalDistance)
+        return fastestWay
+
+    def fastestWay(self, graph, position, currentRoom):
+        f = self.__ship.getFastestWay()
+        if f[currentRoom.getNB()][self.__roomGoal] is None or None in f[currentRoom.getNB()][self.__roomGoal]:
+            t = self.determineFastestWay(graph, position, currentRoom)[:]
+            f[currentRoom.getNB()][self.__roomGoal] = t
+            self.__ship.setFastestWay(f)
+        return f[currentRoom.getNB()][self.__roomGoal]
+
+    def moveTo(self, goal):
+        # unknown stat
+        # We'll say a crewman of normal movement move of 20 per second
+        movementAllowed = self.__movement * 20 / divisionTime
+        distanceToGoal = sqrt((goal[0]-self.__position[0])**2 + (goal[1]-self.__position[1])**2)
+        if distanceToGoal <= movementAllowed:
+            self.__position = goal
+        else:
+            a = goal[0] - self.__position[0]
+            b = goal[1] - self.__position[1]
+            c = movementAllowed
+            # y = sqrt((a**2 * c**2) / (a**2 + b**2))
+            # x = sqrt(c**2 - y**2)
+            x = c * a / sqrt(a**2 + b**2)
+            y = c * b / sqrt(a**2 + b**2)
+            xp = self.__position[0] + x
+            yp = self.__position[1] + y
+            self.__position = (xp, yp)
+
+    def getPercentageRepair(self):  # 3unknown stats, percentage per second
+        """
+        Percentage of repair done per real second.
+        """
+        if self.__race == 'engi':
+            return (5*2)*(1+self.__lvlRepair*0.1)
+        if self.__race == 'mantis':
+            return (5/2)*(1+self.__lvlRepair*0.1)
+        return 5*(1+self.__lvlRepair*0.1)
+
+    def getPercentageExtinction(self):  # unknown stats
+        """
+        Percentage of extinction of fire per real second.
+        """
+        if self.__race == 'engi':
+            return (self.__lvlRepair+1)*20*2
+        elif self.__race == 'mantis':
+            return (self.__lvlRepair+1)*20/2
+        return (self.__lvlRepair+1)*20
+
+    def doDamages(self, nb):
+        self.__hp -= nb
+        if self.isDead():
+            if not self.__ship.hasSystem('cloneBay'):  # no clone bay and no life = death
+                self.__ship.getCrew().remove(self)
+                del self  # to be sure that this object isn't used somewhere else
+            else:
+                self.__ship.getSystem('cloneBay').addDeadCrew(deepcopy(self))
+                    # we keep a clone (literally) of the dead member
+                self.__ship.getCrew().remove(self)
+                del self  # to be sure that this object isn't used somewhere else
+
+    def fireDamages(self, nbFires):
+        if self.__race != 'rockman':
+            self.doDamages(nbFires*2/divisionTime)  # unknown stat
+
+    def suffocation(self):
+        if self.__race != 'lanius':
+            if self.__race == 'crystal':
+                self.doDamages(2.5/divisionTime)
+            else:
+                self.doDamages(5/divisionTime)  # unknown stat
+
+    def isDead(self):
+        return self.__hp <= 0
+
+    def getDamages(self):
+        advantage = 1 + (0.1*self.__lvlCombat)
+        if self.__race == 'engi':
+            return 0.5+advantage/2
+        if self.__race == 'mantis':
+            return (1+advantage)*1.5
+        return 1+advantage
+
+    def getMovement(self):
+        return self.__movement
+
+    def addXpPiloting(self):
+        advantageRace = {'human': 0.9, 'engi': 1, 'mantis': 1, 'rockman': 1, 'zoltan': 1,
+                         'slug': 1, 'crystal': 1, 'lanius': 1}
+        if self.__lvlPiloting < 2*advantageRace[self.__race]:
+            self.__lvlPiloting += 0.01
+            if self.__lvlPiloting >= 0.15*advantageRace[self.__race] \
+                    or self.__lvlPiloting >= 1.15*advantageRace[self.__race]:
+                self.__lvlPiloting = float(int(self.__lvlPiloting)+1)
+
+    def addXpEngines(self):
+        advantageRace = {'human': 0.9, 'engi': 1, 'mantis': 1, 'rockman': 1, 'zoltan': 1,
+                         'slug': 1, 'crystal': 1, 'lanius': 1}
+        if self.__lvlEngines < 2*advantageRace[self.__race]:
+            self.__lvlEngines += 0.01
+            if self.__lvlEngines >= 0.15*advantageRace[self.__race] \
+                    or self.__lvlEngines >= 1.15*advantageRace[self.__race]:
+                self.__lvlEngines = float(int(self.__lvlEngines)+1)
+
+    def addXpShields(self):
+        advantageRace = {'human': 0.9, 'engi': 1, 'mantis': 1, 'rockman': 1, 'zoltan': 1,
+                         'slug': 1, 'crystal': 1, 'lanius': 1}
+        if self.__lvlShields < 2*advantageRace[self.__race]:
+            self.__lvlShields += 0.01
+            if self.__lvlShields >= 0.55*advantageRace[self.__race] \
+                    or self.__lvlShields >= 1.55*advantageRace[self.__race]:
+                self.__lvlShields = float(int(self.__lvlShields)+1)
+
+    def addXpWeaponControl(self):
+        advantageRace = {'human': 0.9, 'engi': 1, 'mantis': 1, 'rockman': 1, 'zoltan': 1,
+                         'slug': 1, 'crystal': 1, 'lanius': 1}
+        if self.__lvlWeaponControl < 2*advantageRace[self.__race]:
+            self.__lvlWeaponControl += 0.01
+            if self.__lvlWeaponControl >= 0.65*advantageRace[self.__race] \
+                    or self.__lvlWeaponControl >= 1.65*advantageRace[self.__race]:
+                self.__lvlWeaponControl = float(int(self.__lvlWeaponControl)+1)
+
+    def addXpRepair(self):
+        advantageRace = {'human': 0.9, 'engi': 1, 'mantis': 1, 'rockman': 1, 'zoltan': 1,
+                         'slug': 1, 'crystal': 1, 'lanius': 1}
+        if self.__lvlRepair < 2*advantageRace[self.__race]:
+            self.__lvlRepair += 0.01
+            if self.__lvlRepair >= 0.18*advantageRace[self.__race] \
+                    or self.__lvlRepair >= 1.18*advantageRace[self.__race]:
+                self.__lvlRepair = float(int(self.__lvlRepair)+1)
+
+    def addXpCombat(self):
+        advantageRace = {'human': 0.9, 'engi': 1, 'mantis': 1, 'rockman': 1, 'zoltan': 1,
+                         'slug': 1, 'crystal': 1, 'lanius': 1}
+        if self.__lvlCombat < 2*advantageRace[self.__race]:
+            self.__lvlCombat += 0.01
+            if self.__lvlCombat >= 0.08*advantageRace[self.__race] \
+                    or self.__lvlCombat >= 1.08*advantageRace[self.__race]:
+                self.__lvlCombat = float(int(self.__lvlCombat)+1)
+
+    def loseExperience(self, percentage):
+        d = {'piloting': 0.15, 'engines': 0.15, 'shields': 0.55, 'weaponControl': 0.65, 'repair': 0.18, 'combat': 0.08}
+        for k in d:
+            totalXP = self.__getattribute__('_CrewMember__lvl' + k[0].upper() + k[1:])
+            totalXP = ((int(totalXP) * d[k]) + (totalXP % 1)) * (100-percentage)/100
+            finalLvl = (totalXP // d[k]) + (totalXP - d[k] * (totalXP // d[k]))
+            self.__setattr__('_CrewMember__lvl' + k[0].upper() + k[1:], finalLvl)

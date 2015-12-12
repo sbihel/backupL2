@@ -1,0 +1,72 @@
+\chapter{Recherche du meilleur vaisseau}
+	
+Un vaisseau est considéré comme bon lorsqu'il gagne plus de combats que ses concurrents. 
+On voit donc une logique évolutive où on compare tout le temps les vaisseaux entre eux et où on peut s'inspirer des meilleurs pour essayer de créer d'encore meilleurs vaisseaux. \\
+Pour cela, il nous a tout d'abord fallu un générateur de vaisseaux. A partir de ce générateur nous avons pu utilisé un algorithme génétique qui permet d'avoir cette logique évolutive. 
+Pour compléter l'optimisation des meilleurs vaisseaux, nous avons utilisé un système expert qui puise ses connaissance dans une base de données où sont stockés les différentes caractéristiques des vaisseaux.
+
+
+	\section{Algorithmes de génération de vaisseaux}
+
+	Un générateur doit créer un vaisseau en fonction d'un certain coût car c'est ce critère qui différencie les vaisseaux en différentes catégories. Tout d'abord, un générateur aléatoire est nécessaire pour parcourir tout les combinaisons d'équipement possibles. Ensuite, on veut un algorithme plus intelligent qui puisse parcourir ces combinaisons aléatoires pour tirer les meilleures et éventuellement les affiner.
+
+		\subsection{Générateur aléatoire}
+
+		Le générateur aléatoire est simple puisque tant qu'il a de l'argent, il va essayer d'acheter quelque chose de façon aléatoire. Suivant les fonctionnalités gérées par le moteur de combat, nous avons construit le générateur aléatoire selon le schéma suivant.
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.65\linewidth]{randomGenerator.pdf}
+		\end{figure}
+
+		On remarque que l'aléatoire est relativement guidé car certains équipements sont plus ou moins utiles et donc il y a plus ou moins de chance de l'acheter. Ce choix a été fait pour éviter de tomber sur le moins de vaisseaux inutiles mais aussi pour tenir compte des chances de tomber sur les équipements précédents qui ont pu dépenser de l'argent. \\
+		
+		Les details d'un achat potentiel dépendent en partie de l'équipement choisi. De façon générale pour un système, le générateur va d'abord calculer combien d'améliorations il peut acheter, puis acheter un nombre aléatoire d'améliorations. Directement après, il va essayer d'acheter un nombre aléatoire (inférieur ou égal à l'achat précédent) d'énergie. Prenons l'exemple des moteurs.
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.65\linewidth]{randomGeneratorExample.pdf}
+		\end{figure}
+		
+		
+		\subsection{Algorithme génétique}
+		
+		Un algorithme génétique reproduit l'évolution naturelle. On part donc d'une population et on détérmine les individus qui sont les meilleurs (ceux qui surviveraient dans la nature). A partir ces individus on créé une nouvelle population dont les individus peuvent avoir des mutations. On reproduit ainsi ce processus autant de fois que l'on veut.\\
+		Dans notre cas ....
+
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=1\linewidth]{geneticalgorithm.pdf}
+		\end{figure}
+		
+		Pour faire les croisements .....
+		
+
+	\section{Importation des modules}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=1\linewidth]{packageDiagram.pdf}
+	\end{figure}
+	
+	Comme on peut le voir, notre programme est divisé en 3 grandes parties :
+	\begin{itemize}
+		\item une partie qui gère les combats entre vaisseau (réalisé au semestre 1) ;
+		\item une partie qui gère les vaisseaux personnalisés ;
+		\item une partie qui utilise les 2 parties précédentes pour determiner le meilleur vaisseau.
+	\end{itemize}
+	En plus de cela, il y a aussi diverses fonctions d'affichage (graphiques ou textuelles) ainsi qu'un fichier qui contient des variables globales qui determine si il y doit y avoir certains affichages, combien de "cycles" il y a par seconde, etc.
+
+	
+	\section{Data Mining avec LCM}
+	
+	Pour les parties de data mining nous avons utilisé le programme \textit{Linear time Closed itemset Miner} de Takeaki Uno.
+	Ce programme prend en entrée un fichier où chaque ligne contient des entiers séparés par des espaces, chacun de ces lignes représente un ensemble d'entiers. 
+	Le programme retourne ensuite tous les sous-ensembles de chaque ligne et donne le nombre d'occurences de ces sous-ensembles dans toutes les lignes. On peut ensuite décider de ne garder que les sous-ensembles qui apparaissent dans au moins n lignes.
+	Nous n'utilisons que les fonctionnalités basiques qui sont relativement simple à programmer mais ce programme est rapide et contient d'autres fonctionnalités qui pourraient nous être utiles pour enrichir notre programme qui détermine les meilleurs vaisseaux. \\
+	
+	Nous utilisons ce programme pour extraire les caractéristiques les plus courantes dans une liste de vaisseaux. 
+	Pour utiliser ce programme il nous a donc fallu traduire les caractéristiques des vaisseaux en entiers....
+	
+	
+	\section{Déroulement de l'algorithme final d'optimisation}

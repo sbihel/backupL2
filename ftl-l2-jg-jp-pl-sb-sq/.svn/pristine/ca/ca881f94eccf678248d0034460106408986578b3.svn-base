@@ -1,0 +1,12 @@
+<ship>
+  <add>
+    <energy>4</energy>
+    <system>
+      <cloaking>2</cloaking>
+      <engines>2</engines>
+      <shields>2</shields>
+    </system>
+    <weapon />
+  </add>
+  <cost>485</cost>
+</ship>

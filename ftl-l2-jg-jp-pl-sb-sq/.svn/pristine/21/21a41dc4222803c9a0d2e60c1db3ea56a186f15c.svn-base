@@ -1,0 +1,69 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\gdef \LT@ix {\LT@entry 
+    {1}{152.92793pt}\LT@entry 
+    {1}{258.72162pt}\LT@entry 
+    {1}{12.0pt}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Module drones}{13}{section.5}}
+\newlabel{drones}{{5}{13}{Module drones}{section.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Functions}{13}{subsection.5.1}}
+\newlabel{drones:genDrone}{{5.1}{13}{Functions}{subsection.5.1}{}}
+\newlabel{drones:genCombatDrone}{{5.1}{13}{Functions}{subsection.5.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Variables}{13}{subsection.5.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Class Drone}{13}{subsection.5.3}}
+\newlabel{drones:Drone}{{5.3}{13}{Class Drone}{subsection.5.3}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.3.1}Methods}{13}{subsubsection.5.3.1}}
+\newlabel{drones:Drone:getName}{{5.3.1}{13}{Methods}{subsubsection.5.3.1}{}}
+\newlabel{drones:Drone:powerIt}{{5.3.1}{13}{Methods}{subsubsection.5.3.1}{}}
+\newlabel{drones:Drone:unpowerIt}{{5.3.1}{13}{Methods}{subsubsection.5.3.1}{}}
+\gdef \LT@x {\LT@entry 
+    {1}{152.92793pt}\LT@entry 
+    {1}{258.72162pt}\LT@entry 
+    {1}{12.0pt}}
+\newlabel{drones:Drone:isPowered}{{5.3.1}{14}{Methods}{subsubsection.5.3.1}{}}
+\newlabel{drones:Drone:getPower}{{5.3.1}{14}{Methods}{subsubsection.5.3.1}{}}
+\newlabel{drones:Drone:getCooldown}{{5.3.1}{14}{Methods}{subsubsection.5.3.1}{}}
+\newlabel{drones:Drone:setCooldown}{{5.3.1}{14}{Methods}{subsubsection.5.3.1}{}}
+\newlabel{drones:Drone:getType}{{5.3.1}{14}{Methods}{subsubsection.5.3.1}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.3.2}Properties}{14}{subsubsection.5.3.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4}Class CombatDrone}{14}{subsection.5.4}}
+\newlabel{drones:CombatDrone}{{5.4}{14}{Class CombatDrone}{subsection.5.4}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.4.1}Methods}{14}{subsubsection.5.4.1}}
+\newlabel{drones:CombatDrone:getSpeed}{{5.4.1}{14}{Methods}{subsubsection.5.4.1}{}}
+\gdef \LT@xi {\LT@entry 
+    {1}{152.92793pt}\LT@entry 
+    {1}{258.72162pt}\LT@entry 
+    {1}{12.0pt}}
+\gdef \LT@xii {\LT@entry 
+    {1}{152.92793pt}\LT@entry 
+    {1}{258.72162pt}\LT@entry 
+    {1}{12.0pt}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.4.2}Properties}{15}{subsubsection.5.4.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.5}Class DefensiveDrone}{15}{subsection.5.5}}
+\newlabel{drones:DefensiveDrone}{{5.5}{15}{Class DefensiveDrone}{subsection.5.5}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.5.1}Methods}{15}{subsubsection.5.5.1}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.5.2}Properties}{15}{subsubsection.5.5.2}}
+\@setckpt{drones-module}{
+\setcounter{page}{16}
+\setcounter{equation}{0}
+\setcounter{enumi}{0}
+\setcounter{enumii}{0}
+\setcounter{enumiii}{0}
+\setcounter{enumiv}{0}
+\setcounter{footnote}{0}
+\setcounter{mpfootnote}{0}
+\setcounter{part}{0}
+\setcounter{section}{5}
+\setcounter{subsection}{5}
+\setcounter{subsubsection}{2}
+\setcounter{paragraph}{0}
+\setcounter{subparagraph}{0}
+\setcounter{figure}{0}
+\setcounter{table}{12}
+\setcounter{LT@tables}{12}
+\setcounter{LT@chunks}{4}
+\setcounter{Item}{0}
+\setcounter{Hfootnote}{0}
+\setcounter{bookmark@seq@number}{33}
+\setcounter{section@level}{3}
+}

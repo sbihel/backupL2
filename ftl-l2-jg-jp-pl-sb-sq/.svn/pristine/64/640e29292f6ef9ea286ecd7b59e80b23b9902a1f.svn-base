@@ -1,0 +1,94 @@
+
+import os
+import time
+
+def sendTable(listShip, tableResults, nbFights):
+
+    table = addSum(tableResults)
+    table2 = modifyTable(listShip, table)
+    if 'TournamentResults' not in os.getcwd():
+        os.chdir('../TournamentResults/')
+
+    day = time.strftime("%x")
+    h = time.strftime("%H:%M")
+    nameFile = day[:2] + '-' + day[3:5] + '_' + h[:2] + '-' + h[3:5] + '.html'
+    file = open(nameFile, "w")
+    file.write(head(nameFile))
+    file.write(body(table2, nbFights))
+    file.write(bottom())
+
+    file.close()
+
+def addSum(table):
+    tab = []
+    for l in table:
+        tab += [l + [sum(l)]]
+    return tab
+
+
+def modifyTable(listShip, tableResults):
+
+    table = [['X'] + ['<a href="../xmlShips/' + listShip[i] +'" target="_blank" >' + str(i+1) +
+                      '</a>' for i in range(len(listShip))] + [' Victories Sum']]
+    print(listShip, tableResults)
+    for i in range(len(listShip)):
+        table +=  [[]]
+        table[i+1] = [str(i+1)+'_'+listShip[i]] + [nb for nb in tableResults[i]]
+    return table
+
+
+def head(date):
+    return '<html lang="fr-FR"><head><meta charset="utf-8"> \n <link rel="stylesheet"  type="text/css" ' \
+           ' media="screen" href="style.css" /> \n <title>Results' + date[:-4] + '</title> \n </head> \n <body>' \
+           ' <h1>Tournament results </h1> '
+
+
+def body(table, nbFights):
+
+    body = '<table> \n'
+
+    nbligne = 0
+    for l in table:
+        nbcase = 0
+
+        body += '<tr> \n'
+
+        if nbligne !=0 :
+            for c in l:
+                body += '<td>'
+                if nbcase != 0:
+                    if nbligne == nbcase :
+                        body += 'X'
+                    else:
+                        if int(c) > 2*nbFights//3:
+                            body += '<span style="color:#32A43B">' + str(c) + '</span> '
+                        elif int(c) > nbFights//2:
+                            body += '<span style="color:#B3D173">' + str(c) + '</span> '
+                        else :
+                            body += '<span style="color:#D1B873">' + str(c) + '</span> '
+                else :
+                    body += str(c)
+                body += '</td>'
+                nbcase += 1
+        else:
+            for c in l:
+                body += '<td>'
+                body += str(c)
+                body += '</td>'
+
+        #print(l, c, nbcase, nbligne, )
+        nbligne += 1
+
+        body += '</tr> \n'
+
+
+    body += '</table> \n'
+    return body
+
+
+
+
+
+
+def bottom():
+    return '</body></html>'

@@ -1,0 +1,77 @@
+\documentclass[a4paper,10pt,final]{book}
+
+%Package de base
+
+\usepackage[francais]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[pdftex]{graphicx}
+\usepackage{setspace}
+\usepackage{hyperref}
+\usepackage[french]{varioref}
+
+%Pour les graphs
+\usepackage{tikz}
+
+\usepackage{listings}
+\usepackage{color}
+\definecolor{listinggray}{gray}{0.92}
+\lstset{ 
+language=[LaTeX]TeX,
+breaklines=true,
+frame=single,
+% frameround=tttt,
+basicstyle=\footnotesize\ttfamily,
+backgroundcolor=\color{listinggray},
+keywordstyle=\color{blue}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  anchorcolor=black,
+  citecolor=olive,
+  filecolor=magenta,
+  menucolor=red,
+  urlcolor=blue
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+%Pour faire quelques symboles
+\usepackage{amssymb}
+
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+\usepackage{float}
+
+
+
+\newcommand{\checkedbox}{\makebox[0pt][l]{$\square$}\raisebox{.10ex}{\hspace{0.1em}$\checkmark$}}   
+
+% \setlength{\parskip}{1ex} % Espace entre les paragraphes
+
+\title{FTL : Fit the fittest \\ Rapport du TPA \\ Semestre 2}
+\author{Sébastien \textsc{Gamblin} \and  Simon \textsc{Bihel} \and Julien \textsc{Pezant} \and  Paul \textsc{Leménager} \and  Josselin \textsc{Gueneron}}
+\date{}
+
+\begin{document}
+
+  \maketitle
+	
+	\tableofcontents	
+	
+	
+	\input{introduction}
+
+	\input{concepts}
+
+	\input{organisationGenerale}
+	
+	\input{realisation}
+	
+	\input{conclusion}
+	
+	
+\end{document}

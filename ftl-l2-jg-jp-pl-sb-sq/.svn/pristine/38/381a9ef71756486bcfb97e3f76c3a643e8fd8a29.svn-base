@@ -1,0 +1,12 @@
+<ship>
+  <add>
+    <energy>4</energy>
+    <system>
+      <cloaking>1</cloaking>
+      <engines>1</engines>
+      <shields>4</shields>
+    </system>
+    <weapon>miniBeam artemisPL</weapon>
+  </add>
+  <cost>473</cost>
+</ship>

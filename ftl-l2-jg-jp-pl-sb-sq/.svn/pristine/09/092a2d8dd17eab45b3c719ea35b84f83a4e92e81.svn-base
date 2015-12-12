@@ -1,0 +1,107 @@
+from tkinter import *
+from variousShips import *
+
+
+
+def displayShipTK(fileShip1):
+
+    t = Tk()
+    t.title("Transparency")
+
+    frame = Frame(t)
+    frame.pack()
+
+    can= Canvas(frame, bg="black", width=500, height=500)
+
+    if fileShip1[-4:] == '.xml':
+        fileShip1 = fileShip1[:-4]
+
+    xmlID1, type1, name1 = '',  'type', ''
+    for i in range(len(fileShip1)):
+        if fileShip1[len(fileShip1)-1-i] not in 'ABC':
+            xmlID1 = fileShip1[len(fileShip1)-1-i] + xmlID1
+        else:
+            type1 += fileShip1[len(fileShip1)-1-i]
+            name1 = fileShip1[:len(fileShip1)-1-i]
+            break
+
+    ship2 = extractShip(name1, type1, xmlID1, 1)
+
+    t.title("Ship " + ship2.getName()+' ' + ship2.getType() + ' ' + str(ship2.getID()))
+
+    m = 20
+    c = 3
+
+    l=[]
+    for r in ship2.getRooms():
+        c1, c2 = r.getCoords()
+        can.create_rectangle(c1[0]*c + m, c1[1]*c + m, c2[0]*c + m, c2[1]*c + m, fill="grey", outline="black")
+        system = r.getSystem()
+
+        if system != False :
+
+            l +=[system]
+
+            if 'xmlShips' in os.getcwd():
+                os.chdir('..')
+
+            locals()['img' + str(r.getNB())] = PhotoImage(file="pictures/systems/"+str(system)+".gif").subsample(5,5)
+            cm1, cm2 = c1[0], c1[1]
+            if c2[0] - c1[0] != 10:
+                cm1 += 5
+            if c2[1] - c1[1] != 10:
+                cm2 += 5
+            can.create_image((cm1*c + m + 15, cm2*c + m + 15), image=locals()['img'+str(r.getNB())])
+        can.update()
+
+    c1, c2 = 50, 250
+
+    nb = 20
+
+    for s in ship2.getSystems():
+
+        locals()['img' + str(nb)] = PhotoImage(file="pictures/systems/"+s.getName()+".gif").subsample(5, 5)
+
+        can.create_image((c1, c2 + (nb-20)*20), image=locals()['img'+str(nb)])
+        nb += 1
+
+        for i in range(s.getCurrentMaxPower()):
+            can.create_rectangle(c1 +10 + i*15, c2 +((nb-20)*20)-25 , c1+20+i*15, c2 + ((nb-20)*20)-15, fill="green", outline="black")
+
+        if s.getName() == 'weaponControl':
+            sysweap = s
+
+    lw=sysweap.getWeapons()
+    for weap in range(len(lw)):
+
+        if weap==0:
+            wx, wy = 300, 300
+        elif weap==1:
+            wx, wy = 300, 400
+        elif weap==2:
+            wx, wy = 400, 300
+        else:
+            wx, wy = 400, 400
+
+        print(lw[weap].getName())
+            
+        locals()['img' + str(nb)] = PhotoImage(file="pictures/weapons/"+lw[weap].getName()+".gif")
+        can.create_image(wx, wy, image=locals()['img'+str(nb)])
+        nb += 1
+
+    doors = ship2.getDoors()
+
+    for d in doors:
+        coords = d.getPosition()
+        if str(coords[0])[-1]=='5':
+            x1, y1, x2, y2 = coords[0]-2, coords[1], coords[0]+2, coords[1]
+        else:
+            x1, y1, x2, y2 = coords[0], coords[1]-2, coords[0], coords[1]+2
+        can.create_line(x1*c+m, y1*c+m, x1*c+m, y2*c+m, fill="red")
+
+    can.update()
+
+
+    can.pack()
+
+    t.mainloop()

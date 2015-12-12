@@ -1,0 +1,12 @@
+<ship>
+  <add>
+    <energy>2</energy>
+    <system>
+      <weaponControl>2</weaponControl>
+      <cloaking>1</cloaking>
+      <shields>2</shields>
+    </system>
+    <weapon>hullLaserI burstLaserII</weapon>
+  </add>
+  <cost>470</cost>
+</ship>

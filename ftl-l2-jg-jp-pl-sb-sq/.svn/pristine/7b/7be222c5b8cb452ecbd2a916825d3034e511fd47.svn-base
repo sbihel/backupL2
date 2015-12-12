@@ -1,0 +1,196 @@
+# -*- coding: utf-8 -*-
+"""
+Module which import and modelize the weapons.
+"""
+
+
+import xml.etree.ElementTree as ET
+tree = ET.parse('ftl_weapon_resource.xml')
+root = tree.getroot()
+
+
+class Weapon(object):
+    
+    def __init__(self, name, damage=0, power=0, cooldown=0,
+                 cost=0, hits=1, fire=0.0, breach=0.0, stun=0.0, typeWeapon='whatever', powered=False):
+        self.__name = name
+        self.__typeWeapon = typeWeapon
+        self.__damage = damage
+        self.__power = power
+        self.__cooldown = cooldown
+        self.__currentCooldown = 0
+        self.__cost = cost
+        self.__hits = hits
+        self.__fire = fire
+        self.__breach = breach
+        self.__stun = stun
+        self.__powered = powered
+
+    def __repr__(self):
+        return 'Name: '+self.__name + \
+               '  Damages: '+str(self.__damage*self.__hits)+'  Active: '+str(self.__powered)
+        
+    def getName(self):
+        return self.__name
+
+    def getType(self):
+        return self.__typeWeapon
+        
+    def getDamage(self):
+        return self.__damage
+        
+    def getPower(self):
+        return self.__power
+        
+    def getCooldown(self):
+        return self.__cooldown
+
+    def getCurrentCooldown(self):
+        return self.__currentCooldown
+
+    def setCurrentCooldown(self, nb):
+        self.__currentCooldown = nb
+        
+    def getCost(self):
+        return self.__cost
+    
+    def getHits(self):
+        return self.__hits
+    
+    def getFireChance(self):
+        return self.__fire
+        
+    def getBreachChance(self):
+        return self.__breach
+    
+    def getStunChance(self):
+        return self.__stun
+
+    def isPowered(self):
+        return self.__powered
+
+    def powerIt(self):
+        self.__powered = True
+
+    def unpowerIt(self):
+        self.__powered = False
+        self.__currentCooldown = 0
+        
+
+class Missile(Weapon):
+    
+    def __init__(self,name,damage=0,power=0,cooldown=0,cost=0,hits=1,fire=0.0,breach=0.0,stun=0.0):
+        Weapon.__init__(self,name,damage,power,cooldown,cost,hits,fire,breach,stun,'missile')
+        
+
+class Beam(Weapon):  # here, damage can be dealt to several rooms
+
+    def __init__(self,name,damage=0,power=0,cooldown=0,cost=0,hits=1,fire=0.0,breach=0.0,stun=0.0,beamLength=0):
+        Weapon.__init__(self,name,damage,power,cooldown,cost,hits,fire,breach,stun,'beam')
+        self.__beamLength = beamLength
+        
+    def getBeamLength(self):
+        return self.__beamLength
+    
+
+class Laser(Weapon):
+    
+    def __init__(self,name,damage=0,power=0,cooldown=0,cost=0,hits=1,fire=0.0,breach=0.0,stun=0.0,speed=0):
+        Weapon.__init__(self,name,damage,power,cooldown,cost,hits,fire,breach,stun,'laser')
+        self.__speed=speed
+        
+    def getSpeed(self):
+        return self.__speed
+
+class Ion(Weapon):
+    
+    def __init__(self,name,damage=0,power=0,cooldown=0,cost=0,hits=1,fire=0.0,breach=0.0,stun=0.0,speed=0):
+        Weapon.__init__(self,name,damage,power,cooldown,cost,hits,fire,breach,stun,'ion')
+        self.__speed=speed
+
+    def getSpeed(self):
+        return self.__speed
+"""
+missileType="leto","artemisPL","artemisAI","hermes","pegasus","breach","hull","boss"
+"""
+
+
+def genMissile(missileType):
+    missile = Missile(name=missileType,
+                      damage=int(root.find('.//'+missileType+'/damage').text),
+                      power=int(root.find('.//'+missileType+'/power').text),
+                      cooldown=int(root.find('.//'+missileType+'/cooldown').text),
+                      cost=int(root.find('.//'+missileType+'/cost').text),
+                      hits=int(root.find('.//'+missileType+'/hits').text),
+                      fire=float(root.find('.//'+missileType+'/fire').text),
+                      breach=float(root.find('.//'+missileType+'/breach').text),
+                      stun=float(root.find('.//'+missileType+'/stun').text))
+                    
+    return missile
+
+"""
+beamType="miniBeam","pikeBeam","halberdBeam","glaiveBeam","fireBeam","hullBeam","antibioBeam","artilleryBeam"
+"""
+
+
+def genBeam(beamType):
+    beam = Beam(name=beamType,
+                damage=int(root.find('.//'+beamType+'/damagePerRoom').text),
+                power=int(root.find('.//'+beamType+'/power').text),
+                cooldown=int(root.find('.//'+beamType+'/cooldown').text),
+                cost=int(root.find('.//'+beamType+'/cost').text),
+                fire=float(root.find('.//'+beamType+'/fire').text),
+                beamLength=int(root.find('.//'+beamType+'/beamLength').text))
+    return beam
+
+"""
+laserType="basicLaser","dualLaser","burstLaserI","burstLaserII","burstLaserIII","heavyPierceI","heavyLaserI","heavyLaserII","hullLaserI","hullLaserII"
+"""
+
+
+def genLaser(laserType):
+    laser = Laser(name=laserType,
+                  damage=int(root.find('.//'+laserType+'/damage').text),
+                  power=int(root.find('.//'+laserType+'/power').text),
+                  cooldown=int(root.find('.//'+laserType+'/cooldown').text),
+                  cost=int(root.find('.//'+laserType+'/cost').text),
+                  hits=int(root.find('.//'+laserType+'/hits').text),
+                  fire=float(root.find('.//'+laserType+'/fire').text),
+                  breach=float(root.find('.//'+laserType+'/breach').text),
+                  stun=float(root.find('.//'+laserType+'/stun').text),
+                  speed=int(root.find('.//'+laserType+'/speed').text))
+    return laser
+
+"""
+ionType="ionBlastI","ionBlastII","heavyIon"
+"""
+
+
+def genIon(ionType):
+    ion = Ion(name=ionType,
+              damage=int(root.find('.//'+ionType+'/damage').text),
+              power=int(root.find('.//'+ionType+'/power').text),
+              cooldown=int(root.find('.//'+ionType+'/cooldown').text),
+              cost=int(root.find('.//'+ionType+'/cost').text),
+              hits=int(root.find('.//'+ionType+'/hits').text),
+              # fire=float(root.find('.//'+ionType+'/fire').text),
+              # breach=float(root.find('.//'+ionType+'/breach').text),
+              stun=float(root.find('.//'+ionType+'/stun').text),
+              speed=int(root.find('.//'+ionType+'/speed').text))
+    return ion
+
+
+def genWeapon(nameWeapon):
+    missileType = "leto","artemisPL","artemisAI","hermes","pegasus","breach","hull","boss"
+    beamType = "miniBeam","pikeBeam","halberdBeam","glaiveBeam","fireBeam","hullBeam","antibioBeam","artilleryBeam"
+    laserType = "basicLaser","dualLaser","burstLaserI","burstLaserII","burstLaserIII","heavyPierceI","heavyLaserI","heavyLaserII","hullLaserI","hullLaserII"
+    ionType = "ionBlastI","ionBlastII","heavyIon"
+    
+    if nameWeapon in missileType:
+        return genMissile(nameWeapon)
+    if nameWeapon in beamType:
+        return genBeam(nameWeapon)
+    if nameWeapon in laserType:
+        return genLaser(nameWeapon)
+    if nameWeapon in ionType:
+        return genIon(nameWeapon)

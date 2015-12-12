@@ -1,0 +1,19 @@
+<html lang="fr-FR"><head><meta charset="utf-8"> 
+ <link rel="stylesheet"  type="text/css"  media="screen" href="style.css" /> 
+ <title>Results03-15_23-03.</title> 
+ </head> 
+ <body> <h1>Tournament results </h1> <table> 
+<tr> 
+<td>X</td><td><a href="../xmlShips/kestrelC91.xml" target="_blank" >1</a></td><td><a href="../xmlShips/kestrelA124.xml" target="_blank" >2</a></td><td><a href="../xmlShips/kestrelB161.xml" target="_blank" >3</a></td><td><a href="../xmlShips/kestrelB162.xml" target="_blank" >4</a></td><td><a href="../xmlShips/kestrelA125.xml" target="_blank" >5</a></td><td> Victories Sum</td></tr> 
+<tr> 
+<td>1_kestrelC91.xml</td><td>X</td><td><span style="color:#D1B873">2</span> </td><td><span style="color:#D1B873">3</span> </td><td><span style="color:#B3D173">6</span> </td><td><span style="color:#32A43B">9</span> </td><td><span style="color:#32A43B">20</span> </td></tr> 
+<tr> 
+<td>2_kestrelA124.xml</td><td><span style="color:#32A43B">8</span> </td><td>X</td><td><span style="color:#D1B873">3</span> </td><td><span style="color:#D1B873">4</span> </td><td><span style="color:#32A43B">10</span> </td><td><span style="color:#32A43B">25</span> </td></tr> 
+<tr> 
+<td>3_kestrelB161.xml</td><td><span style="color:#32A43B">7</span> </td><td><span style="color:#32A43B">7</span> </td><td>X</td><td><span style="color:#D1B873">3</span> </td><td><span style="color:#32A43B">10</span> </td><td><span style="color:#32A43B">27</span> </td></tr> 
+<tr> 
+<td>4_kestrelB162.xml</td><td><span style="color:#D1B873">4</span> </td><td><span style="color:#B3D173">6</span> </td><td><span style="color:#32A43B">7</span> </td><td>X</td><td><span style="color:#32A43B">9</span> </td><td><span style="color:#32A43B">26</span> </td></tr> 
+<tr> 
+<td>5_kestrelA125.xml</td><td><span style="color:#D1B873">1</span> </td><td><span style="color:#D1B873">0</span> </td><td><span style="color:#D1B873">0</span> </td><td><span style="color:#D1B873">1</span> </td><td>X</td><td><span style="color:#D1B873">2</span> </td></tr> 
+</table> 
+</body></html>

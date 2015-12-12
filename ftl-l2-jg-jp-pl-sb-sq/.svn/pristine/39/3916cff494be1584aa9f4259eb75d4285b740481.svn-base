@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<droneList>
+    <combatDroneList>
+        <combat1>
+            <speed>15</speed>
+            <power>2</power>
+            <cost>50</cost>
+        </combat1>
+    </combatDroneList>
+    <defensiveDroneList>
+
+    </defensiveDroneList>
+</droneList>

@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='us-ascii'?>
+<ship>
+  <name>engiCruiser</name>
+  <type>C</type>
+  <add>
+    <energy>5</energy>
+    <system>
+      <shields>6</shields>
+    </system>
+    <weapons>
+      <weapon0>antibioBeam</weapon0>
+      <weapon1>glaiveBeam</weapon1>
+    </weapons>
+  </add>
+  <cost>595</cost>
+</ship>

@@ -1,0 +1,29 @@
+from combat import *
+from variousShips import *
+from random import *
+import multiprocessing as mp
+
+
+def fights(nbFights, nameShip1, typeShip1, xmlIDShip1, nameShip2, typeShip2, xmlIDShip2):
+    pool = mp.Pool(processes=mp.cpu_count())
+    t1 = time()
+    results = [pool.apply_async(oneFightProcess, args=(i, extractShip(nameShip1, typeShip1, xmlIDShip1, 1),
+                                                       extractShip(nameShip2, typeShip2, xmlIDShip2, 2)))
+               for i in range(nbFights)]
+    output = [r.get() for r in results]
+    t2 = time()
+    print(nameShip1+typeShip1[-1]+xmlIDShip1+' won '+str(output.count('Ship 1 won'))+' times on '+str(nbFights))
+    print('It took '+str(t2-t1)+' seconds -> '+str((t2-t1)/nbFights)+' seconds per fight.')
+    return output
+
+
+def oneFightProcess(i, ship1, ship2):
+    s = randrange(999999999)
+    seed(s)
+    c = combat(ship1, ship2)
+    print('Fight #'+str(i)+'\nSeed #'+str(s))
+    return c
+
+
+if __name__ == '__main__':
+    print(fights(5, 'kestrel', 'typeA', '0', 'engiCruiser', 'typeA', '0'))

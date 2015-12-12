@@ -1,0 +1,46 @@
+#!/usr/local/bin/python3
+
+from fightsWithVariousShips import *
+import sys
+import getopt
+import random
+
+####################################
+# s == seed
+# n == number of fights
+####################################
+myopts, args = getopt.getopt(sys.argv[1:], "s:n:")
+
+ship1 = args[0]
+ship2 = args[1]
+if ship1[-4:] == '.xml':
+    ship1 = ship1[:-4]
+if ship2[-4:] == '.xml':
+    ship2 = ship2[:-4]
+xmlID1, xmlID2, type1, type2, name1, name2 = '', '', 'type', 'type', '', ''
+for i in range(len(ship1)):
+    if ship1[len(ship1)-1-i] not in 'ABC':
+        xmlID1 = ship1[len(ship1)-1-i] + xmlID1
+    else:
+        type1 += ship1[len(ship1)-1-i]
+        name1 = ship1[:len(ship1)-1-i]
+        break
+for i in range(len(ship2)):
+    if ship2[len(ship2)-1-i] not in 'ABC':
+        xmlID2 = ship2[len(ship2)-1-i] + xmlID2
+    else:
+        type2 += ship2[len(ship2)-1-i]
+        name2 = ship2[:len(ship2)-1-i]
+        break
+
+seed = None
+nb = 1
+
+for o, a in myopts:
+    if o == '-s':
+        seed = int(a)
+    elif o == '-n':
+        nb = int(a)
+
+random.seed(seed)
+fights(nb, name1, type1, xmlID1, name2, type2, xmlID2)

@@ -1,0 +1,41 @@
+from expertSystem import *
+
+
+def multipleOptimization(maxCost, nbCombats, sizeFirstPopulation, nbInitGeneticAlgo=1):
+    """
+    Takes a lot of time to do multiple techniques to determine the best
+    """
+    nbChampions = 4
+    hallOfFame = []
+    for _ in range(nbInitGeneticAlgo):
+        for bC in autoStopGeneticAlgorithm(sizeFirstPopulation, maxCost, nbCombats, nbChampions=nbChampions):
+            hallOfFame += [bC]
+    bestFeaturesF = getBestFeatures(buildLCMInputFile(hallOfFame))
+    newShips = []
+    ships = {'kestrel': ['typeA', 'typeB', 'typeC'],
+             'engiCruiser': ['typeA']}
+
+    with open(bestFeaturesF) as bF:
+        for line in bF:
+            if int(line.split('(')[1].split(')')[0]) > nbChampions / 2:
+                for s in ships:
+                    for t in ships[s]:
+                        nameN = s
+                        typeN = t
+                        systemsUpgrades, weaponsP, dronesP, energyP = addingToShipFromLCMLine(line, nameN, typeN)
+                        newShips += [createRandomShip(maxCost,
+                                                      nameShip=nameN, typeShip=typeN,
+                                                      systemsUpgradesWanted=systemsUpgrades,
+                                                      weaponsWanted=weaponsP,
+                                                      dronesWanted=dronesP,
+                                                      energyWanted=energyP)]
+            else:
+                break
+
+    for iD in hallOfFame:
+        deleteShip(iD)
+    return autoStopGeneticAlgorithm(len(newShips), maxCost, nbCombats, initChampions=newShips)
+
+
+if __name__ == '__main__':
+    print(multipleOptimization(500, 3, 3))

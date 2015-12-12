@@ -1,0 +1,1179 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Identifier Index</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th bgcolor="#70b0f0" class="navbar-select"
+          >&nbsp;&nbsp;&nbsp;Indices&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">&nbsp;</td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="identifier-index.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table border="0" width="100%">
+<tr valign="bottom"><td>
+<h1 class="epydoc">Identifier Index</h1>
+</td><td>
+[
+ <a href="#A">A</a>
+ <a href="#B">B</a>
+ <a href="#C">C</a>
+ <a href="#D">D</a>
+ <a href="#E">E</a>
+ <a href="#F">F</a>
+ <a href="#G">G</a>
+ <a href="#H">H</a>
+ <a href="#I">I</a>
+  J
+ <a href="#K">K</a>
+ <a href="#L">L</a>
+ <a href="#M">M</a>
+ <a href="#N">N</a>
+ <a href="#O">O</a>
+ <a href="#P">P</a>
+  Q
+ <a href="#R">R</a>
+ <a href="#S">S</a>
+ <a href="#T">T</a>
+ <a href="#U">U</a>
+  V
+ <a href="#W">W</a>
+  X
+  Y
+  Z
+ <a href="#_">_</a>
+]
+</td></table>
+<table border="0" width="100%">
+<tr valign="top"><td valign="top" width="1%"><h2 class="epydoc"><a name="A">A</a></h2></td>
+<td valign="top">
+<table class="link-index" width="100%" border="1">
+<tr>
+<td width="33%" class="link-index"><a href="ship.Ship-class.html#activateCloaking">activateCloaking()</a><br />
+<span class="index-where">(in&nbsp;<a href="ship.Ship-class.html">Ship</a>)</span></td>
+<td width="33%" class="link-index"><a href="displayShip-module.html#addSpacesEnd">addSpacesEnd()</a><br />
+<span class="index-where">(in&nbsp;<a href="displayShip-module.html">displayShip</a>)</span></td>
+<td width="33%" class="link-index"><a href="crewMember.CrewMember-class.html#addXpShields">addXpShields()</a><br />
+<span class="index-where">(in&nbsp;<a href="crewMember.CrewMember-class.html">CrewMember</a>)</span></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="systems.CloneBay-class.html#addDeadCrew">addDeadCrew()</a><br />
+<span class="index-where">(in&nbsp;<a href="systems.CloneBay-class.html">CloneBay</a>)</span></td>
+<td width="33%" class="link-index"><a href="systems.WeaponControl-class.html#addWeapon">addWeapon()</a><br />
+<span class="index-where">(in&nbsp;<a href="systems.WeaponControl-class.html">WeaponControl</a>)</span></td>
+<td width="33%" class="link-index"><a href="crewMember.CrewMember-class.html#addXpWeaponControl">addXpWeaponControl()</a><br />
+<span class="index-where">(in&nbsp;<a href="crewMember.CrewMember-class.html">CrewMember</a>)</span></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="systems.DroneControl-class.html#addDrone">addDrone()</a><br />
+<span class="index-where">(in&nbsp;<a href="systems.DroneControl-class.html">DroneControl</a>)</span></td>
+<td width="33%" class="link-index"><a href="crewMember.CrewMember-class.html#addXpCombat">addXpCombat()</a><br />
+<span class="index-where">(in&nbsp;<a href="crewMember.CrewMember-class.html">CrewMember</a>)</span></td>
+<td width="33%" class="link-index"><a href="systems.Medbay-class.html#amountHealPerSecond">amountHealPerSecond()</a><br />
+<span class="index-where">(in&nbsp;<a href="systems.Medbay-class.html">Medbay</a>)</span></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="room.Room-class.html#addOxygen">addOxygen()</a><br />
+<span class="index-where">(in&nbsp;<a href="room.Room-class.html">Room</a>)</span></td>
+<td width="33%" class="link-index"><a href="ship.Ship-class.html#addXpCrew">addXpCrew()</a><br />
+<span class="index-where">(in&nbsp;<a href="ship.Ship-class.html">Ship</a>)</span></td>
+<td width="33%" class="link-index"><a href="ship.Ship-class.html#attackBeam">attackBeam()</a><br />
+<span class="index-where">(in&nbsp;<a href="ship.Ship-class.html">Ship</a>)</span></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="ship.Ship-class.html#addPower">addPower()</a><br />
+<span class="index-where">(in&nbsp;<a href="ship.Ship-class.html">Ship</a>)</span></td>
+<td width="33%" class="link-index"><a href="crewMember.CrewMember-class.html#addXpEngines">addXpEngines()</a><br />
+<span class="index-where">(in&nbsp;<a href="crewMember.CrewMember-class.html">CrewMember</a>)</span></td>
+<td width="33%" class="link-index"><a href="ship.Ship-class.html#attackOpponent">attackOpponent()</a><br />
+<span class="index-where">(in&nbsp;<a href="ship.Ship-class.html">Ship</a>)</span></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="systems.System-class.html#addPower">addPower()</a><br />
+<span class="index-where">(in&nbsp;<a href="systems.System-class.html">System</a>)</span></td>
+<td width="33%" class="link-index"><a href="crewMember.CrewMember-class.html#addXpPiloting">addXpPiloting()</a><br />
+<span class="index-where">(in&nbsp;<a href="crewMember.CrewMember-class.html">CrewMember</a>)</span></td>
+<td width="33%" class="link-index"><a href="ship.Ship-class.html#attackRoom">attackRoom()</a><br />
+<span class="index-where">(in&nbsp;<a href="ship.Ship-class.html">Ship</a>)</span></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="displayShip-module.html#addSpaces">addSpaces()</a><br />
+<span class="index-where">(in&nbsp;<a href="displayShip-module.html">displayShip</a>)</span></td>
+<td width="33%" class="link-index"><a href="crewMember.CrewMember-class.html#addXpRepair">addXpRepair()</a><br />
+<span class="index-where">(in&nbsp;<a href="crewMember.CrewMember-class.html">CrewMember</a>)</span></td>
+<td width="33%" class="link-index"><a href="ship.Ship-class.html#attackRoomCombatDrone">attackRoomCombatDrone()</a><br />
+<span class="index-where">(in&nbsp;<a href="ship.Ship-class.html">Ship</a>)</span></td>
+</tr>
+</table>
+</td></tr>
+<tr valign="top"><td valign="top" width="1%"><h2 class="epydoc"><a name="B">B</a></h2></td>
+<td valign="top">
+<table class="link-index" width="100%" border="1">
+<tr>
+<td width="33%" class="link-index"><a href="systems.BackupBattery-class.html">BackupBattery</a><br />
+<span class="index-where">(in&nbsp;<a href="systems-module.html">systems</a>)</span></td>
+<td width="33%" class="link-index"><a href="weapon_module_WIP.Beam-class.html">Beam</a><br />
+<span class="index-where">(in&nbsp;<a href="weapon_module_WIP-module.html">weapon_module_WIP</a>)</span></td>
+<td width="33%" class="link-index">&nbsp;</td>
+</tr>
+<tr><td class="link-index">&nbsp;</td><td class="link-index">&nbsp;</td><td class="link-index">&nbsp;</td></tr>
+</table>
+</td></tr>
+<tr valign="top"><td valign="top" width="1%"><h2 class="epydoc"><a name="C">C</a></h2></td>
+<td valign="top">
+<table class="link-index" width="100%" border="1">
+<tr>
+<td width="33%" class="link-index"><a href="systems.Cloaking-class.html">Cloaking</a><br />
+<span class="index-where">(in&nbsp;<a href="systems-module.html">systems</a>)</span></td>
+<td width="33%" class="link-index"><a href="systems.Cloaking-class.html#cooldownCloaking">cooldownCloaking()</a><br />
+<span class="index-where">(in&nbsp;<a href="systems.Cloaking-class.html">Cloaking</a>)</span></td>
+<td width="33%" class="link-index"><a href="room.Room-class.html#cooldowns">cooldowns()</a><br />
+<span class="index-where">(in&nbsp;<a href="room.Room-class.html">Room</a>)</span></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="systems.CloneBay-class.html">CloneBay</a><br />
+<span class="index-where">(in&nbsp;<a href="systems-module.html">systems</a>)</span></td>
+<td width="33%" class="link-index"><a href="systems.DroneControl-class.html#cooldownDrones">cooldownDrones()</a><br />
+<span class="index-where">(in&nbsp;<a href="systems.DroneControl-class.html">DroneControl</a>)</span></td>
+<td width="33%" class="link-index"><a href="ship.Ship-class.html#cooldowns">cooldowns()</a><br />
+<span class="index-where">(in&nbsp;<a href="ship.Ship-class.html">Ship</a>)</span></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="door.Door-class.html#closeDoor">closeDoor()</a><br />
+<span class="index-where">(in&nbsp;<a href="door.Door-class.html">Door</a>)</span></td>
+<td width="33%" class="link-index"><a href="systems.DroneControl-class.html#cooldownIon">cooldownIon()</a><br />
+<span class="index-where">(in&nbsp;<a href="systems.DroneControl-class.html">DroneControl</a>)</span></td>
+<td width="33%" class="link-index"><a href="systems.WeaponControl-class.html#cooldownWeapons">cooldownWeapons()</a><br />
+<span class="index-where">(in&nbsp;<a href="systems.WeaponControl-class.html">WeaponControl</a>)</span></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="combat-module.html">combat</a></td>
+<td width="33%" class="link-index"><a href="systems.System-class.html#cooldownIon">cooldownIon()</a><br />
+<span class="index-where">(in&nbsp;<a href="systems.System-class.html">System</a>)</span></td>
+<td width="33%" class="link-index"><a href="crewMember-module.html">crewMember</a></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="combat-module.html#combat">combat()</a><br />
+<span class="index-where">(in&nbsp;<a href="combat-module.html">combat</a>)</span></td>
+<td width="33%" class="link-index"><a href="systems.WeaponControl-class.html#cooldownIon">cooldownIon()</a><br />
+<span class="index-where">(in&nbsp;<a href="systems.WeaponControl-class.html">WeaponControl</a>)</span></td>
+<td width="33%" class="link-index"><a href="crewMember.CrewMember-class.html">CrewMember</a><br />
+<span class="index-where">(in&nbsp;<a href="crewMember-module.html">crewMember</a>)</span></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="drones.CombatDrone-class.html">CombatDrone</a><br />
+<span class="index-where">(in&nbsp;<a href="drones-module.html">drones</a>)</span></td>
+<td width="33%" class="link-index"><a href="systems.Shields-class.html#cooldownLayer">cooldownLayer()</a><br />
+<span class="index-where">(in&nbsp;<a href="systems.Shields-class.html">Shields</a>)</span></td>
+<td width="33%" class="link-index"><a href="room.Room-class.html#crewTasks">crewTasks()</a><br />
+<span class="index-where">(in&nbsp;<a href="room.Room-class.html">Room</a>)</span></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="crewMember.CrewMember-class.html#continueMovement">continueMovement()</a><br />
+<span class="index-where">(in&nbsp;<a href="crewMember.CrewMember-class.html">CrewMember</a>)</span></td>
+<td width="33%" class="link-index"><a href="systems.CloneBay-class.html#cooldownRevive">cooldownRevive()</a><br />
+<span class="index-where">(in&nbsp;<a href="systems.CloneBay-class.html">CloneBay</a>)</span></td>
+<td width="33%" class="link-index"><a href="systems.CrewTeleporter-class.html">CrewTeleporter</a><br />
+<span class="index-where">(in&nbsp;<a href="systems-module.html">systems</a>)</span></td>
+</tr>
+</table>
+</td></tr>
+<tr valign="top"><td valign="top" width="1%"><h2 class="epydoc"><a name="D">D</a></h2></td>
+<td valign="top">
+<table class="link-index" width="100%" border="1">
+<tr>
+<td width="33%" class="link-index"><a href="ship.Ship-class.html#deactivateCloaking">deactivateCloaking()</a><br />
+<span class="index-where">(in&nbsp;<a href="ship.Ship-class.html">Ship</a>)</span></td>
+<td width="33%" class="link-index"><a href="globalVar-module.html#divisionTime">divisionTime</a><br />
+<span class="index-where">(in&nbsp;<a href="globalVar-module.html">globalVar</a>)</span></td>
+<td width="33%" class="link-index"><a href="systems.WeaponControl-class.html#doDamages">doDamages()</a><br />
+<span class="index-where">(in&nbsp;<a href="systems.WeaponControl-class.html">WeaponControl</a>)</span></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="drones.DefensiveDrone-class.html">DefensiveDrone</a><br />
+<span class="index-where">(in&nbsp;<a href="drones-module.html">drones</a>)</span></td>
+<td width="33%" class="link-index"><a href="room-module.html#divisionTime">divisionTime</a><br />
+<span class="index-where">(in&nbsp;<a href="room-module.html">room</a>)</span></td>
+<td width="33%" class="link-index"><a href="door-module.html">door</a></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="ship.Ship-class.html#degat">degat()</a><br />
+<span class="index-where">(in&nbsp;<a href="ship.Ship-class.html">Ship</a>)</span></td>
+<td width="33%" class="link-index"><a href="ship-module.html#divisionTime">divisionTime</a><br />
+<span class="index-where">(in&nbsp;<a href="ship-module.html">ship</a>)</span></td>
+<td width="33%" class="link-index"><a href="door.Door-class.html">Door</a><br />
+<span class="index-where">(in&nbsp;<a href="door-module.html">door</a>)</span></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="crewMember.CrewMember-class.html#determineFastestWay">determineFastestWay()</a><br />
+<span class="index-where">(in&nbsp;<a href="crewMember.CrewMember-class.html">CrewMember</a>)</span></td>
+<td width="33%" class="link-index"><a href="ships_layouts-module.html#divisionTime">divisionTime</a><br />
+<span class="index-where">(in&nbsp;<a href="ships_layouts-module.html">ships_layouts</a>)</span></td>
+<td width="33%" class="link-index"><a href="systems.DoorSystem-class.html">DoorSystem</a><br />
+<span class="index-where">(in&nbsp;<a href="systems-module.html">systems</a>)</span></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="displayShip-module.html#displayAttack">displayAttack()</a><br />
+<span class="index-where">(in&nbsp;<a href="displayShip-module.html">displayShip</a>)</span></td>
+<td width="33%" class="link-index"><a href="systems-module.html#divisionTime">divisionTime</a><br />
+<span class="index-where">(in&nbsp;<a href="systems-module.html">systems</a>)</span></td>
+<td width="33%" class="link-index"><a href="systems.System-class.html#dotFire">dotFire()</a><br />
+<span class="index-where">(in&nbsp;<a href="systems.System-class.html">System</a>)</span></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="displayShip-module.html#displayInfos">displayInfos()</a><br />
+<span class="index-where">(in&nbsp;<a href="displayShip-module.html">displayShip</a>)</span></td>
+<td width="33%" class="link-index"><a href="room.Room-class.html#doBreach">doBreach()</a><br />
+<span class="index-where">(in&nbsp;<a href="room.Room-class.html">Room</a>)</span></td>
+<td width="33%" class="link-index"><a href="room.Room-class.html#dotsToCrew">dotsToCrew()</a><br />
+<span class="index-where">(in&nbsp;<a href="room.Room-class.html">Room</a>)</span></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="displayShip-module.html#displayInfosBoth">displayInfosBoth()</a><br />
+<span class="index-where">(in&nbsp;<a href="displayShip-module.html">displayShip</a>)</span></td>
+<td width="33%" class="link-index"><a href="crewMember.CrewMember-class.html#doDamages">doDamages()</a><br />
+<span class="index-where">(in&nbsp;<a href="crewMember.CrewMember-class.html">CrewMember</a>)</span></td>
+<td width="33%" class="link-index"><a href="drones.Drone-class.html">Drone</a><br />
+<span class="index-where">(in&nbsp;<a href="drones-module.html">drones</a>)</span></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="displayShip-module.html">displayShip</a></td>
+<td width="33%" class="link-index"><a href="systems.DroneControl-class.html#doDamages">doDamages()</a><br />
+<span class="index-where">(in&nbsp;<a href="systems.DroneControl-class.html">DroneControl</a>)</span></td>
+<td width="33%" class="link-index"><a href="systems.DroneControl-class.html">DroneControl</a><br />
+<span class="index-where">(in&nbsp;<a href="systems-module.html">systems</a>)</span></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="crewMember-module.html#divisionTime">divisionTime</a><br />
+<span class="index-where">(in&nbsp;<a href="crewMember-module.html">crewMember</a>)</span></td>
+<td width="33%" class="link-index"><a href="systems.System-class.html#doDamages">doDamages()</a><br />
+<span class="index-where">(in&nbsp;<a href="systems.System-class.html">System</a>)</span></td>
+<td width="33%" class="link-index"><a href="drones-module.html">drones</a></td>
+</tr>
+</table>
+</td></tr>
+<tr valign="top"><td valign="top" width="1%"><h2 class="epydoc"><a name="E">E</a></h2></td>
+<td valign="top">
+<table class="link-index" width="100%" border="1">
+<tr>
+<td width="33%" class="link-index"><a href="systems.Engines-class.html">Engines</a><br />
+<span class="index-where">(in&nbsp;<a href="systems-module.html">systems</a>)</span></td>
+<td width="33%" class="link-index"><a href="room.Room-class.html#expansionOxygen">expansionOxygen()</a><br />
+<span class="index-where">(in&nbsp;<a href="room.Room-class.html">Room</a>)</span></td>
+<td width="33%" class="link-index"><a href="room.Room-class.html#extinguishFire">extinguishFire()</a><br />
+<span class="index-where">(in&nbsp;<a href="room.Room-class.html">Room</a>)</span></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="room.Room-class.html#expansionFire">expansionFire()</a><br />
+<span class="index-where">(in&nbsp;<a href="room.Room-class.html">Room</a>)</span></td>
+<td width="33%" class="link-index"><a href="systems.System-class.html#explode">explode()</a><br />
+<span class="index-where">(in&nbsp;<a href="systems.System-class.html">System</a>)</span></td>
+<td width="33%" class="link-index">&nbsp;</td>
+</tr>
+</table>
+</td></tr>
+<tr valign="top"><td valign="top" width="1%"><h2 class="epydoc"><a name="F">F</a></h2></td>
+<td valign="top">
+<table class="link-index" width="100%" border="1">
+<tr>
+<td width="33%" class="link-index"><a href="crewMember.CrewMember-class.html#fastestWay">fastestWay()</a><br />
+<span class="index-where">(in&nbsp;<a href="crewMember.CrewMember-class.html">CrewMember</a>)</span></td>
+<td width="33%" class="link-index"><a href="crewMember.CrewMember-class.html#fireDamages">fireDamages()</a><br />
+<span class="index-where">(in&nbsp;<a href="crewMember.CrewMember-class.html">CrewMember</a>)</span></td>
+<td width="33%" class="link-index">&nbsp;</td>
+</tr>
+<tr><td class="link-index">&nbsp;</td><td class="link-index">&nbsp;</td><td class="link-index">&nbsp;</td></tr>
+</table>
+</td></tr>
+<tr valign="top"><td valign="top" width="1%"><h2 class="epydoc"><a name="G">G</a></h2></td>
+<td valign="top">
+<table class="link-index" width="100%" border="1">
+<tr>
+<td width="33%" class="link-index"><a href="weapon_module_WIP-module.html#genBeam">genBeam()</a><br />
+<span class="index-where">(in&nbsp;<a href="weapon_module_WIP-module.html">weapon_module_WIP</a>)</span></td>
+<td width="33%" class="link-index"><a href="weapon_module_WIP.Weapon-class.html#getFireChance">getFireChance()</a><br />
+<span class="index-where">(in&nbsp;<a href="weapon_module_WIP.Weapon-class.html">Weapon</a>)</span></td>
+<td width="33%" class="link-index"><a href="room.Room-class.html#getNbBoxes">getNbBoxes()</a><br />
+<span class="index-where">(in&nbsp;<a href="room.Room-class.html">Room</a>)</span></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="drones-module.html#genCombatDrone">genCombatDrone()</a><br />
+<span class="index-where">(in&nbsp;<a href="drones-module.html">drones</a>)</span></td>
+<td width="33%" class="link-index"><a href="ship.Ship-class.html#getGraph">getGraph()</a><br />
+<span class="index-where">(in&nbsp;<a href="ship.Ship-class.html">Ship</a>)</span></td>
+<td width="33%" class="link-index"><a href="room.Room-class.html#getOxygen">getOxygen()</a><br />
+<span class="index-where">(in&nbsp;<a href="room.Room-class.html">Room</a>)</span></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="drones-module.html#genDrone">genDrone()</a><br />
+<span class="index-where">(in&nbsp;<a href="drones-module.html">drones</a>)</span></td>
+<td width="33%" class="link-index"><a href="weapon_module_WIP.Weapon-class.html#getHits">getHits()</a><br />
+<span class="index-where">(in&nbsp;<a href="weapon_module_WIP.Weapon-class.html">Weapon</a>)</span></td>
+<td width="33%" class="link-index"><a href="crewMember.CrewMember-class.html#getPercentageExtinction">getPercentageExtinction()</a><br />
+<span class="index-where">(in&nbsp;<a href="crewMember.CrewMember-class.html">CrewMember</a>)</span></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="systems.Cloaking-class.html#generalCooldown">generalCooldown()</a><br />
+<span class="index-where">(in&nbsp;<a href="systems.Cloaking-class.html">Cloaking</a>)</span></td>
+<td width="33%" class="link-index"><a href="crewMember.CrewMember-class.html#getHP">getHP()</a><br />
+<span class="index-where">(in&nbsp;<a href="crewMember.CrewMember-class.html">CrewMember</a>)</span></td>
+<td width="33%" class="link-index"><a href="crewMember.CrewMember-class.html#getPercentageRepair">getPercentageRepair()</a><br />
+<span class="index-where">(in&nbsp;<a href="crewMember.CrewMember-class.html">CrewMember</a>)</span></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="tournament_test-module.html#generation">generation()</a><br />
+<span class="index-where">(in&nbsp;<a href="tournament_test-module.html">tournament_test</a>)</span></td>
+<td width="33%" class="link-index"><a href="ship.Ship-class.html#getHP">getHP()</a><br />
+<span class="index-where">(in&nbsp;<a href="ship.Ship-class.html">Ship</a>)</span></td>
+<td width="33%" class="link-index"><a href="crewMember.CrewMember-class.html#getPosition">getPosition()</a><br />
+<span class="index-where">(in&nbsp;<a href="crewMember.CrewMember-class.html">CrewMember</a>)</span></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="weapon_module_WIP-module.html#genIon">genIon()</a><br />
+<span class="index-where">(in&nbsp;<a href="weapon_module_WIP-module.html">weapon_module_WIP</a>)</span></td>
+<td width="33%" class="link-index"><a href="ship.Ship-class.html#getID">getID()</a><br />
+<span class="index-where">(in&nbsp;<a href="ship.Ship-class.html">Ship</a>)</span></td>
+<td width="33%" class="link-index"><a href="door.Door-class.html#getPosition">getPosition()</a><br />
+<span class="index-where">(in&nbsp;<a href="door.Door-class.html">Door</a>)</span></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="weapon_module_WIP-module.html#genLaser">genLaser()</a><br />
+<span class="index-where">(in&nbsp;<a href="weapon_module_WIP-module.html">weapon_module_WIP</a>)</span></td>
+<td width="33%" class="link-index"><a href="systems.Shields-class.html#getLayers">getLayers()</a><br />
+<span class="index-where">(in&nbsp;<a href="systems.Shields-class.html">Shields</a>)</span></td>
+<td width="33%" class="link-index"><a href="drones.Drone-class.html#getPower">getPower()</a><br />
+<span class="index-where">(in&nbsp;<a href="drones.Drone-class.html">Drone</a>)</span></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="weapon_module_WIP-module.html#genMissile">genMissile()</a><br />
+<span class="index-where">(in&nbsp;<a href="weapon_module_WIP-module.html">weapon_module_WIP</a>)</span></td>
+<td width="33%" class="link-index"><a href="door.Door-class.html#getLink">getLink()</a><br />
+<span class="index-where">(in&nbsp;<a href="door.Door-class.html">Door</a>)</span></td>
+<td width="33%" class="link-index"><a href="weapon_module_WIP.Weapon-class.html#getPower">getPower()</a><br />
+<span class="index-where">(in&nbsp;<a href="weapon_module_WIP.Weapon-class.html">Weapon</a>)</span></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="ships_layouts-module.html#genShip">genShip()</a><br />
+<span class="index-where">(in&nbsp;<a href="ships_layouts-module.html">ships_layouts</a>)</span></td>
+<td width="33%" class="link-index"><a href="crewMember.CrewMember-class.html#getLvlCombat">getLvlCombat()</a><br />
+<span class="index-where">(in&nbsp;<a href="crewMember.CrewMember-class.html">CrewMember</a>)</span></td>
+<td width="33%" class="link-index"><a href="ship.Ship-class.html#getPowerAvailable">getPowerAvailable()</a><br />
+<span class="index-where">(in&nbsp;<a href="ship.Ship-class.html">Ship</a>)</span></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="weapon_module_WIP-module.html#genWeapon">genWeapon()</a><br />
+<span class="index-where">(in&nbsp;<a href="weapon_module_WIP-module.html">weapon_module_WIP</a>)</span></td>
+<td width="33%" class="link-index"><a href="ship.Ship-class.html#getLvlCrewRoomSystem">getLvlCrewRoomSystem()</a><br />
+<span class="index-where">(in&nbsp;<a href="ship.Ship-class.html">Ship</a>)</span></td>
+<td width="33%" class="link-index"><a href="systems.System-class.html#getPowerInIt">getPowerInIt()</a><br />
+<span class="index-where">(in&nbsp;<a href="systems.System-class.html">System</a>)</span></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="weapon_module_WIP.Beam-class.html#getBeamLength">getBeamLength()</a><br />
+<span class="index-where">(in&nbsp;<a href="weapon_module_WIP.Beam-class.html">Beam</a>)</span></td>
+<td width="33%" class="link-index"><a href="crewMember.CrewMember-class.html#getLvlEngines">getLvlEngines()</a><br />
+<span class="index-where">(in&nbsp;<a href="crewMember.CrewMember-class.html">CrewMember</a>)</span></td>
+<td width="33%" class="link-index"><a href="systems.System-class.html#getPowerIonised">getPowerIonised()</a><br />
+<span class="index-where">(in&nbsp;<a href="systems.System-class.html">System</a>)</span></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="room.Room-class.html#getBreach">getBreach()</a><br />
+<span class="index-where">(in&nbsp;<a href="room.Room-class.html">Room</a>)</span></td>
+<td width="33%" class="link-index"><a href="crewMember.CrewMember-class.html#getLvlPiloting">getLvlPiloting()</a><br />
+<span class="index-where">(in&nbsp;<a href="crewMember.CrewMember-class.html">CrewMember</a>)</span></td>
+<td width="33%" class="link-index"><a href="crewMember.CrewMember-class.html#getRace">getRace()</a><br />
+<span class="index-where">(in&nbsp;<a href="crewMember.CrewMember-class.html">CrewMember</a>)</span></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="weapon_module_WIP.Weapon-class.html#getBreachChance">getBreachChance()</a><br />
+<span class="index-where">(in&nbsp;<a href="weapon_module_WIP.Weapon-class.html">Weapon</a>)</span></td>
+<td width="33%" class="link-index"><a href="crewMember.CrewMember-class.html#getLvlRepair">getLvlRepair()</a><br />
+<span class="index-where">(in&nbsp;<a href="crewMember.CrewMember-class.html">CrewMember</a>)</span></td>
+<td width="33%" class="link-index"><a href="systems.System-class.html#getRepair">getRepair()</a><br />
+<span class="index-where">(in&nbsp;<a href="systems.System-class.html">System</a>)</span></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="drones.Drone-class.html#getCooldown">getCooldown()</a><br />
+<span class="index-where">(in&nbsp;<a href="drones.Drone-class.html">Drone</a>)</span></td>
+<td width="33%" class="link-index"><a href="crewMember.CrewMember-class.html#getLvlShields">getLvlShields()</a><br />
+<span class="index-where">(in&nbsp;<a href="crewMember.CrewMember-class.html">CrewMember</a>)</span></td>
+<td width="33%" class="link-index"><a href="crewMember.CrewMember-class.html#getRoom">getRoom()</a><br />
+<span class="index-where">(in&nbsp;<a href="crewMember.CrewMember-class.html">CrewMember</a>)</span></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="weapon_module_WIP.Weapon-class.html#getCooldown">getCooldown()</a><br />
+<span class="index-where">(in&nbsp;<a href="weapon_module_WIP.Weapon-class.html">Weapon</a>)</span></td>
+<td width="33%" class="link-index"><a href="crewMember.CrewMember-class.html#getLvlWeaponControl">getLvlWeaponControl()</a><br />
+<span class="index-where">(in&nbsp;<a href="crewMember.CrewMember-class.html">CrewMember</a>)</span></td>
+<td width="33%" class="link-index"><a href="crewMember.CrewMember-class.html#getRoomGoal">getRoomGoal()</a><br />
+<span class="index-where">(in&nbsp;<a href="crewMember.CrewMember-class.html">CrewMember</a>)</span></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="systems.System-class.html#getCooldownIon">getCooldownIon()</a><br />
+<span class="index-where">(in&nbsp;<a href="systems.System-class.html">System</a>)</span></td>
+<td width="33%" class="link-index"><a href="ship.Ship-class.html#getMaxPower">getMaxPower()</a><br />
+<span class="index-where">(in&nbsp;<a href="ship.Ship-class.html">Ship</a>)</span></td>
+<td width="33%" class="link-index"><a href="ship.Ship-class.html#getRooms">getRooms()</a><br />
+<span class="index-where">(in&nbsp;<a href="ship.Ship-class.html">Ship</a>)</span></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="systems.System-class.html#getCooldownIonDone">getCooldownIonDone()</a><br />
+<span class="index-where">(in&nbsp;<a href="systems.System-class.html">System</a>)</span></td>
+<td width="33%" class="link-index"><a href="systems.System-class.html#getMaxPower">getMaxPower()</a><br />
+<span class="index-where">(in&nbsp;<a href="systems.System-class.html">System</a>)</span></td>
+<td width="33%" class="link-index"><a href="ship.Ship-class.html#getRoomSystem">getRoomSystem()</a><br />
+<span class="index-where">(in&nbsp;<a href="ship.Ship-class.html">Ship</a>)</span></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="room.Room-class.html#getCoords">getCoords()</a><br />
+<span class="index-where">(in&nbsp;<a href="room.Room-class.html">Room</a>)</span></td>
+<td width="33%" class="link-index"><a href="systems.System-class.html#getMaxPowerMax">getMaxPowerMax()</a><br />
+<span class="index-where">(in&nbsp;<a href="systems.System-class.html">System</a>)</span></td>
+<td width="33%" class="link-index"><a href="systems.System-class.html#getShip">getShip()</a><br />
+<span class="index-where">(in&nbsp;<a href="systems.System-class.html">System</a>)</span></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="crewMember.CrewMember-class.html#getCoordsGoal">getCoordsGoal()</a><br />
+<span class="index-where">(in&nbsp;<a href="crewMember.CrewMember-class.html">CrewMember</a>)</span></td>
+<td width="33%" class="link-index"><a href="ship.Ship-class.html#getMissiles">getMissiles()</a><br />
+<span class="index-where">(in&nbsp;<a href="ship.Ship-class.html">Ship</a>)</span></td>
+<td width="33%" class="link-index"><a href="drones.CombatDrone-class.html#getSpeed">getSpeed()</a><br />
+<span class="index-where">(in&nbsp;<a href="drones.CombatDrone-class.html">CombatDrone</a>)</span></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="weapon_module_WIP.Weapon-class.html#getCost">getCost()</a><br />
+<span class="index-where">(in&nbsp;<a href="weapon_module_WIP.Weapon-class.html">Weapon</a>)</span></td>
+<td width="33%" class="link-index"><a href="crewMember.CrewMember-class.html#getMovement">getMovement()</a><br />
+<span class="index-where">(in&nbsp;<a href="crewMember.CrewMember-class.html">CrewMember</a>)</span></td>
+<td width="33%" class="link-index"><a href="weapon_module_WIP.Ion-class.html#getSpeed">getSpeed()</a><br />
+<span class="index-where">(in&nbsp;<a href="weapon_module_WIP.Ion-class.html">Ion</a>)</span></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="ship.Ship-class.html#getCrew">getCrew()</a><br />
+<span class="index-where">(in&nbsp;<a href="ship.Ship-class.html">Ship</a>)</span></td>
+<td width="33%" class="link-index"><a href="drones.Drone-class.html#getName">getName()</a><br />
+<span class="index-where">(in&nbsp;<a href="drones.Drone-class.html">Drone</a>)</span></td>
+<td width="33%" class="link-index"><a href="weapon_module_WIP.Laser-class.html#getSpeed">getSpeed()</a><br />
+<span class="index-where">(in&nbsp;<a href="weapon_module_WIP.Laser-class.html">Laser</a>)</span></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="weapon_module_WIP.Weapon-class.html#getCurrentCooldown">getCurrentCooldown()</a><br />
+<span class="index-where">(in&nbsp;<a href="weapon_module_WIP.Weapon-class.html">Weapon</a>)</span></td>
+<td width="33%" class="link-index"><a href="ship.Ship-class.html#getName">getName()</a><br />
+<span class="index-where">(in&nbsp;<a href="ship.Ship-class.html">Ship</a>)</span></td>
+<td width="33%" class="link-index"><a href="weapon_module_WIP.Weapon-class.html#getStunChance">getStunChance()</a><br />
+<span class="index-where">(in&nbsp;<a href="weapon_module_WIP.Weapon-class.html">Weapon</a>)</span></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="systems.System-class.html#getCurrentMaxPower">getCurrentMaxPower()</a><br />
+<span class="index-where">(in&nbsp;<a href="systems.System-class.html">System</a>)</span></td>
+<td width="33%" class="link-index"><a href="systems.System-class.html#getName">getName()</a><br />
+<span class="index-where">(in&nbsp;<a href="systems.System-class.html">System</a>)</span></td>
+<td width="33%" class="link-index"><a href="room.Room-class.html#getSystem">getSystem()</a><br />
+<span class="index-where">(in&nbsp;<a href="room.Room-class.html">Room</a>)</span></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="weapon_module_WIP.Weapon-class.html#getDamage">getDamage()</a><br />
+<span class="index-where">(in&nbsp;<a href="weapon_module_WIP.Weapon-class.html">Weapon</a>)</span></td>
+<td width="33%" class="link-index"><a href="weapon_module_WIP.Weapon-class.html#getName">getName()</a><br />
+<span class="index-where">(in&nbsp;<a href="weapon_module_WIP.Weapon-class.html">Weapon</a>)</span></td>
+<td width="33%" class="link-index"><a href="ship.Ship-class.html#getSystem">getSystem()</a><br />
+<span class="index-where">(in&nbsp;<a href="ship.Ship-class.html">Ship</a>)</span></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="crewMember.CrewMember-class.html#getDamages">getDamages()</a><br />
+<span class="index-where">(in&nbsp;<a href="crewMember.CrewMember-class.html">CrewMember</a>)</span></td>
+<td width="33%" class="link-index"><a href="systems.BackupBattery-class.html#getNameAbbreviation">getNameAbbreviation()</a><br />
+<span class="index-where">(in&nbsp;<a href="systems.BackupBattery-class.html">BackupBattery</a>)</span></td>
+<td width="33%" class="link-index"><a href="ship.Ship-class.html#getSystems">getSystems()</a><br />
+<span class="index-where">(in&nbsp;<a href="ship.Ship-class.html">Ship</a>)</span></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="systems.CloneBay-class.html#getDeadCrew">getDeadCrew()</a><br />
+<span class="index-where">(in&nbsp;<a href="systems.CloneBay-class.html">CloneBay</a>)</span></td>
+<td width="33%" class="link-index"><a href="systems.CrewTeleporter-class.html#getNameAbbreviation">getNameAbbreviation()</a><br />
+<span class="index-where">(in&nbsp;<a href="systems.CrewTeleporter-class.html">CrewTeleporter</a>)</span></td>
+<td width="33%" class="link-index"><a href="systems.Cloaking-class.html#getTimesIonised">getTimesIonised()</a><br />
+<span class="index-where">(in&nbsp;<a href="systems.Cloaking-class.html">Cloaking</a>)</span></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="room.Room-class.html#getDoors">getDoors()</a><br />
+<span class="index-where">(in&nbsp;<a href="room.Room-class.html">Room</a>)</span></td>
+<td width="33%" class="link-index"><a href="systems.DoorSystem-class.html#getNameAbbreviation">getNameAbbreviation()</a><br />
+<span class="index-where">(in&nbsp;<a href="systems.DoorSystem-class.html">DoorSystem</a>)</span></td>
+<td width="33%" class="link-index"><a href="drones.Drone-class.html#getType">getType()</a><br />
+<span class="index-where">(in&nbsp;<a href="drones.Drone-class.html">Drone</a>)</span></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="systems.System-class.html#getDots">getDots()</a><br />
+<span class="index-where">(in&nbsp;<a href="systems.System-class.html">System</a>)</span></td>
+<td width="33%" class="link-index"><a href="systems.DroneControl-class.html#getNameAbbreviation">getNameAbbreviation()</a><br />
+<span class="index-where">(in&nbsp;<a href="systems.DroneControl-class.html">DroneControl</a>)</span></td>
+<td width="33%" class="link-index"><a href="ship.Ship-class.html#getType">getType()</a><br />
+<span class="index-where">(in&nbsp;<a href="ship.Ship-class.html">Ship</a>)</span></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="ship.Ship-class.html#getDroneParts">getDroneParts()</a><br />
+<span class="index-where">(in&nbsp;<a href="ship.Ship-class.html">Ship</a>)</span></td>
+<td width="33%" class="link-index"><a href="systems.MindControl-class.html#getNameAbbreviation">getNameAbbreviation()</a><br />
+<span class="index-where">(in&nbsp;<a href="systems.MindControl-class.html">MindControl</a>)</span></td>
+<td width="33%" class="link-index"><a href="weapon_module_WIP.Weapon-class.html#getType">getType()</a><br />
+<span class="index-where">(in&nbsp;<a href="weapon_module_WIP.Weapon-class.html">Weapon</a>)</span></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="systems.DroneControl-class.html#getDrones">getDrones()</a><br />
+<span class="index-where">(in&nbsp;<a href="systems.DroneControl-class.html">DroneControl</a>)</span></td>
+<td width="33%" class="link-index"><a href="systems.System-class.html#getNameAbbreviation">getNameAbbreviation()</a><br />
+<span class="index-where">(in&nbsp;<a href="systems.System-class.html">System</a>)</span></td>
+<td width="33%" class="link-index"><a href="systems.WeaponControl-class.html#getWeapons">getWeapons()</a><br />
+<span class="index-where">(in&nbsp;<a href="systems.WeaponControl-class.html">WeaponControl</a>)</span></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="ship.Ship-class.html#getFastestWay">getFastestWay()</a><br />
+<span class="index-where">(in&nbsp;<a href="ship.Ship-class.html">Ship</a>)</span></td>
+<td width="33%" class="link-index"><a href="systems.WeaponControl-class.html#getNameAbbreviation">getNameAbbreviation()</a><br />
+<span class="index-where">(in&nbsp;<a href="systems.WeaponControl-class.html">WeaponControl</a>)</span></td>
+<td width="33%" class="link-index"><a href="globalVar-module.html">globalVar</a></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="room.Room-class.html#getFire">getFire()</a><br />
+<span class="index-where">(in&nbsp;<a href="room.Room-class.html">Room</a>)</span></td>
+<td width="33%" class="link-index"><a href="room.Room-class.html#getNB">getNB()</a><br />
+<span class="index-where">(in&nbsp;<a href="room.Room-class.html">Room</a>)</span></td>
+<td width="33%" class="link-index"><a href="crewMember.CrewMember-class.html#goToRoom">goToRoom()</a><br />
+<span class="index-where">(in&nbsp;<a href="crewMember.CrewMember-class.html">CrewMember</a>)</span></td>
+</tr>
+</table>
+</td></tr>
+<tr valign="top"><td valign="top" width="1%"><h2 class="epydoc"><a name="H">H</a></h2></td>
+<td valign="top">
+<table class="link-index" width="100%" border="1">
+<tr>
+<td width="33%" class="link-index"><a href="systems.Hacking-class.html">Hacking</a><br />
+<span class="index-where">(in&nbsp;<a href="systems-module.html">systems</a>)</span></td>
+<td width="33%" class="link-index"><a href="ship.Ship-class.html#hasSystem">hasSystem()</a><br />
+<span class="index-where">(in&nbsp;<a href="ship.Ship-class.html">Ship</a>)</span></td>
+<td width="33%" class="link-index">&nbsp;</td>
+</tr>
+<tr><td class="link-index">&nbsp;</td><td class="link-index">&nbsp;</td><td class="link-index">&nbsp;</td></tr>
+</table>
+</td></tr>
+<tr valign="top"><td valign="top" width="1%"><h2 class="epydoc"><a name="I">I</a></h2></td>
+<td valign="top">
+<table class="link-index" width="100%" border="1">
+<tr>
+<td width="33%" class="link-index"><a href="ship.Ship-class.html#ID">ID</a><br />
+<span class="index-where">(in&nbsp;<a href="ship.Ship-class.html">Ship</a>)</span></td>
+<td width="33%" class="link-index"><a href="systems.DroneControl-class.html#ionise">ionise()</a><br />
+<span class="index-where">(in&nbsp;<a href="systems.DroneControl-class.html">DroneControl</a>)</span></td>
+<td width="33%" class="link-index"><a href="crewMember.CrewMember-class.html#isDead">isDead()</a><br />
+<span class="index-where">(in&nbsp;<a href="crewMember.CrewMember-class.html">CrewMember</a>)</span></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="systems.Engines-class.html#incomingDamages">incomingDamages()</a><br />
+<span class="index-where">(in&nbsp;<a href="systems.Engines-class.html">Engines</a>)</span></td>
+<td width="33%" class="link-index"><a href="systems.Shields-class.html#ionise">ionise()</a><br />
+<span class="index-where">(in&nbsp;<a href="systems.Shields-class.html">Shields</a>)</span></td>
+<td width="33%" class="link-index"><a href="crewMember.CrewMember-class.html#isInMovement">isInMovement()</a><br />
+<span class="index-where">(in&nbsp;<a href="crewMember.CrewMember-class.html">CrewMember</a>)</span></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="systems.Shields-class.html#incomingDamages">incomingDamages()</a><br />
+<span class="index-where">(in&nbsp;<a href="systems.Shields-class.html">Shields</a>)</span></td>
+<td width="33%" class="link-index"><a href="systems.System-class.html#ionise">ionise()</a><br />
+<span class="index-where">(in&nbsp;<a href="systems.System-class.html">System</a>)</span></td>
+<td width="33%" class="link-index"><a href="systems.System-class.html#isIonised">isIonised()</a><br />
+<span class="index-where">(in&nbsp;<a href="systems.System-class.html">System</a>)</span></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="displayShip.InfosBoth-class.html">InfosBoth</a><br />
+<span class="index-where">(in&nbsp;<a href="displayShip-module.html">displayShip</a>)</span></td>
+<td width="33%" class="link-index"><a href="systems.WeaponControl-class.html#ionise">ionise()</a><br />
+<span class="index-where">(in&nbsp;<a href="systems.WeaponControl-class.html">WeaponControl</a>)</span></td>
+<td width="33%" class="link-index"><a href="drones.Drone-class.html#isPowered">isPowered()</a><br />
+<span class="index-where">(in&nbsp;<a href="drones.Drone-class.html">Drone</a>)</span></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="ship.Ship-class.html#initGraph">initGraph()</a><br />
+<span class="index-where">(in&nbsp;<a href="ship.Ship-class.html">Ship</a>)</span></td>
+<td width="33%" class="link-index"><a href="systems.Cloaking-class.html#ionisedCloaking">ionisedCloaking()</a><br />
+<span class="index-where">(in&nbsp;<a href="systems.Cloaking-class.html">Cloaking</a>)</span></td>
+<td width="33%" class="link-index"><a href="weapon_module_WIP.Weapon-class.html#isPowered">isPowered()</a><br />
+<span class="index-where">(in&nbsp;<a href="weapon_module_WIP.Weapon-class.html">Weapon</a>)</span></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="crewMember.CrewMember-class.html#initPosition">initPosition()</a><br />
+<span class="index-where">(in&nbsp;<a href="crewMember.CrewMember-class.html">CrewMember</a>)</span></td>
+<td width="33%" class="link-index"><a href="ship.Ship-class.html#ioniseIncoming">ioniseIncoming()</a><br />
+<span class="index-where">(in&nbsp;<a href="ship.Ship-class.html">Ship</a>)</span></td>
+<td width="33%" class="link-index"><a href="systems.Cloaking-class.html#isUsed">isUsed()</a><br />
+<span class="index-where">(in&nbsp;<a href="systems.Cloaking-class.html">Cloaking</a>)</span></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="displayShip-module.html#inverseStringList">inverseStringList()</a><br />
+<span class="index-where">(in&nbsp;<a href="displayShip-module.html">displayShip</a>)</span></td>
+<td width="33%" class="link-index"><a href="ship.Ship-class.html#isCloaked">isCloaked()</a><br />
+<span class="index-where">(in&nbsp;<a href="ship.Ship-class.html">Ship</a>)</span></td>
+<td width="33%" class="link-index">&nbsp;</td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="weapon_module_WIP.Ion-class.html">Ion</a><br />
+<span class="index-where">(in&nbsp;<a href="weapon_module_WIP-module.html">weapon_module_WIP</a>)</span></td>
+<td width="33%" class="link-index"><a href="door.Door-class.html#isClosed">isClosed()</a><br />
+<span class="index-where">(in&nbsp;<a href="door.Door-class.html">Door</a>)</span></td>
+<td width="33%" class="link-index">&nbsp;</td>
+</tr>
+</table>
+</td></tr>
+<tr valign="top"><td valign="top" width="1%"><h2 class="epydoc"><a name="K">K</a></h2></td>
+<td valign="top">
+<table class="link-index" width="100%" border="1">
+<tr>
+<td width="33%" class="link-index"><a href="ship.Ship-class.html#ko">ko()</a><br />
+<span class="index-where">(in&nbsp;<a href="ship.Ship-class.html">Ship</a>)</span></td>
+<td width="33%" class="link-index">&nbsp;</td>
+<td width="33%" class="link-index">&nbsp;</td>
+</tr>
+<tr><td class="link-index">&nbsp;</td><td class="link-index">&nbsp;</td><td class="link-index">&nbsp;</td></tr>
+</table>
+</td></tr>
+<tr valign="top"><td valign="top" width="1%"><h2 class="epydoc"><a name="L">L</a></h2></td>
+<td valign="top">
+<table class="link-index" width="100%" border="1">
+<tr>
+<td width="33%" class="link-index"><a href="weapon_module_WIP.Laser-class.html">Laser</a><br />
+<span class="index-where">(in&nbsp;<a href="weapon_module_WIP-module.html">weapon_module_WIP</a>)</span></td>
+<td width="33%" class="link-index"><a href="ship.Ship-class.html#linesIntersect">linesIntersect()</a><br />
+<span class="index-where">(in&nbsp;<a href="ship.Ship-class.html">Ship</a>)</span></td>
+<td width="33%" class="link-index"><a href="crewMember.CrewMember-class.html#loseExperience">loseExperience()</a><br />
+<span class="index-where">(in&nbsp;<a href="crewMember.CrewMember-class.html">CrewMember</a>)</span></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="displayShip.InfosBoth-class.html#lenColorsString">lenColorsString()</a><br />
+<span class="index-where">(in&nbsp;<a href="displayShip.InfosBoth-class.html">InfosBoth</a>)</span></td>
+<td width="33%" class="link-index"><a href="ships_layouts-module.html#listString2listInt">listString2listInt()</a><br />
+<span class="index-where">(in&nbsp;<a href="ships_layouts-module.html">ships_layouts</a>)</span></td>
+<td width="33%" class="link-index">&nbsp;</td>
+</tr>
+</table>
+</td></tr>
+<tr valign="top"><td valign="top" width="1%"><h2 class="epydoc"><a name="M">M</a></h2></td>
+<td valign="top">
+<table class="link-index" width="100%" border="1">
+<tr>
+<td width="33%" class="link-index"><a href="crewMember.CrewMember-class.html#manningPointsAI">manningPointsAI()</a><br />
+<span class="index-where">(in&nbsp;<a href="crewMember.CrewMember-class.html">CrewMember</a>)</span></td>
+<td width="33%" class="link-index"><a href="systems.Medbay-class.html">Medbay</a><br />
+<span class="index-where">(in&nbsp;<a href="systems-module.html">systems</a>)</span></td>
+<td width="33%" class="link-index"><a href="crewMember.CrewMember-class.html#movementAI">movementAI()</a><br />
+<span class="index-where">(in&nbsp;<a href="crewMember.CrewMember-class.html">CrewMember</a>)</span></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="displayShip.InfosBoth-class.html#maxL1">maxL1()</a><br />
+<span class="index-where">(in&nbsp;<a href="displayShip.InfosBoth-class.html">InfosBoth</a>)</span></td>
+<td width="33%" class="link-index"><a href="systems.MindControl-class.html">MindControl</a><br />
+<span class="index-where">(in&nbsp;<a href="systems-module.html">systems</a>)</span></td>
+<td width="33%" class="link-index"><a href="crewMember.CrewMember-class.html#moveTo">moveTo()</a><br />
+<span class="index-where">(in&nbsp;<a href="crewMember.CrewMember-class.html">CrewMember</a>)</span></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="displayShip-module.html#maxLength">maxLength()</a><br />
+<span class="index-where">(in&nbsp;<a href="displayShip-module.html">displayShip</a>)</span></td>
+<td width="33%" class="link-index"><a href="weapon_module_WIP.Missile-class.html">Missile</a><br />
+<span class="index-where">(in&nbsp;<a href="weapon_module_WIP-module.html">weapon_module_WIP</a>)</span></td>
+<td width="33%" class="link-index">&nbsp;</td>
+</tr>
+</table>
+</td></tr>
+<tr valign="top"><td valign="top" width="1%"><h2 class="epydoc"><a name="N">N</a></h2></td>
+<td valign="top">
+<table class="link-index" width="100%" border="1">
+<tr>
+<td width="33%" class="link-index"><a href="tournament_test-module.html#n">n</a><br />
+<span class="index-where">(in&nbsp;<a href="tournament_test-module.html">tournament_test</a>)</span></td>
+<td width="33%" class="link-index"><a href="test_combats-module.html#nfight">nfight()</a><br />
+<span class="index-where">(in&nbsp;<a href="test_combats-module.html">test_combats</a>)</span></td>
+<td width="33%" class="link-index">&nbsp;</td>
+</tr>
+<tr><td class="link-index">&nbsp;</td><td class="link-index">&nbsp;</td><td class="link-index">&nbsp;</td></tr>
+</table>
+</td></tr>
+<tr valign="top"><td valign="top" width="1%"><h2 class="epydoc"><a name="O">O</a></h2></td>
+<td valign="top">
+<table class="link-index" width="100%" border="1">
+<tr>
+<td width="33%" class="link-index"><a href="test_combats-module.html#oneEqualFight">oneEqualFight()</a><br />
+<span class="index-where">(in&nbsp;<a href="test_combats-module.html">test_combats</a>)</span></td>
+<td width="33%" class="link-index"><a href="door.Door-class.html#openDoor">openDoor()</a><br />
+<span class="index-where">(in&nbsp;<a href="door.Door-class.html">Door</a>)</span></td>
+<td width="33%" class="link-index">&nbsp;</td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="test_combats-module.html#oneInequalFight">oneInequalFight()</a><br />
+<span class="index-where">(in&nbsp;<a href="test_combats-module.html">test_combats</a>)</span></td>
+<td width="33%" class="link-index"><a href="systems.Oxygen-class.html">Oxygen</a><br />
+<span class="index-where">(in&nbsp;<a href="systems-module.html">systems</a>)</span></td>
+<td width="33%" class="link-index">&nbsp;</td>
+</tr>
+</table>
+</td></tr>
+<tr valign="top"><td valign="top" width="1%"><h2 class="epydoc"><a name="P">P</a></h2></td>
+<td valign="top">
+<table class="link-index" width="100%" border="1">
+<tr>
+<td width="33%" class="link-index"><a href="systems.Piloting-class.html">Piloting</a><br />
+<span class="index-where">(in&nbsp;<a href="systems-module.html">systems</a>)</span></td>
+<td width="33%" class="link-index"><a href="ship.Ship-class.html#poweringSystems">poweringSystems()</a><br />
+<span class="index-where">(in&nbsp;<a href="ship.Ship-class.html">Ship</a>)</span></td>
+<td width="33%" class="link-index"><a href="weapon_module_WIP.Weapon-class.html#powerIt">powerIt()</a><br />
+<span class="index-where">(in&nbsp;<a href="weapon_module_WIP.Weapon-class.html">Weapon</a>)</span></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="systems.DroneControl-class.html#powerDrone">powerDrone()</a><br />
+<span class="index-where">(in&nbsp;<a href="systems.DroneControl-class.html">DroneControl</a>)</span></td>
+<td width="33%" class="link-index"><a href="drones.Drone-class.html#powerIt">powerIt()</a><br />
+<span class="index-where">(in&nbsp;<a href="drones.Drone-class.html">Drone</a>)</span></td>
+<td width="33%" class="link-index"><a href="systems.WeaponControl-class.html#powerWeapon">powerWeapon()</a><br />
+<span class="index-where">(in&nbsp;<a href="systems.WeaponControl-class.html">WeaponControl</a>)</span></td>
+</tr>
+</table>
+</td></tr>
+<tr valign="top"><td valign="top" width="1%"><h2 class="epydoc"><a name="R">R</a></h2></td>
+<td valign="top">
+<table class="link-index" width="100%" border="1">
+<tr>
+<td width="33%" class="link-index"><a href="ship.Ship-class.html#refillOxygen">refillOxygen()</a><br />
+<span class="index-where">(in&nbsp;<a href="ship.Ship-class.html">Ship</a>)</span></td>
+<td width="33%" class="link-index"><a href="systems.CloneBay-class.html#reviveCrewMember">reviveCrewMember()</a><br />
+<span class="index-where">(in&nbsp;<a href="systems.CloneBay-class.html">CloneBay</a>)</span></td>
+<td width="33%" class="link-index"><a href="ship-module.html#root">root</a><br />
+<span class="index-where">(in&nbsp;<a href="ship-module.html">ship</a>)</span></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="room.Room-class.html#removeOxygen">removeOxygen()</a><br />
+<span class="index-where">(in&nbsp;<a href="room.Room-class.html">Room</a>)</span></td>
+<td width="33%" class="link-index"><a href="room-module.html">room</a></td>
+<td width="33%" class="link-index"><a href="ships_layouts-module.html#root">root</a><br />
+<span class="index-where">(in&nbsp;<a href="ships_layouts-module.html">ships_layouts</a>)</span></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="room.Room-class.html#repairBreach">repairBreach()</a><br />
+<span class="index-where">(in&nbsp;<a href="room.Room-class.html">Room</a>)</span></td>
+<td width="33%" class="link-index"><a href="room.Room-class.html">Room</a><br />
+<span class="index-where">(in&nbsp;<a href="room-module.html">room</a>)</span></td>
+<td width="33%" class="link-index"><a href="weapon_module_WIP-module.html#root">root</a><br />
+<span class="index-where">(in&nbsp;<a href="weapon_module_WIP-module.html">weapon_module_WIP</a>)</span></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="systems.System-class.html#reparation">reparation()</a><br />
+<span class="index-where">(in&nbsp;<a href="systems.System-class.html">System</a>)</span></td>
+<td width="33%" class="link-index"><a href="drones-module.html#root">root</a><br />
+<span class="index-where">(in&nbsp;<a href="drones-module.html">drones</a>)</span></td>
+<td width="33%" class="link-index">&nbsp;</td>
+</tr>
+</table>
+</td></tr>
+<tr valign="top"><td valign="top" width="1%"><h2 class="epydoc"><a name="S">S</a></h2></td>
+<td valign="top">
+<table class="link-index" width="100%" border="1">
+<tr>
+<td width="33%" class="link-index"><a href="systems.Sensors-class.html">Sensors</a><br />
+<span class="index-where">(in&nbsp;<a href="systems-module.html">systems</a>)</span></td>
+<td width="33%" class="link-index"><a href="ship.Ship-class.html#setPowerAvailable">setPowerAvailable()</a><br />
+<span class="index-where">(in&nbsp;<a href="ship.Ship-class.html">Ship</a>)</span></td>
+<td width="33%" class="link-index"><a href="ships_layouts-module.html">ships_layouts</a></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="drones.Drone-class.html#setCooldown">setCooldown()</a><br />
+<span class="index-where">(in&nbsp;<a href="drones.Drone-class.html">Drone</a>)</span></td>
+<td width="33%" class="link-index"><a href="systems.System-class.html#setPowerInIt">setPowerInIt()</a><br />
+<span class="index-where">(in&nbsp;<a href="systems.System-class.html">System</a>)</span></td>
+<td width="33%" class="link-index"><a href="crewMember-module.html#showShipState">showShipState</a><br />
+<span class="index-where">(in&nbsp;<a href="crewMember-module.html">crewMember</a>)</span></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="systems.System-class.html#setCooldownIon">setCooldownIon()</a><br />
+<span class="index-where">(in&nbsp;<a href="systems.System-class.html">System</a>)</span></td>
+<td width="33%" class="link-index"><a href="systems.System-class.html#setPowerIonised">setPowerIonised()</a><br />
+<span class="index-where">(in&nbsp;<a href="systems.System-class.html">System</a>)</span></td>
+<td width="33%" class="link-index"><a href="globalVar-module.html#showShipState">showShipState</a><br />
+<span class="index-where">(in&nbsp;<a href="globalVar-module.html">globalVar</a>)</span></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="systems.System-class.html#setCooldownIonDone">setCooldownIonDone()</a><br />
+<span class="index-where">(in&nbsp;<a href="systems.System-class.html">System</a>)</span></td>
+<td width="33%" class="link-index"><a href="systems.System-class.html#setRepair">setRepair()</a><br />
+<span class="index-where">(in&nbsp;<a href="systems.System-class.html">System</a>)</span></td>
+<td width="33%" class="link-index"><a href="room-module.html#showShipState">showShipState</a><br />
+<span class="index-where">(in&nbsp;<a href="room-module.html">room</a>)</span></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="ship.Ship-class.html#setCrew">setCrew()</a><br />
+<span class="index-where">(in&nbsp;<a href="ship.Ship-class.html">Ship</a>)</span></td>
+<td width="33%" class="link-index"><a href="crewMember.CrewMember-class.html#setRoom">setRoom()</a><br />
+<span class="index-where">(in&nbsp;<a href="crewMember.CrewMember-class.html">CrewMember</a>)</span></td>
+<td width="33%" class="link-index"><a href="ship-module.html#showShipState">showShipState</a><br />
+<span class="index-where">(in&nbsp;<a href="ship-module.html">ship</a>)</span></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="weapon_module_WIP.Weapon-class.html#setCurrentCooldown">setCurrentCooldown()</a><br />
+<span class="index-where">(in&nbsp;<a href="weapon_module_WIP.Weapon-class.html">Weapon</a>)</span></td>
+<td width="33%" class="link-index"><a href="systems.Shields-class.html">Shields</a><br />
+<span class="index-where">(in&nbsp;<a href="systems-module.html">systems</a>)</span></td>
+<td width="33%" class="link-index"><a href="ships_layouts-module.html#showShipState">showShipState</a><br />
+<span class="index-where">(in&nbsp;<a href="ships_layouts-module.html">ships_layouts</a>)</span></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="systems.System-class.html#setCurrentMaxPower">setCurrentMaxPower()</a><br />
+<span class="index-where">(in&nbsp;<a href="systems.System-class.html">System</a>)</span></td>
+<td width="33%" class="link-index"><a href="ship-module.html">ship</a></td>
+<td width="33%" class="link-index"><a href="systems-module.html#showShipState">showShipState</a><br />
+<span class="index-where">(in&nbsp;<a href="systems-module.html">systems</a>)</span></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="room.Room-class.html#setDoors">setDoors()</a><br />
+<span class="index-where">(in&nbsp;<a href="room.Room-class.html">Room</a>)</span></td>
+<td width="33%" class="link-index"><a href="ship.Ship-class.html">Ship</a><br />
+<span class="index-where">(in&nbsp;<a href="ship-module.html">ship</a>)</span></td>
+<td width="33%" class="link-index"><a href="ship.Ship-class.html#squareOnLine">squareOnLine()</a><br />
+<span class="index-where">(in&nbsp;<a href="ship.Ship-class.html">Ship</a>)</span></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="systems.System-class.html#setDots">setDots()</a><br />
+<span class="index-where">(in&nbsp;<a href="systems.System-class.html">System</a>)</span></td>
+<td width="33%" class="link-index"><a href="tournament_test-module.html#ship1Won">ship1Won</a><br />
+<span class="index-where">(in&nbsp;<a href="tournament_test-module.html">tournament_test</a>)</span></td>
+<td width="33%" class="link-index"><a href="room.Room-class.html#startFire">startFire()</a><br />
+<span class="index-where">(in&nbsp;<a href="room.Room-class.html">Room</a>)</span></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="ship.Ship-class.html#setDroneParts">setDroneParts()</a><br />
+<span class="index-where">(in&nbsp;<a href="ship.Ship-class.html">Ship</a>)</span></td>
+<td width="33%" class="link-index"><a href="tournament_test-module.html#ship2Won">ship2Won</a><br />
+<span class="index-where">(in&nbsp;<a href="tournament_test-module.html">tournament_test</a>)</span></td>
+<td width="33%" class="link-index"><a href="crewMember.CrewMember-class.html#suffocation">suffocation()</a><br />
+<span class="index-where">(in&nbsp;<a href="crewMember.CrewMember-class.html">CrewMember</a>)</span></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="ship.Ship-class.html#setFastestWay">setFastestWay()</a><br />
+<span class="index-where">(in&nbsp;<a href="ship.Ship-class.html">Ship</a>)</span></td>
+<td width="33%" class="link-index"><a href="tournament_test-module.html#ship3Won">ship3Won</a><br />
+<span class="index-where">(in&nbsp;<a href="tournament_test-module.html">tournament_test</a>)</span></td>
+<td width="33%" class="link-index"><a href="systems.System-class.html">System</a><br />
+<span class="index-where">(in&nbsp;<a href="systems-module.html">systems</a>)</span></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="crewMember.CrewMember-class.html#setInMovement">setInMovement()</a><br />
+<span class="index-where">(in&nbsp;<a href="crewMember.CrewMember-class.html">CrewMember</a>)</span></td>
+<td width="33%" class="link-index"><a href="tournament_test-module.html#ship4Won">ship4Won</a><br />
+<span class="index-where">(in&nbsp;<a href="tournament_test-module.html">tournament_test</a>)</span></td>
+<td width="33%" class="link-index"><a href="systems-module.html">systems</a></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="ship.Ship-class.html#setMissiles">setMissiles()</a><br />
+<span class="index-where">(in&nbsp;<a href="ship.Ship-class.html">Ship</a>)</span></td>
+<td width="33%" class="link-index"><a href="tournament_test-module.html#ship5Won">ship5Won</a><br />
+<span class="index-where">(in&nbsp;<a href="tournament_test-module.html">tournament_test</a>)</span></td>
+<td width="33%" class="link-index">&nbsp;</td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="room.Room-class.html#setOxygen">setOxygen()</a><br />
+<span class="index-where">(in&nbsp;<a href="room.Room-class.html">Room</a>)</span></td>
+<td width="33%" class="link-index"><a href="tournament_test-module.html#ship6Won">ship6Won</a><br />
+<span class="index-where">(in&nbsp;<a href="tournament_test-module.html">tournament_test</a>)</span></td>
+<td width="33%" class="link-index">&nbsp;</td>
+</tr>
+</table>
+</td></tr>
+<tr valign="top"><td valign="top" width="1%"><h2 class="epydoc"><a name="T">T</a></h2></td>
+<td valign="top">
+<table class="link-index" width="100%" border="1">
+<tr>
+<td width="33%" class="link-index"><a href="tournament_test-module.html#t1">t1</a><br />
+<span class="index-where">(in&nbsp;<a href="tournament_test-module.html">tournament_test</a>)</span></td>
+<td width="33%" class="link-index"><a href="systems.DroneControl-class.html#testUnpowerDrones">testUnpowerDrones()</a><br />
+<span class="index-where">(in&nbsp;<a href="systems.DroneControl-class.html">DroneControl</a>)</span></td>
+<td width="33%" class="link-index"><a href="ships_layouts-module.html#tree">tree</a><br />
+<span class="index-where">(in&nbsp;<a href="ships_layouts-module.html">ships_layouts</a>)</span></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="tournament_test-module.html#t2">t2</a><br />
+<span class="index-where">(in&nbsp;<a href="tournament_test-module.html">tournament_test</a>)</span></td>
+<td width="33%" class="link-index"><a href="systems.WeaponControl-class.html#testUnpowerWeapons">testUnpowerWeapons()</a><br />
+<span class="index-where">(in&nbsp;<a href="systems.WeaponControl-class.html">WeaponControl</a>)</span></td>
+<td width="33%" class="link-index"><a href="weapon_module_WIP-module.html#tree">tree</a><br />
+<span class="index-where">(in&nbsp;<a href="weapon_module_WIP-module.html">weapon_module_WIP</a>)</span></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="test_combats-module.html">test_combats</a></td>
+<td width="33%" class="link-index"><a href="tournament_test-module.html">tournament_test</a></td>
+<td width="33%" class="link-index"><a href="ship.Ship-class.html#tryUseCloaking">tryUseCloaking()</a><br />
+<span class="index-where">(in&nbsp;<a href="ship.Ship-class.html">Ship</a>)</span></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="room.Room-class.html#testBreachRepair">testBreachRepair()</a><br />
+<span class="index-where">(in&nbsp;<a href="room.Room-class.html">Room</a>)</span></td>
+<td width="33%" class="link-index"><a href="drones-module.html#tree">tree</a><br />
+<span class="index-where">(in&nbsp;<a href="drones-module.html">drones</a>)</span></td>
+<td width="33%" class="link-index">&nbsp;</td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="room.Room-class.html#testExtinction">testExtinction()</a><br />
+<span class="index-where">(in&nbsp;<a href="room.Room-class.html">Room</a>)</span></td>
+<td width="33%" class="link-index"><a href="ship-module.html#tree">tree</a><br />
+<span class="index-where">(in&nbsp;<a href="ship-module.html">ship</a>)</span></td>
+<td width="33%" class="link-index">&nbsp;</td>
+</tr>
+</table>
+</td></tr>
+<tr valign="top"><td valign="top" width="1%"><h2 class="epydoc"><a name="U">U</a></h2></td>
+<td valign="top">
+<table class="link-index" width="100%" border="1">
+<tr>
+<td width="33%" class="link-index"><a href="drones.Drone-class.html#unpowerIt">unpowerIt()</a><br />
+<span class="index-where">(in&nbsp;<a href="drones.Drone-class.html">Drone</a>)</span></td>
+<td width="33%" class="link-index"><a href="systems.System-class.html#upgradeMaxPower">upgradeMaxPower()</a><br />
+<span class="index-where">(in&nbsp;<a href="systems.System-class.html">System</a>)</span></td>
+<td width="33%" class="link-index"><a href="systems.WeaponControl-class.html#useWeapon">useWeapon()</a><br />
+<span class="index-where">(in&nbsp;<a href="systems.WeaponControl-class.html">WeaponControl</a>)</span></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="weapon_module_WIP.Weapon-class.html#unpowerIt">unpowerIt()</a><br />
+<span class="index-where">(in&nbsp;<a href="weapon_module_WIP.Weapon-class.html">Weapon</a>)</span></td>
+<td width="33%" class="link-index"><a href="systems.Cloaking-class.html#useCloaking">useCloaking()</a><br />
+<span class="index-where">(in&nbsp;<a href="systems.Cloaking-class.html">Cloaking</a>)</span></td>
+<td width="33%" class="link-index">&nbsp;</td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="systems.WeaponControl-class.html#unpowerWeapon">unpowerWeapon()</a><br />
+<span class="index-where">(in&nbsp;<a href="systems.WeaponControl-class.html">WeaponControl</a>)</span></td>
+<td width="33%" class="link-index"><a href="systems.DroneControl-class.html#useDrone">useDrone()</a><br />
+<span class="index-where">(in&nbsp;<a href="systems.DroneControl-class.html">DroneControl</a>)</span></td>
+<td width="33%" class="link-index">&nbsp;</td>
+</tr>
+</table>
+</td></tr>
+<tr valign="top"><td valign="top" width="1%"><h2 class="epydoc"><a name="W">W</a></h2></td>
+<td valign="top">
+<table class="link-index" width="100%" border="1">
+<tr>
+<td width="33%" class="link-index"><a href="weapon_module_WIP.Weapon-class.html">Weapon</a><br />
+<span class="index-where">(in&nbsp;<a href="weapon_module_WIP-module.html">weapon_module_WIP</a>)</span></td>
+<td width="33%" class="link-index"><a href="systems.WeaponControl-class.html">WeaponControl</a><br />
+<span class="index-where">(in&nbsp;<a href="systems-module.html">systems</a>)</span></td>
+<td width="33%" class="link-index"><a href="systems.Cloaking-class.html#weaponIsUsed">weaponIsUsed()</a><br />
+<span class="index-where">(in&nbsp;<a href="systems.Cloaking-class.html">Cloaking</a>)</span></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="weapon_module_WIP-module.html">weapon_module_WIP</a></td>
+<td width="33%" class="link-index"><a href="systems.WeaponControl-class.html#weaponHasBeenUsed">weaponHasBeenUsed()</a><br />
+<span class="index-where">(in&nbsp;<a href="systems.WeaponControl-class.html">WeaponControl</a>)</span></td>
+<td width="33%" class="link-index">&nbsp;</td>
+</tr>
+</table>
+</td></tr>
+<tr valign="top"><td valign="top" width="1%"><h2 class="epydoc"><a name="_">_</a></h2></td>
+<td valign="top">
+<table class="link-index" width="100%" border="1">
+<tr>
+<td width="33%" class="link-index"><a href="crewMember.CrewMember-class.html#__init__">__init__()</a><br />
+<span class="index-where">(in&nbsp;<a href="crewMember.CrewMember-class.html">CrewMember</a>)</span></td>
+<td width="33%" class="link-index"><a href="systems.Medbay-class.html#__init__">__init__()</a><br />
+<span class="index-where">(in&nbsp;<a href="systems.Medbay-class.html">Medbay</a>)</span></td>
+<td width="33%" class="link-index"><a href="displayShip-module.html#__package__">__package__</a><br />
+<span class="index-where">(in&nbsp;<a href="displayShip-module.html">displayShip</a>)</span></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="displayShip.InfosBoth-class.html#__init__">__init__()</a><br />
+<span class="index-where">(in&nbsp;<a href="displayShip.InfosBoth-class.html">InfosBoth</a>)</span></td>
+<td width="33%" class="link-index"><a href="systems.MindControl-class.html#__init__">__init__()</a><br />
+<span class="index-where">(in&nbsp;<a href="systems.MindControl-class.html">MindControl</a>)</span></td>
+<td width="33%" class="link-index"><a href="door-module.html#__package__">__package__</a><br />
+<span class="index-where">(in&nbsp;<a href="door-module.html">door</a>)</span></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="door.Door-class.html#__init__">__init__()</a><br />
+<span class="index-where">(in&nbsp;<a href="door.Door-class.html">Door</a>)</span></td>
+<td width="33%" class="link-index"><a href="systems.Oxygen-class.html#__init__">__init__()</a><br />
+<span class="index-where">(in&nbsp;<a href="systems.Oxygen-class.html">Oxygen</a>)</span></td>
+<td width="33%" class="link-index"><a href="drones-module.html#__package__">__package__</a><br />
+<span class="index-where">(in&nbsp;<a href="drones-module.html">drones</a>)</span></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="drones.CombatDrone-class.html#__init__">__init__()</a><br />
+<span class="index-where">(in&nbsp;<a href="drones.CombatDrone-class.html">CombatDrone</a>)</span></td>
+<td width="33%" class="link-index"><a href="systems.Piloting-class.html#__init__">__init__()</a><br />
+<span class="index-where">(in&nbsp;<a href="systems.Piloting-class.html">Piloting</a>)</span></td>
+<td width="33%" class="link-index"><a href="globalVar-module.html#__package__">__package__</a><br />
+<span class="index-where">(in&nbsp;<a href="globalVar-module.html">globalVar</a>)</span></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="drones.Drone-class.html#__init__">__init__()</a><br />
+<span class="index-where">(in&nbsp;<a href="drones.Drone-class.html">Drone</a>)</span></td>
+<td width="33%" class="link-index"><a href="systems.Sensors-class.html#__init__">__init__()</a><br />
+<span class="index-where">(in&nbsp;<a href="systems.Sensors-class.html">Sensors</a>)</span></td>
+<td width="33%" class="link-index"><a href="room-module.html#__package__">__package__</a><br />
+<span class="index-where">(in&nbsp;<a href="room-module.html">room</a>)</span></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="room.Room-class.html#__init__">__init__()</a><br />
+<span class="index-where">(in&nbsp;<a href="room.Room-class.html">Room</a>)</span></td>
+<td width="33%" class="link-index"><a href="systems.Shields-class.html#__init__">__init__()</a><br />
+<span class="index-where">(in&nbsp;<a href="systems.Shields-class.html">Shields</a>)</span></td>
+<td width="33%" class="link-index"><a href="ship-module.html#__package__">__package__</a><br />
+<span class="index-where">(in&nbsp;<a href="ship-module.html">ship</a>)</span></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="ship.Ship-class.html#__init__">__init__()</a><br />
+<span class="index-where">(in&nbsp;<a href="ship.Ship-class.html">Ship</a>)</span></td>
+<td width="33%" class="link-index"><a href="systems.System-class.html#__init__">__init__()</a><br />
+<span class="index-where">(in&nbsp;<a href="systems.System-class.html">System</a>)</span></td>
+<td width="33%" class="link-index"><a href="ships_layouts-module.html#__package__">__package__</a><br />
+<span class="index-where">(in&nbsp;<a href="ships_layouts-module.html">ships_layouts</a>)</span></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="systems.BackupBattery-class.html#__init__">__init__()</a><br />
+<span class="index-where">(in&nbsp;<a href="systems.BackupBattery-class.html">BackupBattery</a>)</span></td>
+<td width="33%" class="link-index"><a href="systems.WeaponControl-class.html#__init__">__init__()</a><br />
+<span class="index-where">(in&nbsp;<a href="systems.WeaponControl-class.html">WeaponControl</a>)</span></td>
+<td width="33%" class="link-index"><a href="systems-module.html#__package__">__package__</a><br />
+<span class="index-where">(in&nbsp;<a href="systems-module.html">systems</a>)</span></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="systems.Cloaking-class.html#__init__">__init__()</a><br />
+<span class="index-where">(in&nbsp;<a href="systems.Cloaking-class.html">Cloaking</a>)</span></td>
+<td width="33%" class="link-index"><a href="weapon_module_WIP.Beam-class.html#__init__">__init__()</a><br />
+<span class="index-where">(in&nbsp;<a href="weapon_module_WIP.Beam-class.html">Beam</a>)</span></td>
+<td width="33%" class="link-index"><a href="weapon_module_WIP-module.html#__package__">__package__</a><br />
+<span class="index-where">(in&nbsp;<a href="weapon_module_WIP-module.html">weapon_module_WIP</a>)</span></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="systems.CloneBay-class.html#__init__">__init__()</a><br />
+<span class="index-where">(in&nbsp;<a href="systems.CloneBay-class.html">CloneBay</a>)</span></td>
+<td width="33%" class="link-index"><a href="weapon_module_WIP.Ion-class.html#__init__">__init__()</a><br />
+<span class="index-where">(in&nbsp;<a href="weapon_module_WIP.Ion-class.html">Ion</a>)</span></td>
+<td width="33%" class="link-index"><a href="crewMember.CrewMember-class.html#__repr__">__repr__()</a><br />
+<span class="index-where">(in&nbsp;<a href="crewMember.CrewMember-class.html">CrewMember</a>)</span></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="systems.CrewTeleporter-class.html#__init__">__init__()</a><br />
+<span class="index-where">(in&nbsp;<a href="systems.CrewTeleporter-class.html">CrewTeleporter</a>)</span></td>
+<td width="33%" class="link-index"><a href="weapon_module_WIP.Laser-class.html#__init__">__init__()</a><br />
+<span class="index-where">(in&nbsp;<a href="weapon_module_WIP.Laser-class.html">Laser</a>)</span></td>
+<td width="33%" class="link-index"><a href="displayShip.InfosBoth-class.html#__repr__">__repr__()</a><br />
+<span class="index-where">(in&nbsp;<a href="displayShip.InfosBoth-class.html">InfosBoth</a>)</span></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="systems.DoorSystem-class.html#__init__">__init__()</a><br />
+<span class="index-where">(in&nbsp;<a href="systems.DoorSystem-class.html">DoorSystem</a>)</span></td>
+<td width="33%" class="link-index"><a href="weapon_module_WIP.Missile-class.html#__init__">__init__()</a><br />
+<span class="index-where">(in&nbsp;<a href="weapon_module_WIP.Missile-class.html">Missile</a>)</span></td>
+<td width="33%" class="link-index"><a href="drones.Drone-class.html#__repr__">__repr__()</a><br />
+<span class="index-where">(in&nbsp;<a href="drones.Drone-class.html">Drone</a>)</span></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="systems.DroneControl-class.html#__init__">__init__()</a><br />
+<span class="index-where">(in&nbsp;<a href="systems.DroneControl-class.html">DroneControl</a>)</span></td>
+<td width="33%" class="link-index"><a href="weapon_module_WIP.Weapon-class.html#__init__">__init__()</a><br />
+<span class="index-where">(in&nbsp;<a href="weapon_module_WIP.Weapon-class.html">Weapon</a>)</span></td>
+<td width="33%" class="link-index"><a href="ship.Ship-class.html#__repr__">__repr__()</a><br />
+<span class="index-where">(in&nbsp;<a href="ship.Ship-class.html">Ship</a>)</span></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="systems.Engines-class.html#__init__">__init__()</a><br />
+<span class="index-where">(in&nbsp;<a href="systems.Engines-class.html">Engines</a>)</span></td>
+<td width="33%" class="link-index"><a href="combat-module.html#__package__">__package__</a><br />
+<span class="index-where">(in&nbsp;<a href="combat-module.html">combat</a>)</span></td>
+<td width="33%" class="link-index"><a href="systems.System-class.html#__repr__">__repr__()</a><br />
+<span class="index-where">(in&nbsp;<a href="systems.System-class.html">System</a>)</span></td>
+</tr>
+<tr>
+<td width="33%" class="link-index"><a href="systems.Hacking-class.html#__init__">__init__()</a><br />
+<span class="index-where">(in&nbsp;<a href="systems.Hacking-class.html">Hacking</a>)</span></td>
+<td width="33%" class="link-index"><a href="crewMember-module.html#__package__">__package__</a><br />
+<span class="index-where">(in&nbsp;<a href="crewMember-module.html">crewMember</a>)</span></td>
+<td width="33%" class="link-index"><a href="weapon_module_WIP.Weapon-class.html#__repr__">__repr__()</a><br />
+<span class="index-where">(in&nbsp;<a href="weapon_module_WIP.Weapon-class.html">Weapon</a>)</span></td>
+</tr>
+</table>
+</td></tr>
+</table>
+<br /><br /><!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th bgcolor="#70b0f0" class="navbar-select"
+          >&nbsp;&nbsp;&nbsp;Indices&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Sat Dec  6 17:26:50 2014
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+	\chapter{Introduction}
+	
+	\section{Présentation du jeu}
+	
+	FTL : Faster than Light est un jeu pour PC de science fiction, mélangeant la gestion, la stratégie et le jeu de rôle à bord d'un vaisseau spatial. Le joueur a pour objectif de conduire son vaisseau d'un point A à un point B de la galaxie, tout en faisant face aux multiples situations qui se présentent à lui aléatoirement. Il doit ainsi survivre face à de nombreux événements : affronter des adversaires, négocier avec d'autres vaisseaux, échanger des ressources, etc. Le but est donc de rester le plus longtemps en vie pour aller le plus loin possible dans l'espace. Ainsi, le principe primaire du jeu est de s'adapter à un environnement hostile en optimisant son vaisseau, ses équipements (tels que des drônes ou de nombreuses armes), et son équipage qui est composé de plusieurs races possédant chacune des avantages et des inconvénients.
+		
+	\section{Présentation du projet}
+	
+Le but du projet est de concevoir un programme qui calcule quel est le meilleur vaisseau du jeu. Pour cela, l'utilisateur devra indiquer combien de scraps (monnaie du jeu) il veut investir dans l'optimisation de son vaisseau, et quelle est la catégorie du vaisseau qu'il joue parmi les vingt-sept classes possibles.
+\\
+Le projet doit alors se baser sur de nombreuses statistiques intrinsèques au jeu afin de modéliser un duel de vaisseau dans FTL. En effet, de nombreux mécanismes de jeu sont à reproduire de par les statistiques présentes, ainsi que les diverses actions ou armes. Pour cela, nous allons nous baser sur le site \url {http://ftl.wikia.com/wiki/FTL:_Faster_Than_Light_Wiki} qui regroupe les nombreuses informations qui nous seront nécessaires.
+\\
+En outre, notre projet est réalisé en Python version 3.4 et ne comporte pas de modules supplémentaires à la librairie Python.
+
+	\section{Objectifs}
+	
+	\paragraph{Le premier semestre}
+	
+	Dans un premier temps, le projet consiste à modéliser un seul et unique vaisseau, ce qui est en soi la partie la plus complexe à réaliser. En effet, les duels de vaisseaux sont composés de nombreuses composantes difficiles à modéliser: gestion de nombreuses armes, déplacement de l'équipage, niveaux de chaque membre d'équipage qui influe sur le vaisseau, différents systèmes présents dans un vaisseau, de nombreux bonus, etc. Un vaisseau est composé de salles, dans lesquelles peuvent être présents des systèmes, et des membres d'équipages. Selon les niveaux des systèmes et des membres d'équipage, les bonus d'attaque et d'esquive varient. C'est pourquoi beaucoup de paramètres sont à prendre en compte.Toutes ces données sont donc à comprendre et à appliquer au module de combat, ce qui représente un grand travail d'extraction et de compréhension du fonctionnement du jeu.
+	\\
+	Au début, le vaisseau sera basique, et ses systèmes de combats simplifiés. Ainsi des combats pourront être modélisés. Au fur et à mesure du premier semestre, nous allons améliorer ce système de combat, et étoffer le fonctionnement du vaisseau. Ainsi, à la fin du premier semestre, nous espérons avoir un moteur de combat qui prenne en compte toutes les statitiques présentes dans le jeu, ainsi que des intelligences artificielles qui permettent l'utilisation de l'équipage et des choix "tactiques" du vaisseau.
+	
+	\paragraph{Le second semestre}
+	
+	Une fois le moteur de combat accompli et complet, nous pourrons générer (aléatoirement ou non) des vaisseaux qui seront munis d'armes, d'équipements spécifiques, en fonction du nombre de scraps disponibles. Il va nous falloir optimiser la constitution de ses vaisseaux grâce à des règles simples ou non pour qu'il soit le plus performant possible. L'utilisation de systèmes experts pourra être envisagée.\\
+	Ces vaisseaux devront ensuite, grâce à un module de combat, générer de nombreux duels. Ainsi, sur ces nombreux essais, nous pourons évaluer quel est le meilleur vaisseau entre tous. L'étape pourra être reproduite de nombreuses fois pour optimiser les informations recueillies. Enfin, nous pourrons utiliser des algorithmes génétiques afin de générer le meilleur des vaisseaux. 
+	

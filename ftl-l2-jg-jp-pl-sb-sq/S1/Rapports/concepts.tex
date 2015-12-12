@@ -1,0 +1,143 @@
+\chapter{Concepts à maîtriser}
+
+	Le but du premier semestre consistant, en fait, simplement à reproduire le jeu original, il y a juste quelques points à aborder. \\
+	D'abord, nous avons dû extraire les informations du jeu, par exemple celles des vaisseaux de base. Pour cela, nous avons décidé d'utiliser des fichiers xml.
+	Concernant la représentation des vaisseaux et des éléments qui les composent, nous avons utilisé la Programmation Orientée Objet.\\
+	Pour s'assurer d'avoir une représentation correcte du jeu original, sans rien avoir oublier, nous avons construit une bible que voici.
+
+	\section{La bible}
+	
+		\subsection{Base de données des infos de base tirées du jeu}
+		
+				\underline{\checkedbox Travail accompli} 
+
+				\begin{itemize}
+				  \item XML pour les armes
+						\begin{itemize}
+							\item tous les missiles sauf swarm
+							\item tous les rayons
+							\item tous les lasers de l’édition de base
+							\item tous les ions
+						\end{itemize}
+					\item XML pour les vaisseaux
+						\begin{itemize}
+							\item Kestrel A et B
+							\item Engi A
+						\end{itemize}
+				\end{itemize}
+	
+				\underline{Travail à terminer}
+				\begin{itemize}
+					\item XML pour les armes restantes
+					\item XML pour les vaisseaux restants
+				\end{itemize}
+		
+		\subsection{Cooldowns et dots (damages over time)}
+		
+				\underline{\checkedbox Travail accompli} 
+
+				\begin{itemize}
+					\item Recharge des boucliers
+					\item Ions
+					\item Réparation par les membres d’équipage 
+					\item Dommages aux systèmes dûs aux feux
+					\item Explosion des systèmes :
+						\begin{itemize}
+							\item Déclencheur de feu
+							\item Dommages aux membres d’équipage présents 
+						\end{itemize}
+					\item Expansion du feu aléatoire
+					\item Extinction des feux par les membres d’équipage
+					\item Réparation des brèches et des systèmes par les membres d’équipage
+					\item Gestion de l'oxygène
+						\begin{itemize}
+							\item Baisse du taux d'oxygène due aux brèches, feux, membres d'équipages de la race Lanius, système non-alimenté
+							\item Expansion de l'oxygène (entre salles et portes ouvertes vers l'espace)
+							\item Extinction des feux par manque d'oxygène
+						\end{itemize}
+				\end{itemize}
+	
+				\underline{ Travail à terminer} 
+
+				\begin{itemize}
+					\item Baisse du taux d'oxygène quand le système de l'oxygène est hacké
+					\item Expansion du feu plus proche du jeu originel
+				\end{itemize}
+	
+
+		\subsection{Gestion de l'équipage}
+		
+			\underline{\checkedbox Travail accompli} 
+			
+			\begin{itemize}
+				\item Avantages aux systèmes (lorsque le personnage n'est pas en mouvement)
+					\begin{itemize}
+						\item Rechargement plus rapide des boucliers et des armes
+						\item Augmentation de l'esquive grâce aux réacteurs et au pilotage
+					\end{itemize}
+				\item Gain d'expérience pour chaque "coup" final de la réparation d'un système et pour chaque tir bloqué, esquivé ou effectué (cela dépend bien sûr du système présent dans la salle)
+				\item Mort d'un membre d'équipage quand il n'a plus de vie, résurection si le vaisseau a la clone bay
+				\item Dégâts par manque d'air
+				\item Remise à 0 des réparations des systèmes lorsqu'il n'y a pas de membre d'équipage dans leurs salles
+			\end{itemize}
+			
+			\underline{Travail à terminer}
+			
+			\begin{itemize}
+				\item Gestion des déplacements (travail en pause)
+			\end{itemize}
+			
+		\subsection{Utilisation des armes et drones}
+		
+			\underline{\checkedbox Travail accompli}
+			
+				\begin{itemize}
+					\item Double Dégâts au hull pour les salles sans systèmes par certaines armes
+					\item Déclencheur de feux et de brèches
+					\item Dégâts aux membres d'équipage présents dans la salle par certaines armes
+				\end{itemize}
+			
+			\underline{Travail à terminer}
+			
+				\begin{itemize}
+					\item Utilisation des armes ions
+						\begin{itemize}
+							\item Double "dommages" aux boucliers zoltan
+							\item L'ionisation et les nouveaux vrais dommages ne s'accumulent pas
+							\item Un système ionisé ne peut pas recevoir de bonus grâce aux membres d'équipage
+						\end{itemize}
+				\end{itemize}
+				
+		\subsection{Gestion de l'énergie}
+		
+			\underline{\checkedbox Travail accompli}
+				
+				\begin{itemize}
+					\item Impossible d'ajouter de l'énergie si le système est ionisé
+					\item Lorsqu'un système n'est plus ionisé, redonne automatiquement au système l'énergie qui a été enlevée
+					\item Désactivation des armes/drones lorsque le système des armes/drones prend des dégâts
+					\item Re-alimente automatiquement les armes/drones qui ont dû être désactivés (de façon rudimentaire)
+					\item Les vaisseaux essayent de dépenser leur énergie
+				\end{itemize}
+			
+		
+		\subsection{Gestion particulière de certains systèmes}
+		
+			\underline{\checkedbox Travail accompli}
+				
+				\begin{itemize}
+					\item L'invisibilité
+						\begin{itemize}
+							\item Activation lors de la gestion des cooldowns
+							\item Remet à 0 le rechargement des armes et drones du vaisseau adverse
+							\item Ionisation 5 fois de suite du système après utilisation
+						\end{itemize}
+					\item La résurection
+						\begin{itemize}
+							\item Création d'une copie du membre d'équipage qui est supprimé lorsque la copie est faite
+							\item Réduction des niveaux de compétence
+							\item Après un certain temps, ajout de l'objet dans la liste des membres d'équipage
+						\end{itemize}
+				\end{itemize}
+			
+			

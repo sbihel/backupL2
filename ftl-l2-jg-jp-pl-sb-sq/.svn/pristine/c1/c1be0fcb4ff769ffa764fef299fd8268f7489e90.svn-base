@@ -1,0 +1,32 @@
+\chapter{Concepts à maîtriser}
+
+Tout d'abord pour comprendre comment la génération de vaisseaux fonctionne, il faut comprendre comment un vaisseau est représenté. 
+Ensuite, pour déterminer le meilleur vaisseau, nous avons appliqué plusieurs méthodes connues d'optimisation que nous allons expliquer. 
+
+
+	\section{Représentation des vaisseaux}
+	
+		\subsection{Représentation des vaisseaux de base}
+		
+		
+		\subsection{Représentation des vaisseaux personnalisés}
+	
+	
+
+	\section{Algorithmes de génération de vaisseaux}
+
+	Introduction sur la logique et les intentions derriere les algorithmes utilises
+	
+		\subsection{Générateur aléatoire}
+		
+		Schema pour visualiser toutes les parties d'un vaisseau ? 
+		
+		
+		\subsection{Algorithme génétique}
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=1\linewidth]{geneticalgorithm.pdf}
+		\end{figure}
+
+		\section{Data Mining}

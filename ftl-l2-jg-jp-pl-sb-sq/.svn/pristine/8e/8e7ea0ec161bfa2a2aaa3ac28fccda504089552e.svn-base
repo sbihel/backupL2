@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<weaponList>
+	<missileList>
+		<leto>
+			<name>leto</name>
+			<damage>1</damage>
+			<power>1</power>
+			<cooldown>9</cooldown>
+			<hits>1</hits>
+			<fire>0.1</fire>
+			<breach>0.1</breach>
+			<stun>0.1</stun>
+			<cost>20</cost>
+		</leto>
+		<artemisPL>
+			<name>artemisPL</name>
+			<damage>2</damage>
+			<power>1</power>
+			<cooldown>11</cooldown>
+			<hits>1</hits>
+			<fire>0.1</fire>
+			<breach>0.1</breach>
+			<stun>0.1</stun>
+			<cost>38</cost>
+		</artemisPL>
+		<artemisAI> <!--AI only weapon-->
+			<name>artemisAI</name>
+			<damage>2</damage>
+			<power>2</power>
+			<cooldown>10</cooldown>
+			<hits>1</hits>
+			<fire>0.1</fire>
+			<breach>0.1</breach>
+			<stun>0.1</stun>
+			<cost>38</cost>
+		</artemisAI>
+		<hermes>
+			<name>hermes</name>
+			<damage>3</damage>
+			<power>3</power>
+			<cooldown>14</cooldown>
+			<hits>1</hits>
+			<fire>0.3</fire>
+			<breach>0.2</breach>
+			<stun>0.1</stun>
+			<cost>45</cost>
+		</hermes>
+		<pegasus> <!--two missiles for the cost of one-->
+			<name>pegasus</name>
+			<damage>2</damage>
+			<power>3</power>
+			<cooldown>20</cooldown>
+			<hits>2</hits>
+			<fire>0.3</fire>
+			<breach>0.2</breach>
+			<stun>0.1</stun>
+			<cost>60</cost>
+		</pegasus>
+		<breach>
+			<name>breach</name>
+			<damage>4</damage>
+			<power>3</power>
+			<cooldown>22</cooldown>
+			<hits>1</hits>
+			<fire>0.3</fire>
+			<breach>0.8</breach>
+			<stun>0.1</stun>
+			<cost>65</cost>
+		</breach>
+		<hull> <!-- damage*2 on systemless rooms-->
+			<name>hull</name>
+			<damage>2</damage>
+			<power>2</power>
+			<cooldown>17</cooldown>
+			<hits>1</hits>
+			<fire>0.1</fire>
+			<breach>0.3</breach>
+			<stun>0.1</stun>
+			<cost>65</cost>
+		</hull>
+		<boss> <!--AI only, no ammo required, fires 3 times-->
+			<name>boss</name>
+			<damage>1</damage>
+			<power>1</power>
+			<cooldown>23</cooldown>
+			<hits>3</hits>
+			<fire>0.1</fire>
+			<breach>0.1</breach>
+			<stun>0.1</stun>
+			<cost>40</cost> <!--sell price-->
+		</boss>
+	</missileList>
+	<beamList> <!--one tile diagonally is equivalent to 45 beam length-->
+		<miniBeam>
+			<damagePerRoom>1</damagePerRoom>
+			<beamLength>45</beamLength>
+			<power>1</power>
+			<cooldown>12</cooldown>
+			<fire>0.1</fire>  <!-- Per tile. -->
+			<cost>20</cost>
+		</miniBeam>
+		
+		<pikeBeam>
+			<damagePerRoom>1</damagePerRoom>
+			<beamLength>170</beamLength>
+			<power>2</power>
+			<cooldown>16</cooldown>
+			<fire>0.0</fire>
+			<cost>55</cost>
+		</pikeBeam>
+		
+		<halberdBeam>
+			<damagePerRoom>2</damagePerRoom>
+			<beamLength>80</beamLength>
+			<power>3</power>
+			<cooldown>17</cooldown>
+			<fire>0.0</fire>
+			<cost>65</cost> 
+		</halberdBeam>
+		
+		<glaiveBeam>
+			<damagePerRoom>3</damagePerRoom>
+			<beamLength>80</beamLength>
+			<power>4</power>
+			<cooldown>25</cooldown>
+			<fire>0.0</fire>
+			<cost>95</cost>
+		</glaiveBeam>
+		
+		<fireBeam>
+			<damagePerRoom>0</damagePerRoom>
+			<beamLength>140</beamLength>
+			<power>2</power>
+			<cooldown>20</cooldown>
+			<fire>0.8</fire> <!-- Per tile. -->
+			<cost>50</cost>
+		</fireBeam>
+		
+		<hullBeam>
+			<damagePerRoom>1</damagePerRoom> <!-- 1 Hull. -->
+			<beamLength>100</beamLength>
+			<power>2</power>
+			<cooldown>14</cooldown>
+			<fire>0.0</fire>
+			<cost>70</cost>
+		</hullBeam>
+		
+		<antibioBeam>
+			<damagePerRoom>0</damagePerRoom> <!-- 60 to crew - 30 to drones. -->
+			<beamLength>140</beamLength>
+			<power>2</power>
+			<cooldown>16</cooldown>
+			<fire>0.1</fire>
+			<cost>50</cost>
+		</antibioBeam>
+		
+		<artilleryBeam> <!-- Osprey/Nisos -->
+			<damagePerRoom>1</damagePerRoom> <!-- Ignore shields. -->
+			<beamLength>140</beamLength>
+			<power>1</power> <!-- 1-4 -->
+			<cooldown>50</cooldown> <!-- 50/40/30/20 -->
+			<fire>0.0</fire>
+			<cost>0</cost> <!-- 0/30/50/80 --> 
+		</artilleryBeam>
+	</beamList>
+	
+	<laserList> <!--barrages of projectiles are common.-->
+		<basicLaser>
+			<damage>1</damage>
+			<power>1</power>
+			<cooldown>10</cooldown>
+			<cost>20</cost>
+			<hits>1</hits>
+			<fire>0.1</fire>
+			<breach>0.0</breach>
+			<stun>0.0</stun>
+			<speed>60</speed>
+		</basicLaser>
+		<dualLaser>
+			<damage>1</damage> <!--*2-->
+			<power>1</power>
+			<cooldown>10</cooldown>
+			<cost>25</cost>
+			<hits>2</hits>
+			<fire>0.1</fire>
+			<breach>0.0</breach>
+			<stun>0.0</stun>
+			<speed>60</speed>
+		</dualLaser>
+		<burstLaserI>
+			<damage>1</damage> <!--*2-->
+			<power>2</power>
+			<cooldown>11</cooldown>
+			<cost>50</cost>
+			<hits>2</hits>
+			<fire>0.1</fire>
+			<breach>0.0</breach>
+			<stun>0.0</stun>
+			<speed>60</speed>
+		</burstLaserI>
+		<burstLaserII>
+			<damage>1</damage> <!--*3-->
+			<power>2</power>
+			<cooldown>12</cooldown>
+			<cost>80</cost>
+			<hits>3</hits>
+			<fire>0.1</fire>
+			<breach>0.0</breach>
+			<stun>0.0</stun>
+			<speed>60</speed>
+		</burstLaserII>
+		<burstLaserIII>
+			<damage>1</damage> <!--*5-->
+			<power>4</power>
+			<cooldown>19</cooldown>
+			<cost>95</cost>
+			<hits>5</hits>
+			<fire>0.0</fire>
+			<breach>0.0</breach>
+			<stun>0.0</stun>
+			<speed>60</speed>
+		</burstLaserIII>
+		<heavyPierceI>
+			<damage>2</damage> <!--ignores 1 shield-->
+			<power>2</power>
+			<cooldown>10</cooldown>
+			<cost>55</cost>
+			<hits>1</hits>
+			<fire>0.3</fire>
+			<breach>0.3</breach>
+			<stun>0.0</stun>
+			<speed>60</speed>
+		</heavyPierceI>
+		<heavyLaserI>
+			<damage>2</damage> <!--ignores 1 shield-->
+			<power>1</power>
+			<cooldown>9</cooldown>
+			<cost>55</cost>
+			<hits>1</hits>
+			<fire>0.3</fire>
+			<breach>0.3</breach>
+			<stun>0.2</stun>
+			<speed>60</speed>
+		</heavyLaserI>
+		<heavyLaserII>
+			<damage>2</damage> <!--*2-->
+			<power>3</power>
+			<cooldown>13</cooldown>
+			<cost>65</cost>
+			<hits>2</hits>
+			<fire>0.3</fire>
+			<breach>0.3</breach>
+			<stun>0.2</stun>
+			<speed>60</speed>
+		</heavyLaserII>
+		<hullLaserI>
+			<damage>1</damage> <!--*2 hull-->
+			<power>2</power>
+			<cooldown>14</cooldown>
+			<cost>55</cost>
+			<hits>2</hits>
+			<fire>0.0</fire>
+			<breach>0.2</breach>
+			<stun>0.0</stun>
+			<speed>75</speed>
+		</hullLaserI>
+		<hullLaserII>
+			<damage>1</damage> <!--*3 hull-->
+			<power>3</power>
+			<cooldown>15</cooldown>
+			<cost>75</cost>
+			<hits>3</hits>
+			<fire>0.1</fire>
+			<breach>0.3</breach>
+			<stun>0.0</stun>
+			<speed>90</speed>
+		</hullLaserII>
+	</laserList>
+	<ionList>
+		<ionBlastI> <!--"damage" is actually "ion damage"-->
+			<damage>1</damage>
+			<power>1</power>
+			<cooldown>8</cooldown>
+			<cost>30</cost>
+			<stun>0.0</stun>
+			<speed>30</speed>
+			<hits>1</hits>
+		</ionBlastI>
+		<ionBlastII>
+			<damage>1</damage>
+			<power>3</power>
+			<cooldown>4</cooldown>
+			<cost>70</cost>
+			<stun>0.0</stun>
+			<speed>30</speed>
+			<hits>1</hits>
+		</ionBlastII>
+		<heavyIon>
+			<damage>2</damage>
+			<power>2</power>
+			<cooldown>13</cooldown>
+			<cost>45</cost>
+			<stun>0.2</stun>
+			<speed>40</speed>
+			<hits>1</hits>
+		</heavyIon>
+	</ionList>
+
+</weaponList>

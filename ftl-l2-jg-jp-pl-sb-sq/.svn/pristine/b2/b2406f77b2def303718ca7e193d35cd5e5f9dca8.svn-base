@@ -1,0 +1,457 @@
+\begin{theindex}
+
+  \item combat \textit{(module)}, \hyperpage{4}
+    \subitem combat.combat \textit{(function)}, \hyperpage{4}
+  \item crewMember \textit{(module)}, \hyperpage{5--8}
+    \subitem crewMember.CrewMember \textit{(class)}, \hyperpage{5--8}
+      \subsubitem crewMember.CrewMember.addXpCombat \textit{(method)}, 
+		\hyperpage{7}
+      \subsubitem crewMember.CrewMember.addXpEngines \textit{(method)}, 
+		\hyperpage{7}
+      \subsubitem crewMember.CrewMember.addXpPiloting \textit{(method)}, 
+		\hyperpage{7}
+      \subsubitem crewMember.CrewMember.addXpRepair \textit{(method)}, 
+		\hyperpage{7}
+      \subsubitem crewMember.CrewMember.addXpShields \textit{(method)}, 
+		\hyperpage{7}
+      \subsubitem crewMember.CrewMember.addXpWeaponControl \textit{(method)}, 
+		\hyperpage{7}
+      \subsubitem crewMember.CrewMember.continueMovement \textit{(method)}, 
+		\hyperpage{6}
+      \subsubitem crewMember.CrewMember.determineFastestWay \textit{(method)}, 
+		\hyperpage{6}
+      \subsubitem crewMember.CrewMember.doDamages \textit{(method)}, 
+		\hyperpage{7}
+      \subsubitem crewMember.CrewMember.fastestWay \textit{(method)}, 
+		\hyperpage{6}
+      \subsubitem crewMember.CrewMember.fireDamages \textit{(method)}, 
+		\hyperpage{7}
+      \subsubitem crewMember.CrewMember.getCoordsGoal \textit{(method)}, 
+		\hyperpage{6}
+      \subsubitem crewMember.CrewMember.getDamages \textit{(method)}, 
+		\hyperpage{7}
+      \subsubitem crewMember.CrewMember.getHP \textit{(method)}, 
+		\hyperpage{6}
+      \subsubitem crewMember.CrewMember.getLvlCombat \textit{(method)}, 
+		\hyperpage{5}
+      \subsubitem crewMember.CrewMember.getLvlEngines \textit{(method)}, 
+		\hyperpage{5}
+      \subsubitem crewMember.CrewMember.getLvlPiloting \textit{(method)}, 
+		\hyperpage{5}
+      \subsubitem crewMember.CrewMember.getLvlRepair \textit{(method)}, 
+		\hyperpage{5}
+      \subsubitem crewMember.CrewMember.getLvlShields \textit{(method)}, 
+		\hyperpage{5}
+      \subsubitem crewMember.CrewMember.getLvlWeaponControl \textit{(method)}, 
+		\hyperpage{5}
+      \subsubitem crewMember.CrewMember.getMovement \textit{(method)}, 
+		\hyperpage{7}
+      \subsubitem crewMember.CrewMember.getPercentageExtinction \textit{(method)}, 
+		\hyperpage{7}
+      \subsubitem crewMember.CrewMember.getPercentageRepair \textit{(method)}, 
+		\hyperpage{7}
+      \subsubitem crewMember.CrewMember.getPosition \textit{(method)}, 
+		\hyperpage{6}
+      \subsubitem crewMember.CrewMember.getRace \textit{(method)}, 
+		\hyperpage{6}
+      \subsubitem crewMember.CrewMember.getRoom \textit{(method)}, 
+		\hyperpage{6}
+      \subsubitem crewMember.CrewMember.getRoomGoal \textit{(method)}, 
+		\hyperpage{6}
+      \subsubitem crewMember.CrewMember.goToRoom \textit{(method)}, 
+		\hyperpage{6}
+      \subsubitem crewMember.CrewMember.initPosition \textit{(method)}, 
+		\hyperpage{5}
+      \subsubitem crewMember.CrewMember.isDead \textit{(method)}, 
+		\hyperpage{7}
+      \subsubitem crewMember.CrewMember.isInMovement \textit{(method)}, 
+		\hyperpage{6}
+      \subsubitem crewMember.CrewMember.loseExperience \textit{(method)}, 
+		\hyperpage{7}
+      \subsubitem crewMember.CrewMember.manningPointsAI \textit{(method)}, 
+		\hyperpage{6}
+      \subsubitem crewMember.CrewMember.movementAI \textit{(method)}, 
+		\hyperpage{6}
+      \subsubitem crewMember.CrewMember.moveTo \textit{(method)}, 
+		\hyperpage{7}
+      \subsubitem crewMember.CrewMember.setInMovement \textit{(method)}, 
+		\hyperpage{6}
+      \subsubitem crewMember.CrewMember.setRoom \textit{(method)}, 
+		\hyperpage{6}
+      \subsubitem crewMember.CrewMember.suffocation \textit{(method)}, 
+		\hyperpage{7}
+
+  \indexspace
+
+  \item displayShip \textit{(module)}, \hyperpage{9--10}
+    \subitem displayShip.addSpaces \textit{(function)}, \hyperpage{9}
+    \subitem displayShip.addSpacesEnd \textit{(function)}, 
+		\hyperpage{9}
+    \subitem displayShip.displayAttack \textit{(function)}, 
+		\hyperpage{9}
+    \subitem displayShip.displayInfos \textit{(function)}, 
+		\hyperpage{9}
+    \subitem displayShip.displayInfosBoth \textit{(function)}, 
+		\hyperpage{9}
+    \subitem displayShip.InfosBoth \textit{(class)}, \hyperpage{9--10}
+      \subsubitem displayShip.InfosBoth.lenColorsString \textit{(method)}, 
+		\hyperpage{10}
+      \subsubitem displayShip.InfosBoth.maxL1 \textit{(method)}, 
+		\hyperpage{10}
+    \subitem displayShip.inverseStringList \textit{(function)}, 
+		\hyperpage{9}
+    \subitem displayShip.maxLength \textit{(function)}, \hyperpage{9}
+  \item door \textit{(module)}, \hyperpage{11--12}
+    \subitem door.Door \textit{(class)}, \hyperpage{11--12}
+      \subsubitem door.Door.closeDoor \textit{(method)}, \hyperpage{12}
+      \subsubitem door.Door.getLink \textit{(method)}, \hyperpage{12}
+      \subsubitem door.Door.getPosition \textit{(method)}, 
+		\hyperpage{11}
+      \subsubitem door.Door.isClosed \textit{(method)}, \hyperpage{11}
+      \subsubitem door.Door.openDoor \textit{(method)}, \hyperpage{12}
+  \item drones \textit{(module)}, \hyperpage{13--15}
+    \subitem drones.CombatDrone \textit{(class)}, \hyperpage{14--15}
+      \subsubitem drones.CombatDrone.getSpeed \textit{(method)}, 
+		\hyperpage{14}
+    \subitem drones.DefensiveDrone \textit{(class)}, \hyperpage{15}
+    \subitem drones.Drone \textit{(class)}, \hyperpage{13--14}
+      \subsubitem drones.Drone.getCooldown \textit{(method)}, 
+		\hyperpage{14}
+      \subsubitem drones.Drone.getName \textit{(method)}, 
+		\hyperpage{13}
+      \subsubitem drones.Drone.getPower \textit{(method)}, 
+		\hyperpage{14}
+      \subsubitem drones.Drone.getType \textit{(method)}, 
+		\hyperpage{14}
+      \subsubitem drones.Drone.isPowered \textit{(method)}, 
+		\hyperpage{14}
+      \subsubitem drones.Drone.powerIt \textit{(method)}, 
+		\hyperpage{13}
+      \subsubitem drones.Drone.setCooldown \textit{(method)}, 
+		\hyperpage{14}
+      \subsubitem drones.Drone.unpowerIt \textit{(method)}, 
+		\hyperpage{13}
+    \subitem drones.genCombatDrone \textit{(function)}, \hyperpage{13}
+    \subitem drones.genDrone \textit{(function)}, \hyperpage{13}
+
+  \indexspace
+
+  \item globalVar \textit{(module)}, \hyperpage{16}
+
+  \indexspace
+
+  \item room \textit{(module)}, \hyperpage{17--19}
+    \subitem room.Room \textit{(class)}, \hyperpage{17--19}
+      \subsubitem room.Room.addOxygen \textit{(method)}, \hyperpage{18}
+      \subsubitem room.Room.cooldowns \textit{(method)}, \hyperpage{18}
+      \subsubitem room.Room.crewTasks \textit{(method)}, \hyperpage{19}
+      \subsubitem room.Room.doBreach \textit{(method)}, \hyperpage{18}
+      \subsubitem room.Room.dotsToCrew \textit{(method)}, 
+		\hyperpage{19}
+      \subsubitem room.Room.expansionFire \textit{(method)}, 
+		\hyperpage{19}
+      \subsubitem room.Room.expansionOxygen \textit{(method)}, 
+		\hyperpage{19}
+      \subsubitem room.Room.extinguishFire \textit{(method)}, 
+		\hyperpage{18}
+      \subsubitem room.Room.getBreach \textit{(method)}, \hyperpage{18}
+      \subsubitem room.Room.getCoords \textit{(method)}, \hyperpage{17}
+      \subsubitem room.Room.getDoors \textit{(method)}, \hyperpage{17}
+      \subsubitem room.Room.getFire \textit{(method)}, \hyperpage{18}
+      \subsubitem room.Room.getNB \textit{(method)}, \hyperpage{18}
+      \subsubitem room.Room.getNbBoxes \textit{(method)}, 
+		\hyperpage{17}
+      \subsubitem room.Room.getOxygen \textit{(method)}, \hyperpage{18}
+      \subsubitem room.Room.getSystem \textit{(method)}, \hyperpage{18}
+      \subsubitem room.Room.removeOxygen \textit{(method)}, 
+		\hyperpage{18}
+      \subsubitem room.Room.repairBreach \textit{(method)}, 
+		\hyperpage{18}
+      \subsubitem room.Room.setDoors \textit{(method)}, \hyperpage{18}
+      \subsubitem room.Room.setOxygen \textit{(method)}, \hyperpage{18}
+      \subsubitem room.Room.startFire \textit{(method)}, \hyperpage{18}
+      \subsubitem room.Room.testBreachRepair \textit{(method)}, 
+		\hyperpage{19}
+      \subsubitem room.Room.testExtinction \textit{(method)}, 
+		\hyperpage{19}
+
+  \indexspace
+
+  \item ship \textit{(module)}, \hyperpage{20--25}
+    \subitem ship.Ship \textit{(class)}, \hyperpage{20--25}
+      \subsubitem ship.Ship.activateCloaking \textit{(method)}, 
+		\hyperpage{25}
+      \subsubitem ship.Ship.addPower \textit{(method)}, \hyperpage{23}
+      \subsubitem ship.Ship.addXpCrew \textit{(method)}, \hyperpage{23}
+      \subsubitem ship.Ship.attackBeam \textit{(method)}, 
+		\hyperpage{23}
+      \subsubitem ship.Ship.attackOpponent \textit{(method)}, 
+		\hyperpage{24}
+      \subsubitem ship.Ship.attackRoom \textit{(method)}, 
+		\hyperpage{23}
+      \subsubitem ship.Ship.attackRoomCombatDrone \textit{(method)}, 
+		\hyperpage{24}
+      \subsubitem ship.Ship.cooldowns \textit{(method)}, \hyperpage{23}
+      \subsubitem ship.Ship.deactivateCloaking \textit{(method)}, 
+		\hyperpage{25}
+      \subsubitem ship.Ship.degat \textit{(method)}, \hyperpage{20}
+      \subsubitem ship.Ship.getCrew \textit{(method)}, \hyperpage{21}
+      \subsubitem ship.Ship.getDroneParts \textit{(method)}, 
+		\hyperpage{21}
+      \subsubitem ship.Ship.getFastestWay \textit{(method)}, 
+		\hyperpage{21}
+      \subsubitem ship.Ship.getGraph \textit{(method)}, \hyperpage{21}
+      \subsubitem ship.Ship.getHP \textit{(method)}, \hyperpage{21}
+      \subsubitem ship.Ship.getID \textit{(method)}, \hyperpage{21}
+      \subsubitem ship.Ship.getLvlCrewRoomSystem \textit{(method)}, 
+		\hyperpage{22}
+      \subsubitem ship.Ship.getMaxPower \textit{(method)}, 
+		\hyperpage{21}
+      \subsubitem ship.Ship.getMissiles \textit{(method)}, 
+		\hyperpage{21}
+      \subsubitem ship.Ship.getName \textit{(method)}, \hyperpage{21}
+      \subsubitem ship.Ship.getPowerAvailable \textit{(method)}, 
+		\hyperpage{23}
+      \subsubitem ship.Ship.getRooms \textit{(method)}, \hyperpage{22}
+      \subsubitem ship.Ship.getRoomSystem \textit{(method)}, 
+		\hyperpage{22}
+      \subsubitem ship.Ship.getSystem \textit{(method)}, \hyperpage{22}
+      \subsubitem ship.Ship.getSystems \textit{(method)}, 
+		\hyperpage{22}
+      \subsubitem ship.Ship.getType \textit{(method)}, \hyperpage{21}
+      \subsubitem ship.Ship.hasSystem \textit{(method)}, \hyperpage{22}
+      \subsubitem ship.Ship.initGraph \textit{(method)}, \hyperpage{20}
+      \subsubitem ship.Ship.ioniseIncoming \textit{(method)}, 
+		\hyperpage{24}
+      \subsubitem ship.Ship.isCloaked \textit{(method)}, \hyperpage{21}
+      \subsubitem ship.Ship.ko \textit{(method)}, \hyperpage{21}
+      \subsubitem ship.Ship.linesIntersect \textit{(method)}, 
+		\hyperpage{24}
+      \subsubitem ship.Ship.poweringSystems \textit{(method)}, 
+		\hyperpage{23}
+      \subsubitem ship.Ship.refillOxygen \textit{(method)}, 
+		\hyperpage{23}
+      \subsubitem ship.Ship.setCrew \textit{(method)}, \hyperpage{21}
+      \subsubitem ship.Ship.setDroneParts \textit{(method)}, 
+		\hyperpage{21}
+      \subsubitem ship.Ship.setFastestWay \textit{(method)}, 
+		\hyperpage{21}
+      \subsubitem ship.Ship.setMissiles \textit{(method)}, 
+		\hyperpage{21}
+      \subsubitem ship.Ship.setPowerAvailable \textit{(method)}, 
+		\hyperpage{23}
+      \subsubitem ship.Ship.squareOnLine \textit{(method)}, 
+		\hyperpage{24}
+      \subsubitem ship.Ship.tryUseCloaking \textit{(method)}, 
+		\hyperpage{25}
+  \item ships\_layouts \textit{(module)}, \hyperpage{26}
+    \subitem ships\_layouts.genShip \textit{(function)}, \hyperpage{26}
+    \subitem ships\_layouts.listString2listInt \textit{(function)}, 
+		\hyperpage{26}
+  \item systems \textit{(module)}, \hyperpage{27--47}
+    \subitem systems.BackupBattery \textit{(class)}, \hyperpage{41--42}
+    \subitem systems.Cloaking \textit{(class)}, \hyperpage{43--45}
+      \subsubitem systems.Cloaking.cooldownCloaking \textit{(method)}, 
+		\hyperpage{44}
+      \subsubitem systems.Cloaking.generalCooldown \textit{(method)}, 
+		\hyperpage{44}
+      \subsubitem systems.Cloaking.getTimesIonised \textit{(method)}, 
+		\hyperpage{44}
+      \subsubitem systems.Cloaking.ionisedCloaking \textit{(method)}, 
+		\hyperpage{44}
+      \subsubitem systems.Cloaking.isUsed \textit{(method)}, 
+		\hyperpage{44}
+      \subsubitem systems.Cloaking.useCloaking \textit{(method)}, 
+		\hyperpage{44}
+      \subsubitem systems.Cloaking.weaponIsUsed \textit{(method)}, 
+		\hyperpage{44}
+    \subitem systems.CloneBay \textit{(class)}, \hyperpage{45--46}
+      \subsubitem systems.CloneBay.addDeadCrew \textit{(method)}, 
+		\hyperpage{45}
+      \subsubitem systems.CloneBay.cooldownRevive \textit{(method)}, 
+		\hyperpage{45}
+      \subsubitem systems.CloneBay.getDeadCrew \textit{(method)}, 
+		\hyperpage{45}
+      \subsubitem systems.CloneBay.reviveCrewMember \textit{(method)}, 
+		\hyperpage{45}
+    \subitem systems.CrewTeleporter \textit{(class)}, 
+		\hyperpage{42--43}
+    \subitem systems.DoorSystem \textit{(class)}, \hyperpage{39--40}
+    \subitem systems.DroneControl \textit{(class)}, \hyperpage{40--41}
+      \subsubitem systems.DroneControl.addDrone \textit{(method)}, 
+		\hyperpage{40}
+      \subsubitem systems.DroneControl.cooldownDrones \textit{(method)}, 
+		\hyperpage{40}
+      \subsubitem systems.DroneControl.getDrones \textit{(method)}, 
+		\hyperpage{40}
+      \subsubitem systems.DroneControl.powerDrone \textit{(method)}, 
+		\hyperpage{40}
+      \subsubitem systems.DroneControl.testUnpowerDrones \textit{(method)}, 
+		\hyperpage{41}
+      \subsubitem systems.DroneControl.useDrone \textit{(method)}, 
+		\hyperpage{40}
+    \subitem systems.Engines \textit{(class)}, \hyperpage{31--33}
+      \subsubitem systems.Engines.incomingDamages \textit{(method)}, 
+		\hyperpage{32}
+    \subitem systems.Hacking \textit{(class)}, \hyperpage{47}
+    \subitem systems.Medbay \textit{(class)}, \hyperpage{37--38}
+      \subsubitem systems.Medbay.amountHealPerSecond \textit{(method)}, 
+		\hyperpage{37}
+    \subitem systems.MindControl \textit{(class)}, \hyperpage{46--47}
+    \subitem systems.Oxygen \textit{(class)}, \hyperpage{36--37}
+    \subitem systems.Piloting \textit{(class)}, \hyperpage{33}
+    \subitem systems.Sensors \textit{(class)}, \hyperpage{38--39}
+    \subitem systems.Shields \textit{(class)}, \hyperpage{30--31}
+      \subsubitem systems.Shields.cooldownLayer \textit{(method)}, 
+		\hyperpage{31}
+      \subsubitem systems.Shields.getLayers \textit{(method)}, 
+		\hyperpage{30}
+      \subsubitem systems.Shields.incomingDamages \textit{(method)}, 
+		\hyperpage{30}
+    \subitem systems.System \textit{(class)}, \hyperpage{27--30}
+      \subsubitem systems.System.addPower \textit{(method)}, 
+		\hyperpage{28}
+      \subsubitem systems.System.cooldownIon \textit{(method)}, 
+		\hyperpage{29}
+      \subsubitem systems.System.doDamages \textit{(method)}, 
+		\hyperpage{29}
+      \subsubitem systems.System.dotFire \textit{(method)}, 
+		\hyperpage{29}
+      \subsubitem systems.System.explode \textit{(method)}, 
+		\hyperpage{30}
+      \subsubitem systems.System.getCooldownIon \textit{(method)}, 
+		\hyperpage{27}
+      \subsubitem systems.System.getCooldownIonDone \textit{(method)}, 
+		\hyperpage{28}
+      \subsubitem systems.System.getCurrentMaxPower \textit{(method)}, 
+		\hyperpage{28}
+      \subsubitem systems.System.getDots \textit{(method)}, 
+		\hyperpage{28}
+      \subsubitem systems.System.getMaxPower \textit{(method)}, 
+		\hyperpage{28}
+      \subsubitem systems.System.getMaxPowerMax \textit{(method)}, 
+		\hyperpage{28}
+      \subsubitem systems.System.getName \textit{(method)}, 
+		\hyperpage{28}
+      \subsubitem systems.System.getNameAbbreviation \textit{(method)}, 
+		\hyperpage{28}
+      \subsubitem systems.System.getPowerInIt \textit{(method)}, 
+		\hyperpage{28}
+      \subsubitem systems.System.getPowerIonised \textit{(method)}, 
+		\hyperpage{27}
+      \subsubitem systems.System.getRepair \textit{(method)}, 
+		\hyperpage{28}
+      \subsubitem systems.System.getShip \textit{(method)}, 
+		\hyperpage{28}
+      \subsubitem systems.System.ionise \textit{(method)}, 
+		\hyperpage{29}
+      \subsubitem systems.System.isIonised \textit{(method)}, 
+		\hyperpage{28}
+      \subsubitem systems.System.reparation \textit{(method)}, 
+		\hyperpage{29}
+      \subsubitem systems.System.setCooldownIon \textit{(method)}, 
+		\hyperpage{27}
+      \subsubitem systems.System.setCooldownIonDone \textit{(method)}, 
+		\hyperpage{28}
+      \subsubitem systems.System.setCurrentMaxPower \textit{(method)}, 
+		\hyperpage{28}
+      \subsubitem systems.System.setDots \textit{(method)}, 
+		\hyperpage{28}
+      \subsubitem systems.System.setPowerInIt \textit{(method)}, 
+		\hyperpage{28}
+      \subsubitem systems.System.setPowerIonised \textit{(method)}, 
+		\hyperpage{27}
+      \subsubitem systems.System.setRepair \textit{(method)}, 
+		\hyperpage{28}
+      \subsubitem systems.System.upgradeMaxPower \textit{(method)}, 
+		\hyperpage{29}
+    \subitem systems.WeaponControl \textit{(class)}, \hyperpage{33--36}
+      \subsubitem systems.WeaponControl.addWeapon \textit{(method)}, 
+		\hyperpage{34}
+      \subsubitem systems.WeaponControl.cooldownWeapons \textit{(method)}, 
+		\hyperpage{35}
+      \subsubitem systems.WeaponControl.getWeapons \textit{(method)}, 
+		\hyperpage{34}
+      \subsubitem systems.WeaponControl.powerWeapon \textit{(method)}, 
+		\hyperpage{34}
+      \subsubitem systems.WeaponControl.testUnpowerWeapons \textit{(method)}, 
+		\hyperpage{35}
+      \subsubitem systems.WeaponControl.unpowerWeapon \textit{(method)}, 
+		\hyperpage{34}
+      \subsubitem systems.WeaponControl.useWeapon \textit{(method)}, 
+		\hyperpage{35}
+      \subsubitem systems.WeaponControl.weaponHasBeenUsed \textit{(method)}, 
+		\hyperpage{35}
+
+  \indexspace
+
+  \item test\_combats \textit{(module)}, \hyperpage{48}
+    \subitem test\_combats.nfight \textit{(function)}, \hyperpage{48}
+    \subitem test\_combats.oneEqualFight \textit{(function)}, 
+		\hyperpage{48}
+    \subitem test\_combats.oneInequalFight \textit{(function)}, 
+		\hyperpage{48}
+  \item tournament\_test \textit{(module)}, \hyperpage{49}
+    \subitem tournament\_test.generation \textit{(function)}, 
+		\hyperpage{49}
+
+  \indexspace
+
+  \item weapon\_module\_WIP \textit{(module)}, \hyperpage{50--55}
+    \subitem weapon\_module\_WIP.Beam \textit{(class)}, \hyperpage{53}
+      \subsubitem weapon\_module\_WIP.Beam.getBeamLength \textit{(method)}, 
+		\hyperpage{53}
+    \subitem weapon\_module\_WIP.genBeam \textit{(function)}, 
+		\hyperpage{50}
+    \subitem weapon\_module\_WIP.genIon \textit{(function)}, 
+		\hyperpage{50}
+    \subitem weapon\_module\_WIP.genLaser \textit{(function)}, 
+		\hyperpage{50}
+    \subitem weapon\_module\_WIP.genMissile \textit{(function)}, 
+		\hyperpage{50}
+    \subitem weapon\_module\_WIP.genWeapon \textit{(function)}, 
+		\hyperpage{50}
+    \subitem weapon\_module\_WIP.Ion \textit{(class)}, 
+		\hyperpage{54--55}
+      \subsubitem weapon\_module\_WIP.Ion.getSpeed \textit{(method)}, 
+		\hyperpage{55}
+    \subitem weapon\_module\_WIP.Laser \textit{(class)}, 
+		\hyperpage{53--54}
+      \subsubitem weapon\_module\_WIP.Laser.getSpeed \textit{(method)}, 
+		\hyperpage{54}
+    \subitem weapon\_module\_WIP.Missile \textit{(class)}, 
+		\hyperpage{52--53}
+    \subitem weapon\_module\_WIP.Weapon \textit{(class)}, 
+		\hyperpage{50--52}
+      \subsubitem weapon\_module\_WIP.Weapon.getBreachChance \textit{(method)}, 
+		\hyperpage{51}
+      \subsubitem weapon\_module\_WIP.Weapon.getCooldown \textit{(method)}, 
+		\hyperpage{51}
+      \subsubitem weapon\_module\_WIP.Weapon.getCost \textit{(method)}, 
+		\hyperpage{51}
+      \subsubitem weapon\_module\_WIP.Weapon.getCurrentCooldown \textit{(method)}, 
+		\hyperpage{51}
+      \subsubitem weapon\_module\_WIP.Weapon.getDamage \textit{(method)}, 
+		\hyperpage{51}
+      \subsubitem weapon\_module\_WIP.Weapon.getFireChance \textit{(method)}, 
+		\hyperpage{51}
+      \subsubitem weapon\_module\_WIP.Weapon.getHits \textit{(method)}, 
+		\hyperpage{51}
+      \subsubitem weapon\_module\_WIP.Weapon.getName \textit{(method)}, 
+		\hyperpage{51}
+      \subsubitem weapon\_module\_WIP.Weapon.getPower \textit{(method)}, 
+		\hyperpage{51}
+      \subsubitem weapon\_module\_WIP.Weapon.getStunChance \textit{(method)}, 
+		\hyperpage{51}
+      \subsubitem weapon\_module\_WIP.Weapon.getType \textit{(method)}, 
+		\hyperpage{51}
+      \subsubitem weapon\_module\_WIP.Weapon.isPowered \textit{(method)}, 
+		\hyperpage{51}
+      \subsubitem weapon\_module\_WIP.Weapon.powerIt \textit{(method)}, 
+		\hyperpage{51}
+      \subsubitem weapon\_module\_WIP.Weapon.setCurrentCooldown \textit{(method)}, 
+		\hyperpage{51}
+      \subsubitem weapon\_module\_WIP.Weapon.unpowerIt \textit{(method)}, 
+		\hyperpage{52}
+
+\end{theindex}

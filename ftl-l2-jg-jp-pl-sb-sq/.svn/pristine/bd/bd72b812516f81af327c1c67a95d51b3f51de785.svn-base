@@ -1,0 +1,11 @@
+<ship>
+  <add>
+    <energy>2</energy>
+    <system>
+      <weaponControl>4</weaponControl>
+      <shields>2</shields>
+    </system>
+    <weapon>burstLaserIII burstLaserI</weapon>
+  </add>
+  <cost>495</cost>
+</ship>

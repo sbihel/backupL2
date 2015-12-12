@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='us-ascii'?>
+<ship>
+  <name>engiCruiser</name>
+  <type>C</type>
+  <add>
+    <energy>10</energy>
+    <system>
+      <weaponControl>5</weaponControl>
+    </system>
+    <weapons>
+      <weapon0>heavyPierceI</weapon0>
+      <weapon1>fireBeam</weapon1>
+    </weapons>
+  </add>
+  <cost>570</cost>
+</ship>

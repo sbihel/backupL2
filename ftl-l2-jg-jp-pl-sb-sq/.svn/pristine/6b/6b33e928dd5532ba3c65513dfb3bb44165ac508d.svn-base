@@ -1,0 +1,9 @@
+\chapter{Organisation générale}
+
+	\section{Importation des modules}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=1\linewidth]{packageDiagram.pdf}
+	\end{figure}
+
